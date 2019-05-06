@@ -11,4 +11,4 @@ install:
 script:
   - powrap --check --quiet **/*.po
   - pospell -p dict -l hi_IN **/*.po
-- make CPYTHON_CLONE=/tmp/cpython/ COMMIT=905ce9eeb1d1f4e8a1e914c3ec61767490d40ec6
+  - make CPYTHON_CLONE=/tmp/cpython/ COMMIT=905ce9eeb1d1f4e8a1e914c3ec61767490d40ec6
