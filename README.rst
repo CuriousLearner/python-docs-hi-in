@@ -1,8 +1,8 @@
-Translation of the Python Documentation — hi-in
+Translation of the Python Documentation — Hindi
 ===============================================
 
-.. image:: https://travis-ci.org/python/python-docs-hi-in.svg?branch=3.7
-  :target: https://travis-ci.org/python/python-docs-hi-in
+.. image:: https://travis-ci.org/CuriousLearner/python-docs-hi-in.svg?branch=3.7
+  :target: https://travis-ci.org/CuriousLearner/python-docs-hi-in
 
 
 Documentation Contribution Agreement
