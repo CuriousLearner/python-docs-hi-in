@@ -15,7 +15,7 @@
 
 CPYTHON_CLONE := ../cpython/
 SPHINX_CONF := $(CPYTHON_CLONE)/Doc/conf.py
-LANGUAGE := hi-in
+LANGUAGE := hi_IN
 VENV := ~/.venvs/python-docs-i18n/
 PYTHON := $(shell which python3)
 MODE := html
