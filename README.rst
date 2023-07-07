@@ -49,8 +49,8 @@ Prerequisites:
 - A `github account <https://github.com/join>`_.
 - ``git`` `installed <https://help.github.com/articles/set-up-git/>`_ (for windows, see
   https://gitforwindows.org/).
-- A ``.po`` file editor (Use `poedit <https://poedit.net/>`_
-  if you don't already have one).
+- A ``.po`` file editor (Use `poedit <https://poedit.net/>`_ 
+or `VS Code <https://code.visualstudio.com/download>`_ if you don't already have one).
 
 
 Let's start:
@@ -60,11 +60,16 @@ You'll need to fork the `python-docs-hi-in
 button. This creates a copy of the whole project on your github
 account: a place where you have the rights to do modifications.
 
+You can use the GithubDeskop to make it simpler by GUI. Here is the
+link to download GithubDeskop for your computer:
+`Download Github <https://desktop.github.com/>`_
+(Steps to use GithubDeskop will be given soon.) 
+
 Step by step:
 
 .. code-block:: bash
 
-    # Git clone your github fork using ssh (replace JulienPalard):
+    # Git clone your github fork using ssh (replace JulienPalard with your username):
     git clone git@github.com:JulienPalard/python-docs-hi-in.git
 
     # Go to the cloned directory:
