@@ -49,8 +49,7 @@ Prerequisites:
 - A `github account <https://github.com/join>`_.
 - ``git`` `installed <https://help.github.com/articles/set-up-git/>`_ (for windows, see
   https://gitforwindows.org/).
-- A ``.po`` file editor (Use `poedit <https://poedit.net/>`_ 
-or `VS Code <https://code.visualstudio.com/download>`_ if you don't already have one).
+- A ``.po`` file editor (Use `poedit <https://poedit.net/>`_ or `VS Code <https://code.visualstudio.com/download>`_ if you don't already have one).
 
 
 Let's start:
