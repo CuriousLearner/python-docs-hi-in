@@ -8,105 +8,178 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 23:28+0530\n"
+"POT-Creation-Date: 2025-09-01 06:24+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/asyncio.rst:66
+#: ../Doc/library/asyncio.rst:96
 msgid "High-level APIs"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:77
+#: ../Doc/library/asyncio.rst:108
 msgid "Low-level APIs"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:87
+#: ../Doc/library/asyncio.rst:119
 msgid "Guides and Tutorials"
 msgstr ""
 
 #: ../Doc/library/asyncio.rst:2
-msgid ":mod:`asyncio` --- Asynchronous I/O"
+msgid ":mod:`!asyncio` --- Asynchronous I/O"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:None
+#: ../Doc/library/asyncio.rst:-1
 msgid "Hello World!"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:23
+#: ../Doc/library/asyncio.rst:13
+msgid ""
+"import asyncio\n"
+"\n"
+"async def main():\n"
+"    print('Hello ...')\n"
+"    await asyncio.sleep(1)\n"
+"    print('... World!')\n"
+"\n"
+"asyncio.run(main())"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:22
 msgid ""
 "asyncio is a library to write **concurrent** code using the **async/await** "
 "syntax."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:26
+#: ../Doc/library/asyncio.rst:25
 msgid ""
 "asyncio is used as a foundation for multiple Python asynchronous frameworks "
 "that provide high-performance network and web-servers, database connection "
 "libraries, distributed task queues, etc."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:30
+#: ../Doc/library/asyncio.rst:29
 msgid ""
 "asyncio is often a perfect fit for IO-bound and high-level **structured** "
 "network code."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:33
-msgid "asyncio provides a set of **high-level** APIs to:"
+#: ../Doc/library/asyncio.rst:34
+msgid ":ref:`a-conceptual-overview-of-asyncio`"
 msgstr ""
 
 #: ../Doc/library/asyncio.rst:35
+msgid "Explanation of the fundamentals of asyncio."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:37
+msgid "asyncio provides a set of **high-level** APIs to:"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:39
 msgid ""
 ":ref:`run Python coroutines <coroutine>` concurrently and have full control "
 "over their execution;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:38
+#: ../Doc/library/asyncio.rst:42
 msgid "perform :ref:`network IO and IPC <asyncio-streams>`;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:40
+#: ../Doc/library/asyncio.rst:44
 msgid "control :ref:`subprocesses <asyncio-subprocess>`;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:42
+#: ../Doc/library/asyncio.rst:46
 msgid "distribute tasks via :ref:`queues <asyncio-queues>`;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:44
+#: ../Doc/library/asyncio.rst:48
 msgid ":ref:`synchronize <asyncio-sync>` concurrent code;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:46
+#: ../Doc/library/asyncio.rst:50
 msgid ""
 "Additionally, there are **low-level** APIs for *library and framework "
 "developers* to:"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:49
+#: ../Doc/library/asyncio.rst:53
 msgid ""
 "create and manage :ref:`event loops <asyncio-event-loop>`, which provide "
-"asynchronous APIs for :meth:`networking <loop.create_server>`, running :meth:"
-"`subprocesses <loop.subprocess_exec>`, handling :meth:`OS signals <loop."
-"add_signal_handler>`, etc;"
+"asynchronous APIs for :ref:`networking <loop_create_server>`, running :ref:"
+"`subprocesses <loop_subprocess_exec>`, handling :ref:`OS signals "
+"<loop_add_signal_handler>`, etc;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:54
+#: ../Doc/library/asyncio.rst:58
 msgid ""
 "implement efficient protocols using :ref:`transports <asyncio-transports-"
 "protocols>`;"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:57
+#: ../Doc/library/asyncio.rst:61
 msgid ""
 ":ref:`bridge <asyncio-futures>` callback-based libraries and code with async/"
 "await syntax."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:65
+#: ../Doc/includes/wasm-notavail.rst:3
+msgid "Availability"
+msgstr ""
+
+#: ../Doc/includes/wasm-notavail.rst:5
+msgid ""
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:69
+msgid "asyncio REPL"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:70
+msgid ""
+"You can experiment with an ``asyncio`` concurrent context in the :term:"
+"`REPL`:"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:72
+msgid ""
+"$ python -m asyncio\n"
+"asyncio REPL ...\n"
+"Use \"await\" directly instead of \"asyncio.run()\".\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>> import asyncio\n"
+">>> await asyncio.sleep(10, result='hello')\n"
+"'hello'"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:82
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``cpython.run_stdin`` with no "
+"arguments."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:84
+msgid "(also 3.11.10, 3.10.15, 3.9.20, and 3.8.20) Emits audit events."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:87
+msgid ""
+"Uses PyREPL if possible, in which case :envvar:`PYTHONSTARTUP` is also "
+"executed. Emits audit events."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:95
 msgid "Reference"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:128
+msgid "The source code for asyncio can be found in :source:`Lib/asyncio/`."
 msgstr ""

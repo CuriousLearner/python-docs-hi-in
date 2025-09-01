@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 23:28+0530\n"
+"POT-Creation-Date: 2025-09-01 06:24+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/library/atexit.rst:2
-msgid ":mod:`atexit` --- Exit handlers"
+msgid ":mod:`!atexit` --- Exit handlers"
 msgstr ""
 
 #: ../Doc/library/atexit.rst:12
@@ -39,11 +40,17 @@ msgstr ""
 
 #: ../Doc/library/atexit.rst:23
 msgid ""
+"**Note:** The effect of registering or unregistering functions from within a "
+"cleanup function is undefined."
+msgstr ""
+
+#: ../Doc/library/atexit.rst:26
+msgid ""
 "When used with C-API subinterpreters, registered functions are local to the "
 "interpreter they were registered in."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:29
+#: ../Doc/library/atexit.rst:32
 msgid ""
 "Register *func* as a function to be executed at termination.  Any optional "
 "arguments that are to be passed to *func* must be passed as arguments to :"
@@ -51,7 +58,7 @@ msgid ""
 "more than once."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:34
+#: ../Doc/library/atexit.rst:37
 msgid ""
 "At normal program termination (for instance, if :func:`sys.exit` is called "
 "or the main module's execution completes), all functions registered are "
@@ -60,43 +67,59 @@ msgid ""
 "be cleaned up later."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:40
+#: ../Doc/library/atexit.rst:43
 msgid ""
 "If an exception is raised during execution of the exit handlers, a traceback "
 "is printed (unless :exc:`SystemExit` is raised) and the exception "
-"information is saved.  After all exit handlers have had a chance to run the "
+"information is saved.  After all exit handlers have had a chance to run, the "
 "last exception to be raised is re-raised."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:45
+#: ../Doc/library/atexit.rst:48
 msgid ""
 "This function returns *func*, which makes it possible to use it as a "
 "decorator."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:51
+#: ../Doc/library/atexit.rst:52
 msgid ""
-"Remove *func* from the list of functions to be run at interpreter shutdown.  "
-"After calling :func:`unregister`, *func* is guaranteed not to be called when "
-"the interpreter shuts down, even if it was registered more than once.  :func:"
-"`unregister` silently does nothing if *func* was not previously registered."
+"Starting new threads or calling :func:`os.fork` from a registered function "
+"can lead to race condition between the main Python runtime thread freeing "
+"thread states while internal :mod:`threading` routines or the new process "
+"try to use that state. This can lead to crashes rather than clean shutdown."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:61
+#: ../Doc/library/atexit.rst:58
+msgid ""
+"Attempts to start a new thread or :func:`os.fork` a new process in a "
+"registered function now leads to :exc:`RuntimeError`."
+msgstr ""
+
+#: ../Doc/library/atexit.rst:64
+msgid ""
+"Remove *func* from the list of functions to be run at interpreter shutdown. :"
+"func:`unregister` silently does nothing if *func* was not previously "
+"registered.  If *func* has been registered more than once, every occurrence "
+"of that function in the :mod:`atexit` call stack will be removed.  Equality "
+"comparisons (``==``) are used internally during unregistration, so function "
+"references do not need to have matching identities."
+msgstr ""
+
+#: ../Doc/library/atexit.rst:74
 msgid "Module :mod:`readline`"
 msgstr ""
 
-#: ../Doc/library/atexit.rst:61
+#: ../Doc/library/atexit.rst:75
 msgid ""
 "Useful example of :mod:`atexit` to read and write :mod:`readline` history "
 "files."
 msgstr ""
 
-#: ../Doc/library/atexit.rst:68
+#: ../Doc/library/atexit.rst:82
 msgid ":mod:`atexit` Example"
 msgstr ""
 
-#: ../Doc/library/atexit.rst:70
+#: ../Doc/library/atexit.rst:84
 msgid ""
 "The following simple example demonstrates how a module can initialize a "
 "counter from a file when it is imported and save the counter's updated value "
@@ -104,16 +127,58 @@ msgid ""
 "making an explicit call into this module at termination. ::"
 msgstr ""
 
-#: ../Doc/library/atexit.rst:92
+#: ../Doc/library/atexit.rst:89
+msgid ""
+"try:\n"
+"    with open('counterfile') as infile:\n"
+"        _count = int(infile.read())\n"
+"except FileNotFoundError:\n"
+"    _count = 0\n"
+"\n"
+"def incrcounter(n):\n"
+"    global _count\n"
+"    _count = _count + n\n"
+"\n"
+"def savecounter():\n"
+"    with open('counterfile', 'w') as outfile:\n"
+"        outfile.write('%d' % _count)\n"
+"\n"
+"import atexit\n"
+"\n"
+"atexit.register(savecounter)"
+msgstr ""
+
+#: ../Doc/library/atexit.rst:107
 msgid ""
 "Positional and keyword arguments may also be passed to :func:`register` to "
 "be passed along to the registered function when it is called::"
 msgstr ""
 
-#: ../Doc/library/atexit.rst:104
+#: ../Doc/library/atexit.rst:110
+msgid ""
+"def goodbye(name, adjective):\n"
+"    print('Goodbye %s, it was %s to meet you.' % (name, adjective))\n"
+"\n"
+"import atexit\n"
+"\n"
+"atexit.register(goodbye, 'Donny', 'nice')\n"
+"# or:\n"
+"atexit.register(goodbye, adjective='nice', name='Donny')"
+msgstr ""
+
+#: ../Doc/library/atexit.rst:119
 msgid "Usage as a :term:`decorator`::"
 msgstr ""
 
-#: ../Doc/library/atexit.rst:112
+#: ../Doc/library/atexit.rst:121
+msgid ""
+"import atexit\n"
+"\n"
+"@atexit.register\n"
+"def goodbye():\n"
+"    print('You are now leaving the Python sector.')"
+msgstr ""
+
+#: ../Doc/library/atexit.rst:127
 msgid "This only works with functions that can be called without arguments."
 msgstr ""

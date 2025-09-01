@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 23:28+0530\n"
+"POT-Creation-Date: 2025-09-01 06:24+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/library/codeop.rst:2
-msgid ":mod:`codeop` --- Compile Python code"
+msgid ":mod:`!codeop` --- Compile Python code"
 msgstr ""
 
 #: ../Doc/library/codeop.rst:10
@@ -39,13 +40,13 @@ msgstr ""
 
 #: ../Doc/library/codeop.rst:22
 msgid ""
-"Being able to tell if a line of input completes a Python  statement: in "
+"Being able to tell if a line of input completes a Python statement: in "
 "short, telling whether to print '``>>>``' or '``...``' next."
 msgstr ""
 
 #: ../Doc/library/codeop.rst:25
 msgid ""
-"Remembering which future statements the user has entered, so  subsequent "
+"Remembering which future statements the user has entered, so subsequent "
 "input can be compiled with these in effect."
 msgstr ""
 
@@ -62,9 +63,9 @@ msgstr ""
 #: ../Doc/library/codeop.rst:35
 msgid ""
 "Tries to compile *source*, which should be a string of Python code and "
-"return a code object if *source* is valid Python code. In that case, the "
+"return a code object if *source* is valid Python code.  In that case, the "
 "filename attribute of the code object will be *filename*, which defaults to "
-"``'<input>'``. Returns ``None`` if *source* is *not* valid Python code, but "
+"``'<input>'``.  Returns ``None`` if *source* is *not* valid Python code, but "
 "is a prefix of valid Python code."
 msgstr ""
 
@@ -78,11 +79,12 @@ msgstr ""
 #: ../Doc/library/codeop.rst:45
 msgid ""
 "The *symbol* argument determines whether *source* is compiled as a statement "
-"(``'single'``, the default) or as an :term:`expression` (``'eval'``).  Any "
-"other value will cause :exc:`ValueError` to  be raised."
+"(``'single'``, the default), as a sequence of :term:`statement` (``'exec'``) "
+"or as an :term:`expression` (``'eval'``).  Any other value will cause :exc:"
+"`ValueError` to be raised."
 msgstr ""
 
-#: ../Doc/library/codeop.rst:51
+#: ../Doc/library/codeop.rst:52
 msgid ""
 "It is possible (but not likely) that the parser stops parsing with a "
 "successful outcome before reaching the end of the source; in this case, "
@@ -91,19 +93,20 @@ msgid ""
 "This will be fixed once the API for the parser is better."
 msgstr ""
 
-#: ../Doc/library/codeop.rst:60
+#: ../Doc/library/codeop.rst:61
 msgid ""
-"Instances of this class have :meth:`__call__` methods identical in signature "
-"to the built-in function :func:`compile`, but with the difference that if "
-"the instance compiles program text containing a :mod:`__future__` statement, "
-"the instance 'remembers' and compiles all subsequent program texts with the "
-"statement in force."
+"Instances of this class have :meth:`~object.__call__` methods identical in "
+"signature to the built-in function :func:`compile`, but with the difference "
+"that if the instance compiles program text containing a :mod:`__future__` "
+"statement, the instance 'remembers' and compiles all subsequent program "
+"texts with the statement in force."
 msgstr ""
 
-#: ../Doc/library/codeop.rst:69
+#: ../Doc/library/codeop.rst:70
 msgid ""
-"Instances of this class have :meth:`__call__` methods identical in signature "
-"to :func:`compile_command`; the difference is that if the instance compiles "
-"program text containing a ``__future__`` statement, the instance 'remembers' "
-"and compiles all subsequent program texts with the statement in force."
+"Instances of this class have :meth:`~object.__call__` methods identical in "
+"signature to :func:`compile_command`; the difference is that if the instance "
+"compiles program text containing a :mod:`__future__` statement, the instance "
+"'remembers' and compiles all subsequent program texts with the statement in "
+"force."
 msgstr ""

@@ -17,9 +17,9 @@ CPYTHON_CLONE := ../cpython/
 SPHINX_CONF := $(CPYTHON_CLONE)/Doc/conf.py
 LANGUAGE := hi_IN
 VENV := ~/.venvs/python-docs-i18n/
-PYTHON := $(shell which python3)
+PYTHON := $(shell which python3.13)
 MODE := html
-BRANCH = 3.7
+BRANCH = 3.13
 COMMIT =
 JOBS = auto
 
@@ -57,8 +57,8 @@ progress:
 
 .PHONY: merge
 merge: upgrade_venv
-ifneq "$(shell cd $(CPYTHON_CLONE) 2>/dev/null && git describe --contains --all HEAD)" "$(BRANCH)"
-	$(error "You're merging from a different branch:" "$(shell cd $(CPYTHON_CLONE) 2>/dev/null && git describe --contains --all HEAD)" vs "$(BRANCH)")
+ifneq "$(shell cd $(CPYTHON_CLONE) 2>/dev/null && git rev-parse --abbrev-ref HEAD)" "$(BRANCH)"
+	$(warning "Your ../cpython checkout is on branch $(shell cd $(CPYTHON_CLONE) 2>/dev/null && git rev-parse --abbrev-ref HEAD), expected $(BRANCH)")
 endif
 	(cd $(CPYTHON_CLONE)/Doc; rm -f build/NEWS)
 	(cd $(CPYTHON_CLONE); $(VENV)/bin/sphinx-build -Q -b gettext -D gettext_compact=0 Doc pot/)

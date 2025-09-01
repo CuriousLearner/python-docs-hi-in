@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 23:28+0530\n"
+"POT-Creation-Date: 2025-09-01 06:24+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/library/xml.dom.rst:2
-msgid ":mod:`xml.dom` --- The Document Object Model API"
+msgid ":mod:`!xml.dom` --- The Document Object Model API"
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:10
@@ -91,7 +92,7 @@ msgid ""
 "mapping requirements."
 msgstr ""
 
-#: ../Doc/library/xml.dom.rst:71
+#: ../Doc/library/xml.dom.rst:70
 msgid ""
 "`Document Object Model (DOM) Level 2 Specification <https://www.w3.org/"
 "TR/2000/REC-DOM-Level-2-Core-20001113/>`_"
@@ -101,7 +102,7 @@ msgstr ""
 msgid "The W3C recommendation upon which the Python DOM API is based."
 msgstr ""
 
-#: ../Doc/library/xml.dom.rst:74
+#: ../Doc/library/xml.dom.rst:73
 msgid ""
 "`Document Object Model (DOM) Level 1 Specification <https://www.w3.org/TR/"
 "REC-DOM-Level-1/>`_"
@@ -113,8 +114,8 @@ msgstr ""
 
 #: ../Doc/library/xml.dom.rst:76
 msgid ""
-"`Python Language Mapping Specification <http://www.omg.org/cgi-bin/doc?"
-"formal/02-11-05.pdf>`_"
+"`Python Language Mapping Specification <https://www.omg.org/spec/PYTH/1.2/"
+"PDF>`_"
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:77
@@ -368,8 +369,8 @@ msgstr ""
 
 #: ../Doc/library/xml.dom.rst:213
 msgid ""
-"Return true if the feature identified by the pair of strings *feature* and "
-"*version* is implemented."
+"Return ``True`` if the feature identified by the pair of strings *feature* "
+"and *version* is implemented."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:219
@@ -494,16 +495,16 @@ msgid ""
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:338
-msgid "Returns true if the node has any attributes."
+msgid "Return ``True`` if the node has any attributes."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:343
-msgid "Returns true if the node has any child nodes."
+msgid "Return ``True`` if the node has any child nodes."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:348
 msgid ""
-"Returns true if *other* refers to the same node as this node. This is "
+"Return ``True`` if *other* refers to the same node as this node. This is "
 "especially useful for DOM implementations which use any sort of proxy "
 "architecture (because more than one object can refer to the same node)."
 msgstr ""
@@ -770,12 +771,12 @@ msgid "Same as equivalent method in the :class:`Document` class."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:607
-msgid "Returns true if the element has an attribute named by *name*."
+msgid "Return ``True`` if the element has an attribute named by *name*."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:612
 msgid ""
-"Returns true if the element has an attribute named by *namespaceURI* and "
+"Return ``True`` if the element has an attribute named by *namespaceURI* and "
 "*localName*."
 msgstr ""
 
@@ -901,8 +902,8 @@ msgstr ""
 #: ../Doc/library/xml.dom.rst:736
 msgid ""
 "There are also experimental methods that give this class more mapping "
-"behavior. You can use them or you can use the standardized :meth:"
-"`getAttribute\\*` family of methods on the :class:`Element` objects."
+"behavior. You can use them or you can use the standardized :meth:`!"
+"getAttribute\\*` family of methods on the :class:`Element` objects."
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:744
@@ -1305,6 +1306,12 @@ msgid ""
 "The mapping from OMG IDL to Python defines accessor functions for IDL "
 "``attribute`` declarations in much the way the Java mapping does. Mapping "
 "the IDL declarations ::"
+msgstr ""
+
+#: ../Doc/library/xml.dom.rst:1005
+msgid ""
+"readonly attribute string someValue;\n"
+"         attribute string anotherValue;"
 msgstr ""
 
 #: ../Doc/library/xml.dom.rst:1008

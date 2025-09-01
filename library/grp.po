@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 23:28+0530\n"
+"POT-Creation-Date: 2025-09-01 06:24+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/library/grp.rst:2
-msgid ":mod:`grp` --- The group database"
+msgid ":mod:`!grp` --- The group database"
 msgstr ""
 
 #: ../Doc/library/grp.rst:10
@@ -27,73 +28,77 @@ msgid ""
 msgstr ""
 
 #: ../Doc/library/grp.rst:13
+msgid "Availability"
+msgstr ""
+
+#: ../Doc/library/grp.rst:15
 msgid ""
 "Group database entries are reported as a tuple-like object, whose attributes "
 "correspond to the members of the ``group`` structure (Attribute field below, "
-"see ``<pwd.h>``):"
+"see ``<grp.h>``):"
 msgstr ""
 
-#: ../Doc/library/grp.rst:18
+#: ../Doc/library/grp.rst:20
 msgid "Index"
 msgstr ""
 
-#: ../Doc/library/grp.rst:18
+#: ../Doc/library/grp.rst:20
 msgid "Attribute"
 msgstr ""
 
-#: ../Doc/library/grp.rst:18
+#: ../Doc/library/grp.rst:20
 msgid "Meaning"
 msgstr ""
 
-#: ../Doc/library/grp.rst:20
+#: ../Doc/library/grp.rst:22
 msgid "0"
 msgstr ""
 
-#: ../Doc/library/grp.rst:20
+#: ../Doc/library/grp.rst:22
 msgid "gr_name"
 msgstr ""
 
-#: ../Doc/library/grp.rst:20
+#: ../Doc/library/grp.rst:22
 msgid "the name of the group"
 msgstr ""
 
-#: ../Doc/library/grp.rst:22
+#: ../Doc/library/grp.rst:24
 msgid "1"
 msgstr ""
 
-#: ../Doc/library/grp.rst:22
+#: ../Doc/library/grp.rst:24
 msgid "gr_passwd"
 msgstr ""
 
-#: ../Doc/library/grp.rst:22
+#: ../Doc/library/grp.rst:24
 msgid "the (encrypted) group password; often empty"
 msgstr ""
 
-#: ../Doc/library/grp.rst:25
+#: ../Doc/library/grp.rst:27
 msgid "2"
 msgstr ""
 
-#: ../Doc/library/grp.rst:25
+#: ../Doc/library/grp.rst:27
 msgid "gr_gid"
 msgstr ""
 
-#: ../Doc/library/grp.rst:25
+#: ../Doc/library/grp.rst:27
 msgid "the numerical group ID"
 msgstr ""
 
-#: ../Doc/library/grp.rst:27
+#: ../Doc/library/grp.rst:29
 msgid "3"
 msgstr ""
 
-#: ../Doc/library/grp.rst:27
+#: ../Doc/library/grp.rst:29
 msgid "gr_mem"
 msgstr ""
 
-#: ../Doc/library/grp.rst:27
+#: ../Doc/library/grp.rst:29
 msgid "all the group member's  user names"
 msgstr ""
 
-#: ../Doc/library/grp.rst:31
+#: ../Doc/library/grp.rst:33
 msgid ""
 "The gid is an integer, name and password are strings, and the member list is "
 "a list of strings. (Note that most users are not explicitly listed as "
@@ -104,29 +109,28 @@ msgid ""
 "`getgrgid`.)"
 msgstr ""
 
-#: ../Doc/library/grp.rst:38
+#: ../Doc/library/grp.rst:40
 msgid "It defines the following items:"
 msgstr ""
 
-#: ../Doc/library/grp.rst:43
+#: ../Doc/library/grp.rst:45
 msgid ""
 "Return the group database entry for the given numeric group ID. :exc:"
 "`KeyError` is raised if the entry asked for cannot be found."
 msgstr ""
 
-#: ../Doc/library/grp.rst:46
+#: ../Doc/library/grp.rst:48
 msgid ""
-"Since Python 3.6 the support of non-integer arguments like floats or strings "
-"in :func:`getgrgid` is deprecated."
+":exc:`TypeError` is raised for non-integer arguments like floats or strings."
 msgstr ""
 
-#: ../Doc/library/grp.rst:52
+#: ../Doc/library/grp.rst:53
 msgid ""
 "Return the group database entry for the given group name. :exc:`KeyError` is "
 "raised if the entry asked for cannot be found."
 msgstr ""
 
-#: ../Doc/library/grp.rst:58
+#: ../Doc/library/grp.rst:59
 msgid "Return a list of all available group entries, in arbitrary order."
 msgstr ""
 
@@ -134,14 +138,6 @@ msgstr ""
 msgid "Module :mod:`pwd`"
 msgstr ""
 
-#: ../Doc/library/grp.rst:64
+#: ../Doc/library/grp.rst:65
 msgid "An interface to the user database, similar to this."
-msgstr ""
-
-#: ../Doc/library/grp.rst:66
-msgid "Module :mod:`spwd`"
-msgstr ""
-
-#: ../Doc/library/grp.rst:67
-msgid "An interface to the shadow password database, similar to this."
 msgstr ""
