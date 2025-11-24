@@ -37,7 +37,7 @@ How to Contribute
 You can contribute using:
 
 - Github
-- `transifex <https://www.transifex.com/python-doc/public/>`_
+- `transifex <https://explore.transifex.com/python-doc/>`_
 - Or just by opening `an issue on github <https://github.com/python/python-docs-hi-infr/issues>`_
 
 
