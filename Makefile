@@ -17,9 +17,9 @@ CPYTHON_CLONE := ../cpython/
 SPHINX_CONF := $(CPYTHON_CLONE)/Doc/conf.py
 LANGUAGE := hi_IN
 VENV := ~/.venvs/python-docs-i18n/
-PYTHON := $(shell which python3.14)
+PYTHON := $(shell which python3.15)
 MODE := html
-BRANCH = 3.14
+BRANCH = 3.15
 COMMIT =
 JOBS = auto
 
