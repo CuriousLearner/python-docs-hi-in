@@ -64,8 +64,8 @@ Step by step:
 
 .. code-block:: bash
 
-    # Git clone your github fork using ssh (replace JulienPalard):
-    git clone git@github.com:JulienPalard/python-docs-hi-in.git
+    # Git clone your github fork using ssh:
+    git clone git@github.com:CuriousLearner/python-docs-hi-in.git
 
     # Go to the cloned directory:
     cd python-docs-hi-in/
