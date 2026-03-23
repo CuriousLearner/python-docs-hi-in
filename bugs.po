@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,8 @@ msgstr ""
 #: ../Doc/bugs.rst:11
 msgid ""
 "It can be sometimes faster to fix bugs yourself and contribute patches to "
-"Python as it streamlines the process and involves less people. Learn how to :"
-"ref:`contribute <contributing-to-python>`."
+"Python as it streamlines the process and involves fewer people. Learn how "
+"to :ref:`contribute <contributing-to-python>`."
 msgstr ""
 
 #: ../Doc/bugs.rst:16
@@ -42,79 +42,79 @@ msgstr ""
 #: ../Doc/bugs.rst:18
 msgid ""
 "If you find a bug in this documentation or would like to propose an "
-"improvement, please submit a bug report on the :ref:`tracker <using-the-"
-"tracker>`.  If you have a suggestion on how to fix it, include that as well."
+"improvement, please submit a bug report on the :ref:`issue tracker <using-"
+"the-tracker>`.  If you have a suggestion on how to fix it, include that as "
+"well."
 msgstr ""
 
-#: ../Doc/bugs.rst:22
+#: ../Doc/bugs.rst:24
+msgid ""
+"If the bug or suggested improvement concerns the translation of this "
+"documentation, submit the report to the `translation’s repository "
+"<TRANSLATION_REPO_>`_ instead."
+msgstr ""
+
+#: ../Doc/bugs.rst:28
 msgid ""
 "You can also open a discussion item on our `Documentation Discourse forum "
 "<https://discuss.python.org/c/documentation/26>`_."
 msgstr ""
 
-#: ../Doc/bugs.rst:25
+#: ../Doc/bugs.rst:31
 msgid ""
 "If you find a bug in the theme (HTML / CSS / JavaScript) of the "
-"documentation, please submit a bug report on the `python-doc-theme bug "
+"documentation, please submit a bug report on the `python-doc-theme issue "
 "tracker <https://github.com/python/python-docs-theme>`_."
 msgstr ""
 
-#: ../Doc/bugs.rst:29
-msgid ""
-"If you're short on time, you can also email documentation bug reports to "
-"docs@python.org (behavioral bugs can be sent to python-list@python.org). "
-"'docs@' is a mailing list run by volunteers; your request will be noticed, "
-"though it may take a while to be processed."
-msgstr ""
-
-#: ../Doc/bugs.rst:36
+#: ../Doc/bugs.rst:37
 msgid "`Documentation bugs`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:37
+#: ../Doc/bugs.rst:38
 msgid ""
 "A list of documentation bugs that have been submitted to the Python issue "
 "tracker."
 msgstr ""
 
-#: ../Doc/bugs.rst:39
+#: ../Doc/bugs.rst:40
 msgid "`Issue Tracking <https://devguide.python.org/tracker/>`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:40
+#: ../Doc/bugs.rst:41
 msgid ""
 "Overview of the process involved in reporting an improvement on the tracker."
 msgstr ""
 
-#: ../Doc/bugs.rst:42
+#: ../Doc/bugs.rst:43
 msgid ""
 "`Helping with Documentation <https://devguide.python.org/docquality/#helping-"
 "with-documentation>`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:43
+#: ../Doc/bugs.rst:44
 msgid ""
 "Comprehensive guide for individuals that are interested in contributing to "
 "Python documentation."
 msgstr ""
 
-#: ../Doc/bugs.rst:45
+#: ../Doc/bugs.rst:46
 msgid ""
 "`Documentation Translations <https://devguide.python.org/documentation/"
 "translating/>`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:46
+#: ../Doc/bugs.rst:47
 msgid ""
 "A list of GitHub pages for documentation translation and their primary "
 "contacts."
 msgstr ""
 
-#: ../Doc/bugs.rst:52
+#: ../Doc/bugs.rst:53
 msgid "Using the Python issue tracker"
 msgstr ""
 
-#: ../Doc/bugs.rst:54
+#: ../Doc/bugs.rst:55
 msgid ""
 "Issue reports for Python itself should be submitted via the GitHub issues "
 "tracker (https://github.com/python/cpython/issues). The GitHub issues "
@@ -122,7 +122,7 @@ msgid ""
 "and submitted to the developers."
 msgstr ""
 
-#: ../Doc/bugs.rst:59
+#: ../Doc/bugs.rst:60
 msgid ""
 "The first step in filing a report is to determine whether the problem has "
 "already been reported.  The advantage in doing so, aside from saving the "
@@ -133,7 +133,7 @@ msgid ""
 "page."
 msgstr ""
 
-#: ../Doc/bugs.rst:66
+#: ../Doc/bugs.rst:67
 msgid ""
 "If the problem you're reporting is not already in the list, log in to "
 "GitHub. If you don't already have a GitHub account, create a new account "
@@ -141,23 +141,23 @@ msgid ""
 "anonymously."
 msgstr ""
 
-#: ../Doc/bugs.rst:71
+#: ../Doc/bugs.rst:72
 msgid ""
 "Being now logged in, you can submit an issue. Click on the \"New issue\" "
 "button in the top bar to report a new issue."
 msgstr ""
 
-#: ../Doc/bugs.rst:74
+#: ../Doc/bugs.rst:75
 msgid "The submission form has two fields, \"Title\" and \"Comment\"."
 msgstr ""
 
-#: ../Doc/bugs.rst:76
+#: ../Doc/bugs.rst:77
 msgid ""
 "For the \"Title\" field, enter a *very* short description of the problem; "
 "fewer than ten words is good."
 msgstr ""
 
-#: ../Doc/bugs.rst:79
+#: ../Doc/bugs.rst:80
 msgid ""
 "In the \"Comment\" field, describe the problem in detail, including what you "
 "expected to happen and what did happen.  Be sure to include whether any "
@@ -165,42 +165,42 @@ msgid ""
 "were using (including version information as appropriate)."
 msgstr ""
 
-#: ../Doc/bugs.rst:84
+#: ../Doc/bugs.rst:85
 msgid ""
 "Each issue report will be reviewed by a developer who will determine what "
 "needs to be done to correct the problem. You will receive an update each "
 "time an action is taken on the issue."
 msgstr ""
 
-#: ../Doc/bugs.rst:91
+#: ../Doc/bugs.rst:92
 msgid ""
 "`How to Report Bugs Effectively <https://www.chiark.greenend.org.uk/"
 "~sgtatham/bugs.html>`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:92
+#: ../Doc/bugs.rst:93
 msgid ""
 "Article which goes into some detail about how to create a useful bug report. "
 "This describes what kind of information is useful and why it is useful."
 msgstr ""
 
-#: ../Doc/bugs.rst:95
+#: ../Doc/bugs.rst:96
 msgid ""
 "`Bug Writing Guidelines <https://bugzilla.mozilla.org/page.cgi?id=bug-"
 "writing.html>`_"
 msgstr ""
 
-#: ../Doc/bugs.rst:96
+#: ../Doc/bugs.rst:97
 msgid ""
 "Information about writing a good bug report.  Some of this is specific to "
 "the Mozilla project, but describes general good practices."
 msgstr ""
 
-#: ../Doc/bugs.rst:102
+#: ../Doc/bugs.rst:103
 msgid "Getting started contributing to Python yourself"
 msgstr ""
 
-#: ../Doc/bugs.rst:104
+#: ../Doc/bugs.rst:105
 msgid ""
 "Beyond just reporting bugs that you find, you are also welcome to submit "
 "patches to fix them.  You can find more information on how to get started "

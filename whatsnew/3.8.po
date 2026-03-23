@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,19 +36,19 @@ msgid ""
 "`changelog <changelog>`."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:61
+#: ../Doc/whatsnew/3.8.rst:60
 msgid "Summary -- Release highlights"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:72
+#: ../Doc/whatsnew/3.8.rst:71
 msgid "New Features"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:75
+#: ../Doc/whatsnew/3.8.rst:74
 msgid "Assignment expressions"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:77
+#: ../Doc/whatsnew/3.8.rst:76
 msgid ""
 "There is new syntax ``:=`` that assigns values to variables as part of a "
 "larger expression. It is affectionately known as \"the walrus operator\" due "
@@ -55,77 +56,77 @@ msgid ""
 "org/wiki/Walrus#/media/File:Pacific_Walrus_-_Bull_(8247646168).jpg>`_."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:82
+#: ../Doc/whatsnew/3.8.rst:81
 msgid ""
 "In this example, the assignment expression helps avoid calling :func:`len` "
 "twice::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:85
+#: ../Doc/whatsnew/3.8.rst:84
 msgid ""
 "if (n := len(a)) > 10:\n"
 "    print(f\"List is too long ({n} elements, expected <= 10)\")"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:88
+#: ../Doc/whatsnew/3.8.rst:87
 msgid ""
 "A similar benefit arises during regular expression matching where match "
 "objects are needed twice, once to test whether a match occurred and another "
 "to extract a subgroup::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:92
+#: ../Doc/whatsnew/3.8.rst:91
 msgid ""
 "discount = 0.0\n"
 "if (mo := re.search(r'(\\d+)% discount', advertisement)):\n"
 "    discount = float(mo.group(1)) / 100.0"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:96
+#: ../Doc/whatsnew/3.8.rst:95
 msgid ""
 "The operator is also useful with while-loops that compute a value to test "
 "loop termination and then need that same value again in the body of the "
 "loop::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:100
+#: ../Doc/whatsnew/3.8.rst:99
 msgid ""
 "# Loop over fixed length blocks\n"
 "while (block := f.read(256)) != '':\n"
 "    process(block)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:104
+#: ../Doc/whatsnew/3.8.rst:103
 msgid ""
 "Another motivating use case arises in list comprehensions where a value "
 "computed in a filtering condition is also needed in the expression body::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:108
+#: ../Doc/whatsnew/3.8.rst:107
 msgid ""
 "[clean_name.title() for name in names\n"
 " if (clean_name := normalize('NFC', name)) in allowed_names]"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:111
+#: ../Doc/whatsnew/3.8.rst:110
 msgid ""
 "Try to limit use of the walrus operator to clean cases that reduce "
 "complexity and improve readability."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:114
+#: ../Doc/whatsnew/3.8.rst:113
 msgid "See :pep:`572` for a full description."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:116
+#: ../Doc/whatsnew/3.8.rst:115
 msgid "(Contributed by Emily Morehouse in :issue:`35224`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:120
+#: ../Doc/whatsnew/3.8.rst:119
 msgid "Positional-only parameters"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:122
+#: ../Doc/whatsnew/3.8.rst:121
 msgid ""
 "There is a new function parameter syntax ``/`` to indicate that some "
 "function parameters must be specified positionally and cannot be used as "
@@ -134,63 +135,63 @@ msgid ""
 "python.org/development-tools/clinic/>`__ tool."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:128
+#: ../Doc/whatsnew/3.8.rst:127
 msgid ""
 "In the following example, parameters *a* and *b* are positional-only, while "
 "*c* or *d* can be positional or keyword, and *e* or *f* are required to be "
 "keywords::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:132
+#: ../Doc/whatsnew/3.8.rst:131
 msgid ""
 "def f(a, b, /, c, d, *, e, f):\n"
 "    print(a, b, c, d, e, f)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:135
+#: ../Doc/whatsnew/3.8.rst:134
 msgid "The following is a valid call::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:137
+#: ../Doc/whatsnew/3.8.rst:136
 msgid "f(10, 20, 30, d=40, e=50, f=60)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:139
+#: ../Doc/whatsnew/3.8.rst:138
 msgid "However, these are invalid calls::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:141
+#: ../Doc/whatsnew/3.8.rst:140
 msgid ""
 "f(10, b=20, c=30, d=40, e=50, f=60)   # b cannot be a keyword argument\n"
 "f(10, 20, 30, 40, 50, f=60)           # e must be a keyword argument"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:144
+#: ../Doc/whatsnew/3.8.rst:143
 msgid ""
 "One use case for this notation is that it allows pure Python functions to "
 "fully emulate behaviors of existing C coded functions.  For example, the "
 "built-in :func:`divmod` function does not accept keyword arguments::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:148
+#: ../Doc/whatsnew/3.8.rst:147
 msgid ""
 "def divmod(a, b, /):\n"
 "    \"Emulate the built in divmod() function\"\n"
 "    return (a // b, a % b)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:152
+#: ../Doc/whatsnew/3.8.rst:151
 msgid ""
 "Another use case is to preclude keyword arguments when the parameter name is "
 "not helpful.  For example, the builtin :func:`len` function has the "
 "signature ``len(obj, /)``.  This precludes awkward calls such as::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:156
+#: ../Doc/whatsnew/3.8.rst:155
 msgid "len(obj='hello')  # The \"obj\" keyword argument impairs readability"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:158
+#: ../Doc/whatsnew/3.8.rst:157
 msgid ""
 "A further benefit of marking a parameter as positional-only is that it "
 "allows the parameter name to be changed in the future without risk of "
@@ -199,19 +200,19 @@ msgid ""
 "with the following function specification::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:164
+#: ../Doc/whatsnew/3.8.rst:163
 msgid ""
 "def quantiles(dist, /, *, n=4, method='exclusive')\n"
 "    ..."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:167
+#: ../Doc/whatsnew/3.8.rst:166
 msgid ""
 "Since the parameters to the left of ``/`` are not exposed as possible "
 "keywords, the parameters names remain available for use in ``**kwargs``::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:170
+#: ../Doc/whatsnew/3.8.rst:169
 msgid ""
 ">>> def f(a, b, /, **kwargs):\n"
 "...     print(a, b, kwargs)\n"
@@ -220,14 +221,14 @@ msgid ""
 "10 20 {'a': 1, 'b': 2, 'c': 3}"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:176
+#: ../Doc/whatsnew/3.8.rst:175
 msgid ""
 "This greatly simplifies the implementation of functions and methods that "
 "need to accept arbitrary keyword arguments.  For example, here is an excerpt "
 "from code in the :mod:`collections` module::"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:180
+#: ../Doc/whatsnew/3.8.rst:179
 msgid ""
 "class Counter(dict):\n"
 "\n"
@@ -235,19 +236,19 @@ msgid ""
 "        # Note \"iterable\" is a possible keyword argument"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:185
+#: ../Doc/whatsnew/3.8.rst:184
 msgid "See :pep:`570` for a full description."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:187
+#: ../Doc/whatsnew/3.8.rst:186
 msgid "(Contributed by Pablo Galindo in :issue:`36540`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:193
+#: ../Doc/whatsnew/3.8.rst:192
 msgid "Parallel filesystem cache for compiled bytecode files"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:195
+#: ../Doc/whatsnew/3.8.rst:194
 msgid ""
 "The new :envvar:`PYTHONPYCACHEPREFIX` setting (also available as :option:`-"
 "X` ``pycache_prefix``) configures the implicit bytecode cache to use a "
@@ -255,28 +256,28 @@ msgid ""
 "subdirectories within each source directory."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:201
+#: ../Doc/whatsnew/3.8.rst:200
 msgid ""
 "The location of the cache is reported in :data:`sys.pycache_prefix` (:const:"
 "`None` indicates the default location in ``__pycache__`` subdirectories)."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:205
+#: ../Doc/whatsnew/3.8.rst:204
 msgid "(Contributed by Carl Meyer in :issue:`33499`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:209
+#: ../Doc/whatsnew/3.8.rst:208
 msgid "Debug build uses the same ABI as release build"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:211
+#: ../Doc/whatsnew/3.8.rst:210
 msgid ""
 "Python now uses the same ABI whether it's built in release or debug mode. On "
 "Unix, when Python is built in debug mode, it is now possible to load C "
 "extensions built in release mode and C extensions built using the stable ABI."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:215
+#: ../Doc/whatsnew/3.8.rst:214
 msgid ""
 "Release builds and :ref:`debug builds <debug-build>` are now ABI compatible: "
 "defining the ``Py_DEBUG`` macro no longer implies the ``Py_TRACE_REFS`` "
@@ -287,7 +288,7 @@ msgid ""
 "by Victor Stinner in :issue:`36465`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:223
+#: ../Doc/whatsnew/3.8.rst:222
 msgid ""
 "On Unix, C extensions are no longer linked to libpython except on Android "
 "and Cygwin. It is now possible for a statically linked Python to load a C "
@@ -295,14 +296,14 @@ msgid ""
 "Stinner in :issue:`21536`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:230
+#: ../Doc/whatsnew/3.8.rst:229
 msgid ""
 "On Unix, when Python is built in debug mode, import now also looks for C "
 "extensions compiled in release mode and for C extensions compiled with the "
 "stable ABI. (Contributed by Victor Stinner in :issue:`36722`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:235
+#: ../Doc/whatsnew/3.8.rst:234
 msgid ""
 "To embed Python into an application, a new ``--embed`` option must be passed "
 "to ``python3-config --libs --embed`` to get ``-lpython3.8`` (link the "
@@ -311,7 +312,7 @@ msgid ""
 "(without ``--embed``) if the previous command fails."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:241
+#: ../Doc/whatsnew/3.8.rst:240
 msgid ""
 "Add a pkg-config ``python-3.8-embed`` module to embed Python into an "
 "application: ``pkg-config python-3.8-embed --libs`` includes ``-"
@@ -321,7 +322,7 @@ msgid ""
 "the Python version)."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:247
+#: ../Doc/whatsnew/3.8.rst:246
 msgid ""
 "On the other hand, ``pkg-config python3.8 --libs`` no longer contains ``-"
 "lpython3.8``. C extensions must not be linked to libpython (except on "
@@ -330,11 +331,11 @@ msgid ""
 "`36721`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:256
+#: ../Doc/whatsnew/3.8.rst:255
 msgid "f-strings support ``=`` for self-documenting expressions and debugging"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:258
+#: ../Doc/whatsnew/3.8.rst:257
 msgid ""
 "Added an ``=`` specifier to :term:`f-string`\\s. An f-string such as "
 "``f'{expr=}'`` will expand to the text of the expression, an equal sign, "
@@ -349,7 +350,7 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:270
 msgid ""
-">>> delta = date.today() - member_since\n"
+">>> delta = dt.date.today() - member_since\n"
 ">>> f'{user=!s}  {delta.days=:,d}'\n"
 "'user=eric_idle  delta.days=16,075'"
 msgstr ""
@@ -677,9 +678,9 @@ msgstr ""
 #: ../Doc/whatsnew/3.8.rst:430
 msgid ""
 ">>> def parse(family):\n"
-"        lastname, *members = family.split()\n"
-"        return lastname.upper(), *members\n"
-"\n"
+"...     lastname, *members = family.split()\n"
+"...     return lastname.upper(), *members\n"
+"...\n"
 ">>> parse('simpsons homer marge bart lisa maggie')\n"
 "('SIMPSONS', 'homer', 'marge', 'bart', 'lisa', 'maggie')"
 msgstr ""
@@ -828,8 +829,8 @@ msgid ""
 "element is a callable with a ``(obj, state)`` signature.  This allows the "
 "direct control over the state-updating behavior of a specific object.  If "
 "not *None*, this callable will have priority over the object's :meth:"
-"`~__setstate__` method. (Contributed by Pierre Glaser and Olivier Grisel in :"
-"issue:`35900`.)"
+"`~object.__setstate__` method. (Contributed by Pierre Glaser and Olivier "
+"Grisel in :issue:`35900`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:543
@@ -994,7 +995,7 @@ msgstr ""
 msgid "(Contributed by Yury Selivanov in :issue:`37028`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:651 ../Doc/whatsnew/3.8.rst:1970
+#: ../Doc/whatsnew/3.8.rst:651 ../Doc/whatsnew/3.8.rst:1973
 msgid ""
 "The exception :class:`asyncio.CancelledError` now inherits from :class:"
 "`BaseException` rather than :class:`Exception` and no longer inherits from :"
@@ -1570,9 +1571,9 @@ msgid ""
 "system. Specifically, :func:`os.stat` will now traverse anything supported "
 "by the operating system, while :func:`os.lstat` will only open reparse "
 "points that identify as \"name surrogates\" while others are opened as for :"
-"func:`os.stat`. In all cases, :attr:`stat_result.st_mode` will only have "
+"func:`os.stat`. In all cases, :attr:`os.stat_result.st_mode` will only have "
 "``S_IFLNK`` set for symbolic links and not other kinds of reparse points. To "
-"identify other kinds of reparse point, check the new :attr:`stat_result."
+"identify other kinds of reparse point, check the new :attr:`os.stat_result."
 "st_reparse_tag` attribute."
 msgstr ""
 
@@ -1604,7 +1605,7 @@ msgid ""
 "Storchaka in :issue:`33721`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1062 ../Doc/whatsnew/3.8.rst:1965
+#: ../Doc/whatsnew/3.8.rst:1062 ../Doc/whatsnew/3.8.rst:1968
 msgid ""
 ":func:`~os.path.expanduser` on Windows now prefers the :envvar:`USERPROFILE` "
 "environment variable and does not use :envvar:`HOME`, which is not normally "
@@ -1860,7 +1861,7 @@ msgid ""
 "(:func:`gc.collect`). (Contributed by Victor Stinner in :issue:`36829`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1250 ../Doc/whatsnew/3.8.rst:2350
+#: ../Doc/whatsnew/3.8.rst:1250 ../Doc/whatsnew/3.8.rst:2353
 msgid "tarfile"
 msgstr ""
 
@@ -1913,23 +1914,22 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1288
 msgid ""
-"Added methods :meth:`~tkinter.Spinbox.selection_from`, :meth:`~tkinter."
-"Spinbox.selection_present`, :meth:`~tkinter.Spinbox.selection_range` and :"
-"meth:`~tkinter.Spinbox.selection_to` in the :class:`tkinter.Spinbox` class. "
-"(Contributed by Juliette Monsel in :issue:`34829`.)"
+"Added methods :meth:`!selection_from`, :meth:`!selection_present`, :meth:`!"
+"selection_range` and :meth:`!selection_to` in the :class:`!tkinter.Spinbox` "
+"class. (Contributed by Juliette Monsel in :issue:`34829`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1295
 msgid ""
-"Added method :meth:`~tkinter.Canvas.moveto` in the :class:`tkinter.Canvas` "
-"class. (Contributed by Juliette Monsel in :issue:`23831`.)"
+"Added method :meth:`!moveto` in the :class:`!tkinter.Canvas` class. "
+"(Contributed by Juliette Monsel in :issue:`23831`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1299
 msgid ""
-"The :class:`tkinter.PhotoImage` class now has :meth:`~tkinter.PhotoImage."
-"transparency_get` and :meth:`~tkinter.PhotoImage.transparency_set` methods.  "
-"(Contributed by Zackery Spytz in :issue:`25451`.)"
+"The :class:`!tkinter.PhotoImage` class now has :meth:`!transparency_get` "
+"and :meth:`!transparency_set` methods.  (Contributed by Zackery Spytz in :"
+"issue:`25451`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1306
@@ -2125,7 +2125,7 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1434
 msgid ""
-"The :mod:`xml.etree.ElementTree` module provides a new function :func:`–xml."
+"The :mod:`xml.etree.ElementTree` module provides a new function :func:`~xml."
 "etree.ElementTree.canonicalize` that implements C14N 2.0. (Contributed by "
 "Stefan Behnel in :issue:`13611`.)"
 msgstr ""
@@ -2358,7 +2358,7 @@ msgid ":c:func:`Py_XINCREF`, :c:func:`Py_XDECREF`"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1576
-msgid ":c:func:`PyObject_INIT`, :c:func:`PyObject_INIT_VAR`"
+msgid ":c:macro:`!PyObject_INIT`, :c:macro:`!PyObject_INIT_VAR`"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1577
@@ -2516,7 +2516,7 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1680
 msgid ""
-"The :func:`asyncio.coroutine` :term:`decorator` is deprecated and will be "
+"The :deco:`!asyncio.coroutine` :term:`decorator` is deprecated and will be "
 "removed in version 3.10.  Instead of ``@asyncio.coroutine``, use :keyword:"
 "`async def` instead. (Contributed by Andrew Svetlov in :issue:`36921`.)"
 msgstr ""
@@ -2543,28 +2543,28 @@ msgstr ""
 #: ../Doc/whatsnew/3.8.rst:1699
 msgid ""
 "The following functions and methods are deprecated in the :mod:`gettext` "
-"module: :func:`~gettext.lgettext`, :func:`~gettext.ldgettext`, :func:"
-"`~gettext.lngettext` and :func:`~gettext.ldngettext`. They return encoded "
-"bytes, and it's possible that you will get unexpected Unicode-related "
-"exceptions if there are encoding problems with the translated strings. It's "
-"much better to use alternatives which return Unicode strings in Python 3. "
-"These functions have been broken for a long time."
+"module: :func:`!lgettext`, :func:`!ldgettext`, :func:`!lngettext` and :func:"
+"`!ldngettext`. They return encoded bytes, and it's possible that you will "
+"get unexpected Unicode-related exceptions if there are encoding problems "
+"with the translated strings. It's much better to use alternatives which "
+"return Unicode strings in Python 3. These functions have been broken for a "
+"long time."
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1707
 msgid ""
-"Function :func:`~gettext.bind_textdomain_codeset`, methods :meth:`~gettext."
-"NullTranslations.output_charset` and :meth:`~gettext.NullTranslations."
-"set_output_charset`, and the *codeset* parameter of functions :func:"
-"`~gettext.translation` and :func:`~gettext.install` are also deprecated, "
-"since they are only used for the ``l*gettext()`` functions. (Contributed by "
-"Serhiy Storchaka in :issue:`33710`.)"
+"Function :func:`!bind_textdomain_codeset`, methods :meth:`!NullTranslations."
+"output_charset` and :meth:`!NullTranslations.set_output_charset`, and the "
+"*codeset* parameter of functions :func:`~gettext.translation` and :func:"
+"`~gettext.install` are also deprecated, since they are only used for the "
+"``l*gettext()`` functions. (Contributed by Serhiy Storchaka in :issue:"
+"`33710`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1715
 msgid ""
-"The :meth:`~threading.Thread.isAlive` method of :class:`threading.Thread` "
-"has been deprecated. (Contributed by Donghee Na in :issue:`35283`.)"
+"The :meth:`!isAlive` method of :class:`threading.Thread` has been "
+"deprecated. (Contributed by Donghee Na in :issue:`35283`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1719
@@ -2584,7 +2584,7 @@ msgstr ""
 #: ../Doc/whatsnew/3.8.rst:1729
 msgid ""
 "*func* in :func:`functools.partialmethod`, :func:`weakref.finalize`, :meth:"
-"`profile.Profile.runcall`, :meth:`cProfile.Profile.runcall`, :meth:`bdb.Bdb."
+"`profile.Profile.runcall`, :meth:`!cProfile.Profile.runcall`, :meth:`bdb.Bdb."
 "runcall`, :meth:`trace.Trace.runfunc` and :func:`curses.wrapper`."
 msgstr ""
 
@@ -2601,16 +2601,15 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1737
 msgid ""
-"*callback* in :meth:`contextlib.ExitStack.callback`, :meth:`contextlib."
+"*callback* in :meth:`contextlib.ExitStack.callback`, :meth:`!contextlib."
 "AsyncExitStack.callback` and :meth:`contextlib.AsyncExitStack."
 "push_async_callback`."
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1740
 msgid ""
-"*c* and *typeid* in the :meth:`~multiprocessing.managers.Server.create` "
-"method of :class:`multiprocessing.managers.Server` and :class:"
-"`multiprocessing.managers.SharedMemoryServer`."
+"*c* and *typeid* in the :meth:`!create` method of :class:`!multiprocessing."
+"managers.Server` and :class:`!multiprocessing.managers.SharedMemoryServer`."
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1743
@@ -2641,20 +2640,20 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1760
 msgid ""
-"The :mod:`macpath` module, deprecated in Python 3.7, has been removed. "
+"The :mod:`!macpath` module, deprecated in Python 3.7, has been removed. "
 "(Contributed by Victor Stinner in :issue:`35471`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1763 ../Doc/whatsnew/3.8.rst:1882
+#: ../Doc/whatsnew/3.8.rst:1763 ../Doc/whatsnew/3.8.rst:1883
 msgid ""
-"The function :func:`platform.popen` has been removed, after having been "
+"The function :func:`!platform.popen` has been removed, after having been "
 "deprecated since Python 3.3: use :func:`os.popen` instead. (Contributed by "
 "Victor Stinner in :issue:`35345`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1767
 msgid ""
-"The function :func:`time.clock` has been removed, after having been "
+"The function :func:`!time.clock` has been removed, after having been "
 "deprecated since Python 3.3: use :func:`time.perf_counter` or :func:`time."
 "process_time` instead, depending on your requirements, to have well-defined "
 "behavior. (Contributed by Matthias Bussonnier in :issue:`36895`.)"
@@ -2715,7 +2714,7 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.8.rst:1803
 msgid ""
-"The functions :func:`sys.set_coroutine_wrapper` and :func:`sys."
+"The functions :func:`!sys.set_coroutine_wrapper` and :func:`!sys."
 "get_coroutine_wrapper` deprecated in Python 3.7 have been removed; :issue:"
 "`36933` (Contributed by Matthias Bussonnier.)"
 msgstr ""
@@ -2789,7 +2788,7 @@ msgid ""
 "`sys.is_finalizing`. (Contributed by Joannah Nanjekye in :issue:`36475`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1858 ../Doc/whatsnew/3.8.rst:2321
+#: ../Doc/whatsnew/3.8.rst:1858 ../Doc/whatsnew/3.8.rst:2324
 msgid "Changes in the Python API"
 msgstr ""
 
@@ -2805,13 +2804,14 @@ msgstr ""
 msgid ""
 ":class:`subprocess.Popen` can now use :func:`os.posix_spawn` in some cases "
 "for better performance. On Windows Subsystem for Linux and QEMU User "
-"Emulation, the :class:`Popen` constructor using :func:`os.posix_spawn` no "
-"longer raises an exception on errors like \"missing program\".  Instead the "
-"child process fails with a non-zero :attr:`~Popen.returncode`. (Contributed "
-"by Joannah Nanjekye and Victor Stinner in :issue:`35537`.)"
+"Emulation, the :class:`~subprocess.Popen` constructor using :func:`os."
+"posix_spawn` no longer raises an exception on errors like \"missing program"
+"\".  Instead the child process fails with a non-zero :attr:`~subprocess."
+"Popen.returncode`. (Contributed by Joannah Nanjekye and Victor Stinner in :"
+"issue:`35537`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1872
+#: ../Doc/whatsnew/3.8.rst:1873
 msgid ""
 "The *preexec_fn* argument of * :class:`subprocess.Popen` is no longer "
 "compatible with subinterpreters. The use of the parameter in a "
@@ -2819,20 +2819,20 @@ msgid ""
 "issue:`34651`, modified by Christian Heimes in :issue:`37951`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1878
+#: ../Doc/whatsnew/3.8.rst:1879
 msgid ""
-"The :meth:`imap.IMAP4.logout` method no longer silently ignores arbitrary "
+"The :meth:`imaplib.IMAP4.logout` method no longer silently ignores arbitrary "
 "exceptions. (Contributed by Victor Stinner in :issue:`36348`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1886
+#: ../Doc/whatsnew/3.8.rst:1887
 msgid ""
 "The :func:`statistics.mode` function no longer raises an exception when "
 "given multimodal data.  Instead, it returns the first mode encountered in "
 "the input data.  (Contributed by Raymond Hettinger in :issue:`35892`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1891
+#: ../Doc/whatsnew/3.8.rst:1892
 msgid ""
 "The :meth:`~tkinter.ttk.Treeview.selection` method of the :class:`tkinter."
 "ttk.Treeview` class no longer takes arguments.  Using it with arguments for "
@@ -2841,22 +2841,24 @@ msgid ""
 "selection.  (Contributed by Serhiy Storchaka in :issue:`31508`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1897
+#: ../Doc/whatsnew/3.8.rst:1898
 msgid ""
-"The :meth:`writexml`, :meth:`toxml` and :meth:`toprettyxml` methods of :mod:"
-"`xml.dom.minidom`, and the :meth:`write` method of :mod:`xml.etree`, now "
-"preserve the attribute order specified by the user. (Contributed by Diego "
-"Rojas and Raymond Hettinger in :issue:`34160`.)"
+"The :meth:`~xml.dom.minidom.Node.writexml`, :meth:`~xml.dom.minidom.Node."
+"toxml` and :meth:`~xml.dom.minidom.Node.toprettyxml` methods of :mod:`xml."
+"dom.minidom` and the :meth:`~xml.etree.ElementTree.ElementTree.write` method "
+"of :mod:`xml.etree.ElementTree` now preserve the attribute order specified "
+"by the user. (Contributed by Diego Rojas and Raymond Hettinger in :issue:"
+"`34160`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1902
+#: ../Doc/whatsnew/3.8.rst:1905
 msgid ""
 "A :mod:`dbm.dumb` database opened with flags ``'r'`` is now read-only. :func:"
 "`dbm.dumb.open` with flags ``'r'`` and ``'w'`` no longer creates a database "
 "if it does not exist. (Contributed by Serhiy Storchaka in :issue:`32749`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1907
+#: ../Doc/whatsnew/3.8.rst:1910
 msgid ""
 "The ``doctype()`` method defined in a subclass of :class:`~xml.etree."
 "ElementTree.XMLParser` will no longer be called and will emit a :exc:"
@@ -2866,7 +2868,7 @@ msgid ""
 "in :issue:`29209`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1914
+#: ../Doc/whatsnew/3.8.rst:1917
 msgid ""
 "A :exc:`RuntimeError` is now raised when the custom metaclass doesn't "
 "provide the ``__classcell__`` entry in the namespace passed to ``type."
@@ -2874,13 +2876,13 @@ msgid ""
 "(Contributed by Serhiy Storchaka in :issue:`23722`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1919
+#: ../Doc/whatsnew/3.8.rst:1922
 msgid ""
-"The :class:`cProfile.Profile` class can now be used as a context manager. "
-"(Contributed by Scott Sanderson in :issue:`29235`.)"
+"The :class:`cProfile.Profile <profile.Profile>` class can now be used as a "
+"context manager. (Contributed by Scott Sanderson in :issue:`29235`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1922
+#: ../Doc/whatsnew/3.8.rst:1925
 msgid ""
 ":func:`shutil.copyfile`, :func:`shutil.copy`, :func:`shutil.copy2`, :func:"
 "`shutil.copytree` and :func:`shutil.move` use platform-specific \"fast-copy"
@@ -2888,19 +2890,19 @@ msgid ""
 "section)."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1927
+#: ../Doc/whatsnew/3.8.rst:1930
 msgid ""
 ":func:`shutil.copyfile` default buffer size on Windows was changed from 16 "
 "KiB to 1 MiB."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1930
+#: ../Doc/whatsnew/3.8.rst:1933
 msgid ""
 "The ``PyGC_Head`` struct has changed completely.  All code that touched the "
 "struct member should be rewritten.  (See :issue:`33597`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1933
+#: ../Doc/whatsnew/3.8.rst:1936
 msgid ""
 "The :c:type:`PyInterpreterState` struct has been moved into the \"internal\" "
 "header files (specifically Include/internal/pycore_pystate.h).  An opaque "
@@ -2912,7 +2914,7 @@ msgid ""
 "functions to the public API).  (See :issue:`35886`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1943
+#: ../Doc/whatsnew/3.8.rst:1946
 msgid ""
 "The :meth:`mmap.flush() <mmap.mmap.flush>` method now returns ``None`` on "
 "success and raises an exception on error under all platforms.  Previously, "
@@ -2922,21 +2924,21 @@ msgid ""
 "(Contributed by Berker Peksag in :issue:`2122`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1950
+#: ../Doc/whatsnew/3.8.rst:1953
 msgid ""
 ":mod:`xml.dom.minidom` and :mod:`xml.sax` modules no longer process external "
 "entities by default. (Contributed by Christian Heimes in :issue:`17239`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1954
+#: ../Doc/whatsnew/3.8.rst:1957
 msgid ""
 "Deleting a key from a read-only :mod:`dbm` database (:mod:`dbm.dumb`, :mod:"
-"`dbm.gnu` or :mod:`dbm.ndbm`) raises :attr:`error` (:exc:`dbm.dumb.error`, :"
+"`dbm.gnu` or :mod:`dbm.ndbm`) raises :attr:`!error` (:exc:`dbm.dumb.error`, :"
 "exc:`dbm.gnu.error` or :exc:`dbm.ndbm.error`) instead of :exc:`KeyError`. "
 "(Contributed by Xiang Zhang in :issue:`33106`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1959
+#: ../Doc/whatsnew/3.8.rst:1962
 msgid ""
 "Simplified AST for literals.  All constants will be represented as :class:"
 "`ast.Constant` instances.  Instantiating old classes ``Num``, ``Str``, "
@@ -2944,7 +2946,7 @@ msgid ""
 "``Constant``. (Contributed by Serhiy Storchaka in :issue:`32892`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1975
+#: ../Doc/whatsnew/3.8.rst:1978
 msgid ""
 "The function :func:`asyncio.wait_for` now correctly waits for cancellation "
 "when using an instance of :class:`asyncio.Task`. Previously, upon reaching "
@@ -2952,18 +2954,18 @@ msgid ""
 "Pranskevichus in :issue:`32751`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1980
+#: ../Doc/whatsnew/3.8.rst:1983
 msgid ""
 "The function :func:`asyncio.BaseTransport.get_extra_info` now returns a safe "
 "to use socket object when 'socket' is passed to the *name* parameter. "
 "(Contributed by Yury Selivanov in :issue:`37027`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1984
+#: ../Doc/whatsnew/3.8.rst:1987
 msgid ":class:`asyncio.BufferedProtocol` has graduated to the stable API."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:1988
+#: ../Doc/whatsnew/3.8.rst:1991
 msgid ""
 "DLL dependencies for extension modules and DLLs loaded with :mod:`ctypes` on "
 "Windows are now resolved more securely. Only the system paths, the directory "
@@ -2978,14 +2980,14 @@ msgid ""
 "verified by the installer). (Contributed by Steve Dower in :issue:`36085`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2001
+#: ../Doc/whatsnew/3.8.rst:2004
 msgid ""
 "The header files and functions related to pgen have been removed after its "
 "replacement by a pure Python implementation. (Contributed by Pablo Galindo "
 "in :issue:`36623`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2005
+#: ../Doc/whatsnew/3.8.rst:2008
 msgid ""
 ":class:`types.CodeType` has a new parameter in the second position of the "
 "constructor (*posonlyargcount*) to support positional-only arguments defined "
@@ -2995,17 +2997,17 @@ msgid ""
 "code future-proof."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2012
+#: ../Doc/whatsnew/3.8.rst:2015
 msgid ""
 "The parameter ``digestmod`` for :func:`hmac.new` no longer uses the MD5 "
 "digest by default."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2016
+#: ../Doc/whatsnew/3.8.rst:2019
 msgid "Changes in the C API"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2018
+#: ../Doc/whatsnew/3.8.rst:2021
 msgid ""
 "The :c:struct:`PyCompilerFlags` structure got a new *cf_feature_version* "
 "field. It should be initialized to ``PY_MINOR_VERSION``. The field is "
@@ -3013,14 +3015,14 @@ msgid ""
 "in *cf_flags*. (Contributed by Guido van Rossum in :issue:`35766`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2024
+#: ../Doc/whatsnew/3.8.rst:2027
 msgid ""
 "The :c:func:`!PyEval_ReInitThreads` function has been removed from the C "
 "API. It should not be called explicitly: use :c:func:`PyOS_AfterFork_Child` "
 "instead. (Contributed by Victor Stinner in :issue:`36728`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2029
+#: ../Doc/whatsnew/3.8.rst:2032
 msgid ""
 "On Unix, C extensions are no longer linked to libpython except on Android "
 "and Cygwin. When Python is embedded, ``libpython`` must not be loaded with "
@@ -3031,7 +3033,7 @@ msgid ""
 "Stinner in :issue:`21536`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2037
+#: ../Doc/whatsnew/3.8.rst:2040
 msgid ""
 "Use of ``#`` variants of formats in parsing or building value (e.g. :c:func:"
 "`PyArg_ParseTuple`, :c:func:`Py_BuildValue`, :c:func:"
@@ -3040,21 +3042,21 @@ msgid ""
 "`arg-parsing` for detail. (Contributed by Inada Naoki in :issue:`36381`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2043
+#: ../Doc/whatsnew/3.8.rst:2046
 msgid ""
 "Instances of heap-allocated types (such as those created with :c:func:"
 "`PyType_FromSpec`) hold a reference to their type object. Increasing the "
 "reference count of these type objects has been moved from :c:func:"
 "`PyType_GenericAlloc` to the more low-level functions, :c:func:"
-"`PyObject_Init` and :c:func:`PyObject_INIT`. This makes types created "
+"`PyObject_Init` and :c:macro:`!PyObject_INIT`. This makes types created "
 "through :c:func:`PyType_FromSpec` behave like other classes in managed code."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2051
+#: ../Doc/whatsnew/3.8.rst:2054
 msgid ":ref:`Statically allocated types <static-types>` are not affected."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2053
+#: ../Doc/whatsnew/3.8.rst:2056
 msgid ""
 "For the vast majority of cases, there should be no side effect. However, "
 "types that manually increase the reference count after allocating an "
@@ -3063,26 +3065,26 @@ msgid ""
 "instance deallocation."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2059
+#: ../Doc/whatsnew/3.8.rst:2062
 msgid ""
 "To correctly port these types into 3.8, please apply the following changes:"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2062
+#: ../Doc/whatsnew/3.8.rst:2065
 msgid ""
 "Remove :c:macro:`Py_INCREF` on the type object after allocating an instance "
 "- if any. This may happen after calling :c:macro:`PyObject_New`, :c:macro:"
 "`PyObject_NewVar`, :c:func:`PyObject_GC_New`, :c:func:`PyObject_GC_NewVar`, "
-"or any other custom allocator that uses :c:func:`PyObject_Init` or :c:func:"
-"`PyObject_INIT`."
+"or any other custom allocator that uses :c:func:`PyObject_Init` or :c:macro:"
+"`!PyObject_INIT`."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2069 ../Doc/whatsnew/3.8.rst:2088
-#: ../Doc/whatsnew/3.8.rst:2107
+#: ../Doc/whatsnew/3.8.rst:2072 ../Doc/whatsnew/3.8.rst:2091
+#: ../Doc/whatsnew/3.8.rst:2110
 msgid "Example:"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2071
+#: ../Doc/whatsnew/3.8.rst:2074
 msgid ""
 "static foo_struct *\n"
 "foo_new(PyObject *type) {\n"
@@ -3097,13 +3099,13 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2085
+#: ../Doc/whatsnew/3.8.rst:2088
 msgid ""
 "Ensure that all custom ``tp_dealloc`` functions of heap-allocated types "
 "decrease the type's reference count."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2090
+#: ../Doc/whatsnew/3.8.rst:2093
 msgid ""
 "static void\n"
 "foo_dealloc(foo_struct *instance) {\n"
@@ -3116,25 +3118,25 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2102
+#: ../Doc/whatsnew/3.8.rst:2105
 msgid "(Contributed by Eddie Elizondo in :issue:`35810`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2104
+#: ../Doc/whatsnew/3.8.rst:2107
 msgid ""
 "The :c:macro:`Py_DEPRECATED()` macro has been implemented for MSVC. The "
 "macro now must be placed before the symbol name."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2109
+#: ../Doc/whatsnew/3.8.rst:2112
 msgid "Py_DEPRECATED(3.8) PyAPI_FUNC(int) Py_OldFunction(void);"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2113
+#: ../Doc/whatsnew/3.8.rst:2116
 msgid "(Contributed by Zackery Spytz in :issue:`33407`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2115
+#: ../Doc/whatsnew/3.8.rst:2118
 msgid ""
 "The interpreter does not pretend to support binary compatibility of "
 "extension types across feature releases, anymore.  A :c:type:`PyTypeObject` "
@@ -3144,18 +3146,18 @@ msgid ""
 "before reading :c:member:`~PyTypeObject.tp_finalize`)."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2122
+#: ../Doc/whatsnew/3.8.rst:2125
 msgid "(Contributed by Antoine Pitrou in :issue:`32388`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2124
+#: ../Doc/whatsnew/3.8.rst:2127
 msgid ""
 "The functions :c:func:`!PyNode_AddChild` and :c:func:`!PyParser_AddToken` "
 "now accept two additional ``int`` arguments *end_lineno* and "
 "*end_col_offset*."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2127
+#: ../Doc/whatsnew/3.8.rst:2130
 msgid ""
 "The :file:`libpython38.a` file to allow MinGW tools to link directly "
 "against :file:`python38.dll` is no longer included in the regular Windows "
@@ -3164,13 +3166,13 @@ msgid ""
 "package:"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2132
+#: ../Doc/whatsnew/3.8.rst:2135
 msgid ""
 "gendef - python38.dll > tmp.def\n"
 "dlltool --dllname python38.dll --def tmp.def --output-lib libpython38.a"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2137
+#: ../Doc/whatsnew/3.8.rst:2140
 msgid ""
 "The location of an installed :file:`pythonXY.dll` will depend on the "
 "installation options and the version and language of Windows. See :ref:"
@@ -3179,15 +3181,15 @@ msgid ""
 "the :file:`libs` directory under your Python installation."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2143
+#: ../Doc/whatsnew/3.8.rst:2146
 msgid "(Contributed by Steve Dower in :issue:`37351`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2147
+#: ../Doc/whatsnew/3.8.rst:2150
 msgid "CPython bytecode changes"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2149
+#: ../Doc/whatsnew/3.8.rst:2152
 msgid ""
 "The interpreter loop  has been simplified by moving the logic of unrolling "
 "the stack of blocks into the compiler.  The compiler emits now explicit "
@@ -3195,7 +3197,7 @@ msgid ""
 "code for :keyword:`break`, :keyword:`continue` and :keyword:`return`."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2155
+#: ../Doc/whatsnew/3.8.rst:2158
 msgid ""
 "Removed opcodes :opcode:`!BREAK_LOOP`, :opcode:`!CONTINUE_LOOP`, :opcode:`!"
 "SETUP_LOOP` and :opcode:`!SETUP_EXCEPT`.  Added new opcodes :opcode:`!"
@@ -3204,20 +3206,20 @@ msgid ""
 "WITH_CLEANUP_START`."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2161
+#: ../Doc/whatsnew/3.8.rst:2164
 msgid ""
 "(Contributed by Mark Shannon, Antoine Pitrou and Serhiy Storchaka in :issue:"
 "`17611`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2164
+#: ../Doc/whatsnew/3.8.rst:2167
 msgid ""
 "Added new opcode :opcode:`END_ASYNC_FOR` for handling exceptions raised when "
 "awaiting a next item in an :keyword:`async for` loop. (Contributed by Serhiy "
 "Storchaka in :issue:`33041`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2168
+#: ../Doc/whatsnew/3.8.rst:2171
 msgid ""
 "The :opcode:`MAP_ADD` now expects the value as the first element in the "
 "stack and the key as the second element. This change was made so the key is "
@@ -3225,22 +3227,22 @@ msgid ""
 "by :pep:`572`. (Contributed by Jörn Heissler in :issue:`35224`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2175
+#: ../Doc/whatsnew/3.8.rst:2178
 msgid "Demos and Tools"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2177
+#: ../Doc/whatsnew/3.8.rst:2180
 msgid ""
 "Added a benchmark script for timing various ways to access variables: "
 "``Tools/scripts/var_access_benchmark.py``. (Contributed by Raymond Hettinger "
 "in :issue:`35884`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2181
+#: ../Doc/whatsnew/3.8.rst:2184
 msgid "Here's a summary of performance improvements since Python 3.3:"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2183
+#: ../Doc/whatsnew/3.8.rst:2186
 msgid ""
 "Python version                       3.3     3.4     3.5     3.6     3.7     "
 "3.8\n"
@@ -3316,7 +3318,7 @@ msgid ""
 "0.3"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2228
+#: ../Doc/whatsnew/3.8.rst:2231
 msgid ""
 "The benchmarks were measured on an `Intel® Core™ i7-4960HQ processor "
 "<https://ark.intel.com/content/www/us/en/ark/products/76088/intel-core-"
@@ -3325,11 +3327,11 @@ msgid ""
 "benchmark script displays timings in nanoseconds."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2237
+#: ../Doc/whatsnew/3.8.rst:2240
 msgid "Notable changes in Python 3.8.1"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2239
+#: ../Doc/whatsnew/3.8.rst:2242
 msgid ""
 "Due to significant security concerns, the *reuse_address* parameter of :meth:"
 "`asyncio.loop.create_datagram_endpoint` is no longer supported. This is "
@@ -3339,22 +3341,22 @@ msgid ""
 "`37228`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2247
+#: ../Doc/whatsnew/3.8.rst:2250
 msgid "Notable changes in Python 3.8.2"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2249
+#: ../Doc/whatsnew/3.8.rst:2252
 msgid ""
 "Fixed a regression with the ``ignore`` callback of :func:`shutil.copytree`. "
 "The argument types are now str and List[str] again. (Contributed by Manuel "
 "Barkhau and Giampaolo Rodola in :gh:`83571`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2254
+#: ../Doc/whatsnew/3.8.rst:2257
 msgid "Notable changes in Python 3.8.3"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2256
+#: ../Doc/whatsnew/3.8.rst:2259
 msgid ""
 "The constant values of future flags in the :mod:`__future__` module are "
 "updated in order to prevent collision with compiler flags. Previously "
@@ -3362,11 +3364,11 @@ msgid ""
 "(Contributed by Batuhan Taskaya in :gh:`83743`)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2262
+#: ../Doc/whatsnew/3.8.rst:2265
 msgid "Notable changes in Python 3.8.8"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2264
+#: ../Doc/whatsnew/3.8.rst:2267
 msgid ""
 "Earlier Python versions allowed using both ``;`` and ``&`` as query "
 "parameter separators in :func:`urllib.parse.parse_qs` and :func:`urllib."
@@ -3378,11 +3380,11 @@ msgid ""
 "Adam Goldschmidt, Senthil Kumaran and Ken Jin in :issue:`42967`.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2275
+#: ../Doc/whatsnew/3.8.rst:2278
 msgid "Notable changes in Python 3.8.9"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2277
+#: ../Doc/whatsnew/3.8.rst:2280
 msgid ""
 "A security fix alters the :class:`ftplib.FTP` behavior to not trust the IPv4 "
 "address sent from the remote server when setting up a passive data channel.  "
@@ -3391,15 +3393,15 @@ msgid ""
 "instance to ``True``.  (See :gh:`87451`)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2284 ../Doc/whatsnew/3.8.rst:2304
+#: ../Doc/whatsnew/3.8.rst:2287 ../Doc/whatsnew/3.8.rst:2307
 msgid "Notable changes in Python 3.8.10"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2287
+#: ../Doc/whatsnew/3.8.rst:2290
 msgid "macOS 11.0 (Big Sur) and Apple Silicon Mac support"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2289
+#: ../Doc/whatsnew/3.8.rst:2292
 msgid ""
 "As of 3.8.10, Python now supports building and running on macOS 11 (Big Sur) "
 "and on Apple Silicon Macs (based on the ``ARM64`` architecture). A new "
@@ -3412,18 +3414,18 @@ msgid ""
 "on the oldest version in the range."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2299
+#: ../Doc/whatsnew/3.8.rst:2302
 msgid ""
 "(Originally contributed by Ronald Oussoren and Lawrence D'Anna in :gh:"
 "`85272`, with fixes by FX Coudert and Eli Rykoff, and backported to 3.8 by "
 "Maxime Bélanger and Ned Deily)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2307
+#: ../Doc/whatsnew/3.8.rst:2310
 msgid "urllib.parse"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2309
+#: ../Doc/whatsnew/3.8.rst:2312
 msgid ""
 "The presence of newline or tab characters in parts of a URL allows for some "
 "forms of attacks. Following the WHATWG specification that updates :rfc:"
@@ -3433,11 +3435,11 @@ msgid ""
 "variable ``urllib.parse._UNSAFE_URL_BYTES_TO_REMOVE``. (See :issue:`43882`)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2318
+#: ../Doc/whatsnew/3.8.rst:2321
 msgid "Notable changes in Python 3.8.12"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2323
+#: ../Doc/whatsnew/3.8.rst:2326
 msgid ""
 "Starting with Python 3.8.12 the :mod:`ipaddress` module no longer accepts "
 "any leading zeros in IPv4 address strings. Leading zeros are ambiguous and "
@@ -3447,17 +3449,17 @@ msgid ""
 "leading zeros."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2330
+#: ../Doc/whatsnew/3.8.rst:2333
 msgid ""
 "(Originally contributed by Christian Heimes in :issue:`36384`, and "
 "backported to 3.8 by Achraf Merzouki.)"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2334
+#: ../Doc/whatsnew/3.8.rst:2337
 msgid "Notable security feature in 3.8.14"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2336
+#: ../Doc/whatsnew/3.8.rst:2339
 msgid ""
 "Converting between :class:`int` and :class:`str` in bases other than 2 "
 "(binary), 4, 8 (octal), 16 (hexadecimal), or 32 such as base 10 (decimal) "
@@ -3470,11 +3472,11 @@ msgid ""
 "digits in string form."
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2347
+#: ../Doc/whatsnew/3.8.rst:2350
 msgid "Notable changes in 3.8.17"
 msgstr ""
 
-#: ../Doc/whatsnew/3.8.rst:2352
+#: ../Doc/whatsnew/3.8.rst:2355
 msgid ""
 "The extraction methods in :mod:`tarfile`, and :func:`shutil.unpack_archive`, "
 "have a new a *filter* argument that allows limiting tar features than may be "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,72 +25,212 @@ msgstr ""
 msgid ""
 "Initialize a newly allocated object *op* with its type and initial "
 "reference.  Returns the initialized object.  Other fields of the object are "
-"not affected."
+"not initialized.  Despite its name, this function is unrelated to the "
+"object's :meth:`~object.__init__` method (:c:member:`~PyTypeObject.tp_init` "
+"slot).  Specifically, this function does **not** call the object's :meth:`!"
+"__init__` method."
 msgstr ""
 
 #: ../Doc/c-api/allocation.rst:24
+msgid ""
+"In general, consider this function to be a low-level routine. Use :c:member:"
+"`~PyTypeObject.tp_alloc` where possible. For implementing :c:member:`!"
+"tp_alloc` for your type, prefer :c:func:`PyType_GenericAlloc` or :c:func:"
+"`PyObject_New`."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:31
+msgid ""
+"This function only initializes the object's memory corresponding to the "
+"initial :c:type:`PyObject` structure.  It does not zero the rest."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:37
 msgid ""
 "This does everything :c:func:`PyObject_Init` does, and also initializes the "
 "length information for a variable-size object."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:30
+#: ../Doc/c-api/allocation.rst:42
 msgid ""
-"Allocate a new Python object using the C structure type *TYPE* and the "
-"Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
-"Python object header are not initialized. The caller will own the only "
-"reference to the object (i.e. its reference count will be one). The size of "
-"the memory allocation is determined from the :c:member:`~PyTypeObject."
-"tp_basicsize` field of the type object."
+"This function only initializes some of the object's memory.  It does not "
+"zero the rest."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:38
+#: ../Doc/c-api/allocation.rst:48
 msgid ""
-"Note that this function is unsuitable if *typeobj* has :c:macro:"
-"`Py_TPFLAGS_HAVE_GC` set. For such objects, use :c:func:`PyObject_GC_New` "
-"instead."
+"Allocates a new Python object using the C structure type *TYPE* and the "
+"Python type object *typeobj* (``PyTypeObject*``) by calling :c:func:"
+"`PyObject_Malloc` to allocate memory and initializing it like :c:func:"
+"`PyObject_Init`.  The caller will own the only reference to the object (i.e. "
+"its reference count will be one)."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:45
+#: ../Doc/c-api/allocation.rst:54 ../Doc/c-api/allocation.rst:107
 msgid ""
-"Allocate a new Python object using the C structure type *TYPE* and the "
-"Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
-"Python object header are not initialized.  The allocated memory allows for "
-"the *TYPE* structure plus *size* (``Py_ssize_t``) fields of the size given "
-"by the :c:member:`~PyTypeObject.tp_itemsize` field of *typeobj*.  This is "
-"useful for implementing objects like tuples, which are able to determine "
-"their size at construction time.  Embedding the array of fields into the "
-"same allocation decreases the number of allocations, improving the memory "
-"management efficiency."
+"Avoid calling this directly to allocate memory for an object; call the "
+"type's :c:member:`~PyTypeObject.tp_alloc` slot instead."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:56
+#: ../Doc/c-api/allocation.rst:57 ../Doc/c-api/allocation.rst:110
 msgid ""
-"Note that this function is unsuitable if *typeobj* has :c:macro:"
-"`Py_TPFLAGS_HAVE_GC` set. For such objects, use :c:func:`PyObject_GC_NewVar` "
-"instead."
+"When populating a type's :c:member:`~PyTypeObject.tp_alloc` slot, :c:func:"
+"`PyType_GenericAlloc` is preferred over a custom function that simply calls "
+"this macro."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:63
+#: ../Doc/c-api/allocation.rst:61
 msgid ""
-"Releases memory allocated to an object using :c:macro:`PyObject_New` or :c:"
-"macro:`PyObject_NewVar`.  This is normally called from the :c:member:"
-"`~PyTypeObject.tp_dealloc` handler specified in the object's type.  The "
-"fields of the object should not be accessed after this call as the memory is "
-"no longer a valid Python object."
+"This macro does not call :c:member:`~PyTypeObject.tp_alloc`, :c:member:"
+"`~PyTypeObject.tp_new` (:meth:`~object.__new__`), or :c:member:"
+"`~PyTypeObject.tp_init` (:meth:`~object.__init__`)."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:72
+#: ../Doc/c-api/allocation.rst:65
+msgid ""
+"This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
+"member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_New` instead."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:68
+msgid ""
+"Memory allocated by this macro must be freed with :c:func:`PyObject_Free` "
+"(usually called via the object's :c:member:`~PyTypeObject.tp_free` slot)."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:73 ../Doc/c-api/allocation.rst:123
+msgid ""
+"The returned memory is not guaranteed to have been completely zeroed before "
+"it was initialized."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:78 ../Doc/c-api/allocation.rst:128
+msgid ""
+"This macro does not construct a fully initialized object of the given type; "
+"it merely allocates memory and prepares it for further initialization by :c:"
+"member:`~PyTypeObject.tp_init`.  To construct a fully initialized object, "
+"call *typeobj* instead.  For example::"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:83
+msgid "PyObject *foo = PyObject_CallNoArgs((PyObject *)&PyFoo_Type);"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:87 ../Doc/c-api/allocation.rst:137
+#: ../Doc/c-api/allocation.rst:182 ../Doc/c-api/allocation.rst:184
+#: ../Doc/c-api/allocation.rst:186
+msgid ":c:func:`PyObject_Free`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:88
+msgid ":c:macro:`PyObject_GC_New`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:89 ../Doc/c-api/allocation.rst:139
+msgid ":c:func:`PyType_GenericAlloc`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:90 ../Doc/c-api/allocation.rst:140
+msgid ":c:member:`~PyTypeObject.tp_alloc`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:95
+msgid "Like :c:macro:`PyObject_New` except:"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:97
+msgid ""
+"It allocates enough memory for the *TYPE* structure plus *size* "
+"(``Py_ssize_t``) fields of the size given by the :c:member:`~PyTypeObject."
+"tp_itemsize` field of *typeobj*."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:100
+msgid "The memory is initialized like :c:func:`PyObject_InitVar`."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:102
+msgid ""
+"This is useful for implementing objects like tuples, which are able to "
+"determine their size at construction time.  Embedding the array of fields "
+"into the same allocation decreases the number of allocations, improving the "
+"memory management efficiency."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:114
+msgid ""
+"This cannot be used for objects with :c:macro:`Py_TPFLAGS_HAVE_GC` set in :c:"
+"member:`~PyTypeObject.tp_flags`; use :c:macro:`PyObject_GC_NewVar` instead."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:118
+msgid ""
+"Memory allocated by this function must be freed with :c:func:`PyObject_Free` "
+"(usually called via the object's :c:member:`~PyTypeObject.tp_free` slot)."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:133
+msgid ""
+"PyObject *list_instance = PyObject_CallNoArgs((PyObject *)&PyList_Type);"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:138
+msgid ":c:macro:`PyObject_GC_NewVar`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:145
 msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed "
 "using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
 "object."
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:79
+#: ../Doc/c-api/allocation.rst:152
 msgid ":ref:`moduleobjects`"
 msgstr ""
 
-#: ../Doc/c-api/allocation.rst:80
+#: ../Doc/c-api/allocation.rst:153
 msgid "To allocate and create extension modules."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:157
+msgid "Deprecated aliases"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:159
+msgid ""
+"These are :term:`soft deprecated` aliases to existing functions and macros. "
+"They exist solely for backwards compatibility."
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:167
+msgid "Deprecated alias"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:168
+msgid "Function"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:170
+msgid ":c:macro:`PyObject_New`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:172
+msgid ":c:macro:`PyObject_NewVar`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:174
+msgid ":c:func:`PyObject_Init`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:176
+msgid ":c:func:`PyObject_InitVar`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:178
+msgid ":c:func:`PyObject_Malloc`"
+msgstr ""
+
+#: ../Doc/c-api/allocation.rst:180
+msgid ":c:func:`PyObject_Realloc`"
 msgstr ""

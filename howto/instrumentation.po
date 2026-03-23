@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -401,108 +401,207 @@ msgstr ""
 msgid "(assuming a :ref:`debug build <debug-build>` of CPython 3.6)"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:273
+#: ../Doc/howto/instrumentation.rst:275
 msgid "Available static markers"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:277
+#: ../Doc/howto/instrumentation.rst:279
 msgid ""
 "This marker indicates that execution of a Python function has begun. It is "
 "only triggered for pure-Python (bytecode) functions."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:280
+#: ../Doc/howto/instrumentation.rst:282
 msgid ""
 "The filename, function name, and line number are provided back to the "
 "tracing script as positional arguments, which must be accessed using ``"
 "$arg1``, ``$arg2``, ``$arg3``:"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:284
+#: ../Doc/howto/instrumentation.rst:286
 msgid ""
 "``$arg1`` : ``(const char *)`` filename, accessible using "
 "``user_string($arg1)``"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:286
+#: ../Doc/howto/instrumentation.rst:288
 msgid ""
 "``$arg2`` : ``(const char *)`` function name, accessible using "
 "``user_string($arg2)``"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:289
+#: ../Doc/howto/instrumentation.rst:291
 msgid "``$arg3`` : ``int`` line number"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:293
+#: ../Doc/howto/instrumentation.rst:295
 msgid ""
 "This marker is the converse of :c:func:`!function__entry`, and indicates "
 "that execution of a Python function has ended (either via ``return``, or via "
 "an exception).  It is only triggered for pure-Python (bytecode) functions."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:297
+#: ../Doc/howto/instrumentation.rst:299
 msgid "The arguments are the same as for :c:func:`!function__entry`"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:301
+#: ../Doc/howto/instrumentation.rst:303
 msgid ""
 "This marker indicates a Python line is about to be executed.  It is the "
 "equivalent of line-by-line tracing with a Python profiler.  It is not "
 "triggered within C functions."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:305
+#: ../Doc/howto/instrumentation.rst:307
 msgid "The arguments are the same as for :c:func:`!function__entry`."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:309
+#: ../Doc/howto/instrumentation.rst:311
 msgid ""
 "Fires when the Python interpreter starts a garbage collection cycle. "
 "``arg0`` is the generation to scan, like :func:`gc.collect`."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:314
+#: ../Doc/howto/instrumentation.rst:316
 msgid ""
 "Fires when the Python interpreter finishes a garbage collection cycle. "
 "``arg0`` is the number of collected objects."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:319
+#: ../Doc/howto/instrumentation.rst:321
 msgid ""
 "Fires before :mod:`importlib` attempts to find and load the module. ``arg0`` "
 "is the module name."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:326
+#: ../Doc/howto/instrumentation.rst:328
 msgid ""
 "Fires after :mod:`importlib`'s find_and_load function is called. ``arg0`` is "
 "the module name, ``arg1`` indicates if module was successfully loaded."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:335
+#: ../Doc/howto/instrumentation.rst:337
 msgid ""
 "Fires when :func:`sys.audit` or :c:func:`PySys_Audit` is called. ``arg0`` is "
 "the event name as C string, ``arg1`` is a :c:type:`PyObject` pointer to a "
 "tuple object."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:343
+#: ../Doc/howto/instrumentation.rst:345
+msgid "C Entry Points"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:347
+msgid ""
+"To simplify triggering of DTrace markers, Python's C API comes with a number "
+"of helper functions that mirror each static marker. On builds of Python "
+"without DTrace enabled, these do nothing."
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:351
+msgid ""
+"In general, it is not necessary to call these yourself, as Python will do it "
+"for you."
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:358
+msgid "C API Function"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:359
+msgid "Static Marker"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:360
+msgid "Notes"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:362
+msgid ":c:func:`!line`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:365
+msgid ":c:func:`!function__entry`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:368
+msgid ":c:func:`!function__return`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:371
+msgid ":c:func:`!gc__start`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:374
+msgid ":c:func:`!gc__done`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:377
+msgid ":c:func:`!instance__new__start`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:378 ../Doc/howto/instrumentation.rst:381
+#: ../Doc/howto/instrumentation.rst:384 ../Doc/howto/instrumentation.rst:387
+msgid "Not used by Python"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:380
+msgid ":c:func:`!instance__new__done`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:383
+msgid ":c:func:`!instance__delete__start`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:386
+msgid ":c:func:`!instance__delete__done`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:389
+msgid ":c:func:`!import__find__load__start`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:392
+msgid ":c:func:`!import__find__load__done`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:395
+msgid ":c:func:`!audit`"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:400
+msgid "C Probing Checks"
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:415
+msgid ""
+"All calls to ``PyDTrace`` functions must be guarded by a call to one of "
+"these functions. This allows Python to minimize performance impact when "
+"probing is disabled."
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:419
+msgid ""
+"On builds without DTrace enabled, these functions do nothing and return "
+"``0``."
+msgstr ""
+
+#: ../Doc/howto/instrumentation.rst:423
 msgid "SystemTap Tapsets"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:345
+#: ../Doc/howto/instrumentation.rst:425
 msgid ""
 "The higher-level way to use the SystemTap integration is to use a \"tapset"
 "\": SystemTap's equivalent of a library, which hides some of the lower-level "
 "details of the static markers."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:349
+#: ../Doc/howto/instrumentation.rst:429
 msgid "Here is a tapset file, based on a non-shared build of CPython:"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:351
+#: ../Doc/howto/instrumentation.rst:431
 msgid ""
 "/*\n"
 "   Provide a higher-level wrapping around the function__entry and\n"
@@ -525,19 +624,19 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:372
+#: ../Doc/howto/instrumentation.rst:452
 msgid ""
 "If this file is installed in SystemTap's tapset directory (e.g. ``/usr/share/"
 "systemtap/tapset``), then these additional probepoints become available:"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:378
+#: ../Doc/howto/instrumentation.rst:458
 msgid ""
 "This probe point indicates that execution of a Python function has begun. It "
 "is only triggered for pure-Python (bytecode) functions."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:383
+#: ../Doc/howto/instrumentation.rst:463
 msgid ""
 "This probe point is the converse of ``python.function.return``, and "
 "indicates that execution of a Python function has ended (either via "
@@ -545,18 +644,18 @@ msgid ""
 "(bytecode) functions."
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:390
+#: ../Doc/howto/instrumentation.rst:470
 msgid "Examples"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:391
+#: ../Doc/howto/instrumentation.rst:471
 msgid ""
 "This SystemTap script uses the tapset above to more cleanly implement the "
 "example given above of tracing the Python function-call hierarchy, without "
 "needing to directly name the static markers:"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:395
+#: ../Doc/howto/instrumentation.rst:475
 msgid ""
 "probe python.function.entry\n"
 "{\n"
@@ -571,14 +670,14 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:410
+#: ../Doc/howto/instrumentation.rst:490
 msgid ""
 "The following script uses the tapset above to provide a top-like view of all "
 "running CPython code, showing the top 20 most frequently entered bytecode "
 "frames, each second, across the whole system:"
 msgstr ""
 
-#: ../Doc/howto/instrumentation.rst:414
+#: ../Doc/howto/instrumentation.rst:494
 msgid ""
 "global fn_calls;\n"
 "\n"

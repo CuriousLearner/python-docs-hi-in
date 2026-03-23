@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/asyncio.rst:96
+#: ../Doc/library/asyncio.rst:100
 msgid "High-level APIs"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:108
+#: ../Doc/library/asyncio.rst:113
 msgid "Low-level APIs"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:119
+#: ../Doc/library/asyncio.rst:124
 msgid "Guides and Tutorials"
 msgstr ""
 
@@ -162,24 +162,31 @@ msgstr ""
 
 #: ../Doc/library/asyncio.rst:82
 msgid ""
+"This REPL provides limited compatibility with :envvar:`PYTHON_BASIC_REPL`. "
+"It is recommended that the default REPL is used for full functionality and "
+"the latest features."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:86
+msgid ""
 "Raises an :ref:`auditing event <auditing>` ``cpython.run_stdin`` with no "
 "arguments."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:84
+#: ../Doc/library/asyncio.rst:88
 msgid "(also 3.11.10, 3.10.15, 3.9.20, and 3.8.20) Emits audit events."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:87
+#: ../Doc/library/asyncio.rst:91
 msgid ""
 "Uses PyREPL if possible, in which case :envvar:`PYTHONSTARTUP` is also "
 "executed. Emits audit events."
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:95
+#: ../Doc/library/asyncio.rst:99
 msgid "Reference"
 msgstr ""
 
-#: ../Doc/library/asyncio.rst:128
+#: ../Doc/library/asyncio.rst:133
 msgid "The source code for asyncio can be found in :source:`Lib/asyncio/`."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,51 +265,57 @@ msgstr ""
 
 #: ../Doc/reference/executionmodel.rst:193
 msgid ""
-":ref:`Type parameter lists <type-params>` and :keyword:`type` statements "
-"introduce *annotation scopes*, which behave mostly like function scopes, but "
-"with some exceptions discussed below. :term:`Annotations <annotation>` "
-"currently do not use annotation scopes, but they are expected to use "
-"annotation scopes in Python 3.13 when :pep:`649` is implemented."
+":term:`Annotations <annotation>`, :ref:`type parameter lists <type-params>` "
+"and :keyword:`type` statements introduce *annotation scopes*, which behave "
+"mostly like function scopes, but with some exceptions discussed below."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:199
+#: ../Doc/reference/executionmodel.rst:198
 msgid "Annotation scopes are used in the following contexts:"
 msgstr ""
 
+#: ../Doc/reference/executionmodel.rst:200
+msgid ":term:`Function annotations <function annotation>`."
+msgstr ""
+
 #: ../Doc/reference/executionmodel.rst:201
+msgid ":term:`Variable annotations <variable annotation>`."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:202
 msgid ""
 "Type parameter lists for :ref:`generic type aliases <generic-type-aliases>`."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:202
+#: ../Doc/reference/executionmodel.rst:203
 msgid ""
 "Type parameter lists for :ref:`generic functions <generic-functions>`. A "
 "generic function's annotations are executed within the annotation scope, but "
 "its defaults and decorators are not."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:205
+#: ../Doc/reference/executionmodel.rst:206
 msgid ""
 "Type parameter lists for :ref:`generic classes <generic-classes>`. A generic "
 "class's base classes and keyword arguments are executed within the "
 "annotation scope, but its decorators are not."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:208
+#: ../Doc/reference/executionmodel.rst:209
 msgid ""
 "The bounds, constraints, and default values for type parameters (:ref:"
 "`lazily evaluated <lazy-evaluation>`)."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:210
+#: ../Doc/reference/executionmodel.rst:211
 msgid "The value of type aliases (:ref:`lazily evaluated <lazy-evaluation>`)."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:212
+#: ../Doc/reference/executionmodel.rst:213
 msgid "Annotation scopes differ from function scopes in the following ways:"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:214
+#: ../Doc/reference/executionmodel.rst:215
 msgid ""
 "Annotation scopes have access to their enclosing class namespace. If an "
 "annotation scope is immediately within a class scope, or within another "
@@ -320,7 +326,7 @@ msgid ""
 "class scope."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:220
+#: ../Doc/reference/executionmodel.rst:221
 msgid ""
 "Expressions in annotation scopes cannot contain :keyword:`yield`, ``yield "
 "from``, :keyword:`await`, or :token:`:= <python-grammar:"
@@ -328,7 +334,7 @@ msgid ""
 "scopes contained within the annotation scope.)"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:224
+#: ../Doc/reference/executionmodel.rst:225
 msgid ""
 "Names defined in annotation scopes cannot be rebound with :keyword:"
 "`nonlocal` statements in inner scopes. This includes only type parameters, "
@@ -336,7 +342,7 @@ msgid ""
 "introduce new names."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:227
+#: ../Doc/reference/executionmodel.rst:228
 msgid ""
 "While annotation scopes have an internal name, that name is not reflected in "
 "the :term:`qualified name` of objects defined within the scope. Instead, "
@@ -344,35 +350,43 @@ msgid ""
 "were defined in the enclosing scope."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:232
+#: ../Doc/reference/executionmodel.rst:233
 msgid "Annotation scopes were introduced in Python 3.12 as part of :pep:`695`."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:235
+#: ../Doc/reference/executionmodel.rst:236
 msgid ""
 "Annotation scopes are also used for type parameter defaults, as introduced "
 "by :pep:`696`."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:242
+#: ../Doc/reference/executionmodel.rst:240
+msgid ""
+"Annotation scopes are now also used for annotations, as specified in :pep:"
+"`649` and :pep:`749`."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:247
 msgid "Lazy evaluation"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:244
+#: ../Doc/reference/executionmodel.rst:249
 msgid ""
-"The values of type aliases created through the :keyword:`type` statement are "
-"*lazily evaluated*. The same applies to the bounds, constraints, and default "
-"values of type variables created through the :ref:`type parameter syntax "
-"<type-params>`. This means that they are not evaluated when the type alias "
-"or type variable is created. Instead, they are only evaluated when doing so "
-"is necessary to resolve an attribute access."
+"Most annotation scopes are *lazily evaluated*. This includes annotations, "
+"the values of type aliases created through the :keyword:`type` statement, "
+"and the bounds, constraints, and default values of type variables created "
+"through the :ref:`type parameter syntax <type-params>`. This means that they "
+"are not evaluated when the type alias or type variable is created, or when "
+"the object carrying annotations is created. Instead, they are only evaluated "
+"when necessary, for example when the ``__value__`` attribute on a type alias "
+"is accessed."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:251
+#: ../Doc/reference/executionmodel.rst:258
 msgid "Example:"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:253
+#: ../Doc/reference/executionmodel.rst:260
 msgid ""
 ">>> type Alias = 1/0\n"
 ">>> Alias.__value__\n"
@@ -387,20 +401,20 @@ msgid ""
 "ZeroDivisionError: division by zero"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:267
+#: ../Doc/reference/executionmodel.rst:274
 msgid ""
 "Here the exception is raised only when the ``__value__`` attribute of the "
 "type alias or the ``__bound__`` attribute of the type variable is accessed."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:271
+#: ../Doc/reference/executionmodel.rst:278
 msgid ""
 "This behavior is primarily useful for references to types that have not yet "
 "been defined when the type alias or type variable is created. For example, "
 "lazy evaluation enables creation of mutually recursive type aliases::"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:275
+#: ../Doc/reference/executionmodel.rst:282
 msgid ""
 "from typing import Literal\n"
 "\n"
@@ -409,18 +423,18 @@ msgid ""
 "type Expr = SimpleExpr | tuple[SimpleExpr, Literal[\"+\", \"-\"], Expr]"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:281
+#: ../Doc/reference/executionmodel.rst:288
 msgid ""
 "Lazily evaluated values are evaluated in :ref:`annotation scope <annotation-"
 "scopes>`, which means that names that appear inside the lazily evaluated "
 "value are looked up as if they were used in the immediately enclosing scope."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:290
+#: ../Doc/reference/executionmodel.rst:297
 msgid "Builtins and restricted execution"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:296
+#: ../Doc/reference/executionmodel.rst:303
 msgid ""
 "Users should not touch ``__builtins__``; it is strictly an implementation "
 "detail.  Users wanting to override values in the builtins namespace should :"
@@ -428,7 +442,7 @@ msgid ""
 "appropriately."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:301
+#: ../Doc/reference/executionmodel.rst:308
 msgid ""
 "The builtins namespace associated with the execution of a code block is "
 "actually found by looking up the name ``__builtins__`` in its global "
@@ -439,17 +453,17 @@ msgid ""
 "`builtins` module itself."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:313
+#: ../Doc/reference/executionmodel.rst:320
 msgid "Interaction with dynamic features"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:315
+#: ../Doc/reference/executionmodel.rst:322
 msgid ""
 "Name resolution of free variables occurs at runtime, not at compile time. "
 "This means that the following code will print 42::"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:318
+#: ../Doc/reference/executionmodel.rst:325
 msgid ""
 "i = 10\n"
 "def f():\n"
@@ -458,7 +472,7 @@ msgid ""
 "f()"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:326
+#: ../Doc/reference/executionmodel.rst:333
 msgid ""
 "The :func:`eval` and :func:`exec` functions do not have access to the full "
 "environment for resolving names.  Names may be resolved in the local and "
@@ -469,11 +483,11 @@ msgid ""
 "for both."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:340
+#: ../Doc/reference/executionmodel.rst:347
 msgid "Exceptions"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:351
+#: ../Doc/reference/executionmodel.rst:358
 msgid ""
 "Exceptions are a means of breaking out of the normal flow of control of a "
 "code block in order to handle errors or other exceptional conditions.  An "
@@ -482,7 +496,7 @@ msgid ""
 "or indirectly invoked the code block where the error occurred."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:357
+#: ../Doc/reference/executionmodel.rst:364
 msgid ""
 "The Python interpreter raises an exception when it detects a run-time error "
 "(such as division by zero).  A Python program can also explicitly raise an "
@@ -493,7 +507,7 @@ msgid ""
 "exception occurred or not in the preceding code."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:367
+#: ../Doc/reference/executionmodel.rst:374
 msgid ""
 "Python uses the \"termination\" model of error handling: an exception "
 "handler can find out what happened and continue execution at an outer level, "
@@ -501,7 +515,7 @@ msgid ""
 "(except by re-entering the offending piece of code from the top)."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:374
+#: ../Doc/reference/executionmodel.rst:381
 msgid ""
 "When an exception is not handled at all, the interpreter terminates "
 "execution of the program, or returns to its interactive main loop.  In "
@@ -509,7 +523,7 @@ msgid ""
 "`SystemExit`."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:378
+#: ../Doc/reference/executionmodel.rst:385
 msgid ""
 "Exceptions are identified by class instances.  The :keyword:`except` clause "
 "is selected depending on the class of the instance: it must reference the "
@@ -518,7 +532,7 @@ msgid ""
 "additional information about the exceptional condition."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:386
+#: ../Doc/reference/executionmodel.rst:393
 msgid ""
 "Exception messages are not part of the Python API.  Their contents may "
 "change from one version of Python to the next without warning and should not "
@@ -526,17 +540,284 @@ msgid ""
 "interpreter."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:390
+#: ../Doc/reference/executionmodel.rst:397
 msgid ""
 "See also the description of the :keyword:`try` statement in section :ref:"
 "`try` and :keyword:`raise` statement in section :ref:`raise`."
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:395
+#: ../Doc/reference/executionmodel.rst:404
+msgid "Runtime Components"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:407
+msgid "General Computing Model"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:409
+msgid ""
+"Python's execution model does not operate in a vacuum.  It runs on a host "
+"machine and through that host's runtime environment, including its operating "
+"system (OS), if there is one.  When a program runs, the conceptual layers of "
+"how it runs on the host look something like this:"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "**host machine**"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "**process** (global resources)"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "**thread** (runs machine code)"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:419
+msgid ""
+"Each process represents a program running on the host.  Think of each "
+"process itself as the data part of its program.  Think of the process' "
+"threads as the execution part of the program.  This distinction will be "
+"important to understand the conceptual Python runtime."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:424
+msgid ""
+"The process, as the data part, is the execution context in which the program "
+"runs.  It mostly consists of the set of resources assigned to the program by "
+"the host, including memory, signals, file handles, sockets, and environment "
+"variables."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:429
+msgid ""
+"Processes are isolated and independent from one another.  (The same is true "
+"for hosts.)  The host manages the process' access to its assigned resources, "
+"in addition to coordinating between processes."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:433
+msgid ""
+"Each thread represents the actual execution of the program's machine code, "
+"running relative to the resources assigned to the program's process.  It's "
+"strictly up to the host how and when that execution takes place."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:438
+msgid ""
+"From the point of view of Python, a program always starts with exactly one "
+"thread.  However, the program may grow to run in multiple simultaneous "
+"threads.  Not all hosts support multiple threads per process, but most do.  "
+"Unlike processes, threads in a process are not isolated and independent from "
+"one another.  Specifically, all threads in a process share all of the "
+"process' resources."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:445
+msgid ""
+"The fundamental point of threads is that each one does *run* independently, "
+"at the same time as the others.  That may be only conceptually at the same "
+"time (\"concurrently\") or physically (\"in parallel\").  Either way, the "
+"threads effectively run at a non-synchronized rate."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:453
+msgid ""
+"That non-synchronized rate means none of the process' memory is guaranteed "
+"to stay consistent for the code running in any given thread.  Thus multi-"
+"threaded programs must take care to coordinate access to intentionally "
+"shared resources.  Likewise, they must take care to be absolutely diligent "
+"about not accessing any *other* resources in multiple threads; otherwise two "
+"threads running at the same time might accidentally interfere with each "
+"other's use of some shared data.  All this is true for both Python programs "
+"and the Python runtime."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:463
+msgid ""
+"The cost of this broad, unstructured requirement is the tradeoff for the "
+"kind of raw concurrency that threads provide.  The alternative to the "
+"required discipline generally means dealing with non-deterministic bugs and "
+"data corruption."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:469
+msgid "Python Runtime Model"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:471
+msgid ""
+"The same conceptual layers apply to each Python program, with some extra "
+"data layers specific to Python:"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "Python global runtime (*state*)"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "Python interpreter (*state*)"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "**thread** (runs Python bytecode and \"C-API\")"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:0
+msgid "Python thread *state*"
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:481
+msgid ""
+"At the conceptual level: when a Python program starts, it looks exactly like "
+"that diagram, with one of each.  The runtime may grow to include multiple "
+"interpreters, and each interpreter may grow to include multiple thread "
+"states."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:488
+msgid ""
+"A Python implementation won't necessarily implement the runtime layers "
+"distinctly or even concretely.  The only exception is places where distinct "
+"layers are directly specified or exposed to users, like through the :mod:"
+"`threading` module."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:495
+msgid ""
+"The initial interpreter is typically called the \"main\" interpreter. Some "
+"Python implementations, like CPython, assign special roles to the main "
+"interpreter."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:499
+msgid ""
+"Likewise, the host thread where the runtime was initialized is known as the "
+"\"main\" thread.  It may be different from the process' initial thread, "
+"though they are often the same.  In some cases \"main thread\" may be even "
+"more specific and refer to the initial thread state. A Python runtime might "
+"assign specific responsibilities to the main thread, such as handling "
+"signals."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:506
+msgid ""
+"As a whole, the Python runtime consists of the global runtime state, "
+"interpreters, and thread states.  The runtime ensures all that state stays "
+"consistent over its lifetime, particularly when used with multiple host "
+"threads."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:511
+msgid ""
+"The global runtime, at the conceptual level, is just a set of interpreters.  "
+"While those interpreters are otherwise isolated and independent from one "
+"another, they may share some data or other resources.  The runtime is "
+"responsible for managing these global resources safely.  The actual nature "
+"and management of these resources is implementation-specific.  Ultimately, "
+"the external utility of the global runtime is limited to managing "
+"interpreters."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:519
+msgid ""
+"In contrast, an \"interpreter\" is conceptually what we would normally think "
+"of as the (full-featured) \"Python runtime\".  When machine code executing "
+"in a host thread interacts with the Python runtime, it calls into Python in "
+"the context of a specific interpreter."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:526
+msgid ""
+"The term \"interpreter\" here is not the same as the \"bytecode interpreter"
+"\", which is what regularly runs in threads, executing compiled Python code."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:530
+msgid ""
+"In an ideal world, \"Python runtime\" would refer to what we currently call "
+"\"interpreter\".  However, it's been called \"interpreter\" at least since "
+"introduced in 1997 (`CPython:a027efa5b`_)."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:536
+msgid ""
+"Each interpreter completely encapsulates all of the non-process-global, non-"
+"thread-specific state needed for the Python runtime to work. Notably, the "
+"interpreter's state persists between uses.  It includes fundamental data "
+"like :data:`sys.modules`.  The runtime ensures multiple threads using the "
+"same interpreter will safely share it between them."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:543
+msgid ""
+"A Python implementation may support using multiple interpreters at the same "
+"time in the same process.  They are independent and isolated from one "
+"another.  For example, each interpreter has its own :data:`sys.modules`."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:548
+msgid ""
+"For thread-specific runtime state, each interpreter has a set of thread "
+"states, which it manages, in the same way the global runtime contains a set "
+"of interpreters.  It can have thread states for as many host threads as it "
+"needs.  It may even have multiple thread states for the same host thread, "
+"though that isn't as common."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:554
+msgid ""
+"Each thread state, conceptually, has all the thread-specific runtime data an "
+"interpreter needs to operate in one host thread.  The thread state includes "
+"the current raised exception and the thread's Python call stack.  It may "
+"include other thread-specific resources."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:561
+msgid ""
+"The term \"Python thread\" can sometimes refer to a thread state, but "
+"normally it means a thread created using the :mod:`threading` module."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:564
+msgid ""
+"Each thread state, over its lifetime, is always tied to exactly one "
+"interpreter and exactly one host thread.  It will only ever be used in that "
+"thread and with that interpreter."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:568
+msgid ""
+"Multiple thread states may be tied to the same host thread, whether for "
+"different interpreters or even the same interpreter.  However, for any given "
+"host thread, only one of the thread states tied to it can be used by the "
+"thread at a time."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:573
+msgid ""
+"Thread states are isolated and independent from one another and don't share "
+"any data, except for possibly sharing an interpreter and objects or other "
+"resources belonging to that interpreter."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:577
+msgid ""
+"Once a program is running, new Python threads can be created using the :mod:"
+"`threading` module (on platforms and Python implementations that support "
+"threads).  Additional processes can be created using the :mod:`os`, :mod:"
+"`subprocess`, and :mod:`multiprocessing` modules. Interpreters can be "
+"created and used with the :mod:`~concurrent.interpreters` module.  "
+"Coroutines (async) can be run using :mod:`asyncio` in each interpreter, "
+"typically only in a single thread (often the main thread)."
+msgstr ""
+
+#: ../Doc/reference/executionmodel.rst:588
 msgid "Footnotes"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:396
+#: ../Doc/reference/executionmodel.rst:589
 msgid ""
 "This limitation occurs because the code that is executed by these operations "
 "is not available at the time the module is compiled."
@@ -555,7 +836,7 @@ msgid "block"
 msgstr ""
 
 #: ../Doc/reference/executionmodel.rst:31
-#: ../Doc/reference/executionmodel.rst:292
+#: ../Doc/reference/executionmodel.rst:299
 msgid "execution"
 msgstr ""
 
@@ -616,38 +897,38 @@ msgstr ""
 msgid "__main__"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:292
+#: ../Doc/reference/executionmodel.rst:299
 msgid "restricted"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:342
+#: ../Doc/reference/executionmodel.rst:349
 msgid "exception"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:344
+#: ../Doc/reference/executionmodel.rst:351
 msgid "raise an exception"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:344
+#: ../Doc/reference/executionmodel.rst:351
 msgid "handle an exception"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:344
+#: ../Doc/reference/executionmodel.rst:351
 msgid "exception handler"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:344
+#: ../Doc/reference/executionmodel.rst:351
 msgid "errors"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:344
+#: ../Doc/reference/executionmodel.rst:351
 msgid "error handling"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:365
+#: ../Doc/reference/executionmodel.rst:372
 msgid "termination model"
 msgstr ""
 
-#: ../Doc/reference/executionmodel.rst:372
+#: ../Doc/reference/executionmodel.rst:379
 msgid "SystemExit (built-in exception)"
 msgstr ""

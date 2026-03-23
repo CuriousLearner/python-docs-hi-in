@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,25 +86,31 @@ msgid ""
 "the value cannot be determined."
 msgstr ""
 
-#: ../Doc/library/platform.rst:62
+#: ../Doc/library/platform.rst:59
+msgid ""
+"The output is platform-dependent and may differ in casing and naming "
+"conventions."
+msgstr ""
+
+#: ../Doc/library/platform.rst:64
 msgid ""
 "Returns the computer's network name (may not be fully qualified!). An empty "
 "string is returned if the value cannot be determined."
 msgstr ""
 
-#: ../Doc/library/platform.rst:68
+#: ../Doc/library/platform.rst:70
 msgid ""
 "Returns a single string identifying the underlying platform with as much "
 "useful information as possible."
 msgstr ""
 
-#: ../Doc/library/platform.rst:71
+#: ../Doc/library/platform.rst:73
 msgid ""
 "The output is intended to be *human readable* rather than machine parseable. "
 "It may look different on different platforms and this is intended."
 msgstr ""
 
-#: ../Doc/library/platform.rst:74
+#: ../Doc/library/platform.rst:76
 msgid ""
 "If *aliased* is true, the function will use aliases for various platforms "
 "that report system names which differ from their common names, for example "
@@ -112,151 +118,158 @@ msgid ""
 "used to implement this."
 msgstr ""
 
-#: ../Doc/library/platform.rst:79
+#: ../Doc/library/platform.rst:81
 msgid ""
 "Setting *terse* to true causes the function to return only the absolute "
 "minimum information needed to identify the platform."
 msgstr ""
 
-#: ../Doc/library/platform.rst:82
+#: ../Doc/library/platform.rst:84
 msgid ""
 "On macOS, the function now uses :func:`mac_ver`, if it returns a non-empty "
 "release string, to get the macOS version rather than the darwin version."
 msgstr ""
 
-#: ../Doc/library/platform.rst:90
+#: ../Doc/library/platform.rst:92
 msgid "Returns the (real) processor name, e.g. ``'amdk6'``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:92
+#: ../Doc/library/platform.rst:94
 msgid ""
 "An empty string is returned if the value cannot be determined. Note that "
 "many platforms do not provide this information or simply return the same "
 "value as for :func:`machine`.  NetBSD does this."
 msgstr ""
 
-#: ../Doc/library/platform.rst:99
+#: ../Doc/library/platform.rst:101
 msgid ""
 "Returns a tuple ``(buildno, builddate)`` stating the Python build number and "
 "date as strings."
 msgstr ""
 
-#: ../Doc/library/platform.rst:105
+#: ../Doc/library/platform.rst:107
 msgid "Returns a string identifying the compiler used for compiling Python."
 msgstr ""
 
-#: ../Doc/library/platform.rst:110
+#: ../Doc/library/platform.rst:112
 msgid "Returns a string identifying the Python implementation SCM branch."
 msgstr ""
 
-#: ../Doc/library/platform.rst:115
+#: ../Doc/library/platform.rst:117
 msgid ""
 "Returns a string identifying the Python implementation. Possible return "
 "values are: 'CPython', 'IronPython', 'Jython', 'PyPy'."
 msgstr ""
 
-#: ../Doc/library/platform.rst:121
+#: ../Doc/library/platform.rst:123
 msgid "Returns a string identifying the Python implementation SCM revision."
 msgstr ""
 
-#: ../Doc/library/platform.rst:126
+#: ../Doc/library/platform.rst:128
 msgid "Returns the Python version as string ``'major.minor.patchlevel'``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:128
+#: ../Doc/library/platform.rst:130
 msgid ""
 "Note that unlike the Python ``sys.version``, the returned value will always "
 "include the patchlevel (it defaults to 0)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:134
+#: ../Doc/library/platform.rst:136
 msgid ""
 "Returns the Python version as tuple ``(major, minor, patchlevel)`` of "
 "strings."
 msgstr ""
 
-#: ../Doc/library/platform.rst:136
+#: ../Doc/library/platform.rst:138
 msgid ""
 "Note that unlike the Python ``sys.version``, the returned value will always "
 "include the patchlevel (it defaults to ``'0'``)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:142
+#: ../Doc/library/platform.rst:144
 msgid ""
 "Returns the system's release, e.g. ``'2.2.0'`` or ``'NT'``. An empty string "
 "is returned if the value cannot be determined."
 msgstr ""
 
-#: ../Doc/library/platform.rst:148
+#: ../Doc/library/platform.rst:150
 msgid ""
 "Returns the system/OS name, such as ``'Linux'``, ``'Darwin'``, ``'Java'``, "
 "``'Windows'``. An empty string is returned if the value cannot be determined."
 msgstr ""
 
-#: ../Doc/library/platform.rst:151
+#: ../Doc/library/platform.rst:153
 msgid ""
 "On iOS and Android, this returns the user-facing OS name (i.e, ``'iOS``, "
 "``'iPadOS'`` or ``'Android'``). To obtain the kernel name (``'Darwin'`` or "
 "``'Linux'``), use :func:`os.uname`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:157
+#: ../Doc/library/platform.rst:159
 msgid ""
 "Returns ``(system, release, version)`` aliased to common marketing names "
 "used for some systems.  It also does some reordering of the information in "
 "some cases where it would otherwise cause confusion."
 msgstr ""
 
-#: ../Doc/library/platform.rst:164
+#: ../Doc/library/platform.rst:166
 msgid ""
 "Returns the system's release version, e.g. ``'#3 on degas'``. An empty "
 "string is returned if the value cannot be determined."
 msgstr ""
 
-#: ../Doc/library/platform.rst:167
+#: ../Doc/library/platform.rst:169
 msgid ""
 "On iOS and Android, this is the user-facing OS version. To obtain the Darwin "
 "or Linux kernel version, use :func:`os.uname`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:172
+#: ../Doc/library/platform.rst:174
 msgid ""
 "Fairly portable uname interface. Returns a :func:`~collections.namedtuple` "
 "containing six attributes: :attr:`system`, :attr:`node`, :attr:`release`, :"
 "attr:`version`, :attr:`machine`, and :attr:`processor`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:176
+#: ../Doc/library/platform.rst:178
 msgid ":attr:`processor` is resolved late, on demand."
 msgstr ""
 
-#: ../Doc/library/platform.rst:178
+#: ../Doc/library/platform.rst:180
 msgid ""
 "Note: the first two attribute names differ from the names presented by :func:"
 "`os.uname`, where they are named :attr:`!sysname` and :attr:`!nodename`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:182
+#: ../Doc/library/platform.rst:184
 msgid "Entries which cannot be determined are set to ``''``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:184
+#: ../Doc/library/platform.rst:186
 msgid "Result changed from a tuple to a :func:`~collections.namedtuple`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:187
+#: ../Doc/library/platform.rst:189
 msgid ":attr:`processor` is resolved late instead of immediately."
 msgstr ""
 
-#: ../Doc/library/platform.rst:192
+#: ../Doc/library/platform.rst:194
+msgid ""
+"Clear out the internal cache of information, such as the :func:`uname`. This "
+"is typically useful when the platform's :func:`node` is changed by an "
+"external process and one needs to retrieve the updated value."
+msgstr ""
+
+#: ../Doc/library/platform.rst:202
 msgid "Java platform"
 msgstr ""
 
-#: ../Doc/library/platform.rst:197
+#: ../Doc/library/platform.rst:207
 msgid "Version interface for Jython."
 msgstr ""
 
-#: ../Doc/library/platform.rst:199
+#: ../Doc/library/platform.rst:209
 msgid ""
 "Returns a tuple ``(release, vendor, vminfo, osinfo)`` with *vminfo* being a "
 "tuple ``(vm_name, vm_release, vm_vendor)`` and *osinfo* being a tuple "
@@ -264,17 +277,17 @@ msgid ""
 "set to the defaults given as parameters (which all default to ``''``)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:204
+#: ../Doc/library/platform.rst:214
 msgid ""
 "It was largely untested, had a confusing API, and was only useful for Jython "
 "support."
 msgstr ""
 
-#: ../Doc/library/platform.rst:210
+#: ../Doc/library/platform.rst:220
 msgid "Windows platform"
 msgstr ""
 
-#: ../Doc/library/platform.rst:215
+#: ../Doc/library/platform.rst:225
 msgid ""
 "Get additional version information from the Windows Registry and return a "
 "tuple ``(release, version, csd, ptype)`` referring to OS release, version "
@@ -283,7 +296,7 @@ msgid ""
 "parameters (which all default to an empty string)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:221
+#: ../Doc/library/platform.rst:231
 msgid ""
 "As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT "
 "machines and ``'Multiprocessor Free'`` on multi processor machines. The "
@@ -292,7 +305,7 @@ msgid ""
 "e. code that checks arguments, ranges, etc."
 msgstr ""
 
-#: ../Doc/library/platform.rst:229
+#: ../Doc/library/platform.rst:239
 msgid ""
 "Returns a string representing the current Windows edition, or ``None`` if "
 "the value cannot be determined.  Possible values include but are not limited "
@@ -300,70 +313,70 @@ msgid ""
 "``'nanoserver'``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:237
+#: ../Doc/library/platform.rst:247
 msgid ""
 "Return ``True`` if the Windows edition returned by :func:`win32_edition` is "
 "recognized as an IoT edition."
 msgstr ""
 
-#: ../Doc/library/platform.rst:244
+#: ../Doc/library/platform.rst:254
 msgid "macOS platform"
 msgstr ""
 
-#: ../Doc/library/platform.rst:248
+#: ../Doc/library/platform.rst:258
 msgid ""
 "Get macOS version information and return it as tuple ``(release, "
 "versioninfo, machine)`` with *versioninfo* being a tuple ``(version, "
 "dev_stage, non_release_version)``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:252
+#: ../Doc/library/platform.rst:262
 msgid ""
 "Entries which cannot be determined are set to ``''``.  All tuple entries are "
 "strings."
 msgstr ""
 
-#: ../Doc/library/platform.rst:256
+#: ../Doc/library/platform.rst:266
 msgid "iOS platform"
 msgstr ""
 
-#: ../Doc/library/platform.rst:260
+#: ../Doc/library/platform.rst:270
 msgid ""
 "Get iOS version information and return it as a :func:`~collections."
 "namedtuple` with the following attributes:"
 msgstr ""
 
-#: ../Doc/library/platform.rst:263
+#: ../Doc/library/platform.rst:273
 msgid "``system`` is the OS name; either ``'iOS'`` or ``'iPadOS'``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:264
+#: ../Doc/library/platform.rst:274
 msgid "``release`` is the iOS version number as a string (e.g., ``'17.2'``)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:265
+#: ../Doc/library/platform.rst:275
 msgid ""
 "``model`` is the device model identifier; this will be a string like "
 "``'iPhone13,2'`` for a physical device, or ``'iPhone'`` on a simulator."
 msgstr ""
 
-#: ../Doc/library/platform.rst:267
+#: ../Doc/library/platform.rst:277
 msgid ""
 "``is_simulator`` is a boolean describing if the app is running on a "
 "simulator or a physical device."
 msgstr ""
 
-#: ../Doc/library/platform.rst:270
+#: ../Doc/library/platform.rst:280
 msgid ""
 "Entries which cannot be determined are set to the defaults given as "
 "parameters."
 msgstr ""
 
-#: ../Doc/library/platform.rst:275
+#: ../Doc/library/platform.rst:285
 msgid "Unix platforms"
 msgstr ""
 
-#: ../Doc/library/platform.rst:279
+#: ../Doc/library/platform.rst:289
 msgid ""
 "Tries to determine the libc version against which the file executable "
 "(defaults to the Python interpreter) is linked.  Returns a tuple of strings "
@@ -371,22 +384,22 @@ msgid ""
 "fails."
 msgstr ""
 
-#: ../Doc/library/platform.rst:283
+#: ../Doc/library/platform.rst:293
 msgid ""
 "Note that this function has intimate knowledge of how different libc "
 "versions add symbols to the executable is probably only usable for "
 "executables compiled using :program:`gcc`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:287
+#: ../Doc/library/platform.rst:297
 msgid "The file is read and scanned in chunks of *chunksize* bytes."
 msgstr ""
 
-#: ../Doc/library/platform.rst:291
+#: ../Doc/library/platform.rst:301
 msgid "Linux platforms"
 msgstr ""
 
-#: ../Doc/library/platform.rst:295
+#: ../Doc/library/platform.rst:305
 msgid ""
 "Get operating system identification from ``os-release`` file and return it "
 "as a dict. The ``os-release`` file is a `freedesktop.org standard <https://"
@@ -395,13 +408,13 @@ msgid ""
 "based distributions."
 msgstr ""
 
-#: ../Doc/library/platform.rst:301
+#: ../Doc/library/platform.rst:311
 msgid ""
 "Raises :exc:`OSError` or subclass when neither ``/etc/os-release`` nor ``/"
 "usr/lib/os-release`` can be read."
 msgstr ""
 
-#: ../Doc/library/platform.rst:304
+#: ../Doc/library/platform.rst:314
 msgid ""
 "On success, the function returns a dictionary where keys and values are "
 "strings. Values have their special characters like ``\"`` and ``$`` "
@@ -410,7 +423,7 @@ msgid ""
 "may include additional fields."
 msgstr ""
 
-#: ../Doc/library/platform.rst:310
+#: ../Doc/library/platform.rst:320
 msgid ""
 "Note that fields like ``NAME``, ``VERSION``, and ``VARIANT`` are strings "
 "suitable for presentation to users. Programs should use fields like ``ID``, "
@@ -418,11 +431,11 @@ msgid ""
 "distributions."
 msgstr ""
 
-#: ../Doc/library/platform.rst:315
+#: ../Doc/library/platform.rst:325
 msgid "Example::"
 msgstr ""
 
-#: ../Doc/library/platform.rst:317
+#: ../Doc/library/platform.rst:327
 msgid ""
 "def get_like_distro():\n"
 "    info = platform.freedesktop_os_release()\n"
@@ -433,90 +446,90 @@ msgid ""
 "    return ids"
 msgstr ""
 
-#: ../Doc/library/platform.rst:329
+#: ../Doc/library/platform.rst:339
 msgid "Android platform"
 msgstr ""
 
-#: ../Doc/library/platform.rst:334
+#: ../Doc/library/platform.rst:344
 msgid ""
 "Get Android device information. Returns a :func:`~collections.namedtuple` "
 "with the following attributes. Values which cannot be determined are set to "
 "the defaults given as parameters."
 msgstr ""
 
-#: ../Doc/library/platform.rst:338
+#: ../Doc/library/platform.rst:348
 msgid "``release`` - Android version, as a string (e.g. ``\"14\"``)."
 msgstr ""
 
-#: ../Doc/library/platform.rst:340
+#: ../Doc/library/platform.rst:350
 msgid ""
 "``api_level`` - API level of the running device, as an integer (e.g. ``34`` "
 "for Android 14). To get the API level which Python was built against, see :"
 "func:`sys.getandroidapilevel`."
 msgstr ""
 
-#: ../Doc/library/platform.rst:344
+#: ../Doc/library/platform.rst:354
 msgid ""
 "``manufacturer`` - `Manufacturer name <https://developer.android.com/"
 "reference/android/os/Build#MANUFACTURER>`__."
 msgstr ""
 
-#: ../Doc/library/platform.rst:347
+#: ../Doc/library/platform.rst:357
 msgid ""
 "``model`` - `Model name <https://developer.android.com/reference/android/os/"
 "Build#MODEL>`__ – typically the marketing name or model number."
 msgstr ""
 
-#: ../Doc/library/platform.rst:351
+#: ../Doc/library/platform.rst:361
 msgid ""
 "``device`` - `Device name <https://developer.android.com/reference/android/"
 "os/Build#DEVICE>`__ – typically the model number or a codename."
 msgstr ""
 
-#: ../Doc/library/platform.rst:355
+#: ../Doc/library/platform.rst:365
 msgid ""
 "``is_emulator`` - ``True`` if the device is an emulator; ``False`` if it's a "
 "physical device."
 msgstr ""
 
-#: ../Doc/library/platform.rst:358
+#: ../Doc/library/platform.rst:368
 msgid ""
 "Google maintains a `list of known model and device names <https://storage."
 "googleapis.com/play_public/supported_devices.html>`__."
 msgstr ""
 
-#: ../Doc/library/platform.rst:366
+#: ../Doc/library/platform.rst:376
 msgid "Command-line usage"
 msgstr ""
 
-#: ../Doc/library/platform.rst:368
+#: ../Doc/library/platform.rst:378
 msgid ""
-":mod:`platform` can also be invoked directly using the :option:`-m` switch "
+":mod:`!platform` can also be invoked directly using the :option:`-m` switch "
 "of the interpreter::"
 msgstr ""
 
-#: ../Doc/library/platform.rst:371
+#: ../Doc/library/platform.rst:381
 msgid "python -m platform [--terse] [--nonaliased] [{nonaliased,terse} ...]"
 msgstr ""
 
-#: ../Doc/library/platform.rst:373
+#: ../Doc/library/platform.rst:383
 msgid "The following options are accepted:"
 msgstr ""
 
-#: ../Doc/library/platform.rst:379
+#: ../Doc/library/platform.rst:389
 msgid ""
 "Print terse information about the platform. This is equivalent to calling :"
 "func:`platform.platform` with the *terse* argument set to ``True``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:384
+#: ../Doc/library/platform.rst:394
 msgid ""
 "Print platform information without system/OS name aliasing. This is "
 "equivalent to calling :func:`platform.platform` with the *aliased* argument "
 "set to ``True``."
 msgstr ""
 
-#: ../Doc/library/platform.rst:388
+#: ../Doc/library/platform.rst:398
 msgid ""
 "You can also pass one or more positional arguments (``terse``, "
 "``nonaliased``) to explicitly control the output format. These behave "

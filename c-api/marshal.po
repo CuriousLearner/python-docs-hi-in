@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,86 +36,88 @@ msgstr ""
 
 #: ../Doc/c-api/marshal.rst:16
 msgid ""
-"The module supports two versions of the data format: version 0 is the "
-"historical version, version 1 shares interned strings in the file, and upon "
-"unmarshalling.  Version 2 uses a binary format for floating-point numbers. "
-"``Py_MARSHAL_VERSION`` indicates the current file format (currently 2)."
+"The module supports several versions of the data format; see the :py:mod:"
+"`Python module documentation <marshal>` for details."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:24
+#: ../Doc/c-api/marshal.rst:21
+msgid "The current format version. See :py:data:`marshal.version`."
+msgstr ""
+
+#: ../Doc/c-api/marshal.rst:25
 msgid ""
 "Marshal a :c:expr:`long` integer, *value*, to *file*.  This will only write "
 "the least-significant 32 bits of *value*; regardless of the size of the "
 "native :c:expr:`long` type.  *version* indicates the file format."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:28 ../Doc/c-api/marshal.rst:36
+#: ../Doc/c-api/marshal.rst:29 ../Doc/c-api/marshal.rst:37
 msgid ""
 "This function can fail, in which case it sets the error indicator. Use :c:"
 "func:`PyErr_Occurred` to check for that."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:33
+#: ../Doc/c-api/marshal.rst:34
 msgid ""
 "Marshal a Python object, *value*, to *file*. *version* indicates the file "
 "format."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:41
+#: ../Doc/c-api/marshal.rst:42
 msgid ""
 "Return a bytes object containing the marshalled representation of *value*. "
 "*version* indicates the file format."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:45
+#: ../Doc/c-api/marshal.rst:46
 msgid "The following functions allow marshalled values to be read back in."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:50
+#: ../Doc/c-api/marshal.rst:51
 msgid ""
 "Return a C :c:expr:`long` from the data stream in a :c:expr:`FILE*` opened "
 "for reading.  Only a 32-bit value can be read in using this function, "
 "regardless of the native size of :c:expr:`long`."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:54 ../Doc/c-api/marshal.rst:64
+#: ../Doc/c-api/marshal.rst:55 ../Doc/c-api/marshal.rst:65
 msgid ""
 "On error, sets the appropriate exception (:exc:`EOFError`) and returns "
 "``-1``."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:60
+#: ../Doc/c-api/marshal.rst:61
 msgid ""
 "Return a C :c:expr:`short` from the data stream in a :c:expr:`FILE*` opened "
 "for reading.  Only a 16-bit value can be read in using this function, "
 "regardless of the native size of :c:expr:`short`."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:70
+#: ../Doc/c-api/marshal.rst:71
 msgid ""
 "Return a Python object from the data stream in a :c:expr:`FILE*` opened for "
 "reading."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:73 ../Doc/c-api/marshal.rst:87
-#: ../Doc/c-api/marshal.rst:96
+#: ../Doc/c-api/marshal.rst:74 ../Doc/c-api/marshal.rst:88
+#: ../Doc/c-api/marshal.rst:97
 msgid ""
 "On error, sets the appropriate exception (:exc:`EOFError`, :exc:`ValueError` "
 "or :exc:`TypeError`) and returns ``NULL``."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:79
+#: ../Doc/c-api/marshal.rst:80
 msgid ""
 "Return a Python object from the data stream in a :c:expr:`FILE*` opened for "
 "reading.  Unlike :c:func:`PyMarshal_ReadObjectFromFile`, this function "
 "assumes that no further objects will be read from the file, allowing it to "
 "aggressively load file data into memory so that the de-serialization can "
 "operate from data in memory rather than reading a byte at a time from the "
-"file.  Only use these variant if you are certain that you won't be reading "
+"file.  Only use this variant if you are certain that you won't be reading "
 "anything else from the file."
 msgstr ""
 
-#: ../Doc/c-api/marshal.rst:93
+#: ../Doc/c-api/marshal.rst:94
 msgid ""
 "Return a Python object from the data stream in a byte buffer containing "
 "*len* bytes pointed to by *data*."

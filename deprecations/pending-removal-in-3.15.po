@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/deprecations/pending-removal-in-3.15.rst:2
-msgid "Pending Removal in Python 3.15"
+msgid "Pending removal in Python 3.15"
 msgstr ""
 
 #: ../Doc/deprecations/pending-removal-in-3.15.rst:4
@@ -126,7 +127,7 @@ msgstr ""
 #: ../Doc/deprecations/pending-removal-in-3.15.rst:65
 msgid ""
 ":func:`~threading.RLock` will take no arguments in Python 3.15. Passing any "
-"arguments has been deprecated since Python 3.14, as the  Python version does "
+"arguments has been deprecated since Python 3.14, as the Python version does "
 "not permit any arguments, but the C version allows any number of positional "
 "or keyword arguments, ignoring every argument."
 msgstr ""
@@ -150,9 +151,9 @@ msgstr ""
 #: ../Doc/deprecations/pending-removal-in-3.15.rst:82
 msgid ""
 "The undocumented keyword argument syntax for creating :class:`~typing."
-"NamedTuple` classes (e.g. ``Point = NamedTuple(\"Point\", x=int, y=int)``) "
-"has been deprecated since Python 3.13. Use the class-based syntax or the "
-"functional syntax instead."
+"NamedTuple` classes (for example, ``Point = NamedTuple(\"Point\", x=int, "
+"y=int)``) has been deprecated since Python 3.13. Use the class-based syntax "
+"or the functional syntax instead."
 msgstr ""
 
 #: ../Doc/deprecations/pending-removal-in-3.15.rst:88
@@ -180,4 +181,15 @@ msgid ""
 "The :meth:`~wave.Wave_read.getmark`, :meth:`!setmark`, and :meth:`~wave."
 "Wave_read.getmarkers` methods of the :class:`~wave.Wave_read` and :class:"
 "`~wave.Wave_write` classes have been deprecated since Python 3.13."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:107
+msgid ":mod:`zipimport`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:109
+msgid ""
+":meth:`~zipimport.zipimporter.load_module` has been deprecated since Python "
+"3.10. Use :meth:`~zipimport.zipimporter.exec_module` instead. (Contributed "
+"by Jiahao Li in :gh:`125746`.)"
 msgstr ""

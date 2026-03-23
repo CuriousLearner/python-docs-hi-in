@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Doc/tutorial/stdlib.rst:5
-msgid "Brief Tour of the Standard Library"
+msgid "Brief tour of the standard library"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:11
-msgid "Operating System Interface"
+msgid "Operating system interface"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:13
@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 ">>> import os\n"
 ">>> os.getcwd()      # Return the current working directory\n"
-"'C:\\\\Python313'\n"
+"'C:\\\\Python314'\n"
 ">>> os.chdir('/server/accesslogs')   # Change current working directory\n"
 ">>> os.system('mkdir today')   # Run the command mkdir in the system shell\n"
 "0"
@@ -79,7 +79,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:51
-msgid "File Wildcards"
+msgid "File wildcards"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:53
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:64
-msgid "Command Line Arguments"
+msgid "Command-line arguments"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:66
@@ -151,7 +151,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:101
-msgid "Error Output Redirection and Program Termination"
+msgid "Error output redirection and program termination"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:103
@@ -172,7 +172,7 @@ msgid "The most direct way to terminate a script is to use ``sys.exit()``."
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:116
-msgid "String Pattern Matching"
+msgid "String pattern matching"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:118
@@ -264,7 +264,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:179
-msgid "Internet Access"
+msgid "Internet access"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:181
@@ -277,14 +277,13 @@ msgstr ""
 #: ../Doc/tutorial/stdlib.rst:185
 msgid ""
 ">>> from urllib.request import urlopen\n"
-">>> with urlopen('http://worldtimeapi.org/api/timezone/etc/UTC.txt') as "
-"response:\n"
+">>> with urlopen('https://docs.python.org/3/') as response:\n"
 "...     for line in response:\n"
 "...         line = line.decode()             # Convert bytes to a str\n"
-"...         if line.startswith('datetime'):\n"
+"...         if 'updated' in line:\n"
 "...             print(line.rstrip())         # Remove trailing newline\n"
 "...\n"
-"datetime: 2022-01-01T01:36:47.689215+00:00\n"
+"      Last updated on Nov 11, 2025 (20:11 UTC).\n"
 "\n"
 ">>> import smtplib\n"
 ">>> server = smtplib.SMTP('localhost')\n"
@@ -302,7 +301,7 @@ msgid "(Note that the second example needs a mailserver running on localhost.)"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:210
-msgid "Dates and Times"
+msgid "Dates and times"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:212
@@ -317,22 +316,22 @@ msgstr ""
 #: ../Doc/tutorial/stdlib.rst:218
 msgid ""
 ">>> # dates are easily constructed and formatted\n"
-">>> from datetime import date\n"
-">>> now = date.today()\n"
+">>> import datetime as dt\n"
+">>> now = dt.date.today()\n"
 ">>> now\n"
 "datetime.date(2003, 12, 2)\n"
 ">>> now.strftime(\"%m-%d-%y. %d %b %Y is a %A on the %d day of %B.\")\n"
 "'12-02-03. 02 Dec 2003 is a Tuesday on the 02 day of December.'\n"
 "\n"
 ">>> # dates support calendar arithmetic\n"
-">>> birthday = date(1964, 7, 31)\n"
+">>> birthday = dt.date(1964, 7, 31)\n"
 ">>> age = now - birthday\n"
 ">>> age.days\n"
 "14368"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:236
-msgid "Data Compression"
+msgid "Data compression"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:238
@@ -358,7 +357,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:258
-msgid "Performance Measurement"
+msgid "Performance measurement"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:260
@@ -392,7 +391,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:282
-msgid "Quality Control"
+msgid "Quality control"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:284
@@ -451,7 +450,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:328
-msgid "Batteries Included"
+msgid "Batteries included"
 msgstr ""
 
 #: ../Doc/tutorial/stdlib.rst:330
@@ -471,7 +470,7 @@ msgstr ""
 #: ../Doc/tutorial/stdlib.rst:337
 msgid ""
 "The :mod:`email` package is a library for managing email messages, including "
-"MIME and other :rfc:`2822`-based message documents. Unlike :mod:`smtplib` "
+"MIME and other :rfc:`5322`-based message documents. Unlike :mod:`smtplib` "
 "and :mod:`poplib` which actually send and receive messages, the email "
 "package has a complete toolset for building or decoding complex message "
 "structures (including attachments) and for implementing internet encoding "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,11 +32,11 @@ msgid ""
 "and a few useful functions for analyzing pickled data.  The contents of this "
 "module are useful for Python core developers who are working on the :mod:"
 "`pickle`; ordinary users of the :mod:`pickle` module probably won't find "
-"the :mod:`pickletools` module relevant."
+"the :mod:`!pickletools` module relevant."
 msgstr ""
 
 #: ../Doc/library/pickletools.rst:23
-msgid "Command line usage"
+msgid "Command-line usage"
 msgstr ""
 
 #: ../Doc/library/pickletools.rst:27
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/library/pickletools.rst:52
-msgid "Command line options"
+msgid "Command-line options"
 msgstr ""
 
 #: ../Doc/library/pickletools.rst:58
@@ -91,15 +91,20 @@ msgstr ""
 
 #: ../Doc/library/pickletools.rst:75
 msgid ""
-"When more than one pickle file are specified, print given preamble before "
+"When more than one pickle file is specified, print given preamble before "
 "each disassembly."
 msgstr ""
 
-#: ../Doc/library/pickletools.rst:81
-msgid "Programmatic Interface"
+#: ../Doc/library/pickletools.rst:80
+msgid ""
+"A pickle file to read, or ``-`` to indicate reading from standard input."
 msgstr ""
 
-#: ../Doc/library/pickletools.rst:86
+#: ../Doc/library/pickletools.rst:85
+msgid "Programmatic interface"
+msgstr ""
+
+#: ../Doc/library/pickletools.rst:90
 msgid ""
 "Outputs a symbolic disassembly of the pickle to the file-like object *out*, "
 "defaulting to ``sys.stdout``.  *pickle* can be a string or a file-like "
@@ -112,11 +117,11 @@ msgid ""
 "where annotation should start."
 msgstr ""
 
-#: ../Doc/library/pickletools.rst:97
+#: ../Doc/library/pickletools.rst:101
 msgid "Added the *annotate* parameter."
 msgstr ""
 
-#: ../Doc/library/pickletools.rst:102
+#: ../Doc/library/pickletools.rst:106
 msgid ""
 "Provides an :term:`iterator` over all of the opcodes in a pickle, returning "
 "a sequence of ``(opcode, arg, pos)`` triples.  *opcode* is an instance of "
@@ -125,7 +130,7 @@ msgid ""
 "is located. *pickle* can be a string or a file-like object."
 msgstr ""
 
-#: ../Doc/library/pickletools.rst:110
+#: ../Doc/library/pickletools.rst:114
 msgid ""
 "Returns a new equivalent pickle string after eliminating unused ``PUT`` "
 "opcodes. The optimized pickle is shorter, takes less transmission time, "

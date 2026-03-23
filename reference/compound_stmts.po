@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,13 +144,13 @@ msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:160
 msgid ""
-"The ``starred_list`` expression is evaluated once; it should yield an :term:"
-"`iterable` object.  An :term:`iterator` is created for that iterable. The "
-"first item provided by the iterator is then assigned to the target list "
-"using the standard rules for assignments (see :ref:`assignment`), and the "
-"suite is executed.  This repeats for each item provided by the iterator.  "
-"When the iterator is exhausted, the suite in the :keyword:`!else` clause, if "
-"present, is executed, and the loop terminates."
+"The :token:`~python-grammar:starred_expression_list` expression is evaluated "
+"once; it should yield an :term:`iterable` object. An :term:`iterator` is "
+"created for that iterable. The first item provided by the iterator is then "
+"assigned to the target list using the standard rules for assignments (see :"
+"ref:`assignment`), and the suite is executed. This repeats for each item "
+"provided by the iterator. When the iterator is exhausted, the suite in the :"
+"keyword:`!else` clause, if present, is executed, and the loop terminates."
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:173
@@ -208,11 +208,17 @@ msgid ""
 "generate exceptions may be found in section :ref:`raise`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:239
-msgid ":keyword:`!except` clause"
+#: ../Doc/reference/compound_stmts.rst:235
+msgid ""
+"Support for optionally dropping grouping parentheses when using multiple "
+"exception types. See :pep:`758`."
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:241
+msgid ":keyword:`!except` clause"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:243
 msgid ""
 "The :keyword:`!except` clause(s) specify one or more exception handlers. "
 "When no exception occurs in the :keyword:`try` clause, no exception handler "
@@ -223,23 +229,25 @@ msgid ""
 "matches any exception."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:249
+#: ../Doc/reference/compound_stmts.rst:251
 msgid ""
 "For an :keyword:`!except` clause with an expression, the expression must "
-"evaluate to an exception type or a tuple of exception types. The raised "
-"exception matches an :keyword:`!except` clause whose expression evaluates to "
-"the class or a :term:`non-virtual base class <abstract base class>` of the "
-"exception object, or to a tuple that contains such a class."
+"evaluate to an exception type or a tuple of exception types. Parentheses can "
+"be dropped if multiple exception types are provided and the ``as`` clause is "
+"not used. The raised exception matches an :keyword:`!except` clause whose "
+"expression evaluates to the class or a :term:`non-virtual base class "
+"<abstract base class>` of the exception object, or to a tuple that contains "
+"such a class."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:255
+#: ../Doc/reference/compound_stmts.rst:258
 msgid ""
 "If no :keyword:`!except` clause matches the exception, the search for an "
 "exception handler continues in the surrounding code and on the invocation "
 "stack.  [#]_"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:259
+#: ../Doc/reference/compound_stmts.rst:262
 msgid ""
 "If the evaluation of an expression in the header of an :keyword:`!except` "
 "clause raises an exception, the original search for a handler is canceled "
@@ -248,7 +256,7 @@ msgid ""
 "the exception)."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:267
+#: ../Doc/reference/compound_stmts.rst:270
 msgid ""
 "When a matching :keyword:`!except` clause is found, the exception is "
 "assigned to the target specified after the :keyword:`!as` keyword in that :"
@@ -261,23 +269,23 @@ msgid ""
 "handle the exception.)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:278
+#: ../Doc/reference/compound_stmts.rst:281
 msgid ""
 "When an exception has been assigned using ``as target``, it is cleared at "
 "the end of the :keyword:`!except` clause.  This is as if ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:281
+#: ../Doc/reference/compound_stmts.rst:284
 msgid ""
 "except E as N:\n"
 "    foo"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:284
+#: ../Doc/reference/compound_stmts.rst:287
 msgid "was translated to ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:286
+#: ../Doc/reference/compound_stmts.rst:289
 msgid ""
 "except E as N:\n"
 "    try:\n"
@@ -286,7 +294,7 @@ msgid ""
 "        del N"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:292
+#: ../Doc/reference/compound_stmts.rst:295
 msgid ""
 "This means the exception must be assigned to a different name to be able to "
 "refer to it after the :keyword:`!except` clause. Exceptions are cleared "
@@ -295,7 +303,7 @@ msgid ""
 "garbage collection occurs."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:302
+#: ../Doc/reference/compound_stmts.rst:305
 msgid ""
 "Before an :keyword:`!except` clause's suite is executed, the exception is "
 "stored in the :mod:`sys` module, where it can be accessed from within the "
@@ -304,7 +312,7 @@ msgid ""
 "is reset to its previous value::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:308
+#: ../Doc/reference/compound_stmts.rst:311
 msgid ""
 ">>> print(sys.exception())\n"
 "None\n"
@@ -325,24 +333,45 @@ msgid ""
 "None"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:333
+#: ../Doc/reference/compound_stmts.rst:336
 msgid ":keyword:`!except*` clause"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:335
+#: ../Doc/reference/compound_stmts.rst:338
 msgid ""
-"The :keyword:`!except*` clause(s) are used for handling :exc:`ExceptionGroup`"
-"\\s. The exception type for matching is interpreted as in the case of :"
-"keyword:`except`, but in the case of exception groups we can have partial "
-"matches when the type matches some of the exceptions in the group. This "
-"means that multiple :keyword:`!except*` clauses can execute, each handling "
-"part of the exception group. Each clause executes at most once and handles "
-"an exception group of all matching exceptions.  Each exception in the group "
-"is handled by at most one :keyword:`!except*` clause, the first that matches "
-"it. ::"
+"The :keyword:`!except*` clause(s) specify one or more handlers for groups of "
+"exceptions (:exc:`BaseExceptionGroup` instances). A :keyword:`try` statement "
+"can have either :keyword:`except` or :keyword:`!except*` clauses, but not "
+"both. The exception type for matching is mandatory in the case of :keyword:`!"
+"except*`, so ``except*:`` is a syntax error. The type is interpreted as in "
+"the case of :keyword:`!except`, but matching is performed on the exceptions "
+"contained in the group that is being handled. An :exc:`TypeError` is raised "
+"if a matching type is a subclass of :exc:`!BaseExceptionGroup`, because that "
+"would have ambiguous semantics."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:345
+#: ../Doc/reference/compound_stmts.rst:348
+msgid ""
+"When an exception group is raised in the try block, each :keyword:`!except*` "
+"clause splits (see :meth:`~BaseExceptionGroup.split`) it into the subgroups "
+"of matching and non-matching exceptions. If the matching subgroup is not "
+"empty, it becomes the handled exception (the value returned from :func:`sys."
+"exception`) and assigned to the target of the :keyword:`!except*` clause (if "
+"there is one). Then, the body of the :keyword:`!except*` clause executes. If "
+"the non-matching subgroup is not empty, it is processed by the next :keyword:"
+"`!except*` in the same manner. This continues until all exceptions in the "
+"group have been matched, or the last :keyword:`!except*` clause has run."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:358
+msgid ""
+"After all :keyword:`!except*` clauses execute, the group of unhandled "
+"exceptions is merged with any exceptions that were raised or re-raised from "
+"within :keyword:`!except*` clauses. This merged exception group propagates "
+"on.::"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:362
 msgid ""
 ">>> try:\n"
 "...     raise ExceptionGroup(\"eg\",\n"
@@ -355,57 +384,45 @@ msgid ""
 "caught <class 'ExceptionGroup'> with nested (TypeError(2),)\n"
 "caught <class 'ExceptionGroup'> with nested (OSError(3), OSError(4))\n"
 "  + Exception Group Traceback (most recent call last):\n"
-"  |   File \"<stdin>\", line 2, in <module>\n"
-"  | ExceptionGroup: eg\n"
+"  |   File \"<doctest default[0]>\", line 2, in <module>\n"
+"  |     raise ExceptionGroup(\"eg\",\n"
+"  |         [ValueError(1), TypeError(2), OSError(3), OSError(4)])\n"
+"  | ExceptionGroup: eg (1 sub-exception)\n"
 "  +-+---------------- 1 ----------------\n"
 "    | ValueError: 1\n"
 "    +------------------------------------"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:363
+#: ../Doc/reference/compound_stmts.rst:381
 msgid ""
-"Any remaining exceptions that were not handled by any :keyword:`!except*` "
-"clause are re-raised at the end, along with all exceptions that were raised "
-"from within the :keyword:`!except*` clauses. If this list contains more than "
-"one exception to reraise, they are combined into an exception group."
+"If the exception raised from the :keyword:`try` block is not an exception "
+"group and its type matches one of the :keyword:`!except*` clauses, it is "
+"caught and wrapped by an exception group with an empty message string. This "
+"ensures that the type of the target ``e`` is consistently :exc:"
+"`BaseExceptionGroup`::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:369
-msgid ""
-"If the raised exception is not an exception group and its type matches one "
-"of the :keyword:`!except*` clauses, it is caught and wrapped by an exception "
-"group with an empty message string. ::"
-msgstr ""
-
-#: ../Doc/reference/compound_stmts.rst:373
+#: ../Doc/reference/compound_stmts.rst:386
 msgid ""
 ">>> try:\n"
 "...     raise BlockingIOError\n"
 "... except* BlockingIOError as e:\n"
 "...     print(repr(e))\n"
 "...\n"
-"ExceptionGroup('', (BlockingIOError()))"
+"ExceptionGroup('', (BlockingIOError(),))"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:380
+#: ../Doc/reference/compound_stmts.rst:393
 msgid ""
-"An :keyword:`!except*` clause must have a matching expression; it cannot be "
-"``except*:``. Furthermore, this expression cannot contain exception group "
-"types, because that would have ambiguous semantics."
+":keyword:`break`, :keyword:`continue` and :keyword:`return` cannot appear in "
+"an :keyword:`!except*` clause."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:384
-msgid ""
-"It is not possible to mix :keyword:`except` and :keyword:`!except*` in the "
-"same :keyword:`try`. The :keyword:`break`, :keyword:`continue`, and :keyword:"
-"`return` statements cannot appear in an :keyword:`!except*` clause."
-msgstr ""
-
-#: ../Doc/reference/compound_stmts.rst:399
+#: ../Doc/reference/compound_stmts.rst:406
 msgid ":keyword:`!else` clause"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:401
+#: ../Doc/reference/compound_stmts.rst:408
 msgid ""
 "The optional :keyword:`!else` clause is executed if the control flow leaves "
 "the :keyword:`try` suite, no exception was raised, and no :keyword:"
@@ -414,43 +431,40 @@ msgid ""
 "keyword:`except` clauses."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:413
+#: ../Doc/reference/compound_stmts.rst:420
 msgid ":keyword:`!finally` clause"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:415
+#: ../Doc/reference/compound_stmts.rst:422
 msgid ""
 "If :keyword:`!finally` is present, it specifies a 'cleanup' handler.  The :"
 "keyword:`try` clause is executed, including any :keyword:`except` and :"
-"keyword:`else` clauses.  If an exception occurs in any of the clauses and is "
-"not handled, the exception is temporarily saved. The :keyword:`!finally` "
-"clause is executed.  If there is a saved exception it is re-raised at the "
-"end of the :keyword:`!finally` clause.  If the :keyword:`!finally` clause "
-"raises another exception, the saved exception is set as the context of the "
-"new exception. If the :keyword:`!finally` clause executes a :keyword:"
-"`return`, :keyword:`break` or :keyword:`continue` statement, the saved "
-"exception is discarded::"
+"keyword:`else <except_else>` clauses. If an exception occurs in any of the "
+"clauses and is not handled, the exception is temporarily saved. The :keyword:"
+"`!finally` clause is executed.  If there is a saved exception it is re-"
+"raised at the end of the :keyword:`!finally` clause. If the :keyword:`!"
+"finally` clause raises another exception, the saved exception is set as the "
+"context of the new exception. If the :keyword:`!finally` clause executes a :"
+"keyword:`return`, :keyword:`break` or :keyword:`continue` statement, the "
+"saved exception is discarded. For example, this function returns 42."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:425
+#: ../Doc/reference/compound_stmts.rst:435
 msgid ""
-">>> def f():\n"
-"...     try:\n"
-"...         1/0\n"
-"...     finally:\n"
-"...         return 42\n"
-"...\n"
-">>> f()\n"
-"42"
+"def f():\n"
+"    try:\n"
+"        1/0\n"
+"    finally:\n"
+"        return 42"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:434
+#: ../Doc/reference/compound_stmts.rst:443
 msgid ""
 "The exception information is not available to the program during execution "
 "of the :keyword:`!finally` clause."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:442
+#: ../Doc/reference/compound_stmts.rst:451
 msgid ""
 "When a :keyword:`return`, :keyword:`break` or :keyword:`continue` statement "
 "is executed in the :keyword:`try` suite of a :keyword:`!try`...\\ :keyword:`!"
@@ -458,37 +472,42 @@ msgid ""
 "way out.'"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:446
+#: ../Doc/reference/compound_stmts.rst:455
 msgid ""
 "The return value of a function is determined by the last :keyword:`return` "
 "statement executed.  Since the :keyword:`!finally` clause always executes, "
 "a :keyword:`!return` statement executed in the :keyword:`!finally` clause "
-"will always be the last one executed::"
-msgstr ""
-
-#: ../Doc/reference/compound_stmts.rst:451
-msgid ""
-">>> def foo():\n"
-"...     try:\n"
-"...         return 'try'\n"
-"...     finally:\n"
-"...         return 'finally'\n"
-"...\n"
-">>> foo()\n"
-"'finally'"
+"will always be the last one executed. The following function returns "
+"'finally'."
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:460
+msgid ""
+"def foo():\n"
+"    try:\n"
+"        return 'try'\n"
+"    finally:\n"
+"        return 'finally'"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:468
 msgid ""
 "Prior to Python 3.8, a :keyword:`continue` statement was illegal in the :"
 "keyword:`!finally` clause due to a problem with the implementation."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:469
+#: ../Doc/reference/compound_stmts.rst:472
+msgid ""
+"The compiler emits a :exc:`SyntaxWarning` when a :keyword:`return`, :keyword:"
+"`break` or :keyword:`continue` appears in a :keyword:`!finally` block (see :"
+"pep:`765`)."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:482
 msgid "The :keyword:`!with` statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:478
+#: ../Doc/reference/compound_stmts.rst:491
 msgid ""
 "The :keyword:`with` statement is used to wrap the execution of a block with "
 "methods defined by a context manager (see section :ref:`context-managers`). "
@@ -496,38 +515,38 @@ msgid ""
 "`finally` usage patterns to be encapsulated for convenient reuse."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:488
+#: ../Doc/reference/compound_stmts.rst:501
 msgid ""
 "The execution of the :keyword:`with` statement with one \"item\" proceeds as "
 "follows:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:490
+#: ../Doc/reference/compound_stmts.rst:503
 msgid ""
 "The context expression (the expression given in the :token:`~python-grammar:"
 "with_item`) is evaluated to obtain a context manager."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:493
+#: ../Doc/reference/compound_stmts.rst:506
 msgid ""
 "The context manager's :meth:`~object.__enter__` is loaded for later use."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:495
+#: ../Doc/reference/compound_stmts.rst:508
 msgid "The context manager's :meth:`~object.__exit__` is loaded for later use."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:497
+#: ../Doc/reference/compound_stmts.rst:510
 msgid "The context manager's :meth:`~object.__enter__` method is invoked."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:499
+#: ../Doc/reference/compound_stmts.rst:512
 msgid ""
 "If a target was included in the :keyword:`with` statement, the return value "
 "from :meth:`~object.__enter__` is assigned to it."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:504
+#: ../Doc/reference/compound_stmts.rst:517
 msgid ""
 "The :keyword:`with` statement guarantees that if the :meth:`~object."
 "__enter__` method returns without an error, then :meth:`~object.__exit__` "
@@ -536,11 +555,11 @@ msgid ""
 "suite would be. See step 7 below."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:510
+#: ../Doc/reference/compound_stmts.rst:523
 msgid "The suite is executed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:512
+#: ../Doc/reference/compound_stmts.rst:525
 msgid ""
 "The context manager's :meth:`~object.__exit__` method is invoked.  If an "
 "exception caused the suite to be exited, its type, value, and traceback are "
@@ -548,7 +567,7 @@ msgid ""
 "`None` arguments are supplied."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:517
+#: ../Doc/reference/compound_stmts.rst:530
 msgid ""
 "If the suite was exited due to an exception, and the return value from the :"
 "meth:`~object.__exit__` method was false, the exception is reraised.  If the "
@@ -556,37 +575,37 @@ msgid ""
 "with the statement following the :keyword:`with` statement."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:522
+#: ../Doc/reference/compound_stmts.rst:535
 msgid ""
 "If the suite was exited for any reason other than an exception, the return "
 "value from :meth:`~object.__exit__` is ignored, and execution proceeds at "
 "the normal location for the kind of exit that was taken."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:526
-#: ../Doc/reference/compound_stmts.rst:1549
-#: ../Doc/reference/compound_stmts.rst:1590
+#: ../Doc/reference/compound_stmts.rst:539
+#: ../Doc/reference/compound_stmts.rst:1560
+#: ../Doc/reference/compound_stmts.rst:1601
 msgid "The following code::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:528
+#: ../Doc/reference/compound_stmts.rst:541
 msgid ""
 "with EXPRESSION as TARGET:\n"
 "    SUITE"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:531
-#: ../Doc/reference/compound_stmts.rst:556
-#: ../Doc/reference/compound_stmts.rst:1595
+#: ../Doc/reference/compound_stmts.rst:544
+#: ../Doc/reference/compound_stmts.rst:572
+#: ../Doc/reference/compound_stmts.rst:1606
 msgid "is semantically equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:533
+#: ../Doc/reference/compound_stmts.rst:546
 msgid ""
 "manager = (EXPRESSION)\n"
-"enter = type(manager).__enter__\n"
-"exit = type(manager).__exit__\n"
-"value = enter(manager)\n"
+"enter = manager.__enter__\n"
+"exit = manager.__exit__\n"
+"value = enter()\n"
 "hit_except = False\n"
 "\n"
 "try:\n"
@@ -594,39 +613,45 @@ msgid ""
 "    SUITE\n"
 "except:\n"
 "    hit_except = True\n"
-"    if not exit(manager, *sys.exc_info()):\n"
+"    if not exit(*sys.exc_info()):\n"
 "        raise\n"
 "finally:\n"
 "    if not hit_except:\n"
-"        exit(manager, None, None, None)"
+"        exit(None, None, None)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:550
+#: ../Doc/reference/compound_stmts.rst:563
+msgid ""
+"except that implicit :ref:`special method lookup <special-lookup>` is used "
+"for :meth:`~object.__enter__` and :meth:`~object.__exit__`."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:566
 msgid ""
 "With more than one item, the context managers are processed as if multiple :"
 "keyword:`with` statements were nested::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:553
+#: ../Doc/reference/compound_stmts.rst:569
 msgid ""
 "with A() as a, B() as b:\n"
 "    SUITE"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:558
+#: ../Doc/reference/compound_stmts.rst:574
 msgid ""
 "with A() as a:\n"
 "    with B() as b:\n"
 "        SUITE"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:562
+#: ../Doc/reference/compound_stmts.rst:578
 msgid ""
 "You can also write multi-item context managers in multiple lines if the "
 "items are surrounded by parentheses. For example::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:565
+#: ../Doc/reference/compound_stmts.rst:581
 msgid ""
 "with (\n"
 "    A() as a,\n"
@@ -635,88 +660,88 @@ msgid ""
 "    SUITE"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:571
+#: ../Doc/reference/compound_stmts.rst:587
 msgid "Support for multiple context expressions."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:574
+#: ../Doc/reference/compound_stmts.rst:590
 msgid ""
 "Support for using grouping parentheses to break the statement in multiple "
 "lines."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:579
+#: ../Doc/reference/compound_stmts.rst:595
 msgid ":pep:`343` - The \"with\" statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:580
+#: ../Doc/reference/compound_stmts.rst:596
 msgid ""
 "The specification, background, and examples for the Python :keyword:`with` "
 "statement."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:586
+#: ../Doc/reference/compound_stmts.rst:603
 msgid "The :keyword:`!match` statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:600
+#: ../Doc/reference/compound_stmts.rst:617
 msgid "The match statement is used for pattern matching.  Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:609
+#: ../Doc/reference/compound_stmts.rst:626
 msgid ""
 "This section uses single quotes to denote :ref:`soft keywords <soft-"
 "keywords>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:612
+#: ../Doc/reference/compound_stmts.rst:629
 msgid ""
 "Pattern matching takes a pattern as input (following ``case``) and a subject "
 "value (following ``match``).  The pattern (which may contain subpatterns) is "
 "matched against the subject value.  The outcomes are:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:616
+#: ../Doc/reference/compound_stmts.rst:633
 msgid "A match success or failure (also termed a pattern success or failure)."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:618
+#: ../Doc/reference/compound_stmts.rst:635
 msgid ""
 "Possible binding of matched values to a name.  The prerequisites for this "
 "are further discussed below."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:621
+#: ../Doc/reference/compound_stmts.rst:638
 msgid ""
 "The ``match`` and ``case`` keywords are :ref:`soft keywords <soft-keywords>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:625
-#: ../Doc/reference/compound_stmts.rst:1182
+#: ../Doc/reference/compound_stmts.rst:642
+#: ../Doc/reference/compound_stmts.rst:1199
 msgid ":pep:`634` -- Structural Pattern Matching: Specification"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:626
-#: ../Doc/reference/compound_stmts.rst:1183
+#: ../Doc/reference/compound_stmts.rst:643
+#: ../Doc/reference/compound_stmts.rst:1200
 msgid ":pep:`636` -- Structural Pattern Matching: Tutorial"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:630
+#: ../Doc/reference/compound_stmts.rst:647
 msgid "Overview"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:632
+#: ../Doc/reference/compound_stmts.rst:649
 msgid "Here's an overview of the logical flow of a match statement:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:635
+#: ../Doc/reference/compound_stmts.rst:652
 msgid ""
 "The subject expression ``subject_expr`` is evaluated and a resulting subject "
 "value obtained. If the subject expression contains a comma, a tuple is "
 "constructed using :ref:`the standard rules <typesseq-tuple>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:639
+#: ../Doc/reference/compound_stmts.rst:656
 msgid ""
 "Each pattern in a ``case_block`` is attempted to match with the subject "
 "value. The specific rules for success or failure are described below. The "
@@ -726,7 +751,7 @@ msgid ""
 "outlive the executed block and can be used after the match statement**."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:648
+#: ../Doc/reference/compound_stmts.rst:665
 msgid ""
 "During failed pattern matches, some subpatterns may succeed.  Do not rely on "
 "bindings being made for a failed match.  Conversely, do not rely on "
@@ -735,38 +760,38 @@ msgid ""
 "made to allow different implementations to add optimizations."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:655
+#: ../Doc/reference/compound_stmts.rst:672
 msgid ""
 "If the pattern succeeds, the corresponding guard (if present) is evaluated. "
 "In this case all name bindings are guaranteed to have happened."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:658
+#: ../Doc/reference/compound_stmts.rst:675
 msgid ""
 "If the guard evaluates as true or is missing, the ``block`` inside "
 "``case_block`` is executed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:661
+#: ../Doc/reference/compound_stmts.rst:678
 msgid "Otherwise, the next ``case_block`` is attempted as described above."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:663
+#: ../Doc/reference/compound_stmts.rst:680
 msgid "If there are no further case blocks, the match statement is completed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:667
+#: ../Doc/reference/compound_stmts.rst:684
 msgid ""
 "Users should generally never rely on a pattern being evaluated.  Depending "
 "on implementation, the interpreter may cache values or use other "
 "optimizations which skip repeated evaluations."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:671
+#: ../Doc/reference/compound_stmts.rst:688
 msgid "A sample match statement::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:673
+#: ../Doc/reference/compound_stmts.rst:690
 msgid ""
 ">>> flag = False\n"
 ">>> match (100, 200):\n"
@@ -782,56 +807,56 @@ msgid ""
 "Case 3, y: 200"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:687
+#: ../Doc/reference/compound_stmts.rst:704
 msgid ""
 "In this case, ``if flag`` is a guard.  Read more about that in the next "
 "section."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:690
+#: ../Doc/reference/compound_stmts.rst:707
 msgid "Guards"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:697
+#: ../Doc/reference/compound_stmts.rst:714
 msgid ""
 "A ``guard`` (which is part of the ``case``) must succeed for code inside the "
 "``case`` block to execute.  It takes the form: :keyword:`if` followed by an "
 "expression."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:702
+#: ../Doc/reference/compound_stmts.rst:719
 msgid "The logical flow of a ``case`` block with a ``guard`` follows:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:704
+#: ../Doc/reference/compound_stmts.rst:721
 msgid ""
 "Check that the pattern in the ``case`` block succeeded.  If the pattern "
 "failed, the ``guard`` is not evaluated and the next ``case`` block is "
 "checked."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:708
+#: ../Doc/reference/compound_stmts.rst:725
 msgid "If the pattern succeeded, evaluate the ``guard``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:710
+#: ../Doc/reference/compound_stmts.rst:727
 msgid ""
 "If the ``guard`` condition evaluates as true, the case block is selected."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:713
+#: ../Doc/reference/compound_stmts.rst:730
 msgid ""
 "If the ``guard`` condition evaluates as false, the case block is not "
 "selected."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:716
+#: ../Doc/reference/compound_stmts.rst:733
 msgid ""
 "If the ``guard`` raises an exception during evaluation, the exception "
 "bubbles up."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:719
+#: ../Doc/reference/compound_stmts.rst:736
 msgid ""
 "Guards are allowed to have side effects as they are expressions.  Guard "
 "evaluation must proceed from the first to the last case block, one at a "
@@ -840,17 +865,17 @@ msgid ""
 "block is selected."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:729
+#: ../Doc/reference/compound_stmts.rst:746
 msgid "Irrefutable Case Blocks"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:733
+#: ../Doc/reference/compound_stmts.rst:750
 msgid ""
 "An irrefutable case block is a match-all case block.  A match statement may "
 "have at most one irrefutable case block, and it must be last."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:736
+#: ../Doc/reference/compound_stmts.rst:753
 msgid ""
 "A case block is considered irrefutable if it has no guard and its pattern is "
 "irrefutable.  A pattern is considered irrefutable if we can prove from its "
@@ -858,47 +883,47 @@ msgid ""
 "irrefutable:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:741
+#: ../Doc/reference/compound_stmts.rst:758
 msgid ":ref:`as-patterns` whose left-hand side is irrefutable"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:743
+#: ../Doc/reference/compound_stmts.rst:760
 msgid ":ref:`or-patterns` containing at least one irrefutable pattern"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:745
+#: ../Doc/reference/compound_stmts.rst:762
 msgid ":ref:`capture-patterns`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:747
+#: ../Doc/reference/compound_stmts.rst:764
 msgid ":ref:`wildcard-patterns`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:749
+#: ../Doc/reference/compound_stmts.rst:766
 msgid "parenthesized irrefutable patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:753
+#: ../Doc/reference/compound_stmts.rst:770
 msgid "Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:760
+#: ../Doc/reference/compound_stmts.rst:777
 msgid "This section uses grammar notations beyond standard EBNF:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:762
+#: ../Doc/reference/compound_stmts.rst:779
 msgid "the notation ``SEP.RULE+`` is shorthand for ``RULE (SEP RULE)*``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:764
+#: ../Doc/reference/compound_stmts.rst:781
 msgid "the notation ``!RULE`` is shorthand for a negative lookahead assertion"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:767
+#: ../Doc/reference/compound_stmts.rst:784
 msgid "The top-level syntax for ``patterns`` is:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:781
+#: ../Doc/reference/compound_stmts.rst:798
 msgid ""
 "The descriptions below will include a description \"in simple terms\" of "
 "what a pattern does for illustration purposes (credits to Raymond Hettinger "
@@ -908,113 +933,113 @@ msgid ""
 "forms."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:791
+#: ../Doc/reference/compound_stmts.rst:808
 msgid "OR Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:793
+#: ../Doc/reference/compound_stmts.rst:810
 msgid ""
 "An OR pattern is two or more patterns separated by vertical bars ``|``.  "
 "Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:799
+#: ../Doc/reference/compound_stmts.rst:816
 msgid ""
 "Only the final subpattern may be :ref:`irrefutable <irrefutable_case>`, and "
 "each subpattern must bind the same set of names to avoid ambiguity."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:802
+#: ../Doc/reference/compound_stmts.rst:819
 msgid ""
 "An OR pattern matches each of its subpatterns in turn to the subject value, "
 "until one succeeds.  The OR pattern is then considered successful.  "
 "Otherwise, if none of the subpatterns succeed, the OR pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:806
+#: ../Doc/reference/compound_stmts.rst:823
 msgid ""
 "In simple terms, ``P1 | P2 | ...`` will try to match ``P1``, if it fails it "
 "will try to match ``P2``, succeeding immediately if any succeeds, failing "
 "otherwise."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:812
+#: ../Doc/reference/compound_stmts.rst:829
 msgid "AS Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:814
+#: ../Doc/reference/compound_stmts.rst:831
 msgid ""
 "An AS pattern matches an OR pattern on the left of the :keyword:`as` keyword "
 "against a subject.  Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:820
+#: ../Doc/reference/compound_stmts.rst:837
 msgid ""
 "If the OR pattern fails, the AS pattern fails.  Otherwise, the AS pattern "
 "binds the subject to the name on the right of the as keyword and succeeds. "
 "``capture_pattern`` cannot be a ``_``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:824
+#: ../Doc/reference/compound_stmts.rst:841
 msgid ""
 "In simple terms ``P as NAME`` will match with ``P``, and on success it will "
 "set ``NAME = <subject>``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:831
+#: ../Doc/reference/compound_stmts.rst:848
 msgid "Literal Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:833
+#: ../Doc/reference/compound_stmts.rst:850
 msgid ""
 "A literal pattern corresponds to most :ref:`literals <literals>` in Python.  "
 "Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:846
+#: ../Doc/reference/compound_stmts.rst:863
 msgid ""
 "The rule ``strings`` and the token ``NUMBER`` are defined in the :doc:"
 "`standard Python grammar <./grammar>`.  Triple-quoted strings are "
 "supported.  Raw strings and byte strings are supported.  :ref:`f-strings` "
-"are not supported."
+"and :ref:`t-strings` are not supported."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:851
+#: ../Doc/reference/compound_stmts.rst:868
 msgid ""
 "The forms ``signed_number '+' NUMBER`` and ``signed_number '-' NUMBER`` are "
 "for expressing :ref:`complex numbers <imaginary>`; they require a real "
 "number on the left and an imaginary number on the right. E.g. ``3 + 4j``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:855
+#: ../Doc/reference/compound_stmts.rst:872
 msgid ""
 "In simple terms, ``LITERAL`` will succeed only if ``<subject> == LITERAL``. "
 "For the singletons ``None``, ``True`` and ``False``, the :keyword:`is` "
 "operator is used."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:861
+#: ../Doc/reference/compound_stmts.rst:878
 msgid "Capture Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:863
+#: ../Doc/reference/compound_stmts.rst:880
 msgid "A capture pattern binds the subject value to a name. Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:869
+#: ../Doc/reference/compound_stmts.rst:886
 msgid ""
 "A single underscore ``_`` is not a capture pattern (this is what ``!'_'`` "
 "expresses). It is instead treated as a :token:`~python-grammar:"
 "wildcard_pattern`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:873
+#: ../Doc/reference/compound_stmts.rst:890
 msgid ""
 "In a given pattern, a given name can only be bound once.  E.g. ``case x, "
 "x: ...`` is invalid while ``case [x] | x: ...`` is allowed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:876
+#: ../Doc/reference/compound_stmts.rst:893
 msgid ""
 "Capture patterns always succeed.  The binding follows scoping rules "
 "established by the assignment expression operator in :pep:`572`; the name "
@@ -1022,55 +1047,55 @@ msgid ""
 "there's an applicable :keyword:`global` or :keyword:`nonlocal` statement."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:881
+#: ../Doc/reference/compound_stmts.rst:898
 msgid ""
 "In simple terms ``NAME`` will always succeed and it will set ``NAME = "
 "<subject>``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:886
+#: ../Doc/reference/compound_stmts.rst:903
 msgid "Wildcard Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:888
+#: ../Doc/reference/compound_stmts.rst:905
 msgid ""
 "A wildcard pattern always succeeds (matches anything) and binds no name.  "
 "Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:894
+#: ../Doc/reference/compound_stmts.rst:911
 msgid ""
 "``_`` is a :ref:`soft keyword <soft-keywords>` within any pattern, but only "
 "within patterns.  It is an identifier, as usual, even within ``match`` "
 "subject expressions, ``guard``\\ s, and ``case`` blocks."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:898
+#: ../Doc/reference/compound_stmts.rst:915
 msgid "In simple terms, ``_`` will always succeed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:903
+#: ../Doc/reference/compound_stmts.rst:920
 msgid "Value Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:905
+#: ../Doc/reference/compound_stmts.rst:922
 msgid "A value pattern represents a named value in Python. Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:913
+#: ../Doc/reference/compound_stmts.rst:930
 msgid ""
 "The dotted name in the pattern is looked up using standard Python :ref:`name "
 "resolution rules <resolve_names>`.  The pattern succeeds if the value found "
 "compares equal to the subject value (using the ``==`` equality operator)."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:918
+#: ../Doc/reference/compound_stmts.rst:935
 msgid ""
 "In simple terms ``NAME1.NAME2`` will succeed only if ``<subject> == NAME1."
 "NAME2``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:922
+#: ../Doc/reference/compound_stmts.rst:939
 msgid ""
 "If the same value occurs multiple times in the same match statement, the "
 "interpreter may cache the first value found and reuse it rather than repeat "
@@ -1078,44 +1103,44 @@ msgid ""
 "given match statement."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:930
+#: ../Doc/reference/compound_stmts.rst:947
 msgid "Group Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:932
+#: ../Doc/reference/compound_stmts.rst:949
 msgid ""
 "A group pattern allows users to add parentheses around patterns to emphasize "
 "the intended grouping.  Otherwise, it has no additional syntax. Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:939
+#: ../Doc/reference/compound_stmts.rst:956
 msgid "In simple terms ``(P)`` has the same effect as ``P``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:944
+#: ../Doc/reference/compound_stmts.rst:961
 msgid "Sequence Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:946
+#: ../Doc/reference/compound_stmts.rst:963
 msgid ""
 "A sequence pattern contains several subpatterns to be matched against "
 "sequence elements. The syntax is similar to the unpacking of a list or tuple."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:957
+#: ../Doc/reference/compound_stmts.rst:974
 msgid ""
 "There is no difference if parentheses  or square brackets are used for "
 "sequence patterns (i.e. ``(...)`` vs ``[...]`` )."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:961
+#: ../Doc/reference/compound_stmts.rst:978
 msgid ""
 "A single pattern enclosed in parentheses without a trailing comma (e.g. ``(3 "
 "| 4)``) is a :ref:`group pattern <group-patterns>`. While a single pattern "
 "enclosed in square brackets (e.g. ``[3 | 4]``) is still a sequence pattern."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:966
+#: ../Doc/reference/compound_stmts.rst:983
 msgid ""
 "At most one star subpattern may be in a sequence pattern.  The star "
 "subpattern may occur in any position. If no star subpattern is present, the "
@@ -1123,40 +1148,40 @@ msgid ""
 "variable-length sequence pattern."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:971
+#: ../Doc/reference/compound_stmts.rst:988
 msgid ""
 "The following is the logical flow for matching a sequence pattern against a "
 "subject value:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:974
+#: ../Doc/reference/compound_stmts.rst:991
 msgid ""
 "If the subject value is not a sequence [#]_, the sequence pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:977
+#: ../Doc/reference/compound_stmts.rst:994
 msgid ""
 "If the subject value is an instance of ``str``, ``bytes`` or ``bytearray`` "
 "the sequence pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:980
+#: ../Doc/reference/compound_stmts.rst:997
 msgid ""
 "The subsequent steps depend on whether the sequence pattern is fixed or "
 "variable-length."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:983
+#: ../Doc/reference/compound_stmts.rst:1000
 msgid "If the sequence pattern is fixed-length:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:985
+#: ../Doc/reference/compound_stmts.rst:1002
 msgid ""
 "If the length of the subject sequence is not equal to the number of "
 "subpatterns, the sequence pattern fails"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:988
+#: ../Doc/reference/compound_stmts.rst:1005
 msgid ""
 "Subpatterns in the sequence pattern are matched to their corresponding items "
 "in the subject sequence from left to right.  Matching stops as soon as a "
@@ -1164,375 +1189,371 @@ msgid ""
 "corresponding item, the sequence pattern succeeds."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:993
+#: ../Doc/reference/compound_stmts.rst:1010
 msgid "Otherwise, if the sequence pattern is variable-length:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:995
+#: ../Doc/reference/compound_stmts.rst:1012
 msgid ""
 "If the length of the subject sequence is less than the number of non-star "
 "subpatterns, the sequence pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:998
+#: ../Doc/reference/compound_stmts.rst:1015
 msgid ""
 "The leading non-star subpatterns are matched to their corresponding items as "
 "for fixed-length sequences."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1001
+#: ../Doc/reference/compound_stmts.rst:1018
 msgid ""
 "If the previous step succeeds, the star subpattern matches a list formed of "
 "the remaining subject items, excluding the remaining items corresponding to "
 "non-star subpatterns following the star subpattern."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1005
+#: ../Doc/reference/compound_stmts.rst:1022
 msgid ""
 "Remaining non-star subpatterns are matched to their corresponding subject "
 "items, as for a fixed-length sequence."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1008
+#: ../Doc/reference/compound_stmts.rst:1025
 msgid ""
 "The length of the subject sequence is obtained via :func:`len` (i.e. via "
-"the :meth:`__len__` protocol).  This length may be cached by the interpreter "
-"in a similar manner as :ref:`value patterns <value-patterns>`."
+"the :meth:`~object.__len__` protocol). This length may be cached by the "
+"interpreter in a similar manner as :ref:`value patterns <value-patterns>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1014
+#: ../Doc/reference/compound_stmts.rst:1031
 msgid ""
 "In simple terms ``[P1, P2, P3,`` ... ``, P<N>]`` matches only if all the "
 "following happens:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1017
+#: ../Doc/reference/compound_stmts.rst:1034
 msgid "check ``<subject>`` is a sequence"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1018
+#: ../Doc/reference/compound_stmts.rst:1035
 msgid "``len(subject) == <N>``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1019
+#: ../Doc/reference/compound_stmts.rst:1036
 msgid ""
 "``P1`` matches ``<subject>[0]`` (note that this match can also bind names)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1020
+#: ../Doc/reference/compound_stmts.rst:1037
 msgid ""
 "``P2`` matches ``<subject>[1]`` (note that this match can also bind names)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1021
+#: ../Doc/reference/compound_stmts.rst:1038
 msgid "... and so on for the corresponding pattern/element."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1026
+#: ../Doc/reference/compound_stmts.rst:1043
 msgid "Mapping Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1028
+#: ../Doc/reference/compound_stmts.rst:1045
 msgid ""
 "A mapping pattern contains one or more key-value patterns.  The syntax is "
 "similar to the construction of a dictionary. Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1039
+#: ../Doc/reference/compound_stmts.rst:1056
 msgid ""
 "At most one double star pattern may be in a mapping pattern.  The double "
 "star pattern must be the last subpattern in the mapping pattern."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1042
+#: ../Doc/reference/compound_stmts.rst:1059
 msgid ""
 "Duplicate keys in mapping patterns are disallowed. Duplicate literal keys "
 "will raise a :exc:`SyntaxError`. Two keys that otherwise have the same value "
 "will raise a :exc:`ValueError` at runtime."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1046
+#: ../Doc/reference/compound_stmts.rst:1063
 msgid ""
 "The following is the logical flow for matching a mapping pattern against a "
 "subject value:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1049
+#: ../Doc/reference/compound_stmts.rst:1066
 msgid "If the subject value is not a mapping [#]_,the mapping pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1051
+#: ../Doc/reference/compound_stmts.rst:1068
 msgid ""
 "If every key given in the mapping pattern is present in the subject mapping, "
 "and the pattern for each key matches the corresponding item of the subject "
 "mapping, the mapping pattern succeeds."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1055
+#: ../Doc/reference/compound_stmts.rst:1072
 msgid ""
 "If duplicate keys are detected in the mapping pattern, the pattern is "
 "considered invalid. A :exc:`SyntaxError` is raised for duplicate literal "
 "values; or a :exc:`ValueError` for named keys of the same value."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1059
+#: ../Doc/reference/compound_stmts.rst:1076
 msgid ""
 "Key-value pairs are matched using the two-argument form of the mapping "
 "subject's ``get()`` method.  Matched key-value pairs must already be present "
-"in the mapping, and not created on-the-fly via :meth:`__missing__` or :meth:"
-"`~object.__getitem__`."
+"in the mapping, and not created on-the-fly via :meth:`~object.__missing__` "
+"or :meth:`~object.__getitem__`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1064
+#: ../Doc/reference/compound_stmts.rst:1081
 msgid ""
 "In simple terms ``{KEY1: P1, KEY2: P2, ... }`` matches only if all the "
 "following happens:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1067
+#: ../Doc/reference/compound_stmts.rst:1084
 msgid "check ``<subject>`` is a mapping"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1068
+#: ../Doc/reference/compound_stmts.rst:1085
 msgid "``KEY1 in <subject>``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1069
+#: ../Doc/reference/compound_stmts.rst:1086
 msgid "``P1`` matches ``<subject>[KEY1]``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1070
+#: ../Doc/reference/compound_stmts.rst:1087
 msgid "... and so on for the corresponding KEY/pattern pair."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1076
+#: ../Doc/reference/compound_stmts.rst:1093
 msgid "Class Patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1078
+#: ../Doc/reference/compound_stmts.rst:1095
 msgid ""
 "A class pattern represents a class and its positional and keyword arguments "
 "(if any).  Syntax:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1089
+#: ../Doc/reference/compound_stmts.rst:1106
 msgid "The same keyword should not be repeated in class patterns."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1091
+#: ../Doc/reference/compound_stmts.rst:1108
 msgid ""
 "The following is the logical flow for matching a class pattern against a "
 "subject value:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1094
+#: ../Doc/reference/compound_stmts.rst:1111
 msgid ""
 "If ``name_or_attr`` is not an instance of the builtin :class:`type` , raise :"
 "exc:`TypeError`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1097
+#: ../Doc/reference/compound_stmts.rst:1114
 msgid ""
 "If the subject value is not an instance of ``name_or_attr`` (tested via :"
 "func:`isinstance`), the class pattern fails."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1100
+#: ../Doc/reference/compound_stmts.rst:1117
 msgid ""
 "If no pattern arguments are present, the pattern succeeds.  Otherwise, the "
 "subsequent steps depend on whether keyword or positional argument patterns "
 "are present."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1104
+#: ../Doc/reference/compound_stmts.rst:1121
 msgid ""
 "For a number of built-in types (specified below), a single positional "
 "subpattern is accepted which will match the entire subject; for these types "
 "keyword patterns also work as for other types."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1108
+#: ../Doc/reference/compound_stmts.rst:1125
 msgid ""
 "If only keyword patterns are present, they are processed as follows, one by "
 "one:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1111
-msgid "I. The keyword is looked up as an attribute on the subject."
+#: ../Doc/reference/compound_stmts.rst:1128
+msgid "The keyword is looked up as an attribute on the subject."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1113
+#: ../Doc/reference/compound_stmts.rst:1130
 msgid ""
 "If this raises an exception other than :exc:`AttributeError`, the exception "
 "bubbles up."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1116
+#: ../Doc/reference/compound_stmts.rst:1133
 msgid "If this raises :exc:`AttributeError`, the class pattern has failed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1118
+#: ../Doc/reference/compound_stmts.rst:1135
 msgid ""
 "Else, the subpattern associated with the keyword pattern is matched against "
 "the subject's attribute value.  If this fails, the class pattern fails; if "
 "this succeeds, the match proceeds to the next keyword."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1123
-msgid "II. If all keyword patterns succeed, the class pattern succeeds."
+#: ../Doc/reference/compound_stmts.rst:1140
+msgid "If all keyword patterns succeed, the class pattern succeeds."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1125
+#: ../Doc/reference/compound_stmts.rst:1142
 msgid ""
 "If any positional patterns are present, they are converted to keyword "
 "patterns using the :data:`~object.__match_args__` attribute on the class "
 "``name_or_attr`` before matching:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1129
-msgid ""
-"I. The equivalent of ``getattr(cls, \"__match_args__\", ())`` is called."
+#: ../Doc/reference/compound_stmts.rst:1146
+msgid "The equivalent of ``getattr(cls, \"__match_args__\", ())`` is called."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1131
+#: ../Doc/reference/compound_stmts.rst:1148
 msgid "If this raises an exception, the exception bubbles up."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1133
+#: ../Doc/reference/compound_stmts.rst:1150
 msgid ""
 "If the returned value is not a tuple, the conversion fails and :exc:"
 "`TypeError` is raised."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1136
+#: ../Doc/reference/compound_stmts.rst:1153
 msgid ""
 "If there are more positional patterns than ``len(cls.__match_args__)``, :exc:"
 "`TypeError` is raised."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1139
+#: ../Doc/reference/compound_stmts.rst:1156
 msgid ""
 "Otherwise, positional pattern ``i`` is converted to a keyword pattern using "
 "``__match_args__[i]`` as the keyword.  ``__match_args__[i]`` must be a "
 "string; if not :exc:`TypeError` is raised."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1143
+#: ../Doc/reference/compound_stmts.rst:1160
 msgid "If there are duplicate keywords, :exc:`TypeError` is raised."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1145
+#: ../Doc/reference/compound_stmts.rst:1162
 msgid ":ref:`class-pattern-matching`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1147
+#: ../Doc/reference/compound_stmts.rst:1164
 msgid ""
-"II. Once all positional patterns have been converted to keyword patterns,"
+"Once all positional patterns have been converted to keyword patterns, the "
+"match proceeds as if there were only keyword patterns."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1148
-msgid "the match proceeds as if there were only keyword patterns."
-msgstr ""
-
-#: ../Doc/reference/compound_stmts.rst:1150
+#: ../Doc/reference/compound_stmts.rst:1167
 msgid ""
 "For the following built-in types the handling of positional subpatterns is "
 "different:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1153
+#: ../Doc/reference/compound_stmts.rst:1170
 msgid ":class:`bool`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1154
+#: ../Doc/reference/compound_stmts.rst:1171
 msgid ":class:`bytearray`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1155
+#: ../Doc/reference/compound_stmts.rst:1172
 msgid ":class:`bytes`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1156
+#: ../Doc/reference/compound_stmts.rst:1173
 msgid ":class:`dict`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1157
+#: ../Doc/reference/compound_stmts.rst:1174
 msgid ":class:`float`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1158
+#: ../Doc/reference/compound_stmts.rst:1175
 msgid ":class:`frozenset`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1159
+#: ../Doc/reference/compound_stmts.rst:1176
 msgid ":class:`int`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1160
-#: ../Doc/reference/compound_stmts.rst:1880
+#: ../Doc/reference/compound_stmts.rst:1177
+#: ../Doc/reference/compound_stmts.rst:1936
 msgid ":class:`list`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1161
+#: ../Doc/reference/compound_stmts.rst:1178
 msgid ":class:`set`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1162
+#: ../Doc/reference/compound_stmts.rst:1179
 msgid ":class:`str`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1163
-#: ../Doc/reference/compound_stmts.rst:1883
+#: ../Doc/reference/compound_stmts.rst:1180
+#: ../Doc/reference/compound_stmts.rst:1939
 msgid ":class:`tuple`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1165
+#: ../Doc/reference/compound_stmts.rst:1182
 msgid ""
 "These classes accept a single positional argument, and the pattern there is "
 "matched against the whole object rather than an attribute. For example "
 "``int(0|1)`` matches the value ``0``, but not the value ``0.0``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1169
+#: ../Doc/reference/compound_stmts.rst:1186
 msgid ""
 "In simple terms ``CLS(P1, attr=P2)`` matches only if the following happens:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1171
+#: ../Doc/reference/compound_stmts.rst:1188
 msgid "``isinstance(<subject>, CLS)``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1172
+#: ../Doc/reference/compound_stmts.rst:1189
 msgid "convert ``P1`` to a keyword pattern using ``CLS.__match_args__``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1173
+#: ../Doc/reference/compound_stmts.rst:1190
 msgid "For each keyword argument ``attr=P2``:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1175
+#: ../Doc/reference/compound_stmts.rst:1192
 msgid "``hasattr(<subject>, \"attr\")``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1176
+#: ../Doc/reference/compound_stmts.rst:1193
 msgid "``P2`` matches ``<subject>.attr``"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1178
+#: ../Doc/reference/compound_stmts.rst:1195
 msgid "... and so on for the corresponding keyword argument/pattern pair."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1193
+#: ../Doc/reference/compound_stmts.rst:1210
 msgid "Function definitions"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1208
+#: ../Doc/reference/compound_stmts.rst:1225
 msgid ""
 "A function definition defines a user-defined function object (see section :"
 "ref:`types`):"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1230
+#: ../Doc/reference/compound_stmts.rst:1247
 msgid ""
 "A function definition is an executable statement.  Its execution binds the "
 "function name in the current local namespace to a function object (a wrapper "
@@ -1541,13 +1562,13 @@ msgid ""
 "used when the function is called."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1236
+#: ../Doc/reference/compound_stmts.rst:1253
 msgid ""
 "The function definition does not execute the function body; this gets "
 "executed only when the function is called. [#]_"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1242
+#: ../Doc/reference/compound_stmts.rst:1259
 msgid ""
 "A function definition may be wrapped by one or more :term:`decorator` "
 "expressions. Decorator expressions are evaluated when the function is "
@@ -1558,38 +1579,38 @@ msgid ""
 "example, the following code ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1249
+#: ../Doc/reference/compound_stmts.rst:1266
 msgid ""
 "@f1(arg)\n"
 "@f2\n"
 "def func(): pass"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1253
-#: ../Doc/reference/compound_stmts.rst:1448
+#: ../Doc/reference/compound_stmts.rst:1270
+#: ../Doc/reference/compound_stmts.rst:1459
 msgid "is roughly equivalent to ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1255
+#: ../Doc/reference/compound_stmts.rst:1272
 msgid ""
 "def func(): pass\n"
 "func = f1(arg)(f2(func))"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1258
+#: ../Doc/reference/compound_stmts.rst:1275
 msgid ""
 "except that the original function is not temporarily bound to the name "
 "``func``."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1260
+#: ../Doc/reference/compound_stmts.rst:1277
 msgid ""
 "Functions may be decorated with any valid :token:`~python-grammar:"
 "assignment_expression`. Previously, the grammar was much more restrictive; "
 "see :pep:`614` for details."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1265
+#: ../Doc/reference/compound_stmts.rst:1282
 msgid ""
 "A list of :ref:`type parameters <type-params>` may be given in square "
 "brackets between the function's name and the opening parenthesis for its "
@@ -1599,12 +1620,12 @@ msgid ""
 "functions` for more."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1272
-#: ../Doc/reference/compound_stmts.rst:1467
+#: ../Doc/reference/compound_stmts.rst:1289
+#: ../Doc/reference/compound_stmts.rst:1478
 msgid "Type parameter lists are new in Python 3.12."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1280
+#: ../Doc/reference/compound_stmts.rst:1297
 msgid ""
 "When one or more :term:`parameters <parameter>` have the form *parameter* "
 "``=`` *expression*, the function is said to have \"default parameter values."
@@ -1615,7 +1636,7 @@ msgid ""
 "syntactic restriction that is not expressed by the grammar."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1288
+#: ../Doc/reference/compound_stmts.rst:1305
 msgid ""
 "**Default parameter values are evaluated from left to right when the "
 "function definition is executed.** This means that the expression is "
@@ -1628,7 +1649,7 @@ msgid ""
 "the default, and explicitly test for it in the body of the function, e.g.::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1298
+#: ../Doc/reference/compound_stmts.rst:1315
 msgid ""
 "def whats_on_the_telly(penguin=None):\n"
 "    if penguin is None:\n"
@@ -1637,7 +1658,7 @@ msgid ""
 "    return penguin"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1309
+#: ../Doc/reference/compound_stmts.rst:1326
 msgid ""
 "Function call semantics are described in more detail in section :ref:"
 "`calls`. A function call always assigns values to all parameters mentioned "
@@ -1653,13 +1674,13 @@ msgid ""
 "positional arguments."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1321
+#: ../Doc/reference/compound_stmts.rst:1338
 msgid ""
 "The ``/`` function parameter syntax may be used to indicate positional-only "
 "parameters. See :pep:`570` for details."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1330
+#: ../Doc/reference/compound_stmts.rst:1347
 msgid ""
 "Parameters may have an :term:`annotation <function annotation>` of the form "
 "\"``: expression``\" following the parameter name.  Any parameter may have "
@@ -1668,23 +1689,17 @@ msgid ""
 "annotation \"``: *expression``\".) Functions may have \"return\" annotation "
 "of the form \"``-> expression``\" after the parameter list.  These "
 "annotations can be any valid Python expression.  The presence of annotations "
-"does not change the semantics of a function.  The annotation values are "
-"available as values of a dictionary keyed by the parameters' names in the :"
-"attr:`__annotations__` attribute of the function object.  If the "
-"``annotations`` import from :mod:`__future__` is used, annotations are "
-"preserved as strings at runtime which enables postponed evaluation.  "
-"Otherwise, they are evaluated when the function definition is executed.  In "
-"this case annotations may be evaluated in a different order than they appear "
-"in the source code."
+"does not change the semantics of a function. See :ref:`annotations` for more "
+"information on annotations."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1344
+#: ../Doc/reference/compound_stmts.rst:1355
 msgid ""
 "Parameters of the form \"``*identifier``\" may have an annotation \"``: "
 "*expression``\". See :pep:`646`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1350
+#: ../Doc/reference/compound_stmts.rst:1361
 msgid ""
 "It is also possible to create anonymous functions (functions not bound to a "
 "name), for immediate use in expressions.  This uses lambda expressions, "
@@ -1696,7 +1711,7 @@ msgid ""
 "execution of multiple statements and annotations."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1358
+#: ../Doc/reference/compound_stmts.rst:1369
 msgid ""
 "**Programmer's note:** Functions are first-class objects.  A \"``def``\" "
 "statement executed inside a function definition defines a local function "
@@ -1705,61 +1720,61 @@ msgid ""
 "See section :ref:`naming` for details."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1366
+#: ../Doc/reference/compound_stmts.rst:1377
 msgid ":pep:`3107` - Function Annotations"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1367
+#: ../Doc/reference/compound_stmts.rst:1378
 msgid "The original specification for function annotations."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1369
+#: ../Doc/reference/compound_stmts.rst:1380
 msgid ":pep:`484` - Type Hints"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1370
+#: ../Doc/reference/compound_stmts.rst:1381
 msgid "Definition of a standard meaning for annotations: type hints."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1372
+#: ../Doc/reference/compound_stmts.rst:1383
 msgid ":pep:`526` - Syntax for Variable Annotations"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1373
+#: ../Doc/reference/compound_stmts.rst:1384
 msgid ""
 "Ability to type hint variable declarations, including class variables and "
 "instance variables."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1376
+#: ../Doc/reference/compound_stmts.rst:1387
 msgid ":pep:`563` - Postponed Evaluation of Annotations"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1377
+#: ../Doc/reference/compound_stmts.rst:1388
 msgid ""
 "Support for forward references within annotations by preserving annotations "
 "in a string form at runtime instead of eager evaluation."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1380
+#: ../Doc/reference/compound_stmts.rst:1391
 msgid ":pep:`318` - Decorators for Functions and Methods"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1381
+#: ../Doc/reference/compound_stmts.rst:1392
 msgid ""
 "Function and method decorators were introduced. Class decorators were "
 "introduced in :pep:`3129`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1387
+#: ../Doc/reference/compound_stmts.rst:1398
 msgid "Class definitions"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1402
+#: ../Doc/reference/compound_stmts.rst:1413
 msgid "A class definition defines a class object (see section :ref:`types`):"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1409
+#: ../Doc/reference/compound_stmts.rst:1420
 msgid ""
 "A class definition is an executable statement.  The inheritance list usually "
 "gives a list of base classes (see :ref:`metaclasses` for more advanced "
@@ -1768,23 +1783,23 @@ msgid ""
 "default, from the base class :class:`object`; hence, ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1415
+#: ../Doc/reference/compound_stmts.rst:1426
 msgid ""
 "class Foo:\n"
 "    pass"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1418
+#: ../Doc/reference/compound_stmts.rst:1429
 msgid "is equivalent to ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1420
+#: ../Doc/reference/compound_stmts.rst:1431
 msgid ""
 "class Foo(object):\n"
 "    pass"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1423
+#: ../Doc/reference/compound_stmts.rst:1434
 msgid ""
 "The class's suite is then executed in a new execution frame (see :ref:"
 "`naming`), using a newly created local namespace and the original global "
@@ -1796,7 +1811,7 @@ msgid ""
 "original local namespace."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1432
+#: ../Doc/reference/compound_stmts.rst:1443
 msgid ""
 "The order in which attributes are defined in the class body is preserved in "
 "the new class's :attr:`~type.__dict__`.  Note that this is reliable only "
@@ -1804,43 +1819,43 @@ msgid ""
 "using the definition syntax."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1437
+#: ../Doc/reference/compound_stmts.rst:1448
 msgid ""
 "Class creation can be customized heavily using :ref:`metaclasses "
 "<metaclasses>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1442
+#: ../Doc/reference/compound_stmts.rst:1453
 msgid "Classes can also be decorated: just like when decorating functions, ::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1444
+#: ../Doc/reference/compound_stmts.rst:1455
 msgid ""
 "@f1(arg)\n"
 "@f2\n"
 "class Foo: pass"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1450
+#: ../Doc/reference/compound_stmts.rst:1461
 msgid ""
 "class Foo: pass\n"
 "Foo = f1(arg)(f2(Foo))"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1453
+#: ../Doc/reference/compound_stmts.rst:1464
 msgid ""
 "The evaluation rules for the decorator expressions are the same as for "
 "function decorators.  The result is then bound to the class name."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1456
+#: ../Doc/reference/compound_stmts.rst:1467
 msgid ""
 "Classes may be decorated with any valid :token:`~python-grammar:"
 "assignment_expression`. Previously, the grammar was much more restrictive; "
 "see :pep:`614` for details."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1461
+#: ../Doc/reference/compound_stmts.rst:1472
 msgid ""
 "A list of :ref:`type parameters <type-params>` may be given in square "
 "brackets immediately after the class's name. This indicates to static type "
@@ -1849,7 +1864,7 @@ msgid ""
 "`generic-classes` for more."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1470
+#: ../Doc/reference/compound_stmts.rst:1481
 msgid ""
 "**Programmer's note:** Variables defined in the class definition are class "
 "attributes; they are shared by instances.  Instance attributes can be set in "
@@ -1862,35 +1877,35 @@ msgid ""
 "implementation details."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1482
+#: ../Doc/reference/compound_stmts.rst:1493
 msgid ":pep:`3115` - Metaclasses in Python 3000"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1483
+#: ../Doc/reference/compound_stmts.rst:1494
 msgid ""
 "The proposal that changed the declaration of metaclasses to the current "
 "syntax, and the semantics for how classes with metaclasses are constructed."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1487
+#: ../Doc/reference/compound_stmts.rst:1498
 msgid ":pep:`3129` - Class Decorators"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1488
+#: ../Doc/reference/compound_stmts.rst:1499
 msgid ""
 "The proposal that added class decorators.  Function and method decorators "
 "were introduced in :pep:`318`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1495
+#: ../Doc/reference/compound_stmts.rst:1506
 msgid "Coroutines"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1503
+#: ../Doc/reference/compound_stmts.rst:1514
 msgid "Coroutine function definition"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1513
+#: ../Doc/reference/compound_stmts.rst:1524
 msgid ""
 "Execution of Python coroutines can be suspended and resumed at many points "
 "(see :term:`coroutine`). :keyword:`await` expressions, :keyword:`async for` "
@@ -1898,53 +1913,53 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1517
+#: ../Doc/reference/compound_stmts.rst:1528
 msgid ""
 "Functions defined with ``async def`` syntax are always coroutine functions, "
 "even if they do not contain ``await`` or ``async`` keywords."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1520
+#: ../Doc/reference/compound_stmts.rst:1531
 msgid ""
 "It is a :exc:`SyntaxError` to use a ``yield from`` expression inside the "
 "body of a coroutine function."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1523
+#: ../Doc/reference/compound_stmts.rst:1534
 msgid "An example of a coroutine function::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1525
+#: ../Doc/reference/compound_stmts.rst:1536
 msgid ""
 "async def func(param1, param2):\n"
 "    do_stuff()\n"
 "    await some_coroutine()"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1529
+#: ../Doc/reference/compound_stmts.rst:1540
 msgid ""
 "``await`` and ``async`` are now keywords; previously they were only treated "
 "as such inside the body of a coroutine function."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1537
+#: ../Doc/reference/compound_stmts.rst:1548
 msgid "The :keyword:`!async for` statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1542
+#: ../Doc/reference/compound_stmts.rst:1553
 msgid ""
 "An :term:`asynchronous iterable` provides an ``__aiter__`` method that "
 "directly returns an :term:`asynchronous iterator`, which can call "
 "asynchronous code in its ``__anext__`` method."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1546
+#: ../Doc/reference/compound_stmts.rst:1557
 msgid ""
 "The ``async for`` statement allows convenient iteration over asynchronous "
 "iterables."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1551
+#: ../Doc/reference/compound_stmts.rst:1562
 msgid ""
 "async for TARGET in ITER:\n"
 "    SUITE\n"
@@ -1952,19 +1967,18 @@ msgid ""
 "    SUITE2"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1556
+#: ../Doc/reference/compound_stmts.rst:1567
 msgid "Is semantically equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1558
+#: ../Doc/reference/compound_stmts.rst:1569
 msgid ""
-"iter = (ITER)\n"
-"iter = type(iter).__aiter__(iter)\n"
+"iter = (ITER).__aiter__()\n"
 "running = True\n"
 "\n"
 "while running:\n"
 "    try:\n"
-"        TARGET = await type(iter).__anext__(iter)\n"
+"        TARGET = await iter.__anext__()\n"
 "    except StopAsyncIteration:\n"
 "        running = False\n"
 "    else:\n"
@@ -1973,39 +1987,40 @@ msgid ""
 "    SUITE2"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1572
+#: ../Doc/reference/compound_stmts.rst:1582
 msgid ""
-"See also :meth:`~object.__aiter__` and :meth:`~object.__anext__` for details."
+"except that implicit :ref:`special method lookup <special-lookup>` is used "
+"for :meth:`~object.__aiter__` and :meth:`~object.__anext__`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1574
+#: ../Doc/reference/compound_stmts.rst:1585
 msgid ""
 "It is a :exc:`SyntaxError` to use an ``async for`` statement outside the "
 "body of a coroutine function."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1582
+#: ../Doc/reference/compound_stmts.rst:1593
 msgid "The :keyword:`!async with` statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1587
+#: ../Doc/reference/compound_stmts.rst:1598
 msgid ""
 "An :term:`asynchronous context manager` is a :term:`context manager` that is "
 "able to suspend execution in its *enter* and *exit* methods."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1592
+#: ../Doc/reference/compound_stmts.rst:1603
 msgid ""
 "async with EXPRESSION as TARGET:\n"
 "    SUITE"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1597
+#: ../Doc/reference/compound_stmts.rst:1608
 msgid ""
 "manager = (EXPRESSION)\n"
-"aenter = type(manager).__aenter__\n"
-"aexit = type(manager).__aexit__\n"
-"value = await aenter(manager)\n"
+"aenter = manager.__aenter__\n"
+"aexit = manager.__aexit__\n"
+"value = await aenter()\n"
 "hit_except = False\n"
 "\n"
 "try:\n"
@@ -2013,51 +2028,51 @@ msgid ""
 "    SUITE\n"
 "except:\n"
 "    hit_except = True\n"
-"    if not await aexit(manager, *sys.exc_info()):\n"
+"    if not await aexit(*sys.exc_info()):\n"
 "        raise\n"
 "finally:\n"
 "    if not hit_except:\n"
-"        await aexit(manager, None, None, None)"
+"        await aexit(None, None, None)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1614
+#: ../Doc/reference/compound_stmts.rst:1625
 msgid ""
-"See also :meth:`~object.__aenter__` and :meth:`~object.__aexit__` for "
-"details."
+"except that implicit :ref:`special method lookup <special-lookup>` is used "
+"for :meth:`~object.__aenter__` and :meth:`~object.__aexit__`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1616
+#: ../Doc/reference/compound_stmts.rst:1628
 msgid ""
 "It is a :exc:`SyntaxError` to use an ``async with`` statement outside the "
 "body of a coroutine function."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1621
+#: ../Doc/reference/compound_stmts.rst:1633
 msgid ":pep:`492` - Coroutines with async and await syntax"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1622
+#: ../Doc/reference/compound_stmts.rst:1634
 msgid ""
 "The proposal that made coroutines a proper standalone concept in Python, and "
 "added supporting syntax."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1628
+#: ../Doc/reference/compound_stmts.rst:1640
 msgid "Type parameter lists"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1632
+#: ../Doc/reference/compound_stmts.rst:1644
 msgid "Support for default values was added (see :pep:`696`)."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1645
+#: ../Doc/reference/compound_stmts.rst:1657
 msgid ""
 ":ref:`Functions <def>` (including :ref:`coroutines <async def>`), :ref:"
 "`classes <class>` and :ref:`type aliases <type>` may contain a type "
 "parameter list::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1649
+#: ../Doc/reference/compound_stmts.rst:1661
 msgid ""
 "def max[T](args: list[T]) -> T:\n"
 "    ...\n"
@@ -2075,7 +2090,7 @@ msgid ""
 "type ListOrSet[T] = list[T] | set[T]"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1664
+#: ../Doc/reference/compound_stmts.rst:1676
 msgid ""
 "Semantically, this indicates that the function, class, or type alias is "
 "generic over a type variable. This information is primarily used by static "
@@ -2083,7 +2098,7 @@ msgid ""
 "generic counterparts."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1669
+#: ../Doc/reference/compound_stmts.rst:1681
 msgid ""
 "Type parameters are declared in square brackets (``[]``) immediately after "
 "the name of the function, class, or type alias. The type parameters are "
@@ -2095,36 +2110,36 @@ msgid ""
 "wraps the creation of the generic object."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1678
+#: ../Doc/reference/compound_stmts.rst:1690
 msgid ""
 "Generic functions, classes, and type aliases have a :attr:`~definition."
 "__type_params__` attribute listing their type parameters."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1681
+#: ../Doc/reference/compound_stmts.rst:1693
 msgid "Type parameters come in three kinds:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1683
+#: ../Doc/reference/compound_stmts.rst:1695
 msgid ""
 ":data:`typing.TypeVar`, introduced by a plain name (e.g., ``T``). "
 "Semantically, this represents a single type to a type checker."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1685
+#: ../Doc/reference/compound_stmts.rst:1697
 msgid ""
 ":data:`typing.TypeVarTuple`, introduced by a name prefixed with a single "
 "asterisk (e.g., ``*Ts``). Semantically, this stands for a tuple of any "
 "number of types."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1688
+#: ../Doc/reference/compound_stmts.rst:1700
 msgid ""
 ":data:`typing.ParamSpec`, introduced by a name prefixed with two asterisks "
 "(e.g., ``**P``). Semantically, this stands for the parameters of a callable."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1691
+#: ../Doc/reference/compound_stmts.rst:1703
 msgid ""
 ":data:`typing.TypeVar` declarations can define *bounds* and *constraints* "
 "with a colon (``:``) followed by an expression. A single expression after "
@@ -2136,7 +2151,7 @@ msgid ""
 "variables can only take on one of the types in the list of constraints."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1700
+#: ../Doc/reference/compound_stmts.rst:1712
 msgid ""
 "For :data:`!typing.TypeVar`\\ s declared using the type parameter list "
 "syntax, the bound and constraints are not evaluated when the generic object "
@@ -2146,13 +2161,13 @@ msgid ""
 "<annotation-scopes>`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1706
+#: ../Doc/reference/compound_stmts.rst:1718
 msgid ""
 ":data:`typing.TypeVarTuple`\\ s and :data:`typing.ParamSpec`\\ s cannot have "
 "bounds or constraints."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1709
+#: ../Doc/reference/compound_stmts.rst:1721
 msgid ""
 "All three flavors of type parameters can also have a *default value*, which "
 "is used when the type parameter is not explicitly provided. This is added by "
@@ -2165,13 +2180,13 @@ msgid ""
 "attribute is set to the special sentinel object :data:`typing.NoDefault`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1719
+#: ../Doc/reference/compound_stmts.rst:1731
 msgid ""
 "The following example indicates the full set of allowed type parameter "
 "declarations::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1721
+#: ../Doc/reference/compound_stmts.rst:1733
 msgid ""
 "def overly_generic[\n"
 "   SimpleTypeVar,\n"
@@ -2189,24 +2204,24 @@ msgid ""
 "): ..."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1739
+#: ../Doc/reference/compound_stmts.rst:1751
 msgid "Generic functions"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1741
+#: ../Doc/reference/compound_stmts.rst:1753
 msgid "Generic functions are declared as follows::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1743
+#: ../Doc/reference/compound_stmts.rst:1755
 msgid "def func[T](arg: T): ..."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1745
-#: ../Doc/reference/compound_stmts.rst:1805
+#: ../Doc/reference/compound_stmts.rst:1757
+#: ../Doc/reference/compound_stmts.rst:1817
 msgid "This syntax is equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1747
+#: ../Doc/reference/compound_stmts.rst:1759
 msgid ""
 "annotation-def TYPE_PARAMS_OF_func():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2216,7 +2231,7 @@ msgid ""
 "func = TYPE_PARAMS_OF_func()"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1754
+#: ../Doc/reference/compound_stmts.rst:1766
 msgid ""
 "Here ``annotation-def`` indicates an :ref:`annotation scope <annotation-"
 "scopes>`, which is not actually bound to any name at runtime. (One other "
@@ -2225,33 +2240,33 @@ msgid ""
 "data:`typing.TypeVar` directly.)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1760
+#: ../Doc/reference/compound_stmts.rst:1772
 msgid ""
 "The annotations of generic functions are evaluated within the annotation "
 "scope used for declaring the type parameters, but the function's defaults "
 "and decorators are not."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1764
+#: ../Doc/reference/compound_stmts.rst:1776
 msgid ""
 "The following example illustrates the scoping rules for these cases, as well "
 "as for additional flavors of type parameters::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1767
+#: ../Doc/reference/compound_stmts.rst:1779
 msgid ""
 "@decorator\n"
 "def func[T: int, *Ts, **P](*args: *Ts, arg: Callable[P, T] = some_default):\n"
 "    ..."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1771
+#: ../Doc/reference/compound_stmts.rst:1783
 msgid ""
 "Except for the :ref:`lazy evaluation <lazy-evaluation>` of the :class:"
 "`~typing.TypeVar` bound, this is equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1774
+#: ../Doc/reference/compound_stmts.rst:1786
 msgid ""
 "DEFAULT_OF_arg = some_default\n"
 "\n"
@@ -2273,25 +2288,25 @@ msgid ""
 "func = decorator(TYPE_PARAMS_OF_func())"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1793
+#: ../Doc/reference/compound_stmts.rst:1805
 msgid ""
 "The capitalized names like ``DEFAULT_OF_arg`` are not actually bound at "
 "runtime."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1799
+#: ../Doc/reference/compound_stmts.rst:1811
 msgid "Generic classes"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1801
+#: ../Doc/reference/compound_stmts.rst:1813
 msgid "Generic classes are declared as follows::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1803
+#: ../Doc/reference/compound_stmts.rst:1815
 msgid "class Bag[T]: ..."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1807
+#: ../Doc/reference/compound_stmts.rst:1819
 msgid ""
 "annotation-def TYPE_PARAMS_OF_Bag():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2302,14 +2317,14 @@ msgid ""
 "Bag = TYPE_PARAMS_OF_Bag()"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1815
+#: ../Doc/reference/compound_stmts.rst:1827
 msgid ""
 "Here again ``annotation-def`` (not a real keyword) indicates an :ref:"
 "`annotation scope <annotation-scopes>`, and the name ``TYPE_PARAMS_OF_Bag`` "
 "is not actually bound at runtime."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1819
+#: ../Doc/reference/compound_stmts.rst:1831
 msgid ""
 "Generic classes implicitly inherit from :data:`typing.Generic`. The base "
 "classes and keyword arguments of generic classes are evaluated within the "
@@ -2317,17 +2332,17 @@ msgid ""
 "that scope. This is illustrated by this example::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1825
+#: ../Doc/reference/compound_stmts.rst:1837
 msgid ""
 "@decorator\n"
 "class Bag(Base[T], arg=T): ..."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1828
+#: ../Doc/reference/compound_stmts.rst:1840
 msgid "This is equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1830
+#: ../Doc/reference/compound_stmts.rst:1842
 msgid ""
 "annotation-def TYPE_PARAMS_OF_Bag():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2338,27 +2353,27 @@ msgid ""
 "Bag = decorator(TYPE_PARAMS_OF_Bag())"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1841
+#: ../Doc/reference/compound_stmts.rst:1853
 msgid "Generic type aliases"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1843
+#: ../Doc/reference/compound_stmts.rst:1855
 msgid ""
 "The :keyword:`type` statement can also be used to create a generic type "
 "alias::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1845
+#: ../Doc/reference/compound_stmts.rst:1857
 msgid "type ListOrSet[T] = list[T] | set[T]"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1847
+#: ../Doc/reference/compound_stmts.rst:1859
 msgid ""
 "Except for the :ref:`lazy evaluation <lazy-evaluation>` of the value, this "
 "is equivalent to::"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1850
+#: ../Doc/reference/compound_stmts.rst:1862
 msgid ""
 "annotation-def TYPE_PARAMS_OF_ListOrSet():\n"
 "    T = typing.TypeVar(\"T\")\n"
@@ -2371,105 +2386,176 @@ msgid ""
 "ListOrSet = TYPE_PARAMS_OF_ListOrSet()"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1859
+#: ../Doc/reference/compound_stmts.rst:1871
 msgid ""
 "Here, ``annotation-def`` (not a real keyword) indicates an :ref:`annotation "
 "scope <annotation-scopes>`. The capitalized names like "
 "``TYPE_PARAMS_OF_ListOrSet`` are not actually bound at runtime."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1864
+#: ../Doc/reference/compound_stmts.rst:1878
+msgid "Annotations"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1880
+msgid "Annotations are now lazily evaluated by default."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1883
+msgid ""
+"Variables and function parameters may carry :term:`annotations "
+"<annotation>`, created by adding a colon after the name, followed by an "
+"expression::"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1886
+msgid ""
+"x: annotation = 1\n"
+"def f(param: annotation): ..."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1889
+msgid "Functions may also carry a return annotation following an arrow::"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1891
+msgid "def f() -> annotation: ..."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1893
+msgid ""
+"Annotations are conventionally used for :term:`type hints <type hint>`, but "
+"this is not enforced by the language, and in general annotations may contain "
+"arbitrary expressions. The presence of annotations does not change the "
+"runtime semantics of the code, except if some mechanism is used that "
+"introspects and uses the annotations (such as :mod:`dataclasses` or :func:"
+"`functools.singledispatch`)."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1899
+msgid ""
+"By default, annotations are lazily evaluated in an :ref:`annotation scope "
+"<annotation-scopes>`. This means that they are not evaluated when the code "
+"containing the annotation is evaluated. Instead, the interpreter saves "
+"information that can be used to evaluate the annotation later if requested. "
+"The :mod:`annotationlib` module provides tools for evaluating annotations."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1904
+msgid ""
+"If the :ref:`future statement <future>` ``from __future__ import "
+"annotations`` is present, all annotations are instead stored as strings::"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1907
+msgid ""
+">>> from __future__ import annotations\n"
+">>> def f(param: annotation): ...\n"
+">>> f.__annotations__\n"
+"{'param': 'annotation'}"
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1912
+msgid ""
+"This future statement will be deprecated and removed in a future version of "
+"Python, but not before Python 3.13 reaches its end of life (see :pep:`749`). "
+"When it is used, introspection tools like :func:`annotationlib."
+"get_annotations` and :func:`typing.get_type_hints` are less likely to be "
+"able to resolve annotations at runtime."
+msgstr ""
+
+#: ../Doc/reference/compound_stmts.rst:1920
 msgid "Footnotes"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1865
+#: ../Doc/reference/compound_stmts.rst:1921
 msgid ""
 "The exception is propagated to the invocation stack unless there is a :"
 "keyword:`finally` clause which happens to raise another exception. That new "
 "exception causes the old one to be lost."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1869
+#: ../Doc/reference/compound_stmts.rst:1925
 msgid "In pattern matching, a sequence is defined as one of the following:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1871
+#: ../Doc/reference/compound_stmts.rst:1927
 msgid "a class that inherits from :class:`collections.abc.Sequence`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1872
+#: ../Doc/reference/compound_stmts.rst:1928
 msgid ""
 "a Python class that has been registered as :class:`collections.abc.Sequence`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1873
+#: ../Doc/reference/compound_stmts.rst:1929
 msgid ""
 "a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_SEQUENCE` bit set"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1874
-#: ../Doc/reference/compound_stmts.rst:1893
+#: ../Doc/reference/compound_stmts.rst:1930
+#: ../Doc/reference/compound_stmts.rst:1949
 msgid "a class that inherits from any of the above"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1876
+#: ../Doc/reference/compound_stmts.rst:1932
 msgid "The following standard library classes are sequences:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1878
+#: ../Doc/reference/compound_stmts.rst:1934
 msgid ":class:`array.array`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1879
+#: ../Doc/reference/compound_stmts.rst:1935
 msgid ":class:`collections.deque`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1881
+#: ../Doc/reference/compound_stmts.rst:1937
 msgid ":class:`memoryview`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1882
+#: ../Doc/reference/compound_stmts.rst:1938
 msgid ":class:`range`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1885
+#: ../Doc/reference/compound_stmts.rst:1941
 msgid ""
 "Subject values of type ``str``, ``bytes``, and ``bytearray`` do not match "
 "sequence patterns."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1888
+#: ../Doc/reference/compound_stmts.rst:1944
 msgid "In pattern matching, a mapping is defined as one of the following:"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1890
+#: ../Doc/reference/compound_stmts.rst:1946
 msgid "a class that inherits from :class:`collections.abc.Mapping`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1891
+#: ../Doc/reference/compound_stmts.rst:1947
 msgid ""
 "a Python class that has been registered as :class:`collections.abc.Mapping`"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1892
+#: ../Doc/reference/compound_stmts.rst:1948
 msgid ""
 "a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_MAPPING` bit set"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1895
+#: ../Doc/reference/compound_stmts.rst:1951
 msgid ""
 "The standard library classes :class:`dict` and :class:`types."
 "MappingProxyType` are mappings."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1898
+#: ../Doc/reference/compound_stmts.rst:1954
 msgid ""
 "A string literal appearing as the first statement in the function body is "
 "transformed into the function's :attr:`~function.__doc__` attribute and "
 "therefore the function's :term:`docstring`."
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1902
+#: ../Doc/reference/compound_stmts.rst:1958
 msgid ""
 "A string literal appearing as the first statement in the class body is "
 "transformed into the namespace's :attr:`~type.__doc__` item and therefore "
@@ -2486,15 +2572,15 @@ msgstr ""
 #: ../Doc/reference/compound_stmts.rst:144
 #: ../Doc/reference/compound_stmts.rst:169
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:390
-#: ../Doc/reference/compound_stmts.rst:437
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:588
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
-#: ../Doc/reference/compound_stmts.rst:1499
-#: ../Doc/reference/compound_stmts.rst:1533
-#: ../Doc/reference/compound_stmts.rst:1578
+#: ../Doc/reference/compound_stmts.rst:397
+#: ../Doc/reference/compound_stmts.rst:446
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:605
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
+#: ../Doc/reference/compound_stmts.rst:1510
+#: ../Doc/reference/compound_stmts.rst:1544
+#: ../Doc/reference/compound_stmts.rst:1589
 msgid "statement"
 msgstr ""
 
@@ -2527,12 +2613,12 @@ msgstr ""
 #: ../Doc/reference/compound_stmts.rst:111
 #: ../Doc/reference/compound_stmts.rst:144
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:390
+#: ../Doc/reference/compound_stmts.rst:397
 msgid "else"
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:86
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "if"
 msgstr ""
 
@@ -2540,12 +2626,12 @@ msgstr ""
 #: ../Doc/reference/compound_stmts.rst:111
 #: ../Doc/reference/compound_stmts.rst:144
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:327
-#: ../Doc/reference/compound_stmts.rst:390
-#: ../Doc/reference/compound_stmts.rst:408
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:588
-#: ../Doc/reference/compound_stmts.rst:1509
+#: ../Doc/reference/compound_stmts.rst:330
+#: ../Doc/reference/compound_stmts.rst:397
+#: ../Doc/reference/compound_stmts.rst:415
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:605
+#: ../Doc/reference/compound_stmts.rst:1520
 msgid "keyword"
 msgstr ""
 
@@ -2557,11 +2643,11 @@ msgstr ""
 #: ../Doc/reference/compound_stmts.rst:111
 #: ../Doc/reference/compound_stmts.rst:144
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:588
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1325
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:605
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1342
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid ": (colon)"
 msgstr ""
 
@@ -2569,10 +2655,10 @@ msgstr ""
 #: ../Doc/reference/compound_stmts.rst:111
 #: ../Doc/reference/compound_stmts.rst:144
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:588
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:605
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "compound statement"
 msgstr ""
 
@@ -2587,15 +2673,15 @@ msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:129
 #: ../Doc/reference/compound_stmts.rst:169
-#: ../Doc/reference/compound_stmts.rst:390
-#: ../Doc/reference/compound_stmts.rst:437
+#: ../Doc/reference/compound_stmts.rst:397
+#: ../Doc/reference/compound_stmts.rst:446
 msgid "break"
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:129
 #: ../Doc/reference/compound_stmts.rst:169
-#: ../Doc/reference/compound_stmts.rst:390
-#: ../Doc/reference/compound_stmts.rst:437
+#: ../Doc/reference/compound_stmts.rst:397
+#: ../Doc/reference/compound_stmts.rst:446
 msgid "continue"
 msgstr ""
 
@@ -2616,9 +2702,9 @@ msgid "list"
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:144
-#: ../Doc/reference/compound_stmts.rst:298
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:301
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "object"
 msgstr ""
 
@@ -2643,244 +2729,244 @@ msgid "except"
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:408
+#: ../Doc/reference/compound_stmts.rst:415
 msgid "finally"
 msgstr ""
 
 #: ../Doc/reference/compound_stmts.rst:207
-#: ../Doc/reference/compound_stmts.rst:265
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:268
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "as"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:265
+#: ../Doc/reference/compound_stmts.rst:268
 msgid "except clause"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:298
+#: ../Doc/reference/compound_stmts.rst:301
 msgid "module"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:298
+#: ../Doc/reference/compound_stmts.rst:301
 msgid "sys"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:298
+#: ../Doc/reference/compound_stmts.rst:301
 msgid "traceback"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:327
+#: ../Doc/reference/compound_stmts.rst:330
 msgid "except_star"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:390
-#: ../Doc/reference/compound_stmts.rst:437
+#: ../Doc/reference/compound_stmts.rst:397
+#: ../Doc/reference/compound_stmts.rst:446
 msgid "return"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:471
+#: ../Doc/reference/compound_stmts.rst:484
 msgid "with"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:471
+#: ../Doc/reference/compound_stmts.rst:484
 msgid "with statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:471
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:484
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid ", (comma)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "match"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "case"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "pattern matching"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:588
+#: ../Doc/reference/compound_stmts.rst:605
 msgid "match statement"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:692
+#: ../Doc/reference/compound_stmts.rst:709
 msgid "guard"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:731
+#: ../Doc/reference/compound_stmts.rst:748
 msgid "irrefutable case block"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:731
+#: ../Doc/reference/compound_stmts.rst:748
 msgid "case block"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:755
+#: ../Doc/reference/compound_stmts.rst:772
 msgid "! patterns"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:755
+#: ../Doc/reference/compound_stmts.rst:772
 msgid "AS pattern, OR pattern, capture pattern, wildcard pattern"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1186
-#: ../Doc/reference/compound_stmts.rst:1275
+#: ../Doc/reference/compound_stmts.rst:1203
+#: ../Doc/reference/compound_stmts.rst:1292
 msgid "parameter"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1186
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1239
-#: ../Doc/reference/compound_stmts.rst:1275
-#: ../Doc/reference/compound_stmts.rst:1304
+#: ../Doc/reference/compound_stmts.rst:1203
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1256
+#: ../Doc/reference/compound_stmts.rst:1292
+#: ../Doc/reference/compound_stmts.rst:1321
 msgid "function definition"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
+#: ../Doc/reference/compound_stmts.rst:1212
 msgid "def"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1325
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1342
 msgid "function"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "definition"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "name"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "binding"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
+#: ../Doc/reference/compound_stmts.rst:1212
 msgid "user-defined function"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1212
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "() (parentheses)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1195
+#: ../Doc/reference/compound_stmts.rst:1212
 msgid "parameter list"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1239
-#: ../Doc/reference/compound_stmts.rst:1439
+#: ../Doc/reference/compound_stmts.rst:1256
+#: ../Doc/reference/compound_stmts.rst:1450
 msgid "@ (at)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1275
+#: ../Doc/reference/compound_stmts.rst:1292
 msgid "default"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1275
+#: ../Doc/reference/compound_stmts.rst:1292
 msgid "value"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1275
+#: ../Doc/reference/compound_stmts.rst:1292
 msgid "argument"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1275
+#: ../Doc/reference/compound_stmts.rst:1292
 msgid "= (equals)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1304
+#: ../Doc/reference/compound_stmts.rst:1321
 msgid "/ (slash)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1304
+#: ../Doc/reference/compound_stmts.rst:1321
 msgid "* (asterisk)"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1304
+#: ../Doc/reference/compound_stmts.rst:1321
 msgid "**"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1325
+#: ../Doc/reference/compound_stmts.rst:1342
 msgid "annotations"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1325
+#: ../Doc/reference/compound_stmts.rst:1342
 msgid "->"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1325
+#: ../Doc/reference/compound_stmts.rst:1342
 msgid "function annotations"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1348
+#: ../Doc/reference/compound_stmts.rst:1359
 msgid "lambda"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1348
+#: ../Doc/reference/compound_stmts.rst:1359
 msgid "expression"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "class"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "execution"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "frame"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "inheritance"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "docstring"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
-#: ../Doc/reference/compound_stmts.rst:1439
+#: ../Doc/reference/compound_stmts.rst:1400
+#: ../Doc/reference/compound_stmts.rst:1450
 msgid "class definition"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1389
+#: ../Doc/reference/compound_stmts.rst:1400
 msgid "expression list"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1499
+#: ../Doc/reference/compound_stmts.rst:1510
 msgid "async def"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1509
+#: ../Doc/reference/compound_stmts.rst:1520
 msgid "async"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1509
+#: ../Doc/reference/compound_stmts.rst:1520
 msgid "await"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1533
+#: ../Doc/reference/compound_stmts.rst:1544
 msgid "async for"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1578
+#: ../Doc/reference/compound_stmts.rst:1589
 msgid "async with"
 msgstr ""
 
-#: ../Doc/reference/compound_stmts.rst:1635
+#: ../Doc/reference/compound_stmts.rst:1647
 msgid "type parameters"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid ""
 "While these future statements are given additional special meaning by the "
 "Python compiler, they are still executed like any other import statement and "
-"the :mod:`__future__` exists and is handled by the import system the same "
+"the :mod:`!__future__` exists and is handled by the import system the same "
 "way any other Python module would be. This design serves three purposes:"
 msgstr ""
 
@@ -51,15 +51,15 @@ msgstr ""
 msgid ""
 "To document when incompatible changes were introduced, and when they will be "
 "--- or were --- made mandatory.  This is a form of executable documentation, "
-"and can be inspected programmatically via importing :mod:`__future__` and "
+"and can be inspected programmatically via importing :mod:`!__future__` and "
 "examining its contents."
 msgstr ""
 
 #: ../Doc/library/__future__.rst:29
 msgid ""
 "To ensure that :ref:`future statements <future>` run under releases prior to "
-"Python 2.1 at least yield runtime exceptions (the import of :mod:"
-"`__future__` will fail, because there was no module of that name prior to "
+"Python 2.1 at least yield runtime exceptions (the import of :mod:`!"
+"__future__` will fail, because there was no module of that name prior to "
 "2.1)."
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../Doc/library/__future__.rst:36
 msgid ""
-"No feature description will ever be deleted from :mod:`__future__`. Since "
+"No feature description will ever be deleted from :mod:`!__future__`. Since "
 "its introduction in Python 2.1 the following features have found their way "
 "into the language using this mechanism:"
 msgstr ""
@@ -176,26 +176,28 @@ msgid "Never [1]_"
 msgstr ""
 
 #: ../Doc/library/__future__.rst:84
-msgid ":pep:`563`: *Postponed evaluation of annotations*"
+msgid ""
+":pep:`563`: *Postponed evaluation of annotations*, :pep:`649`: *Deferred "
+"evaluation of annotations using descriptors*"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:92
+#: ../Doc/library/__future__.rst:93
 msgid "Each statement in :file:`__future__.py` is of the form::"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:94
+#: ../Doc/library/__future__.rst:95
 msgid ""
 "FeatureName = _Feature(OptionalRelease, MandatoryRelease,\n"
 "                       CompilerFlag)"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:97
+#: ../Doc/library/__future__.rst:98
 msgid ""
 "where, normally, *OptionalRelease* is less than *MandatoryRelease*, and both "
 "are 5-tuples of the same form as :data:`sys.version_info`::"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:100
+#: ../Doc/library/__future__.rst:101
 msgid ""
 "(PY_MAJOR_VERSION, # the 2 in 2.1.0a3; an int\n"
 " PY_MINOR_VERSION, # the 1; an int\n"
@@ -206,20 +208,20 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:109
+#: ../Doc/library/__future__.rst:110
 msgid ""
 "*OptionalRelease* records the first release in which the feature was "
 "accepted."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:113
+#: ../Doc/library/__future__.rst:114
 msgid ""
 "In the case of a *MandatoryRelease* that has not yet occurred, "
 "*MandatoryRelease* predicts the release in which the feature will become "
 "part of the language."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:117
+#: ../Doc/library/__future__.rst:118
 msgid ""
 "Else *MandatoryRelease* records when the feature became part of the "
 "language; in releases at or after that, modules no longer need a future "
@@ -227,13 +229,13 @@ msgid ""
 "imports."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:121
+#: ../Doc/library/__future__.rst:122
 msgid ""
 "*MandatoryRelease* may also be ``None``, meaning that a planned feature got "
 "dropped or that it is not yet decided."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:126
+#: ../Doc/library/__future__.rst:127
 msgid ""
 "*CompilerFlag* is the (bitfield) flag that should be passed in the fourth "
 "argument to the built-in function :func:`compile` to enable the feature in "
@@ -241,29 +243,26 @@ msgid ""
 "compiler_flag` attribute on :class:`_Feature` instances."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:132
+#: ../Doc/library/__future__.rst:133
 msgid ""
 "``from __future__ import annotations`` was previously scheduled to become "
-"mandatory in Python 3.10, but the Python Steering Council twice decided to "
-"delay the change (`announcement for Python 3.10 <https://mail.python.org/"
-"archives/list/python-dev@python.org/message/CLVXXPQ2T2LQ5MP2Y53VVQFCXYWQJHKZ/"
-">`__; `announcement for Python 3.11 <https://mail.python.org/archives/list/"
-"python-dev@python.org/message/VIZEBX5EYMSYIJNDBF6DMUMZOCWHARSO/>`__). No "
-"final decision has been made yet. See also :pep:`563` and :pep:`649`."
+"mandatory in Python 3.10, but the change was delayed and ultimately "
+"canceled. This feature will eventually be deprecated and removed. See :pep:"
+"`649` and :pep:`749`."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:142
+#: ../Doc/library/__future__.rst:141
 msgid ":ref:`future`"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:143
+#: ../Doc/library/__future__.rst:142
 msgid "How the compiler treats future imports."
 msgstr ""
 
-#: ../Doc/library/__future__.rst:145
+#: ../Doc/library/__future__.rst:144
 msgid ":pep:`236` - Back to the __future__"
 msgstr ""
 
-#: ../Doc/library/__future__.rst:146
+#: ../Doc/library/__future__.rst:145
 msgid "The original proposal for the __future__ mechanism."
 msgstr ""

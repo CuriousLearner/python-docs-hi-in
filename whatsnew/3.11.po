@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -964,8 +965,8 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:743
 msgid ""
-":func:`functools.singledispatch` now supports :data:`types.UnionType` and :"
-"data:`typing.Union` as annotations to the dispatch argument.::"
+":func:`functools.singledispatch` now supports :class:`types.UnionType` and :"
+"class:`typing.Union` as annotations to the dispatch argument.::"
 msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:746
@@ -1676,7 +1677,7 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:1294
 msgid ""
-"Resizing lists is streamlined for the common case, speeding up :meth:`!list."
+"Resizing lists is streamlined for the common case, speeding up :meth:`list."
 "append` by ≈15% and simple :term:`list comprehension`\\s by up to 20-30% "
 "(Contributed by Dennis Sweeney in :gh:`91165`.)"
 msgstr ""
@@ -2454,7 +2455,7 @@ msgid ":opcode:`!SETUP_ASYNC_WITH`"
 msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:1673
-msgid ":opcode:`BEFORE_WITH`"
+msgid ":opcode:`!BEFORE_WITH`"
 msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:1673
@@ -3448,9 +3449,8 @@ msgstr ""
 #: ../Doc/whatsnew/3.11.rst:2170
 msgid ""
 "Freelists for object structs can now be disabled. A new :program:`configure` "
-"option :option:`--without-freelists` can be used to disable all freelists "
-"except empty tuple singleton. (Contributed by Christian Heimes in :issue:"
-"`45522`.)"
+"option ``--without-freelists`` can be used to disable all freelists except "
+"empty tuple singleton. (Contributed by Christian Heimes in :issue:`45522`.)"
 msgstr ""
 
 #: ../Doc/whatsnew/3.11.rst:2175

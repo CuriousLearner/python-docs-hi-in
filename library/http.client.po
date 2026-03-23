@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,7 +175,7 @@ msgstr ""
 msgid ""
 "Parse the headers from a file pointer *fp* representing a HTTP request/"
 "response. The file has to be a :class:`~io.BufferedIOBase` reader (i.e. not "
-"text) and must provide a valid :rfc:`2822` style header."
+"text) and must provide a valid :rfc:`5322` style header."
 msgstr ""
 
 #: ../Doc/library/http.client.rst:130
@@ -358,11 +358,18 @@ msgid ""
 "that is not also a file as the body representation."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:314
+#: ../Doc/library/http.client.rst:316
+msgid ""
+"Note that you must have read the whole response or call :meth:`close` if :"
+"meth:`getresponse` raised an non-:exc:`ConnectionError` exception before you "
+"can send a new request to the server."
+msgstr ""
+
+#: ../Doc/library/http.client.rst:320
 msgid "*body* can now be an iterable."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:317
+#: ../Doc/library/http.client.rst:323
 msgid ""
 "If neither Content-Length nor Transfer-Encoding are set in *headers*, file "
 "and iterable *body* objects are now chunk-encoded. The *encode_chunked* "
@@ -370,26 +377,27 @@ msgid ""
 "file objects."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:326
+#: ../Doc/library/http.client.rst:332
 msgid ""
 "Should be called after a request is sent to get the response from the "
 "server. Returns an :class:`HTTPResponse` instance."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:331
-msgid ""
-"Note that you must have read the whole response before you can send a new "
-"request to the server."
-msgstr ""
-
-#: ../Doc/library/http.client.rst:334
+#: ../Doc/library/http.client.rst:335
 msgid ""
 "If a :exc:`ConnectionError` or subclass is raised, the :class:"
 "`HTTPConnection` object will be ready to reconnect when a new request is "
 "sent."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:342
+#: ../Doc/library/http.client.rst:340
+msgid ""
+"Note that this does not apply to :exc:`OSError`\\s raised by the underlying "
+"socket. Instead the caller is responsible to call :meth:`close` on the "
+"existing connection."
+msgstr ""
+
+#: ../Doc/library/http.client.rst:347
 msgid ""
 "Set the debugging level.  The default debug level is ``0``, meaning no "
 "debugging output is printed.  Any value greater than ``0`` will cause all "
@@ -397,26 +405,26 @@ msgid ""
 "is passed to any new :class:`HTTPResponse` objects that are created."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:352
+#: ../Doc/library/http.client.rst:357
 msgid ""
 "Set the host and the port for HTTP Connect Tunnelling. This allows running "
 "the connection through a proxy server."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:355
+#: ../Doc/library/http.client.rst:360
 msgid ""
 "The *host* and *port* arguments specify the endpoint of the tunneled "
 "connection (i.e. the address included in the CONNECT request, *not* the "
 "address of the proxy server)."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:359
+#: ../Doc/library/http.client.rst:364
 msgid ""
 "The *headers* argument should be a mapping of extra HTTP headers to send "
 "with the CONNECT request."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:362
+#: ../Doc/library/http.client.rst:367
 msgid ""
 "As HTTP/1.1 is used for HTTP CONNECT tunnelling request, `as per the RFC "
 "<https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.6>`_, a HTTP "
@@ -426,7 +434,7 @@ msgid ""
 "generated and transmitted automatically."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:369
+#: ../Doc/library/http.client.rst:374
 msgid ""
 "For example, to tunnel through a HTTPS proxy server running locally on port "
 "8080, we would pass the address of the proxy to the :class:`HTTPSConnection` "
@@ -434,7 +442,7 @@ msgid ""
 "the :meth:`~HTTPConnection.set_tunnel` method::"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:374
+#: ../Doc/library/http.client.rst:379
 msgid ""
 ">>> import http.client\n"
 ">>> conn = http.client.HTTPSConnection(\"localhost\", 8080)\n"
@@ -442,7 +450,7 @@ msgid ""
 ">>> conn.request(\"HEAD\",\"/index.html\")"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:381
+#: ../Doc/library/http.client.rst:386
 msgid ""
 "HTTP CONNECT tunnelling requests use protocol HTTP/1.1, upgraded from "
 "protocol HTTP/1.0. ``Host:`` HTTP headers are mandatory for HTTP/1.1, so one "
@@ -450,45 +458,45 @@ msgid ""
 "headers argument."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:390
+#: ../Doc/library/http.client.rst:395
 msgid ""
 "Returns a dictionary with the headers of the response received from the "
 "proxy server to the CONNECT request."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:393
+#: ../Doc/library/http.client.rst:398
 msgid "If the CONNECT request was not sent, the method returns ``None``."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:400
+#: ../Doc/library/http.client.rst:405
 msgid ""
 "Connect to the server specified when the object was created.  By default, "
 "this is called automatically when making a request if the client does not "
 "already have a connection."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:404
+#: ../Doc/library/http.client.rst:409
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``http.client.connect`` with "
 "arguments ``self``, ``host``, ``port``."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:409
+#: ../Doc/library/http.client.rst:414
 msgid "Close the connection to the server."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:414
+#: ../Doc/library/http.client.rst:419
 msgid "Buffer size in bytes for sending a file-like message body."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:419
+#: ../Doc/library/http.client.rst:424
 msgid ""
 "As an alternative to using the :meth:`~HTTPConnection.request` method "
 "described above, you can also send your request step by step, by using the "
 "four functions below."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:426
+#: ../Doc/library/http.client.rst:431
 msgid ""
 "This should be the first call after the connection to the server has been "
 "made. It sends a line to the server consisting of the *method* string, the "
@@ -498,7 +506,7 @@ msgid ""
 "with non-False values."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:436
+#: ../Doc/library/http.client.rst:441
 msgid ""
 "Send an :rfc:`822`\\ -style header to the server.  It sends a line to the "
 "server consisting of the header, a colon and a space, and the first "
@@ -506,14 +514,14 @@ msgid ""
 "consisting of a tab and an argument."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:444
+#: ../Doc/library/http.client.rst:449
 msgid ""
 "Send a blank line to the server, signalling the end of the headers. The "
 "optional *message_body* argument can be used to pass a message body "
 "associated with the request."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:448
+#: ../Doc/library/http.client.rst:453
 msgid ""
 "If *encode_chunked* is ``True``, the result of each iteration of "
 "*message_body* will be chunk-encoded as specified in :rfc:`7230`, Section "
@@ -526,7 +534,7 @@ msgid ""
 "the chunk-encoded data immediately after *message_body*."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:459
+#: ../Doc/library/http.client.rst:464
 msgid ""
 "Due to the chunked encoding specification, empty chunks yielded by an "
 "iterator body will be ignored by the chunk-encoder. This is to avoid "
@@ -534,50 +542,50 @@ msgid ""
 "malformed encoding."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:464
+#: ../Doc/library/http.client.rst:469
 msgid "Added chunked encoding support and the *encode_chunked* parameter."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:470
+#: ../Doc/library/http.client.rst:475
 msgid ""
 "Send data to the server.  This should be used directly only after the :meth:"
 "`endheaders` method has been called and before :meth:`getresponse` is called."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:474
+#: ../Doc/library/http.client.rst:479
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``http.client.send`` with "
 "arguments ``self``, ``data``."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:480
+#: ../Doc/library/http.client.rst:485
 msgid "HTTPResponse Objects"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:482
+#: ../Doc/library/http.client.rst:487
 msgid ""
 "An :class:`HTTPResponse` instance wraps the HTTP response from the server.  "
 "It provides access to the request headers and the entity body.  The response "
 "is an iterable object and can be used in a with statement."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:487
+#: ../Doc/library/http.client.rst:492
 msgid ""
 "The :class:`io.BufferedIOBase` interface is now implemented and all of its "
 "reader operations are supported."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:494
+#: ../Doc/library/http.client.rst:499
 msgid "Reads and returns the response body, or up to the next *amt* bytes."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:498
+#: ../Doc/library/http.client.rst:503
 msgid ""
 "Reads up to the next len(b) bytes of the response body into the buffer *b*. "
 "Returns the number of bytes read."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:505
+#: ../Doc/library/http.client.rst:510
 msgid ""
 "Return the value of the header *name*, or *default* if there is no header "
 "matching *name*.  If there is more than one  header with the name *name*, "
@@ -585,77 +593,77 @@ msgid ""
 "than a single string, its elements are similarly returned joined by commas."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:512
+#: ../Doc/library/http.client.rst:517
 msgid "Return a list of (header, value) tuples."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:516
+#: ../Doc/library/http.client.rst:521
 msgid "Return the ``fileno`` of the underlying socket."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:520
+#: ../Doc/library/http.client.rst:525
 msgid ""
 "A :class:`http.client.HTTPMessage` instance containing the response "
 "headers.  :class:`http.client.HTTPMessage` is a subclass of :class:`email."
 "message.Message`."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:526
+#: ../Doc/library/http.client.rst:531
 msgid ""
 "HTTP protocol version used by server.  10 for HTTP/1.0, 11 for HTTP/1.1."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:530
+#: ../Doc/library/http.client.rst:535
 msgid ""
 "URL of the resource retrieved, commonly used to determine if a redirect was "
 "followed."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:534
+#: ../Doc/library/http.client.rst:539
 msgid ""
 "Headers of the response in the form of an :class:`email.message."
 "EmailMessage` instance."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:538
+#: ../Doc/library/http.client.rst:543
 msgid "Status code returned by server."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:542
+#: ../Doc/library/http.client.rst:547
 msgid "Reason phrase returned by server."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:546
+#: ../Doc/library/http.client.rst:551
 msgid ""
 "A debugging hook.  If :attr:`debuglevel` is greater than zero, messages will "
 "be printed to stdout as the response is read and parsed."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:551
+#: ../Doc/library/http.client.rst:556
 msgid "Is ``True`` if the stream is closed."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:555
+#: ../Doc/library/http.client.rst:560
 msgid "Deprecated in favor of :attr:`~HTTPResponse.url`."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:560
+#: ../Doc/library/http.client.rst:565
 msgid "Deprecated in favor of :attr:`~HTTPResponse.headers`."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:565
+#: ../Doc/library/http.client.rst:570
 msgid "Deprecated in favor of :attr:`~HTTPResponse.status`."
 msgstr ""
 
-#: ../Doc/library/http.client.rst:569
+#: ../Doc/library/http.client.rst:574
 msgid "Examples"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:571
+#: ../Doc/library/http.client.rst:576
 msgid "Here is an example session that uses the ``GET`` method::"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:573
+#: ../Doc/library/http.client.rst:578
 msgid ""
 ">>> import http.client\n"
 ">>> conn = http.client.HTTPSConnection(\"www.python.org\")\n"
@@ -681,13 +689,13 @@ msgid ""
 ">>> conn.close()"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:596
+#: ../Doc/library/http.client.rst:601
 msgid ""
 "Here is an example session that uses the ``HEAD`` method.  Note that the "
 "``HEAD`` method never returns any data. ::"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:599
+#: ../Doc/library/http.client.rst:604
 msgid ""
 ">>> import http.client\n"
 ">>> conn = http.client.HTTPSConnection(\"www.python.org\")\n"
@@ -702,11 +710,11 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:611
+#: ../Doc/library/http.client.rst:616
 msgid "Here is an example session that uses the ``POST`` method::"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:613
+#: ../Doc/library/http.client.rst:618
 msgid ""
 ">>> import http.client, urllib.parse\n"
 ">>> params = urllib.parse.urlencode({'@number': 12524, '@type': 'issue', "
@@ -725,7 +733,7 @@ msgid ""
 ">>> conn.close()"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:627
+#: ../Doc/library/http.client.rst:632
 msgid ""
 "Client side HTTP ``PUT`` requests are very similar to ``POST`` requests. The "
 "difference lies only on the server side where HTTP servers will allow "
@@ -735,7 +743,7 @@ msgid ""
 "``PUT`` method::"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:633
+#: ../Doc/library/http.client.rst:638
 msgid ""
 ">>> # This creates an HTTP request\n"
 ">>> # with the content of BODY as the enclosed representation\n"
@@ -750,11 +758,11 @@ msgid ""
 "200, OK"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:648
+#: ../Doc/library/http.client.rst:653
 msgid "HTTPMessage Objects"
 msgstr ""
 
-#: ../Doc/library/http.client.rst:652
+#: ../Doc/library/http.client.rst:657
 msgid ""
 "An :class:`http.client.HTTPMessage` instance holds the headers from an HTTP "
 "response.  It is implemented using the :class:`email.message.Message` class."

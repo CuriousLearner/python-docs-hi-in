@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -135,20 +135,45 @@ msgid ""
 msgstr ""
 
 #: ../Doc/c-api/sys.rst:129
+msgid "Check if a :c:macro:`!SIGINT` signal has been received."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:131
+msgid ""
+"Returns ``1`` if a :c:macro:`!SIGINT` has occurred and clears the signal "
+"flag, or ``0`` otherwise."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:134
+msgid ""
+"In most cases, you should prefer :c:func:`PyErr_CheckSignals` over this "
+"function. :c:func:`!PyErr_CheckSignals` invokes the appropriate signal "
+"handlers for all pending signals, allowing Python code to handle the signal "
+"properly. This function only detects :c:macro:`!SIGINT` and does not invoke "
+"any Python signal handlers."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:140
+msgid ""
+"This function is async-signal-safe and this function cannot fail. The caller "
+"must hold an :term:`attached thread state`."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:147
 msgid ""
 "This function should not be called directly: use the :c:type:`PyConfig` API "
 "with the :c:func:`PyConfig_SetBytesString` function which ensures that :ref:"
 "`Python is preinitialized <c-preinit>`."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:133 ../Doc/c-api/sys.rst:200
+#: ../Doc/c-api/sys.rst:151 ../Doc/c-api/sys.rst:218
 msgid ""
 "This function must not be called before :ref:`Python is preinitialized <c-"
 "preinit>` and so that the LC_CTYPE locale is properly configured: see the :c:"
 "func:`Py_PreInitialize` function."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:137
+#: ../Doc/c-api/sys.rst:155
 msgid ""
 "Decode a byte string from the :term:`filesystem encoding and error handler`. "
 "If the error handler is :ref:`surrogateescape error handler "
@@ -158,57 +183,57 @@ msgid ""
 "instead of decoding them."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:144
+#: ../Doc/c-api/sys.rst:162
 msgid ""
 "Return a pointer to a newly allocated wide character string, use :c:func:"
 "`PyMem_RawFree` to free the memory. If size is not ``NULL``, write the "
 "number of wide characters excluding the null character into ``*size``"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:148
+#: ../Doc/c-api/sys.rst:166
 msgid ""
 "Return ``NULL`` on decoding error or memory allocation error. If *size* is "
 "not ``NULL``, ``*size`` is set to ``(size_t)-1`` on memory error or set to "
 "``(size_t)-2`` on decoding error."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:152 ../Doc/c-api/sys.rst:192
+#: ../Doc/c-api/sys.rst:170 ../Doc/c-api/sys.rst:210
 msgid ""
 "The :term:`filesystem encoding and error handler` are selected by :c:func:"
 "`PyConfig_Read`: see :c:member:`~PyConfig.filesystem_encoding` and :c:member:"
 "`~PyConfig.filesystem_errors` members of :c:type:`PyConfig`."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:156
+#: ../Doc/c-api/sys.rst:174
 msgid ""
 "Decoding errors should never happen, unless there is a bug in the C library."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:159
+#: ../Doc/c-api/sys.rst:177
 msgid ""
 "Use the :c:func:`Py_EncodeLocale` function to encode the character string "
 "back to a byte string."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:164
+#: ../Doc/c-api/sys.rst:182
 msgid ""
 "The :c:func:`PyUnicode_DecodeFSDefaultAndSize` and :c:func:"
 "`PyUnicode_DecodeLocaleAndSize` functions."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:169 ../Doc/c-api/sys.rst:211
+#: ../Doc/c-api/sys.rst:187 ../Doc/c-api/sys.rst:229
 msgid ""
 "The function now uses the UTF-8 encoding in the :ref:`Python UTF-8 Mode "
 "<utf8-mode>`."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:173
+#: ../Doc/c-api/sys.rst:191
 msgid ""
 "The function now uses the UTF-8 encoding on Windows if :c:member:"
 "`PyPreConfig.legacy_windows_fs_encoding` is zero;"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:180
+#: ../Doc/c-api/sys.rst:198
 msgid ""
 "Encode a wide character string to the :term:`filesystem encoding and error "
 "handler`. If the error handler is :ref:`surrogateescape error handler "
@@ -216,42 +241,85 @@ msgid ""
 "converted to bytes 0x80..0xFF."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:185
+#: ../Doc/c-api/sys.rst:203
 msgid ""
 "Return a pointer to a newly allocated byte string, use :c:func:`PyMem_Free` "
 "to free the memory. Return ``NULL`` on encoding error or memory allocation "
 "error."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:189
+#: ../Doc/c-api/sys.rst:207
 msgid ""
 "If error_pos is not ``NULL``, ``*error_pos`` is set to ``(size_t)-1`` on "
 "success,  or set to the index of the invalid character on encoding error."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:196
+#: ../Doc/c-api/sys.rst:214
 msgid ""
 "Use the :c:func:`Py_DecodeLocale` function to decode the bytes string back "
 "to a wide character string."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:206
+#: ../Doc/c-api/sys.rst:224
 msgid ""
 "The :c:func:`PyUnicode_EncodeFSDefault` and :c:func:`PyUnicode_EncodeLocale` "
 "functions."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:215
+#: ../Doc/c-api/sys.rst:233
 msgid ""
 "The function now uses the UTF-8 encoding on Windows if :c:member:"
 "`PyPreConfig.legacy_windows_fs_encoding` is zero."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:223
+#: ../Doc/c-api/sys.rst:239
+msgid ""
+"Similar to :c:func:`!fopen`, but *path* is a Python object and an exception "
+"is set on error."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:242
+msgid ""
+"*path* must be a :class:`str` object, a :class:`bytes` object, or a :term:"
+"`path-like object`."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:245
+msgid ""
+"On success, return the new file pointer. On error, set an exception and "
+"return ``NULL``."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:248
+msgid ""
+"The file must be closed by :c:func:`Py_fclose` rather than calling directly :"
+"c:func:`!fclose`."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:251
+msgid "The file descriptor is created non-inheritable (:pep:`446`)."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:253
+msgid "The caller must have an :term:`attached thread state`."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:260
+msgid "Close a file that was opened by :c:func:`Py_fopen`."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:262
+msgid ""
+"On success, return ``0``. On error, return ``EOF`` and ``errno`` is set to "
+"indicate the error. In either case, any further access (including another "
+"call to :c:func:`Py_fclose`) to the stream results in undefined behavior."
+msgstr ""
+
+#: ../Doc/c-api/sys.rst:273
 msgid "System Functions"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:225
+#: ../Doc/c-api/sys.rst:275
 msgid ""
 "These are utility functions that make functionality from the :mod:`sys` "
 "module accessible to C code.  They all work with the current interpreter "
@@ -259,36 +327,36 @@ msgid ""
 "state structure."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:231
+#: ../Doc/c-api/sys.rst:281
 msgid ""
 "Return the object *name* from the :mod:`sys` module or ``NULL`` if it does "
 "not exist, without setting an exception."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:236
+#: ../Doc/c-api/sys.rst:286
 msgid ""
 "Set *name* in the :mod:`sys` module to *v* unless *v* is ``NULL``, in which "
 "case *name* is deleted from the sys module. Returns ``0`` on success, ``-1`` "
 "on error."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:242
+#: ../Doc/c-api/sys.rst:292
 msgid ""
 "Reset :data:`sys.warnoptions` to an empty list. This function may be called "
 "prior to :c:func:`Py_Initialize`."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:245
+#: ../Doc/c-api/sys.rst:295
 msgid "Clear :data:`sys.warnoptions` and :data:`!warnings.filters` instead."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:250
+#: ../Doc/c-api/sys.rst:300
 msgid ""
 "Write the output string described by *format* to :data:`sys.stdout`.  No "
 "exceptions are raised, even if truncation occurs (see below)."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:253
+#: ../Doc/c-api/sys.rst:303
 msgid ""
 "*format* should limit the total size of the formatted output string to 1000 "
 "bytes or less -- after 1000 bytes, the output string is truncated. In "
@@ -299,48 +367,48 @@ msgid ""
 "of digits for very large numbers."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:261
+#: ../Doc/c-api/sys.rst:311
 msgid ""
 "If a problem occurs, or :data:`sys.stdout` is unset, the formatted message "
 "is written to the real (C level) *stdout*."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:266
+#: ../Doc/c-api/sys.rst:316
 msgid ""
 "As :c:func:`PySys_WriteStdout`, but write to :data:`sys.stderr` or *stderr* "
 "instead."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:271
+#: ../Doc/c-api/sys.rst:321
 msgid ""
 "Function similar to PySys_WriteStdout() but format the message using :c:func:"
 "`PyUnicode_FromFormatV` and don't truncate the message to an arbitrary "
 "length."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:279
+#: ../Doc/c-api/sys.rst:329
 msgid ""
 "As :c:func:`PySys_FormatStdout`, but write to :data:`sys.stderr` or *stderr* "
 "instead."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:286
+#: ../Doc/c-api/sys.rst:336
 msgid ""
 "Return the current dictionary of :option:`-X` options, similarly to :data:"
 "`sys._xoptions`.  On error, ``NULL`` is returned and an exception is set."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:295
+#: ../Doc/c-api/sys.rst:345
 msgid ""
 "Raise an auditing event with any active hooks. Return zero for success and "
 "non-zero with an exception set on failure."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:298
+#: ../Doc/c-api/sys.rst:348
 msgid "The *event* string argument must not be *NULL*."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:300
+#: ../Doc/c-api/sys.rst:350
 msgid ""
 "If any hooks have been added, *format* and other arguments will be used to "
 "construct a tuple to pass. Apart from ``N``, the same format characters as "
@@ -348,40 +416,40 @@ msgid ""
 "tuple, it will be added into a single-element tuple."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:305
+#: ../Doc/c-api/sys.rst:355
 msgid ""
 "The ``N`` format option must not be used. It consumes a reference, but since "
 "there is no way to know whether arguments to this function will be consumed, "
 "using it may cause reference leaks."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:309
+#: ../Doc/c-api/sys.rst:359
 msgid ""
 "Note that ``#`` format characters should always be treated as :c:type:"
 "`Py_ssize_t`, regardless of whether ``PY_SSIZE_T_CLEAN`` was defined."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:312
+#: ../Doc/c-api/sys.rst:362
 msgid ":func:`sys.audit` performs the same function from Python code."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:314
+#: ../Doc/c-api/sys.rst:364
 msgid "See also :c:func:`PySys_AuditTuple`."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:320
+#: ../Doc/c-api/sys.rst:370
 msgid ""
 "Require :c:type:`Py_ssize_t` for ``#`` format characters. Previously, an "
 "unavoidable deprecation warning was raised."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:326
+#: ../Doc/c-api/sys.rst:376
 msgid ""
 "Similar to :c:func:`PySys_Audit`, but pass arguments as a Python object. "
 "*args* must be a :class:`tuple`. To pass no arguments, *args* can be *NULL*."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:334
+#: ../Doc/c-api/sys.rst:384
 msgid ""
 "Append the callable *hook* to the list of active auditing hooks. Return zero "
 "on success and non-zero on failure. If the runtime has been initialized, "
@@ -389,14 +457,14 @@ msgid ""
 "all interpreters created by the runtime."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:340
+#: ../Doc/c-api/sys.rst:390
 msgid ""
 "The *userData* pointer is passed into the hook function. Since hook "
 "functions may be called from different runtimes, this pointer should not "
 "refer directly to Python state."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:344
+#: ../Doc/c-api/sys.rst:394
 msgid ""
 "This function is safe to call before :c:func:`Py_Initialize`. When called "
 "after runtime initialization, existing audit hooks are notified and may "
@@ -404,20 +472,20 @@ msgid ""
 "`Exception` (other errors will not be silenced)."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:349
+#: ../Doc/c-api/sys.rst:399
 msgid ""
-"The hook function is always called with the GIL held by the Python "
-"interpreter that raised the event."
+"The hook function is always called with an :term:`attached thread state` by "
+"the Python interpreter that raised the event."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:352
+#: ../Doc/c-api/sys.rst:402
 msgid ""
 "See :pep:`578` for a detailed description of auditing.  Functions in the "
 "runtime and standard library that raise events are listed in the :ref:`audit "
 "events table <audit-events>`. Details are in each function's documentation."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:357 ../Doc/c-api/sys.rst:359
+#: ../Doc/c-api/sys.rst:407 ../Doc/c-api/sys.rst:409
 msgid ""
 "If the interpreter is initialized, this function raises an auditing event "
 "``sys.addaudithook`` with no arguments. If any existing hooks raise an "
@@ -426,7 +494,7 @@ msgid ""
 "hook has been added unless they control all existing hooks."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:368
+#: ../Doc/c-api/sys.rst:418
 msgid ""
 "The type of the hook function. *event* is the C string event argument passed "
 "to :c:func:`PySys_Audit` or :c:func:`PySys_AuditTuple`. *args* is guaranteed "
@@ -434,11 +502,11 @@ msgid ""
 "PySys_AddAuditHook()."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:380
+#: ../Doc/c-api/sys.rst:430
 msgid "Process Control"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:387
+#: ../Doc/c-api/sys.rst:437
 msgid ""
 "Print a fatal error message and kill the process.  No cleanup is performed. "
 "This function should only be invoked when a condition is detected that would "
@@ -448,29 +516,29 @@ msgid ""
 "file:`core` file."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:394
+#: ../Doc/c-api/sys.rst:444
 msgid ""
 "The ``Py_FatalError()`` function is replaced with a macro which logs "
 "automatically the name of the current function, unless the "
 "``Py_LIMITED_API`` macro is defined."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:398
+#: ../Doc/c-api/sys.rst:448
 msgid "Log the function name automatically."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:408
+#: ../Doc/c-api/sys.rst:458
 msgid ""
 "Exit the current process.  This calls :c:func:`Py_FinalizeEx` and then calls "
 "the standard C library function ``exit(status)``.  If :c:func:"
 "`Py_FinalizeEx` indicates an error, the exit status is set to 120."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:412
+#: ../Doc/c-api/sys.rst:462
 msgid "Errors from finalization no longer ignored."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:422
+#: ../Doc/c-api/sys.rst:472
 msgid ""
 "Register a cleanup function to be called by :c:func:`Py_FinalizeEx`.  The "
 "cleanup function will be called with no arguments and should return no "
@@ -482,7 +550,7 @@ msgid ""
 "should be called by *func*."
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:432
+#: ../Doc/c-api/sys.rst:482
 msgid ":c:func:`PyUnstable_AtExit` for passing a ``void *data`` argument."
 msgstr ""
 
@@ -490,18 +558,18 @@ msgstr ""
 msgid "USE_STACKCHECK (C macro)"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:385
+#: ../Doc/c-api/sys.rst:435
 msgid "abort (C function)"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:404 ../Doc/c-api/sys.rst:418
+#: ../Doc/c-api/sys.rst:454 ../Doc/c-api/sys.rst:468
 msgid "Py_FinalizeEx (C function)"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:404
+#: ../Doc/c-api/sys.rst:454
 msgid "exit (C function)"
 msgstr ""
 
-#: ../Doc/c-api/sys.rst:418
+#: ../Doc/c-api/sys.rst:468
 msgid "cleanup functions"
 msgstr ""

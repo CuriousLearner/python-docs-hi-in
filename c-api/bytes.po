@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -314,6 +314,29 @@ msgid ""
 msgstr ""
 
 #: ../Doc/c-api/bytes.rst:194
+msgid "Similar to ``sep.join(iterable)`` in Python."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:196
+msgid ""
+"*sep* must be Python :class:`bytes` object. (Note that :c:func:"
+"`PyUnicode_Join` accepts ``NULL`` separator and treats it as a space, "
+"whereas :c:func:`PyBytes_Join` doesn't accept ``NULL`` separator.)"
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:201
+msgid ""
+"*iterable* must be an iterable object yielding objects that implement the :"
+"ref:`buffer protocol <bufferobjects>`."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:204
+msgid ""
+"On success, return a new :class:`bytes` object. On error, set an exception "
+"and return ``NULL``."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:212
 msgid ""
 "Resize a bytes object. *newsize* will be the new length of the bytes object. "
 "You can think of it as creating a new bytes object and destroying the old "
@@ -323,6 +346,57 @@ msgid ""
 "in *\\*bytes* may differ from its input value.  If the reallocation fails, "
 "the original bytes object at *\\*bytes* is deallocated, *\\*bytes* is set to "
 "``NULL``, :exc:`MemoryError` is set, and ``-1`` is returned."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:226
+msgid ""
+"Get the string representation of *bytes*. This function is currently used to "
+"implement :meth:`!bytes.__repr__` in Python."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:229
+msgid ""
+"This function does not do type checking; it is undefined behavior to pass "
+"*bytes* as a non-bytes object or ``NULL``."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:232
+msgid ""
+"If *smartquotes* is true, the representation will use a double-quoted string "
+"instead of single-quoted string when single-quotes are present in *bytes*. "
+"For example, the byte string ``'Python'`` would be represented as ``b"
+"\"'Python'\"`` when *smartquotes* is true, or ``b'\\'Python\\''`` when it is "
+"false."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:238
+msgid ""
+"On success, this function returns a :term:`strong reference` to a :class:"
+"`str` object containing the representation. On failure, this returns "
+"``NULL`` with an exception set."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:245
+msgid ""
+"Unescape a backslash-escaped string *s*. *s* must not be ``NULL``. *len* "
+"must be the size of *s*."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:248
+msgid ""
+"*errors* must be one of ``\"strict\"``, ``\"replace\"``, or ``\"ignore\"``. "
+"If *errors* is ``NULL``, then ``\"strict\"`` is used by default."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:251
+msgid ""
+"On success, this function returns a :term:`strong reference` to a Python :"
+"class:`bytes` object containing the unescaped string. On failure, this "
+"function returns ``NULL`` with an exception set."
+msgstr ""
+
+#: ../Doc/c-api/bytes.rst:255
+msgid "*unicode* and *recode_encoding* are now unused."
 msgstr ""
 
 #: ../Doc/c-api/bytes.rst:11

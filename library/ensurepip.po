@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../Doc/library/ensurepip.rst:14
 msgid ""
-"The :mod:`ensurepip` package provides support for bootstrapping the ``pip`` "
+"The :mod:`!ensurepip` package provides support for bootstrapping the ``pip`` "
 "installer into an existing Python installation or virtual environment. This "
 "bootstrapping approach reflects the fact that ``pip`` is an independent "
 "project with its own release cycle, and the latest available stable version "
@@ -49,19 +49,27 @@ msgid ""
 "bootstrap ``pip`` are included as internal parts of the package."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:35
+#: ../Doc/includes/optional-module.rst:1
+msgid ""
+"This is an :term:`optional module`. If it is missing from your copy of "
+"CPython, look for documentation from your distributor (that is, whoever "
+"provided Python to you). If you are the distributor, see :ref:`optional-"
+"module-requirements`."
+msgstr ""
+
+#: ../Doc/library/ensurepip.rst:37
 msgid ":ref:`installing-index`"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:36
+#: ../Doc/library/ensurepip.rst:38
 msgid "The end user guide for installing Python packages"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:38
+#: ../Doc/library/ensurepip.rst:40
 msgid ":pep:`453`: Explicit bootstrapping of pip in Python installations"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:39
+#: ../Doc/library/ensurepip.rst:41
 msgid "The original rationale and specification for this module."
 msgstr ""
 
@@ -75,24 +83,24 @@ msgid ""
 "availability>` or :ref:`WebAssembly platforms <wasm-availability>`."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:44
-msgid "Command line interface"
+#: ../Doc/library/ensurepip.rst:48
+msgid "Command-line interface"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:48
+#: ../Doc/library/ensurepip.rst:52
 msgid ""
 "The command line interface is invoked using the interpreter's ``-m`` switch."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:50
+#: ../Doc/library/ensurepip.rst:54
 msgid "The simplest possible invocation is::"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:52
+#: ../Doc/library/ensurepip.rst:56
 msgid "python -m ensurepip"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:54
+#: ../Doc/library/ensurepip.rst:58
 msgid ""
 "This invocation will install ``pip`` if it is not already installed, but "
 "otherwise does nothing. To ensure the installed version of ``pip`` is at "
@@ -100,11 +108,11 @@ msgid ""
 "upgrade`` option::"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:59
+#: ../Doc/library/ensurepip.rst:63
 msgid "python -m ensurepip --upgrade"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:61
+#: ../Doc/library/ensurepip.rst:65
 msgid ""
 "By default, ``pip`` is installed into the current virtual environment (if "
 "one is active) or into the system site packages (if there is no active "
@@ -112,122 +120,122 @@ msgid ""
 "two additional command line options:"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:68
+#: ../Doc/library/ensurepip.rst:72
 msgid ""
 "Installs ``pip`` relative to the given root directory rather than the root "
 "of the currently active virtual environment (if any) or the default root for "
 "the current Python installation."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:74
+#: ../Doc/library/ensurepip.rst:78
 msgid ""
 "Installs ``pip`` into the user site packages directory rather than globally "
 "for the current Python installation (this option is not permitted inside an "
 "active virtual environment)."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:78
+#: ../Doc/library/ensurepip.rst:82
 msgid ""
 "By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y "
 "stands for the version of Python used to invoke ``ensurepip``). The scripts "
 "installed can be controlled through two additional command line options:"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:85
+#: ../Doc/library/ensurepip.rst:89
 msgid ""
 "If an alternate installation is requested, the ``pipX`` script will *not* be "
 "installed."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:90
+#: ../Doc/library/ensurepip.rst:94
 msgid ""
 "If a \"default pip\" installation is requested, the ``pip`` script will be "
 "installed in addition to the two regular scripts."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:93
+#: ../Doc/library/ensurepip.rst:97
 msgid ""
 "Providing both of the script selection options will trigger an exception."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:96
+#: ../Doc/library/ensurepip.rst:100
 msgid "Module API"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:98
-msgid ":mod:`ensurepip` exposes two functions for programmatic use:"
+#: ../Doc/library/ensurepip.rst:102
+msgid ":mod:`!ensurepip` exposes two functions for programmatic use:"
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:102
+#: ../Doc/library/ensurepip.rst:106
 msgid ""
 "Returns a string specifying the available version of pip that will be "
 "installed when bootstrapping an environment."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:109
+#: ../Doc/library/ensurepip.rst:113
 msgid "Bootstraps ``pip`` into the current or designated environment."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:111
+#: ../Doc/library/ensurepip.rst:115
 msgid ""
 "*root* specifies an alternative root directory to install relative to. If "
 "*root* is ``None``, then installation uses the default install location for "
 "the current environment."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:115
+#: ../Doc/library/ensurepip.rst:119
 msgid ""
 "*upgrade* indicates whether or not to upgrade an existing installation of an "
 "earlier version of ``pip`` to the available version."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:118
+#: ../Doc/library/ensurepip.rst:122
 msgid ""
 "*user* indicates whether to use the user scheme rather than installing "
 "globally."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:121
+#: ../Doc/library/ensurepip.rst:125
 msgid ""
 "By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y "
 "stands for the current version of Python)."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:124
+#: ../Doc/library/ensurepip.rst:128
 msgid "If *altinstall* is set, then ``pipX`` will *not* be installed."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:126
+#: ../Doc/library/ensurepip.rst:130
 msgid ""
 "If *default_pip* is set, then ``pip`` will be installed in addition to the "
 "two regular scripts."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:129
+#: ../Doc/library/ensurepip.rst:133
 msgid ""
 "Setting both *altinstall* and *default_pip* will trigger :exc:`ValueError`."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:132
+#: ../Doc/library/ensurepip.rst:136
 msgid ""
 "*verbosity* controls the level of output to :data:`sys.stdout` from the "
 "bootstrapping operation."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:135
+#: ../Doc/library/ensurepip.rst:139
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``ensurepip.bootstrap`` with "
 "argument ``root``."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:139
+#: ../Doc/library/ensurepip.rst:143
 msgid ""
 "The bootstrapping process has side effects on both ``sys.path`` and ``os."
 "environ``. Invoking the command line interface in a subprocess instead "
 "allows these side effects to be avoided."
 msgstr ""
 
-#: ../Doc/library/ensurepip.rst:145
+#: ../Doc/library/ensurepip.rst:149
 msgid ""
 "The bootstrapping process may install additional modules required by "
 "``pip``, but other software should not assume those dependencies will always "

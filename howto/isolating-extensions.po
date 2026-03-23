@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -508,8 +509,8 @@ msgstr ""
 
 #: ../Doc/howto/isolating-extensions.rst:356
 msgid ""
-"Define a traverse function using ``Py_tp_traverse``, which visits the type "
-"(e.g. using ``Py_VISIT(Py_TYPE(self))``)."
+"Define a traverse function using :c:data:`Py_tp_traverse`, which visits the "
+"type (e.g. using ``Py_VISIT(Py_TYPE(self))``)."
 msgstr ""
 
 #: ../Doc/howto/isolating-extensions.rst:359

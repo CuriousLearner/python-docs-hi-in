@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -739,37 +739,37 @@ msgid ""
 "popen`, you need to use ``p.read(n)``."
 msgstr ""
 
-#: ../Doc/faq/library.rst:623
+#: ../Doc/faq/library.rst:545
 msgid "How do I access the serial (RS232) port?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:625
+#: ../Doc/faq/library.rst:547
 msgid "For Win32, OSX, Linux, BSD, Jython, IronPython:"
 msgstr ""
 
-#: ../Doc/faq/library.rst:627
+#: ../Doc/faq/library.rst:549
 msgid ":pypi:`pyserial`"
 msgstr ""
 
-#: ../Doc/faq/library.rst:629
+#: ../Doc/faq/library.rst:551
 msgid "For Unix, see a Usenet post by Mitch Chapman:"
 msgstr ""
 
-#: ../Doc/faq/library.rst:631
+#: ../Doc/faq/library.rst:553
 msgid "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 msgstr ""
 
-#: ../Doc/faq/library.rst:635
+#: ../Doc/faq/library.rst:557
 msgid "Why doesn't closing sys.stdout (stdin, stderr) really close it?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:637
+#: ../Doc/faq/library.rst:559
 msgid ""
 "Python :term:`file objects <file object>` are a high-level layer of "
 "abstraction on low-level C file descriptors."
 msgstr ""
 
-#: ../Doc/faq/library.rst:640
+#: ../Doc/faq/library.rst:562
 msgid ""
 "For most file objects you create in Python via the built-in :func:`open` "
 "function, ``f.close()`` marks the Python file object as being closed from "
@@ -778,7 +778,7 @@ msgid ""
 "``f`` becomes garbage."
 msgstr ""
 
-#: ../Doc/faq/library.rst:646
+#: ../Doc/faq/library.rst:568
 msgid ""
 "But stdin, stdout and stderr are treated specially by Python, because of the "
 "special status also given to them by C.  Running ``sys.stdout.close()`` "
@@ -786,70 +786,70 @@ msgid ""
 "associated C file descriptor."
 msgstr ""
 
-#: ../Doc/faq/library.rst:651
+#: ../Doc/faq/library.rst:573
 msgid ""
 "To close the underlying C file descriptor for one of these three, you should "
 "first be sure that's what you really want to do (e.g., you may confuse "
 "extension modules trying to do I/O).  If it is, use :func:`os.close`::"
 msgstr ""
 
-#: ../Doc/faq/library.rst:655
+#: ../Doc/faq/library.rst:577
 msgid ""
 "os.close(stdin.fileno())\n"
 "os.close(stdout.fileno())\n"
 "os.close(stderr.fileno())"
 msgstr ""
 
-#: ../Doc/faq/library.rst:659
+#: ../Doc/faq/library.rst:581
 msgid "Or you can use the numeric constants 0, 1 and 2, respectively."
 msgstr ""
 
-#: ../Doc/faq/library.rst:663
+#: ../Doc/faq/library.rst:585
 msgid "Network/Internet Programming"
 msgstr ""
 
-#: ../Doc/faq/library.rst:666
+#: ../Doc/faq/library.rst:588
 msgid "What WWW tools are there for Python?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:668
+#: ../Doc/faq/library.rst:590
 msgid ""
 "See the chapters titled :ref:`internet` and :ref:`netdata` in the Library "
 "Reference Manual.  Python has many modules that will help you build server-"
 "side and client-side web systems."
 msgstr ""
 
-#: ../Doc/faq/library.rst:674
+#: ../Doc/faq/library.rst:596
 msgid ""
 "A summary of available frameworks is maintained by Paul Boddie at https://"
 "wiki.python.org/moin/WebProgramming\\ ."
 msgstr ""
 
-#: ../Doc/faq/library.rst:679
+#: ../Doc/faq/library.rst:601
 msgid "What module should I use to help with generating HTML?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:683
+#: ../Doc/faq/library.rst:605
 msgid ""
 "You can find a collection of useful links on the `Web Programming wiki page "
 "<https://wiki.python.org/moin/WebProgramming>`_."
 msgstr ""
 
-#: ../Doc/faq/library.rst:688
+#: ../Doc/faq/library.rst:610
 msgid "How do I send mail from a Python script?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:690
+#: ../Doc/faq/library.rst:612
 msgid "Use the standard library module :mod:`smtplib`."
 msgstr ""
 
-#: ../Doc/faq/library.rst:692
+#: ../Doc/faq/library.rst:614
 msgid ""
 "Here's a very simple interactive mail sender that uses it.  This method will "
 "work on any host that supports an SMTP listener. ::"
 msgstr ""
 
-#: ../Doc/faq/library.rst:695
+#: ../Doc/faq/library.rst:617
 msgid ""
 "import sys, smtplib\n"
 "\n"
@@ -869,7 +869,7 @@ msgid ""
 "server.quit()"
 msgstr ""
 
-#: ../Doc/faq/library.rst:712
+#: ../Doc/faq/library.rst:634
 msgid ""
 "A Unix-only alternative uses sendmail.  The location of the sendmail program "
 "varies between systems; sometimes it is ``/usr/lib/sendmail``, sometimes ``/"
@@ -877,7 +877,7 @@ msgid ""
 "some sample code::"
 msgstr ""
 
-#: ../Doc/faq/library.rst:717
+#: ../Doc/faq/library.rst:639
 msgid ""
 "import os\n"
 "\n"
@@ -893,17 +893,17 @@ msgid ""
 "    print(\"Sendmail exit status\", sts)"
 msgstr ""
 
-#: ../Doc/faq/library.rst:732
+#: ../Doc/faq/library.rst:654
 msgid "How do I avoid blocking in the connect() method of a socket?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:734
+#: ../Doc/faq/library.rst:656
 msgid ""
 "The :mod:`select` module is commonly used to help with asynchronous I/O on "
 "sockets."
 msgstr ""
 
-#: ../Doc/faq/library.rst:737
+#: ../Doc/faq/library.rst:659
 msgid ""
 "To prevent the TCP connect from blocking, you can set the socket to non-"
 "blocking mode.  Then when you do the :meth:`~socket.socket.connect`, you "
@@ -914,7 +914,7 @@ msgid ""
 "your system."
 msgstr ""
 
-#: ../Doc/faq/library.rst:745
+#: ../Doc/faq/library.rst:667
 msgid ""
 "You can use the :meth:`~socket.socket.connect_ex` method to avoid creating "
 "an exception. It will just return the errno value. To poll, you can call :"
@@ -923,7 +923,7 @@ msgid ""
 "`select.select` to check if it's writable."
 msgstr ""
 
-#: ../Doc/faq/library.rst:753
+#: ../Doc/faq/library.rst:675
 msgid ""
 "The :mod:`asyncio` module provides a general purpose single-threaded and "
 "concurrent asynchronous library, which can be used for writing non-blocking "
@@ -931,19 +931,19 @@ msgid ""
 "popular and feature-rich alternative."
 msgstr ""
 
-#: ../Doc/faq/library.rst:761
+#: ../Doc/faq/library.rst:683
 msgid "Databases"
 msgstr ""
 
-#: ../Doc/faq/library.rst:764
+#: ../Doc/faq/library.rst:686
 msgid "Are there any interfaces to database packages in Python?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:766
+#: ../Doc/faq/library.rst:688
 msgid "Yes."
 msgstr ""
 
-#: ../Doc/faq/library.rst:768
+#: ../Doc/faq/library.rst:690
 msgid ""
 "Interfaces to disk-based hashes such as :mod:`DBM <dbm.ndbm>` and :mod:`GDBM "
 "<dbm.gnu>` are also included with standard Python.  There is also the :mod:"
@@ -951,18 +951,18 @@ msgid ""
 "database."
 msgstr ""
 
-#: ../Doc/faq/library.rst:773
+#: ../Doc/faq/library.rst:695
 msgid ""
 "Support for most relational databases is available.  See the "
 "`DatabaseProgramming wiki page <https://wiki.python.org/moin/"
 "DatabaseProgramming>`_ for details."
 msgstr ""
 
-#: ../Doc/faq/library.rst:779
+#: ../Doc/faq/library.rst:701
 msgid "How do you implement persistent objects in Python?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:781
+#: ../Doc/faq/library.rst:703
 msgid ""
 "The :mod:`pickle` library module solves this in a very general way (though "
 "you still can't store things like open files, sockets or windows), and the :"
@@ -970,61 +970,61 @@ msgid ""
 "mappings containing arbitrary Python objects."
 msgstr ""
 
-#: ../Doc/faq/library.rst:788
+#: ../Doc/faq/library.rst:710
 msgid "Mathematics and Numerics"
 msgstr ""
 
-#: ../Doc/faq/library.rst:791
+#: ../Doc/faq/library.rst:713
 msgid "How do I generate random numbers in Python?"
 msgstr ""
 
-#: ../Doc/faq/library.rst:793
+#: ../Doc/faq/library.rst:715
 msgid ""
 "The standard module :mod:`random` implements a random number generator.  "
 "Usage is simple::"
 msgstr ""
 
-#: ../Doc/faq/library.rst:796
+#: ../Doc/faq/library.rst:718
 msgid ""
 "import random\n"
 "random.random()"
 msgstr ""
 
-#: ../Doc/faq/library.rst:799
+#: ../Doc/faq/library.rst:721
 msgid "This returns a random floating-point number in the range [0, 1)."
 msgstr ""
 
-#: ../Doc/faq/library.rst:801
+#: ../Doc/faq/library.rst:723
 msgid ""
 "There are also many other specialized generators in this module, such as:"
 msgstr ""
 
-#: ../Doc/faq/library.rst:803
+#: ../Doc/faq/library.rst:725
 msgid "``randrange(a, b)`` chooses an integer in the range [a, b)."
 msgstr ""
 
-#: ../Doc/faq/library.rst:804
+#: ../Doc/faq/library.rst:726
 msgid "``uniform(a, b)`` chooses a floating-point number in the range [a, b)."
 msgstr ""
 
-#: ../Doc/faq/library.rst:805
+#: ../Doc/faq/library.rst:727
 msgid ""
 "``normalvariate(mean, sdev)`` samples the normal (Gaussian) distribution."
 msgstr ""
 
-#: ../Doc/faq/library.rst:807
+#: ../Doc/faq/library.rst:729
 msgid "Some higher-level functions operate on sequences directly, such as:"
 msgstr ""
 
-#: ../Doc/faq/library.rst:809
+#: ../Doc/faq/library.rst:731
 msgid "``choice(S)`` chooses a random element from a given sequence."
 msgstr ""
 
-#: ../Doc/faq/library.rst:810
+#: ../Doc/faq/library.rst:732
 msgid "``shuffle(L)`` shuffles a list in-place, i.e. permutes it randomly."
 msgstr ""
 
-#: ../Doc/faq/library.rst:812
+#: ../Doc/faq/library.rst:734
 msgid ""
 "There's also a ``Random`` class you can instantiate to create independent "
 "multiple random number generators."

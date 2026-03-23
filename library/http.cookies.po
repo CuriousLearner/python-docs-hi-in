@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../Doc/library/http.cookies.rst:14
 msgid ""
-"The :mod:`http.cookies` module defines classes for abstracting the concept "
+"The :mod:`!http.cookies` module defines classes for abstracting the concept "
 "of cookies, an HTTP state management mechanism. It supports both simple "
 "string-only cookies, and provides an abstraction for having any serializable "
 "data-type as cookie value."
@@ -95,7 +95,7 @@ msgstr ""
 #: ../Doc/library/http.cookies.rst:67
 msgid ""
 "HTTP cookie handling for web *clients*.  The :mod:`http.cookiejar` and :mod:"
-"`http.cookies` modules do not depend on each other."
+"`!http.cookies` modules do not depend on each other."
 msgstr ""
 
 #: ../Doc/library/http.cookies.rst:70
@@ -144,8 +144,8 @@ msgid ""
 "supports JavaScript, will act the same as if the HTTP headers was sent."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:111 ../Doc/library/http.cookies.rst:210
-#: ../Doc/library/http.cookies.rst:218
+#: ../Doc/library/http.cookies.rst:111 ../Doc/library/http.cookies.rst:227
+#: ../Doc/library/http.cookies.rst:235
 msgid "The meaning for *attrs* is the same as in :meth:`output`."
 msgstr ""
 
@@ -176,14 +176,14 @@ msgid ""
 "valid :rfc:`2109` attributes, which are:"
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:146
+#: ../Doc/library/http.cookies.rst:147
 msgid ""
 "The attribute :attr:`httponly` specifies that the cookie is only transferred "
 "in HTTP requests, and is not accessible through JavaScript. This is intended "
 "to mitigate some forms of cross-site scripting."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:150
+#: ../Doc/library/http.cookies.rst:151
 msgid ""
 "The attribute :attr:`samesite` controls when the browser sends the cookie "
 "with cross-site requests. This helps to mitigate CSRF attacks. Valid values "
@@ -193,47 +193,67 @@ msgid ""
 "also be set, as required by modern browsers."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:157
+#: ../Doc/library/http.cookies.rst:158
+msgid ""
+"The attribute :attr:`partitioned` indicates to user agents that these cross-"
+"site cookies *should* only be available in the same top-level context that "
+"the cookie was first set in. For this to be accepted by the user agent, you "
+"**must** also set ``Secure``."
+msgstr ""
+
+#: ../Doc/library/http.cookies.rst:163
+msgid ""
+"In addition, it is recommended to use the ``__Host`` prefix when setting "
+"partitioned cookies to make them bound to the hostname and not the "
+"registrable domain. Read `CHIPS (Cookies Having Independent Partitioned "
+"State)`_ for full details and examples."
+msgstr ""
+
+#: ../Doc/library/http.cookies.rst:171
 msgid "The keys are case-insensitive and their default value is ``''``."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:159
+#: ../Doc/library/http.cookies.rst:173
 msgid ""
 ":meth:`!__eq__` now takes :attr:`~Morsel.key` and :attr:`~Morsel.value` into "
 "account."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:163
+#: ../Doc/library/http.cookies.rst:177
 msgid ""
 "Attributes :attr:`~Morsel.key`, :attr:`~Morsel.value` and :attr:`~Morsel."
 "coded_value` are read-only.  Use :meth:`~Morsel.set` for setting them."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:168
+#: ../Doc/library/http.cookies.rst:182
 msgid "Added support for the :attr:`samesite` attribute."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:174
+#: ../Doc/library/http.cookies.rst:185
+msgid "Added support for the :attr:`partitioned` attribute."
+msgstr ""
+
+#: ../Doc/library/http.cookies.rst:191
 msgid "The value of the cookie."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:179
+#: ../Doc/library/http.cookies.rst:196
 msgid "The encoded value of the cookie --- this is what should be sent."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:184
+#: ../Doc/library/http.cookies.rst:201
 msgid "The name of the cookie."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:189
+#: ../Doc/library/http.cookies.rst:206
 msgid "Set the *key*, *value* and *coded_value* attributes."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:194
+#: ../Doc/library/http.cookies.rst:211
 msgid "Whether *K* is a member of the set of keys of a :class:`Morsel`."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:199
+#: ../Doc/library/http.cookies.rst:216
 msgid ""
 "Return a string representation of the Morsel, suitable to be sent as an HTTP "
 "header. By default, all the attributes are included, unless *attrs* is "
@@ -241,53 +261,54 @@ msgid ""
 "by default ``\"Set-Cookie:\"``."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:207
+#: ../Doc/library/http.cookies.rst:224
 msgid ""
 "Return an embeddable JavaScript snippet, which, if run on a browser which "
 "supports JavaScript, will act the same as if the HTTP header was sent."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:215
+#: ../Doc/library/http.cookies.rst:232
 msgid ""
 "Return a string representing the Morsel, without any surrounding HTTP or "
 "JavaScript."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:223
+#: ../Doc/library/http.cookies.rst:240
 msgid ""
 "Update the values in the Morsel dictionary with the values in the dictionary "
 "*values*.  Raise an error if any of the keys in the *values* dict is not a "
 "valid :rfc:`2109` attribute."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:227
+#: ../Doc/library/http.cookies.rst:244
 msgid "an error is raised for invalid keys."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:233
+#: ../Doc/library/http.cookies.rst:250
 msgid "Return a shallow copy of the Morsel object."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:235
+#: ../Doc/library/http.cookies.rst:252
 msgid "return a Morsel object instead of a dict."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:241
+#: ../Doc/library/http.cookies.rst:258
 msgid ""
 "Raise an error if key is not a valid :rfc:`2109` attribute, otherwise behave "
 "the same as :meth:`dict.setdefault`."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:248
+#: ../Doc/library/http.cookies.rst:265
 msgid "Example"
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:250
+#: ../Doc/library/http.cookies.rst:267
 msgid ""
-"The following example demonstrates how to use the :mod:`http.cookies` module."
+"The following example demonstrates how to use the :mod:`!http.cookies` "
+"module."
 msgstr ""
 
-#: ../Doc/library/http.cookies.rst:252
+#: ../Doc/library/http.cookies.rst:269
 msgid ""
 ">>> from http import cookies\n"
 ">>> C = cookies.SimpleCookie()\n"
@@ -313,9 +334,9 @@ msgid ""
 "Set-Cookie: chips=ahoy\n"
 "Set-Cookie: vienna=finger\n"
 ">>> C = cookies.SimpleCookie()\n"
-">>> C.load('keebler=\"E=everybody; L=\\\\\"Loves\\\\\"; fudge=\\\\012;\";')\n"
+">>> C.load('keebler=\"E=everybody; L=\\\\\"Loves\\\\\"; fudge=;\";')\n"
 ">>> print(C)\n"
-"Set-Cookie: keebler=\"E=everybody; L=\\\"Loves\\\"; fudge=\\012;\"\n"
+"Set-Cookie: keebler=\"E=everybody; L=\\\"Loves\\\"; fudge=;\"\n"
 ">>> C = cookies.SimpleCookie()\n"
 ">>> C[\"oreo\"] = \"doublestuff\"\n"
 ">>> C[\"oreo\"][\"path\"] = \"/\"\n"

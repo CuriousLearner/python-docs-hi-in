@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../Doc/library/sysconfig.rst:19
 msgid ""
-"The :mod:`sysconfig` module provides access to Python's configuration "
+"The :mod:`!sysconfig` module provides access to Python's configuration "
 "information like the list of installation paths and the configuration "
 "variables relevant for the current platform."
 msgstr ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../Doc/library/sysconfig.rst:31
 msgid ""
-":mod:`sysconfig` puts all variables found in these files in a dictionary "
+":mod:`!sysconfig` puts all variables found in these files in a dictionary "
 "that can be accessed using :func:`get_config_vars` or :func:`get_config_var`."
 msgstr ""
 
@@ -102,8 +102,8 @@ msgstr ""
 #: ../Doc/library/sysconfig.rst:70
 msgid ""
 "Python uses an installation scheme that differs depending on the platform "
-"and on the installation options.  These schemes are stored in :mod:"
-"`sysconfig` under unique identifiers based on the value returned by :const:"
+"and on the installation options.  These schemes are stored in :mod:`!"
+"sysconfig` under unique identifiers based on the value returned by :const:"
 "`os.name`. The schemes are used by package installers to determine where to "
 "copy files to."
 msgstr ""
@@ -466,14 +466,14 @@ msgstr ""
 
 #: ../Doc/library/sysconfig.rst:261
 msgid ""
-":mod:`sysconfig` provides some functions to determine these installation "
+":mod:`!sysconfig` provides some functions to determine these installation "
 "paths."
 msgstr ""
 
 #: ../Doc/library/sysconfig.rst:265
 msgid ""
-"Return a tuple containing all schemes currently supported in :mod:"
-"`sysconfig`."
+"Return a tuple containing all schemes currently supported in :mod:`!"
+"sysconfig`."
 msgstr ""
 
 #: ../Doc/library/sysconfig.rst:271
@@ -503,7 +503,7 @@ msgstr ""
 #: ../Doc/library/sysconfig.rst:287
 msgid ""
 "The return value is a scheme name listed in :func:`get_scheme_names`. It can "
-"be passed to :mod:`sysconfig` functions that take a *scheme* argument, such "
+"be passed to :mod:`!sysconfig` functions that take a *scheme* argument, such "
 "as :func:`get_paths`."
 msgstr ""
 
@@ -531,8 +531,8 @@ msgstr ""
 
 #: ../Doc/library/sysconfig.rst:315
 msgid ""
-"Return a tuple containing all path names currently supported in :mod:"
-"`sysconfig`."
+"Return a tuple containing all path names currently supported in :mod:`!"
+"sysconfig`."
 msgstr ""
 
 #: ../Doc/library/sysconfig.rst:321
@@ -548,7 +548,7 @@ msgstr ""
 
 #: ../Doc/library/sysconfig.rst:326
 msgid ""
-":mod:`sysconfig` stores installation paths corresponding to each path name, "
+":mod:`!sysconfig` stores installation paths corresponding to each path name, "
 "for each platform, with variables to be expanded.  For instance the *stdlib* "
 "path for the *nt* scheme is: ``{base}/Lib``."
 msgstr ""
@@ -638,99 +638,87 @@ msgstr ""
 msgid "Examples of returned values:"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:385
-msgid "linux-i586"
-msgstr ""
-
 #: ../Doc/library/sysconfig.rst:386
-msgid "linux-alpha (?)"
+msgid "Windows:"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:387
-msgid "solaris-2.6-sun4u"
-msgstr ""
-
-#: ../Doc/library/sysconfig.rst:389
-msgid "Windows will return one of:"
-msgstr ""
-
-#: ../Doc/library/sysconfig.rst:391
+#: ../Doc/library/sysconfig.rst:388
 msgid "win-amd64 (64-bit Windows on AMD64, aka x86_64, Intel64, and EM64T)"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:392
+#: ../Doc/library/sysconfig.rst:389
 msgid "win-arm64 (64-bit Windows on ARM64, aka AArch64)"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:393
+#: ../Doc/library/sysconfig.rst:390
 msgid "win32 (all others - specifically, sys.platform is returned)"
 msgstr ""
 
+#: ../Doc/library/sysconfig.rst:392
+msgid "POSIX based OS:"
+msgstr ""
+
+#: ../Doc/library/sysconfig.rst:394
+msgid "linux-x86_64"
+msgstr ""
+
 #: ../Doc/library/sysconfig.rst:395
-msgid "macOS can return:"
+msgid "macosx-15.5-arm64"
+msgstr ""
+
+#: ../Doc/library/sysconfig.rst:396
+msgid "macosx-26.0-universal2 (macOS on Apple Silicon or Intel)"
 msgstr ""
 
 #: ../Doc/library/sysconfig.rst:397
-msgid "macosx-10.6-ppc"
-msgstr ""
-
-#: ../Doc/library/sysconfig.rst:398
-msgid "macosx-10.4-ppc64"
+msgid "android-24-arm64_v8a"
 msgstr ""
 
 #: ../Doc/library/sysconfig.rst:399
-msgid "macosx-10.3-i386"
-msgstr ""
-
-#: ../Doc/library/sysconfig.rst:400
-msgid "macosx-10.4-fat"
-msgstr ""
-
-#: ../Doc/library/sysconfig.rst:402
 msgid ""
 "For other non-POSIX platforms, currently just returns :data:`sys.platform`."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:407
+#: ../Doc/library/sysconfig.rst:404
 msgid ""
 "Return ``True`` if the running Python interpreter was built from source and "
 "is being run from its built location, and not from a location resulting from "
 "e.g. running ``make install`` or installing via a binary installer."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:414
+#: ../Doc/library/sysconfig.rst:411
 msgid "Parse a :file:`config.h`\\-style file."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:416
+#: ../Doc/library/sysconfig.rst:413
 msgid ""
 "*fp* is a file-like object pointing to the :file:`config.h`\\-like file."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:418
+#: ../Doc/library/sysconfig.rst:415
 msgid ""
 "A dictionary containing name/value pairs is returned.  If an optional "
 "dictionary is passed in as the second argument, it is used instead of a new "
 "dictionary, and updated with the values read in the file."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:425
+#: ../Doc/library/sysconfig.rst:422
 msgid "Return the path of :file:`pyconfig.h`."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:429
+#: ../Doc/library/sysconfig.rst:426
 msgid "Return the path of :file:`Makefile`."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:435
+#: ../Doc/library/sysconfig.rst:432
 msgid "Command-line usage"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:437
-msgid "You can use :mod:`sysconfig` as a script with Python's *-m* option:"
+#: ../Doc/library/sysconfig.rst:434
+msgid "You can use :mod:`!sysconfig` as a script with Python's *-m* option:"
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:439
+#: ../Doc/library/sysconfig.rst:436
 msgid ""
 "$ python -m sysconfig\n"
 "Platform: \"macosx-10.4-i386\"\n"
@@ -755,7 +743,7 @@ msgid ""
 "        ..."
 msgstr ""
 
-#: ../Doc/library/sysconfig.rst:463
+#: ../Doc/library/sysconfig.rst:460
 msgid ""
 "This call will print in the standard output the information returned by :"
 "func:`get_platform`, :func:`get_python_version`, :func:`get_path` and :func:"

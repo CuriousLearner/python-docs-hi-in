@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -371,6 +371,35 @@ msgid ""
 "If Python is initialized multiple times, :c:func:`PyImport_AppendInittab` "
 "or :c:func:`PyImport_ExtendInittab` must be called before each Python "
 "initialization."
+msgstr ""
+
+#: ../Doc/c-api/import.rst:332
+msgid ""
+"The table of built-in modules used by Python initialization. Do not use this "
+"directly; use :c:func:`PyImport_AppendInittab` and :c:func:"
+"`PyImport_ExtendInittab` instead."
+msgstr ""
+
+#: ../Doc/c-api/import.rst:339
+msgid "Import the module *mod_name* and get its attribute *attr_name*."
+msgstr ""
+
+#: ../Doc/c-api/import.rst:341
+msgid "Names must be Python :class:`str` objects."
+msgstr ""
+
+#: ../Doc/c-api/import.rst:343
+msgid ""
+"Helper function combining :c:func:`PyImport_Import` and :c:func:"
+"`PyObject_GetAttr`. For example, it can raise :exc:`ImportError` if the "
+"module is not found, and :exc:`AttributeError` if the attribute doesn't "
+"exist."
+msgstr ""
+
+#: ../Doc/c-api/import.rst:352
+msgid ""
+"Similar to :c:func:`PyImport_ImportModuleAttr`, but names are UTF-8 encoded "
+"strings instead of Python :class:`str` objects."
 msgstr ""
 
 #: ../Doc/c-api/import.rst:11

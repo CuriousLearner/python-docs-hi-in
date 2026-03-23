@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -191,13 +191,12 @@ msgid ""
 "specify handlers for different exceptions.  At most one handler will be "
 "executed. Handlers only handle exceptions that occur in the corresponding "
 "*try clause*, not in other handlers of the same :keyword:`!try` statement.  "
-"An *except clause* may name multiple exceptions as a parenthesized tuple, "
-"for example::"
+"An *except clause* may name multiple exceptions, for example::"
 msgstr ""
 
 #: ../Doc/tutorial/errors.rst:126
 msgid ""
-"... except (RuntimeError, TypeError, NameError):\n"
+"... except RuntimeError, TypeError, NameError:\n"
 "...     pass"
 msgstr ""
 
@@ -608,10 +607,12 @@ msgstr ""
 #: ../Doc/tutorial/errors.rst:419
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
-"`continue` or :keyword:`return` statement, exceptions are not re-raised."
+"`continue` or :keyword:`return` statement, exceptions are not re-raised. "
+"This can be confusing and is therefore discouraged. From version 3.14 the "
+"compiler emits a :exc:`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:423
+#: ../Doc/tutorial/errors.rst:425
 msgid ""
 "If the :keyword:`!try` statement reaches a :keyword:`break`, :keyword:"
 "`continue` or :keyword:`return` statement, the :keyword:`!finally` clause "
@@ -619,19 +620,21 @@ msgid ""
 "keyword:`!return` statement's execution."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:429
+#: ../Doc/tutorial/errors.rst:431
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the "
 "returned value will be the one from the :keyword:`!finally` clause's :"
 "keyword:`!return` statement, not the value from the :keyword:`!try` "
-"clause's :keyword:`!return` statement."
+"clause's :keyword:`!return` statement. This can be confusing and is "
+"therefore discouraged. From version 3.14 the compiler emits a :exc:"
+"`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:435
+#: ../Doc/tutorial/errors.rst:439
 msgid "For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:437
+#: ../Doc/tutorial/errors.rst:441
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -643,11 +646,11 @@ msgid ""
 "False"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:446
+#: ../Doc/tutorial/errors.rst:450
 msgid "A more complicated example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:448
+#: ../Doc/tutorial/errors.rst:452
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -677,7 +680,7 @@ msgid ""
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:475
+#: ../Doc/tutorial/errors.rst:479
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  "
 "The :exc:`TypeError` raised by dividing two strings is not handled by the :"
@@ -685,18 +688,18 @@ msgid ""
 "finally` clause has been executed."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:480
+#: ../Doc/tutorial/errors.rst:484
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
 "regardless of whether the use of the resource was successful."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:488
+#: ../Doc/tutorial/errors.rst:492
 msgid "Predefined Clean-up Actions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:490
+#: ../Doc/tutorial/errors.rst:494
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation using "
@@ -704,13 +707,13 @@ msgid ""
 "to open a file and print its contents to the screen. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:495
+#: ../Doc/tutorial/errors.rst:499
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:498
+#: ../Doc/tutorial/errors.rst:502
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -720,14 +723,14 @@ msgid ""
 "correctly. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:504
+#: ../Doc/tutorial/errors.rst:508
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
 "        print(line, end=\"\")"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:508
+#: ../Doc/tutorial/errors.rst:512
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a "
 "problem was encountered while processing the lines. Objects which, like "
@@ -735,11 +738,11 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:516
+#: ../Doc/tutorial/errors.rst:520
 msgid "Raising and Handling Multiple Unrelated Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:518
+#: ../Doc/tutorial/errors.rst:522
 msgid ""
 "There are situations where it is necessary to report several exceptions that "
 "have occurred. This is often the case in concurrency frameworks, when "
@@ -748,14 +751,14 @@ msgid ""
 "errors rather than raise the first exception."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:524
+#: ../Doc/tutorial/errors.rst:528
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be "
 "caught like any other exception. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:528
+#: ../Doc/tutorial/errors.rst:532
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -783,7 +786,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:553
+#: ../Doc/tutorial/errors.rst:557
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle only "
 "the exceptions in the group that match a certain type. In the following "
@@ -792,7 +795,7 @@ msgid ""
 "exceptions propagate to other clauses and eventually to be reraised. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:560
+#: ../Doc/tutorial/errors.rst:564
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -836,7 +839,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:601
+#: ../Doc/tutorial/errors.rst:605
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, not "
 "types. This is because in practice the exceptions would typically be ones "
@@ -844,7 +847,7 @@ msgid ""
 "pattern::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:606
+#: ../Doc/tutorial/errors.rst:610
 msgid ""
 ">>> excs = []\n"
 "... for test in tests:\n"
@@ -858,11 +861,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:621
+#: ../Doc/tutorial/errors.rst:625
 msgid "Enriching Exceptions with Notes"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:623
+#: ../Doc/tutorial/errors.rst:627
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -873,7 +876,7 @@ msgid ""
 "added, after the exception. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:630
+#: ../Doc/tutorial/errors.rst:634
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -891,14 +894,14 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:645
+#: ../Doc/tutorial/errors.rst:649
 msgid ""
 "For example, when collecting exceptions into an exception group, we may want "
 "to add context information for the individual errors. In the following each "
 "exception in the group has a note indicating when this error has occurred. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:649
+#: ../Doc/tutorial/errors.rst:653
 msgid ""
 ">>> def f():\n"
 "...     raise OSError('operation failed')\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../Doc/library/linecache.rst:13
 msgid ""
-"The :mod:`linecache` module allows one to get any line from a Python source "
+"The :mod:`!linecache` module allows one to get any line from a Python source "
 "file, while attempting to optimize internally, using a cache, the common "
 "case where many lines are read from a single file.  This is used by the :mod:"
 "`traceback` module to retrieve source lines for inclusion in  the formatted "
@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 
 #: ../Doc/library/linecache.rst:22
-msgid "The :mod:`linecache` module defines the following functions:"
+msgid "The :mod:`!linecache` module defines the following functions:"
 msgstr ""
 
 #: ../Doc/library/linecache.rst:27
@@ -54,6 +54,13 @@ msgstr ""
 
 #: ../Doc/library/linecache.rst:33
 msgid ""
+"If *filename* indicates a frozen module (starting with ``'<frozen '``), the "
+"function will attempt to get the real file name from "
+"``module_globals['__file__']`` if *module_globals* is not ``None``."
+msgstr ""
+
+#: ../Doc/library/linecache.rst:37
+msgid ""
 "If a file named *filename* is not found, the function first checks for a :"
 "pep:`302` ``__loader__`` in *module_globals*. If there is such a loader and "
 "it defines a ``get_source`` method, then that determines the source lines "
@@ -62,20 +69,24 @@ msgid ""
 "in the module search path, ``sys.path``."
 msgstr ""
 
-#: ../Doc/library/linecache.rst:44
+#: ../Doc/library/linecache.rst:47
+msgid "Support *filename* of frozen modules."
+msgstr ""
+
+#: ../Doc/library/linecache.rst:52
 msgid ""
 "Clear the cache.  Use this function if you no longer need lines from files "
 "previously read using :func:`getline`."
 msgstr ""
 
-#: ../Doc/library/linecache.rst:50
+#: ../Doc/library/linecache.rst:58
 msgid ""
 "Check the cache for validity.  Use this function if files in the cache  may "
 "have changed on disk, and you require the updated version.  If *filename* is "
 "omitted, it will check all the entries in the cache."
 msgstr ""
 
-#: ../Doc/library/linecache.rst:56
+#: ../Doc/library/linecache.rst:64
 msgid ""
 "Capture enough detail about a non-file-based module to permit getting its "
 "lines later via :func:`getline` even if *module_globals* is ``None`` in the "
@@ -83,11 +94,11 @@ msgid ""
 "having to carry the module globals around indefinitely."
 msgstr ""
 
-#: ../Doc/library/linecache.rst:63
+#: ../Doc/library/linecache.rst:71
 msgid "Example::"
 msgstr ""
 
-#: ../Doc/library/linecache.rst:65
+#: ../Doc/library/linecache.rst:73
 msgid ""
 ">>> import linecache\n"
 ">>> linecache.getline(linecache.__file__, 8)\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-03-23 23:49+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid ""
 "only need to implement those interfaces whose events they are interested in; "
 "they can implement the interfaces in a single object or in multiple objects. "
 "Handler implementations should inherit from the base classes provided in the "
-"module :mod:`xml.sax.handler`, so that all methods get default "
+"module :mod:`!xml.sax.handler`, so that all methods get default "
 "implementations."
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../Doc/library/xml.sax.handler.rst:56
 msgid ""
-"In addition to these classes, :mod:`xml.sax.handler` provides symbolic "
+"In addition to these classes, :mod:`!xml.sax.handler` provides symbolic "
 "constants for the feature and property names."
 msgstr ""
 
@@ -95,9 +95,9 @@ msgstr ""
 
 #: ../Doc/library/xml.sax.handler.rst:66 ../Doc/library/xml.sax.handler.rst:76
 #: ../Doc/library/xml.sax.handler.rst:85 ../Doc/library/xml.sax.handler.rst:94
-#: ../Doc/library/xml.sax.handler.rst:102
-#: ../Doc/library/xml.sax.handler.rst:112
-#: ../Doc/library/xml.sax.handler.rst:144
+#: ../Doc/library/xml.sax.handler.rst:110
+#: ../Doc/library/xml.sax.handler.rst:120
+#: ../Doc/library/xml.sax.handler.rst:152
 msgid "access: (parsing) read-only; (not parsing) read/write"
 msgstr ""
 
@@ -146,124 +146,132 @@ msgstr ""
 msgid "false: Do not report validation errors."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:99
-msgid "value: ``\"http://xml.org/sax/features/external-general-entities\"``"
-msgstr ""
-
-#: ../Doc/library/xml.sax.handler.rst:100
-msgid "true: Include all external general (text) entities."
-msgstr ""
-
 #: ../Doc/library/xml.sax.handler.rst:101
-msgid "false: Do not include external general entities."
+msgid ""
+"Enabling opens a vulnerability to `external entity attacks <https://en."
+"wikipedia.org/wiki/XML_external_entity_attack>`_ if the parser is used with "
+"user-provided XML content. Please reflect on your `threat model <https://en."
+"wikipedia.org/wiki/Threat_model>`_ before enabling this feature."
 msgstr ""
 
 #: ../Doc/library/xml.sax.handler.rst:107
-msgid "value: ``\"http://xml.org/sax/features/external-parameter-entities\"``"
+msgid "value: ``\"http://xml.org/sax/features/external-general-entities\"``"
+msgstr ""
+
+#: ../Doc/library/xml.sax.handler.rst:108
+msgid "true: Include all external general (text) entities."
 msgstr ""
 
 #: ../Doc/library/xml.sax.handler.rst:109
+msgid "false: Do not include external general entities."
+msgstr ""
+
+#: ../Doc/library/xml.sax.handler.rst:115
+msgid "value: ``\"http://xml.org/sax/features/external-parameter-entities\"``"
+msgstr ""
+
+#: ../Doc/library/xml.sax.handler.rst:117
 msgid ""
 "true: Include all external parameter entities, including the external DTD "
 "subset."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:111
+#: ../Doc/library/xml.sax.handler.rst:119
 msgid ""
 "false: Do not include any external parameter entities, even the external DTD "
 "subset."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:117
+#: ../Doc/library/xml.sax.handler.rst:125
 msgid "List of all features."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:122
+#: ../Doc/library/xml.sax.handler.rst:130
 msgid "value: ``\"http://xml.org/sax/properties/lexical-handler\"``"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:123
+#: ../Doc/library/xml.sax.handler.rst:131
 msgid "data type: xml.sax.handler.LexicalHandler (not supported in Python 2)"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:125
+#: ../Doc/library/xml.sax.handler.rst:133
 msgid ""
 "description: An optional extension handler for lexical events like comments."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:126
-#: ../Doc/library/xml.sax.handler.rst:135
+#: ../Doc/library/xml.sax.handler.rst:134
+#: ../Doc/library/xml.sax.handler.rst:143
 msgid "access: read/write"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:131
+#: ../Doc/library/xml.sax.handler.rst:139
 msgid "value: ``\"http://xml.org/sax/properties/declaration-handler\"``"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:132
+#: ../Doc/library/xml.sax.handler.rst:140
 msgid "data type: xml.sax.sax2lib.DeclHandler (not supported in Python 2)"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:134
+#: ../Doc/library/xml.sax.handler.rst:142
 msgid ""
 "description: An optional extension handler for DTD-related events other than "
 "notations and unparsed entities."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:140
+#: ../Doc/library/xml.sax.handler.rst:148
 msgid "value: ``\"http://xml.org/sax/properties/dom-node\"``"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:141
+#: ../Doc/library/xml.sax.handler.rst:149
 msgid "data type: org.w3c.dom.Node (not supported in Python 2)"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:143
+#: ../Doc/library/xml.sax.handler.rst:151
 msgid ""
 "description: When parsing, the current DOM node being visited if this is a "
 "DOM iterator; when not parsing, the root DOM node for iteration."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:149
+#: ../Doc/library/xml.sax.handler.rst:157
 msgid "value: ``\"http://xml.org/sax/properties/xml-string\"``"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:150
+#: ../Doc/library/xml.sax.handler.rst:158
 msgid "data type: Bytes"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:152
+#: ../Doc/library/xml.sax.handler.rst:160
 msgid ""
 "description: The literal string of characters that was the source for the "
 "current event."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:153
+#: ../Doc/library/xml.sax.handler.rst:161
 msgid "access: read-only"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:158
+#: ../Doc/library/xml.sax.handler.rst:166
 msgid "List of all known property names."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:164
+#: ../Doc/library/xml.sax.handler.rst:172
 msgid "ContentHandler Objects"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:166
+#: ../Doc/library/xml.sax.handler.rst:174
 msgid ""
 "Users are expected to subclass :class:`ContentHandler` to support their "
 "application.  The following methods are called by the parser on the "
 "appropriate events in the input document:"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:173
+#: ../Doc/library/xml.sax.handler.rst:181
 msgid ""
 "Called by the parser to give the application a locator for locating the "
 "origin of document events."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:176
+#: ../Doc/library/xml.sax.handler.rst:184
 msgid ""
 "SAX parsers are strongly encouraged (though not absolutely required) to "
 "supply a locator: if it does so, it must supply the locator to the "
@@ -271,7 +279,7 @@ msgid ""
 "in the DocumentHandler interface."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:181
+#: ../Doc/library/xml.sax.handler.rst:189
 msgid ""
 "The locator allows the application to determine the end position of any "
 "document-related event, even if the parser is not reporting an error. "
@@ -281,28 +289,28 @@ msgid ""
 "sufficient for use with a search engine."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:188
+#: ../Doc/library/xml.sax.handler.rst:196
 msgid ""
 "Note that the locator will return correct information only during the "
 "invocation of the events in this interface. The application should not "
 "attempt to use it at any other time."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:195
+#: ../Doc/library/xml.sax.handler.rst:203
 msgid "Receive notification of the beginning of a document."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:197
+#: ../Doc/library/xml.sax.handler.rst:205
 msgid ""
 "The SAX parser will invoke this method only once, before any other methods "
 "in this interface or in DTDHandler (except for :meth:`setDocumentLocator`)."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:203
+#: ../Doc/library/xml.sax.handler.rst:211
 msgid "Receive notification of the end of a document."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:205
+#: ../Doc/library/xml.sax.handler.rst:213
 msgid ""
 "The SAX parser will invoke this method only once, and it will be the last "
 "method invoked during the parse. The parser shall not invoke this method "
@@ -310,11 +318,11 @@ msgid ""
 "reached the end of input."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:213
+#: ../Doc/library/xml.sax.handler.rst:221
 msgid "Begin the scope of a prefix-URI Namespace mapping."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:215
+#: ../Doc/library/xml.sax.handler.rst:223
 msgid ""
 "The information from this event is not necessary for normal Namespace "
 "processing: the SAX XML reader will automatically replace prefixes for "
@@ -322,7 +330,7 @@ msgid ""
 "enabled (the default)."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:220
+#: ../Doc/library/xml.sax.handler.rst:228
 msgid ""
 "There are cases, however, when applications need to use prefixes in "
 "character data or in attribute values, where they cannot safely be expanded "
@@ -331,7 +339,7 @@ msgid ""
 "contexts itself, if necessary."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:228
+#: ../Doc/library/xml.sax.handler.rst:236
 msgid ""
 "Note that :meth:`startPrefixMapping` and :meth:`endPrefixMapping` events are "
 "not guaranteed to be properly nested relative to each-other: all :meth:"
@@ -341,81 +349,80 @@ msgid ""
 "guaranteed."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:238
+#: ../Doc/library/xml.sax.handler.rst:246
 msgid "End the scope of a prefix-URI mapping."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:240
+#: ../Doc/library/xml.sax.handler.rst:248
 msgid ""
 "See :meth:`startPrefixMapping` for details. This event will always occur "
 "after the corresponding :meth:`endElement` event, but the order of :meth:"
 "`endPrefixMapping` events is not otherwise guaranteed."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:247
+#: ../Doc/library/xml.sax.handler.rst:255
 msgid "Signals the start of an element in non-namespace mode."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:249
+#: ../Doc/library/xml.sax.handler.rst:257
 msgid ""
 "The *name* parameter contains the raw XML 1.0 name of the element type as a "
-"string and the *attrs* parameter holds an object of the :class:`~xml.sax."
-"xmlreader.Attributes` interface (see :ref:`attributes-objects`) containing "
-"the attributes of the element.  The object passed as *attrs* may be re-used "
-"by the parser; holding on to a reference to it is not a reliable way to keep "
-"a copy of the attributes. To keep a copy of the attributes, use the :meth:"
-"`copy` method of the *attrs* object."
+"string and the *attrs* parameter holds an object of the :ref:`Attributes "
+"<attributes-objects>` interface containing the attributes of the element.  "
+"The object passed as *attrs* may be re-used by the parser; holding on to a "
+"reference to it is not a reliable way to keep a copy of the attributes. To "
+"keep a copy of the attributes, use the :meth:`copy` method of the *attrs* "
+"object."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:261
+#: ../Doc/library/xml.sax.handler.rst:268
 msgid "Signals the end of an element in non-namespace mode."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:263
+#: ../Doc/library/xml.sax.handler.rst:270
 msgid ""
 "The *name* parameter contains the name of the element type, just as with "
 "the :meth:`startElement` event."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:269
+#: ../Doc/library/xml.sax.handler.rst:276
 msgid "Signals the start of an element in namespace mode."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:271
+#: ../Doc/library/xml.sax.handler.rst:278
 msgid ""
 "The *name* parameter contains the name of the element type as a ``(uri, "
 "localname)`` tuple, the *qname* parameter contains the raw XML 1.0 name used "
 "in the source document, and the *attrs* parameter holds an instance of the :"
-"class:`~xml.sax.xmlreader.AttributesNS` interface (see :ref:`attributes-ns-"
-"objects`) containing the attributes of the element.  If no namespace is "
-"associated with the element, the *uri* component of *name* will be "
-"``None``.  The object passed as *attrs* may be re-used by the parser; "
-"holding on to a reference to it is not a reliable way to keep a copy of the "
-"attributes.  To keep a copy of the attributes, use the :meth:`copy` method "
-"of the *attrs* object."
+"ref:`AttributesNS <attributes-ns-objects>` interface containing the "
+"attributes of the element.  If no namespace is associated with the element, "
+"the *uri* component of *name* will be ``None``.  The object passed as "
+"*attrs* may be re-used by the parser; holding on to a reference to it is not "
+"a reliable way to keep a copy of the attributes.  To keep a copy of the "
+"attributes, use the :meth:`copy` method of the *attrs* object."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:282
+#: ../Doc/library/xml.sax.handler.rst:288
 msgid ""
 "Parsers may set the *qname* parameter to ``None``, unless the "
 "``feature_namespace_prefixes`` feature is activated."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:288
+#: ../Doc/library/xml.sax.handler.rst:294
 msgid "Signals the end of an element in namespace mode."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:290
+#: ../Doc/library/xml.sax.handler.rst:296
 msgid ""
 "The *name* parameter contains the name of the element type, just as with "
 "the :meth:`startElementNS` method, likewise the *qname* parameter."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:296
+#: ../Doc/library/xml.sax.handler.rst:302
 msgid "Receive notification of character data."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:298
+#: ../Doc/library/xml.sax.handler.rst:304
 msgid ""
 "The Parser will call this method to report each chunk of character data. SAX "
 "parsers may return all contiguous character data in a single chunk, or they "
@@ -424,13 +431,13 @@ msgid ""
 "provides useful information."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:304
+#: ../Doc/library/xml.sax.handler.rst:310
 msgid ""
 "*content* may be a string or bytes instance; the ``expat`` reader module "
 "always produces strings."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:309
+#: ../Doc/library/xml.sax.handler.rst:315
 msgid ""
 "The earlier SAX 1 interface provided by the Python XML Special Interest "
 "Group used a more Java-like interface for this method.  Since most parsers "
@@ -440,11 +447,11 @@ msgid ""
 "and *length* parameters."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:318
+#: ../Doc/library/xml.sax.handler.rst:324
 msgid "Receive notification of ignorable whitespace in element content."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:320
+#: ../Doc/library/xml.sax.handler.rst:326
 msgid ""
 "Validating Parsers must use this method to report each chunk of ignorable "
 "whitespace (see the W3C XML 1.0 recommendation, section 2.10): non-"
@@ -452,7 +459,7 @@ msgid ""
 "and using content models."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:325
+#: ../Doc/library/xml.sax.handler.rst:331
 msgid ""
 "SAX parsers may return all contiguous whitespace in a single chunk, or they "
 "may split it into several chunks; however, all of the characters in any "
@@ -460,28 +467,28 @@ msgid ""
 "provides useful information."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:333
+#: ../Doc/library/xml.sax.handler.rst:339
 msgid "Receive notification of a processing instruction."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:335
+#: ../Doc/library/xml.sax.handler.rst:341
 msgid ""
 "The Parser will invoke this method once for each processing instruction "
 "found: note that processing instructions may occur before or after the main "
 "document element."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:339
+#: ../Doc/library/xml.sax.handler.rst:345
 msgid ""
 "A SAX parser should never report an XML declaration (XML 1.0, section 2.8) "
 "or a text declaration (XML 1.0, section 4.3.1) using this method."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:345
+#: ../Doc/library/xml.sax.handler.rst:351
 msgid "Receive notification of a skipped entity."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:347
+#: ../Doc/library/xml.sax.handler.rst:353
 msgid ""
 "The Parser will invoke this method once for each entity skipped. Non-"
 "validating processors may skip entities if they have not seen the "
@@ -491,38 +498,38 @@ msgid ""
 "properties."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:357
+#: ../Doc/library/xml.sax.handler.rst:363
 msgid "DTDHandler Objects"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:359
+#: ../Doc/library/xml.sax.handler.rst:365
 msgid ":class:`DTDHandler` instances provide the following methods:"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:364
+#: ../Doc/library/xml.sax.handler.rst:370
 msgid "Handle a notation declaration event."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:369
+#: ../Doc/library/xml.sax.handler.rst:375
 msgid "Handle an unparsed entity declaration event."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:375
+#: ../Doc/library/xml.sax.handler.rst:381
 msgid "EntityResolver Objects"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:380
+#: ../Doc/library/xml.sax.handler.rst:386
 msgid ""
 "Resolve the system identifier of an entity and return either the system "
 "identifier to read from as a string, or an InputSource to read from. The "
 "default implementation returns *systemId*."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:388
+#: ../Doc/library/xml.sax.handler.rst:394
 msgid "ErrorHandler Objects"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:390
+#: ../Doc/library/xml.sax.handler.rst:396
 msgid ""
 "Objects with this interface are used to receive error and warning "
 "information from the :class:`~xml.sax.xmlreader.XMLReader`.  If you create "
@@ -535,7 +542,7 @@ msgid ""
 "the passed-in exception object."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:403
+#: ../Doc/library/xml.sax.handler.rst:409
 msgid ""
 "Called when the parser encounters a recoverable error.  If this method does "
 "not raise an exception, parsing may continue, but further document "
@@ -544,13 +551,13 @@ msgid ""
 "document."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:411
+#: ../Doc/library/xml.sax.handler.rst:417
 msgid ""
 "Called when the parser encounters an error it cannot recover from; parsing "
 "is expected to terminate when this method returns."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:417
+#: ../Doc/library/xml.sax.handler.rst:423
 msgid ""
 "Called when the parser presents minor warning information to the "
 "application. Parsing is expected to continue when this method returns, and "
@@ -558,15 +565,15 @@ msgid ""
 "an exception in this method will cause parsing to end."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:426
+#: ../Doc/library/xml.sax.handler.rst:432
 msgid "LexicalHandler Objects"
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:427
+#: ../Doc/library/xml.sax.handler.rst:433
 msgid "Optional SAX2 handler for lexical events."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:429
+#: ../Doc/library/xml.sax.handler.rst:435
 msgid ""
 "This handler is used to obtain lexical information about an XML document. "
 "Lexical information includes information describing the document encoding "
@@ -575,38 +582,38 @@ msgid ""
 "used in the same manner as content handlers."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:435
+#: ../Doc/library/xml.sax.handler.rst:441
 msgid ""
 "Set the LexicalHandler of an XMLReader by using the setProperty method with "
 "the property identifier ``'http://xml.org/sax/properties/lexical-handler'``."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:442
+#: ../Doc/library/xml.sax.handler.rst:448
 msgid ""
 "Reports a comment anywhere in the document (including the DTD and outside "
 "the document element)."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:447
+#: ../Doc/library/xml.sax.handler.rst:453
 msgid ""
 "Reports the start of the DTD declarations if the document has an associated "
 "DTD."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:452
+#: ../Doc/library/xml.sax.handler.rst:458
 msgid "Reports the end of DTD declaration."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:456
+#: ../Doc/library/xml.sax.handler.rst:462
 msgid "Reports the start of a CDATA marked section."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:458
+#: ../Doc/library/xml.sax.handler.rst:464
 msgid ""
 "The contents of the CDATA marked section will be reported through the "
 "characters handler."
 msgstr ""
 
-#: ../Doc/library/xml.sax.handler.rst:463
+#: ../Doc/library/xml.sax.handler.rst:469
 msgid "Reports the end of a CDATA marked section."
 msgstr ""
