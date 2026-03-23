@@ -3,36 +3,40 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-06 23:28+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-05-07 11:10-0400\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hi\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../Doc/glossary.rst:5
 msgid "Glossary"
-msgstr ""
+msgstr "शब्दकोष"
 
 #: ../Doc/glossary.rst:10
 msgid "``>>>``"
-msgstr ""
+msgstr "``>>>``"
 
 #: ../Doc/glossary.rst:12
 msgid ""
 "The default Python prompt of the interactive shell.  Often seen for code "
 "examples which can be executed interactively in the interpreter."
 msgstr ""
+"यह इंटरैक्टिव शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट है। यह अक्सर कोड उदाहरणों के लिए देखा जाता है "
+"जिसे दुभाषिया में अंतःक्रियात्मक रूप से निष्पादित किया जा सकता है।"
 
 #: ../Doc/glossary.rst:14
 msgid "``...``"
-msgstr ""
+msgstr "``...``"
 
 #: ../Doc/glossary.rst:16
 msgid ""
@@ -41,10 +45,13 @@ msgid ""
 "delimiters (parentheses, square brackets, curly braces or triple quotes), or "
 "after specifying a decorator."
 msgstr ""
+"एक एकीकृत कोड ब्लॉक के लिए कोड दर्ज करते समय इंटरएक्टिव शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट, "
+"जब बाएं और दाएं सीमांकक (कोष्ठक, वर्ग ब्रैकेट, घुंघराले ब्रेसिज़ या ट्रिपल उद्धरण) की एक "
+"जोड़ी के भीतर, या एक डेकोरेटर निर्दिष्ट करने के बाद।"
 
 #: ../Doc/glossary.rst:20
 msgid "2to3"
-msgstr ""
+msgstr "२ से ३"
 
 #: ../Doc/glossary.rst:22
 msgid ""
@@ -52,6 +59,9 @@ msgid ""
 "most of the incompatibilities which can be detected by parsing the source "
 "and traversing the parse tree."
 msgstr ""
+"एक उपकरण जो पायथन 2.x कोड को पायथन 3.x कोड में बदलने की कोशिश करता है, जो अधिकांश "
+"असंगतताओं को संभालता है, जिसे स्रोत को पार्स करके और पार्स ट्री को ट्रेस करके पता लगाया "
+"जा सकता है।"
 
 #: ../Doc/glossary.rst:26
 msgid ""
@@ -59,10 +69,12 @@ msgid ""
 "entry point is provided as :file:`Tools/scripts/2to3`.  See :ref:`2to3-"
 "reference`."
 msgstr ""
+"2to3 मानक पुस्तकालय में :mod:`lib2to3` कि तरह उपलब्ध है ; एक स्टैंडअलोन एंट्री पॉइंट इस "
+"प्रकार दिया गया है :file:`Tools/scripts/2to3`। Ref:`2to3-reference` देखें।"
 
 #: ../Doc/glossary.rst:29
 msgid "abstract base class"
-msgstr ""
+msgstr "ऐब्स्ट्रैक्ट बेस क्लास "
 
 #: ../Doc/glossary.rst:31
 msgid ""
@@ -77,10 +89,19 @@ msgid ""
 "module), import finders and loaders (in the :mod:`importlib.abc` module).  "
 "You can create your own ABCs with the :mod:`abc` module."
 msgstr ""
+"ऐब्स्ट्रैक्ट बेस क्लासिस पूरक :term:`duck-typing` इंटरफेस को परिभाषित करने का एक तरीका "
+"प्रदान करता है जबकि अन्य तकनीक जैसे :func:`hasattr` अनाड़ी या सूक्ष्म रूप से गलत होंगे "
+"(उदाहरण के लिए :ref:`magic methods <special-lookup>` देखें)।  एबीसी वर्चूअल क्लासिस "
+"का परिचय देते हैं, जो ऐसी क्लासिस हैं जो किसी वर्ग से विरासत में नहीं आती हैं, लेकिन फिर भी "
+"उन्हें पहचाना जाता है :func:`isinstance` और :func:`issubclass` देखें; :mod:`abc` "
+"मॉड्यूल प्रलेखन देखें।  पायथन डेटा संरचनाओं के लिए कई अंतर्निहित एबीसी के साथ आता है (:mod: "
+"`collection.abc` मॉड्यूल में), नम्बर (:mod:`numbers` मॉड्यूल में), आइ ओ (:mod:`io` "
+"मॉड्यूल में) , इंपोर्ट फ़ाइंडर और लोडर्स (:mod:`importlib.abc` मॉड्यूल में)। आप के साथ अपने "
+"खुद के एबीसी बना सकते हैं :mod:`abc` मॉड्यूल।"
 
 #: ../Doc/glossary.rst:42
 msgid "annotation"
-msgstr ""
+msgstr "टिप्पणी"
 
 #: ../Doc/glossary.rst:44
 msgid ""
@@ -104,7 +125,7 @@ msgstr ""
 
 #: ../Doc/glossary.rst:56
 msgid "argument"
-msgstr ""
+msgstr "तर्क"
 
 #: ../Doc/glossary.rst:58
 msgid ""
