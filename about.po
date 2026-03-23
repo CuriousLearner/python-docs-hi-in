@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-01 06:24+0530\n"
-"PO-Revision-Date: 2019-05-06 15:02-0400\n"
+"PO-Revision-Date: 2019-05-06 18:54-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hi\n"
@@ -63,7 +63,7 @@ msgid ""
 "the `Docutils <https://docutils.sourceforge.io/>`_ project for creating "
 "reStructuredText and the Docutils suite;"
 msgstr ""
-"`Docutils <http://docutils.sourceforge.net/>`_ प्रोजेक्ट का रीस्ट्रक्चर्ड टेक्स्ट और "
+"`Doc utils <http://docutils.sourceforge.net/>`_ प्रोजेक्ट का रीस्ट्रक्चर्ड टेक्स्ट और "
 "डॉक यूटिल्ज़ सूट बनाने के लिए;"
 
 #: ../Doc/about.rst:27
@@ -72,8 +72,8 @@ msgid ""
 "Fredrik Lundh for his Alternative Python Reference project from which Sphinx "
 "got many good ideas."
 msgstr ""
-"फ्रेड्रिक लुंड अपने `वैकल्पिक पायथन संदर्भ <http://effbot.org/zone/pyref.htm>` _ "
-"प्रोजेक्ट के लिए जिसमें से स्फिंक्स को कई अच्छे विचार मिले।"
+"फ्रेड्रिक लुंड अपने `Alternative Python Reference <http://effbot.org/zone/pyref."
+"htm>`_ प्रोजेक्ट के लिए जिसमें से स्फिंक्स को कई अच्छे विचार मिले।"
 
 #: ../Doc/about.rst:32
 #, fuzzy
