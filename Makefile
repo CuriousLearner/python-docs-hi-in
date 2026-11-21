@@ -62,6 +62,9 @@ ifneq "$(shell cd $(CPYTHON_CLONE) 2>/dev/null && git rev-parse --abbrev-ref HEA
 endif
 	(cd $(CPYTHON_CLONE)/Doc; rm -f build/NEWS)
 	(cd $(CPYTHON_CLONE); $(VENV)/bin/sphinx-build -Q -b gettext -D gettext_compact=0 Doc pot/)
+	# Write source references relative to Doc/ (bugs.rst:5, not ../Doc/bugs.rst:5).
+	find $(CPYTHON_CLONE)/pot/ -name '*.pot' -exec sed -i.bak -e '/^#: /s# \.\./Doc/# #g' {} +
+	find $(CPYTHON_CLONE)/pot/ -name '*.pot.bak' -delete
 	find $(CPYTHON_CLONE)/pot/ -name '*.pot' |\
 	    while read -r POT;\
 	    do\
