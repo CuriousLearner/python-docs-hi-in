@@ -19,7 +19,7 @@ msgstr ""
 
 #: tutorial/appetite.rst:5
 msgid "Whetting Your Appetite"
-msgstr "जिज्ञासा जगाना"
+msgstr "आपकी जिज्ञासा जगाना"
 
 #: tutorial/appetite.rst:7
 msgid ""
