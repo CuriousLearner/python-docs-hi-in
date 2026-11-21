@@ -17,7 +17,8 @@ Propose new or changed terms in an issue or PR before using them widely.
   in everyday writing (for example *example* → उदाहरण, *value* → मान).
 - **Nukta:** write the English *f* and *z* sounds with a nukta (फ़ाइल,
   फ़ंक्शन, डिफ़ॉल्ट), and use ऑ for the English *o* in *object*, *module*
-  (ऑब्जेक्ट, मॉड्यूल).
+  (ऑब्जेक्ट, मॉड्यूल). Perso-Arabic loanwords always keep their nukta too
+  (ख़ुद, ख़ास, ख़ाली, बाक़ी, तरीक़ा, ग़लत, ग़ैर, क़दम, तारीख़, फ़र्क़).
 - **Register:** polite आप form with -एँ / -इए imperatives (देखें, कीजिए),
   never तुम or तू.
 - **Punctuation:** end sentences with the पूर्ण विराम (।). Other punctuation
@@ -111,7 +112,7 @@ Propose new or changed terms in an issue or PR before using them widely.
 | regular expression | रेगुलर एक्सप्रेशन |
 | release | रिलीज़ |
 | repository | रिपॉज़िटरी |
-| return (a value) | रिटर्न करना |
+| return (a value) | लौटाना (रिटर्न करना) |
 | shell | शेल |
 | single quote | सिंगल कोट |
 | socket | सॉकेट |
