@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: tutorial/modules.rst:5
 msgid "Modules"
-msgstr ""
+msgstr "मॉड्यूल"
 
 #: tutorial/modules.rst:7
 msgid ""
@@ -32,6 +32,13 @@ msgid ""
 "You may also want to use a handy function that you've written in several "
 "programs without copying its definition into each program."
 msgstr ""
+"अगर आप पायथन इंटरप्रेटर से बाहर निकलकर फिर से उसमें जाते हैं, तो आपकी बनाई परिभाषाएँ "
+"(फ़ंक्शन और वेरिएबल) खो जाती हैं। इसलिए, अगर आप थोड़ा लंबा प्रोग्राम लिखना चाहते हैं, तो "
+"बेहतर है कि आप इंटरप्रेटर के लिए इनपुट किसी टेक्स्ट एडिटर में तैयार करें, और उस फ़ाइल को "
+"इनपुट के रूप में देकर इंटरप्रेटर चलाएँ। इसे *स्क्रिप्ट* बनाना कहते हैं। जैसे-जैसे आपका प्रोग्राम "
+"लंबा होता है, आप उसे आसान रखरखाव के लिए कई फ़ाइलों में बाँटना चाह सकते हैं। आप अपने लिखे "
+"किसी काम के फ़ंक्शन को भी कई प्रोग्रामों में इस्तेमाल करना चाह सकते हैं, बिना उसकी परिभाषा "
+"हर प्रोग्राम में कॉपी किए।"
 
 #: tutorial/modules.rst:16
 msgid ""
@@ -41,6 +48,11 @@ msgid ""
 "modules or into the *main* module (the collection of variables that you have "
 "access to in a script executed at the top level and in calculator mode)."
 msgstr ""
+"इसके लिए, पायथन में परिभाषाओं को एक फ़ाइल में रखकर उन्हें किसी स्क्रिप्ट में या इंटरप्रेटर के "
+"इंटरैक्टिव सेशन में इस्तेमाल करने का तरीका है। ऐसी फ़ाइल को *मॉड्यूल* कहते हैं; किसी मॉड्यूल "
+"की परिभाषाएँ दूसरे मॉड्यूलों में या *main* मॉड्यूल में *इम्पोर्ट* की जा सकती हैं (main मॉड्यूल "
+"वेरिएबलों का वह संग्रह है जिस तक आप टॉप लेवल पर चलाई गई स्क्रिप्ट में और कैलकुलेटर मोड में "
+"पहुँच सकते हैं)।"
 
 #: tutorial/modules.rst:22
 msgid ""
@@ -51,6 +63,11 @@ msgid ""
 "to create a file called :file:`fibo.py` in the current directory with the "
 "following contents::"
 msgstr ""
+"मॉड्यूल एक फ़ाइल है जिसमें पायथन की परिभाषाएँ और स्टेटमेंट होते हैं। फ़ाइल का नाम मॉड्यूल का "
+"नाम होता है, जिसके आख़िर में :file:`.py` जुड़ा होता है। किसी मॉड्यूल के अंदर, मॉड्यूल का "
+"नाम (एक स्ट्रिंग के रूप में) ग्लोबल वेरिएबल ``__name__`` के मान के रूप में उपलब्ध होता है। "
+"उदाहरण के लिए, अपने पसंदीदा टेक्स्ट एडिटर से मौजूदा डायरेक्टरी में :file:`fibo.py` नाम "
+"की फ़ाइल बनाएँ, जिसमें यह सामग्री हो::"
 
 #: tutorial/modules.rst:28
 msgid ""
@@ -73,16 +90,34 @@ msgid ""
 "        a, b = b, a+b\n"
 "    return result"
 msgstr ""
+"# Fibonacci numbers module\n"
+"\n"
+"def fib(n):\n"
+"    \"\"\"Write Fibonacci series up to n.\"\"\"\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        print(a, end=' ')\n"
+"        a, b = b, a+b\n"
+"    print()\n"
+"\n"
+"def fib2(n):\n"
+"    \"\"\"Return Fibonacci series up to n.\"\"\"\n"
+"    result = []\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        result.append(a)\n"
+"        a, b = b, a+b\n"
+"    return result"
 
 #: tutorial/modules.rst:47
 msgid ""
 "Now enter the Python interpreter and import this module with the following "
 "command::"
-msgstr ""
+msgstr "अब पायथन इंटरप्रेटर में जाएँ और इस कमांड से यह मॉड्यूल इम्पोर्ट करें::"
 
 #: tutorial/modules.rst:50
 msgid ">>> import fibo"
-msgstr ""
+msgstr ">>> import fibo"
 
 #: tutorial/modules.rst:52
 msgid ""
@@ -91,6 +126,9 @@ msgid ""
 "it only adds the module name ``fibo`` there. Using the module name you can "
 "access the functions::"
 msgstr ""
+"इससे ``fibo`` में परिभाषित फ़ंक्शनों के नाम सीधे मौजूदा :term:`नेमस्पेस <namespace>` में "
+"नहीं जुड़ते (ज़्यादा जानकारी के लिए :ref:`tut-scopes` देखें); इससे वहाँ सिर्फ़ मॉड्यूल का "
+"नाम ``fibo`` जुड़ता है। मॉड्यूल के नाम से आप फ़ंक्शनों तक पहुँच सकते हैं::"
 
 #: tutorial/modules.rst:57
 msgid ""
@@ -101,11 +139,19 @@ msgid ""
 ">>> fibo.__name__\n"
 "'fibo'"
 msgstr ""
+">>> fibo.fib(1000)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n"
+">>> fibo.fib2(100)\n"
+"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n"
+">>> fibo.__name__\n"
+"'fibo'"
 
 #: tutorial/modules.rst:64
 msgid ""
 "If you intend to use a function often you can assign it to a local name::"
 msgstr ""
+"अगर आप किसी फ़ंक्शन को अक्सर इस्तेमाल करना चाहते हैं, तो आप उसे एक लोकल नाम को असाइन "
+"कर सकते हैं::"
 
 #: tutorial/modules.rst:66
 msgid ""
@@ -113,10 +159,13 @@ msgid ""
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> fib = fibo.fib\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: tutorial/modules.rst:74
 msgid "More on Modules"
-msgstr ""
+msgstr "मॉड्यूल के बारे में और"
 
 #: tutorial/modules.rst:76
 msgid ""
@@ -125,6 +174,10 @@ msgid ""
 "only the *first* time the module name is encountered in an import statement. "
 "[#]_ (They are also run if the file is executed as a script.)"
 msgstr ""
+"किसी मॉड्यूल में फ़ंक्शन की परिभाषाओं के साथ-साथ चलाए जा सकने वाले स्टेटमेंट भी हो सकते हैं। ये "
+"स्टेटमेंट मॉड्यूल को इनिशियलाइज़ करने के लिए होते हैं। ये सिर्फ़ *पहली* बार तब चलते हैं जब "
+"किसी import स्टेटमेंट में मॉड्यूल का नाम आता है। [#]_ (अगर फ़ाइल को स्क्रिप्ट के रूप में "
+"चलाया जाए, तब भी ये चलते हैं।)"
 
 #: tutorial/modules.rst:81
 msgid ""
@@ -135,6 +188,11 @@ msgid ""
 "know what you are doing you can touch a module's global variables with the "
 "same notation used to refer to its functions, ``modname.itemname``."
 msgstr ""
+"हर मॉड्यूल का अपना निजी नेमस्पेस होता है, जिसे मॉड्यूल में परिभाषित सभी फ़ंक्शन ग्लोबल "
+"नेमस्पेस के रूप में इस्तेमाल करते हैं। इसलिए, मॉड्यूल का लेखक मॉड्यूल में ग्लोबल वेरिएबल इस्तेमाल "
+"कर सकता है, बिना इस चिंता के कि वे गलती से किसी यूज़र के ग्लोबल वेरिएबलों से टकरा जाएँगे। "
+"दूसरी ओर, अगर आप जानते हैं कि आप क्या कर रहे हैं, तो आप किसी मॉड्यूल के ग्लोबल वेरिएबलों "
+"तक उसी संकेत से पहुँच सकते हैं जिससे उसके फ़ंक्शनों तक पहुँचते हैं, ``modname.itemname``।"
 
 #: tutorial/modules.rst:88
 msgid ""
@@ -144,12 +202,18 @@ msgid ""
 "a module (outside any functions or classes), are added to the module's "
 "global namespace."
 msgstr ""
+"मॉड्यूल दूसरे मॉड्यूल इम्पोर्ट कर सकते हैं। सभी :keyword:`import` स्टेटमेंट को मॉड्यूल (या "
+"स्क्रिप्ट) की शुरुआत में रखना एक परंपरा है, लेकिन ज़रूरी नहीं। इम्पोर्ट किए गए मॉड्यूलों के "
+"नाम, अगर मॉड्यूल के टॉप लेवल पर (किसी फ़ंक्शन या क्लास के बाहर) रखे गए हों, तो मॉड्यूल के "
+"ग्लोबल नेमस्पेस में जुड़ जाते हैं।"
 
 #: tutorial/modules.rst:93
 msgid ""
 "There is a variant of the :keyword:`import` statement that imports names "
 "from a module directly into the importing module's namespace.  For example::"
 msgstr ""
+":keyword:`import` स्टेटमेंट का एक रूप ऐसा भी है जो किसी मॉड्यूल के नाम सीधे इम्पोर्ट करने "
+"वाले मॉड्यूल के नेमस्पेस में इम्पोर्ट करता है। उदाहरण के लिए::"
 
 #: tutorial/modules.rst:96
 msgid ""
@@ -157,16 +221,21 @@ msgid ""
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import fib, fib2\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: tutorial/modules.rst:100
 msgid ""
 "This does not introduce the module name from which the imports are taken in "
 "the local namespace (so in the example, ``fibo`` is not defined)."
 msgstr ""
+"इससे वह मॉड्यूल नाम, जिससे इम्पोर्ट किया गया है, लोकल नेमस्पेस में नहीं आता (इसलिए उदाहरण "
+"में ``fibo`` परिभाषित नहीं है)।"
 
 #: tutorial/modules.rst:103
 msgid "There is even a variant to import all names that a module defines::"
-msgstr ""
+msgstr "एक रूप ऐसा भी है जो किसी मॉड्यूल में परिभाषित सभी नाम इम्पोर्ट करता है::"
 
 #: tutorial/modules.rst:105
 msgid ""
@@ -174,6 +243,9 @@ msgid ""
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import *\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: tutorial/modules.rst:109
 msgid ""
@@ -182,6 +254,9 @@ msgid ""
 "an unknown set of names into the interpreter, possibly hiding some things "
 "you have already defined."
 msgstr ""
+"यह अंडरस्कोर (``_``) से शुरू होने वाले नामों को छोड़कर सभी नाम इम्पोर्ट करता है। ज़्यादातर "
+"मामलों में पायथन प्रोग्रामर यह सुविधा इस्तेमाल नहीं करते, क्योंकि इससे इंटरप्रेटर में नामों का "
+"एक अनजाना सेट आ जाता है, जो शायद आपकी पहले से परिभाषित कुछ चीज़ों को छिपा दे।"
 
 #: tutorial/modules.rst:114
 msgid ""
@@ -189,12 +264,17 @@ msgid ""
 "package is frowned upon, since it often causes poorly readable code. "
 "However, it is okay to use it to save typing in interactive sessions."
 msgstr ""
+"ध्यान दें कि आम तौर पर किसी मॉड्यूल या पैकेज से ``*`` इम्पोर्ट करना अच्छा नहीं माना "
+"जाता, क्योंकि इससे अक्सर पढ़ने में मुश्किल कोड बनता है। फिर भी, इंटरैक्टिव सेशन में टाइपिंग "
+"बचाने के लिए इसका इस्तेमाल ठीक है।"
 
 #: tutorial/modules.rst:118
 msgid ""
 "If the module name is followed by :keyword:`!as`, then the name "
 "following :keyword:`!as` is bound directly to the imported module."
 msgstr ""
+"अगर मॉड्यूल के नाम के बाद :keyword:`!as` आता है, तो :keyword:`!as` के बाद वाला नाम "
+"सीधे इम्पोर्ट किए गए मॉड्यूल से बंध जाता है।"
 
 #: tutorial/modules.rst:123
 msgid ""
@@ -202,17 +282,23 @@ msgid ""
 ">>> fib.fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> import fibo as fib\n"
+">>> fib.fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: tutorial/modules.rst:127
 msgid ""
 "This is effectively importing the module in the same way that ``import "
 "fibo`` will do, with the only difference of it being available as ``fib``."
 msgstr ""
+"यह असल में मॉड्यूल को उसी तरह इम्पोर्ट करना है जैसे ``import fibo`` करेगा, फ़र्क़ सिर्फ़ "
+"इतना है कि मॉड्यूल ``fib`` नाम से उपलब्ध होता है।"
 
 #: tutorial/modules.rst:130
 msgid ""
 "It can also be used when utilising :keyword:`from` with similar effects::"
 msgstr ""
+":keyword:`from` के साथ भी इसे इसी तरह के असर के लिए इस्तेमाल किया जा सकता है::"
 
 #: tutorial/modules.rst:132
 msgid ""
@@ -220,6 +306,9 @@ msgid ""
 ">>> fibonacci(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import fib as fibonacci\n"
+">>> fibonacci(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: tutorial/modules.rst:139
 msgid ""
@@ -229,18 +318,22 @@ msgid ""
 "use :func:`importlib.reload`, e.g. ``import importlib; "
 "importlib.reload(modulename)``."
 msgstr ""
+"कुशलता के लिए, हर मॉड्यूल एक इंटरप्रेटर सेशन में सिर्फ़ एक बार इम्पोर्ट होता है। इसलिए, अगर "
+"आप अपने मॉड्यूल बदलते हैं, तो आपको इंटरप्रेटर फिर से शुरू करना होगा -- या, अगर आप सिर्फ़ "
+"एक मॉड्यूल को इंटरैक्टिव रूप से टेस्ट करना चाहते हैं, तो :func:`importlib.reload` इस्तेमाल "
+"करें, जैसे ``import importlib; importlib.reload(modulename)``।"
 
 #: tutorial/modules.rst:149
 msgid "Executing modules as scripts"
-msgstr ""
+msgstr "मॉड्यूल को स्क्रिप्ट के रूप में चलाना"
 
 #: tutorial/modules.rst:151
 msgid "When you run a Python module with ::"
-msgstr ""
+msgstr "जब आप किसी पायथन मॉड्यूल को इस तरह चलाते हैं ::"
 
 #: tutorial/modules.rst:153
 msgid "python fibo.py <arguments>"
-msgstr ""
+msgstr "python fibo.py <arguments>"
 
 #: tutorial/modules.rst:155
 msgid ""
@@ -248,6 +341,9 @@ msgid ""
 "with the ``__name__`` set to ``\"__main__\"``.  That means that by adding "
 "this code at the end of your module::"
 msgstr ""
+"तो मॉड्यूल का कोड ठीक वैसे ही चलेगा जैसे आपने उसे इम्पोर्ट किया हो, लेकिन ``__name__`` "
+"का मान ``\"__main__\"`` होगा। इसका मतलब है कि अपने मॉड्यूल के आख़िर में यह कोड "
+"जोड़कर::"
 
 #: tutorial/modules.rst:159
 msgid ""
@@ -255,6 +351,9 @@ msgid ""
 "    import sys\n"
 "    fib(int(sys.argv[1]))"
 msgstr ""
+"if __name__ == \"__main__\":\n"
+"    import sys\n"
+"    fib(int(sys.argv[1]))"
 
 #: tutorial/modules.rst:163
 msgid ""
@@ -262,22 +361,29 @@ msgid ""
 "because the code that parses the command line only runs if the module is "
 "executed as the \"main\" file:"
 msgstr ""
+"आप फ़ाइल को स्क्रिप्ट के रूप में भी और इम्पोर्ट किए जा सकने वाले मॉड्यूल के रूप में भी इस्तेमाल "
+"करने लायक बना सकते हैं, क्योंकि कमांड लाइन को पार्स करने वाला कोड सिर्फ़ तब चलता है जब "
+"मॉड्यूल \"main\" फ़ाइल के रूप में चलाया जाए:"
 
 #: tutorial/modules.rst:167
 msgid ""
 "$ python fibo.py 50\n"
 "0 1 1 2 3 5 8 13 21 34"
 msgstr ""
+"$ python fibo.py 50\n"
+"0 1 1 2 3 5 8 13 21 34"
 
 #: tutorial/modules.rst:172
 msgid "If the module is imported, the code is not run::"
-msgstr ""
+msgstr "अगर मॉड्यूल इम्पोर्ट किया जाता है, तो वह कोड नहीं चलता::"
 
 #: tutorial/modules.rst:174
 msgid ""
 ">>> import fibo\n"
 ">>>"
 msgstr ""
+">>> import fibo\n"
+">>>"
 
 #: tutorial/modules.rst:177
 msgid ""
@@ -285,10 +391,12 @@ msgid ""
 "module, or for testing purposes (running the module as a script executes a "
 "test suite)."
 msgstr ""
+"इसका इस्तेमाल अक्सर या तो किसी मॉड्यूल के लिए सुविधाजनक यूज़र इंटरफ़ेस देने के लिए, या "
+"टेस्टिंग के लिए किया जाता है (मॉड्यूल को स्क्रिप्ट के रूप में चलाने पर एक टेस्ट सूट चलता है)।"
 
 #: tutorial/modules.rst:184
 msgid "The Module Search Path"
-msgstr ""
+msgstr "मॉड्यूल खोजने का पाथ"
 
 #: tutorial/modules.rst:188
 msgid ""
@@ -299,28 +407,38 @@ msgid ""
 "variable :data:`sys.path`.  :data:`sys.path` is initialized from these "
 "locations:"
 msgstr ""
+"जब :mod:`!spam` नाम का मॉड्यूल इम्पोर्ट किया जाता है, तो इंटरप्रेटर पहले उस नाम का "
+"बिल्ट-इन मॉड्यूल खोजता है। ये मॉड्यूल नाम :data:`sys.builtin_module_names` में दिए गए "
+"हैं। अगर नहीं मिलता, तो वह :data:`sys.path` वेरिएबल में दी गई डायरेक्टरियों की सूची "
+"में :file:`spam.py` नाम की फ़ाइल खोजता है। :data:`sys.path` इन जगहों से इनिशियलाइज़ "
+"होता है:"
 
 #: tutorial/modules.rst:194
 msgid ""
 "The directory containing the input script (or the current directory when no "
 "file is specified)."
 msgstr ""
+"इनपुट स्क्रिप्ट वाली डायरेक्टरी (या, अगर कोई फ़ाइल नहीं दी गई, तो मौजूदा डायरेक्टरी)।"
 
 #: tutorial/modules.rst:196
 msgid ""
 ":envvar:`PYTHONPATH` (a list of directory names, with the same syntax as the "
 "shell variable :envvar:`PATH`)."
 msgstr ""
+":envvar:`PYTHONPATH` (डायरेक्टरी नामों की एक सूची, जिसका सिंटैक्स शेल "
+"वेरिएबल :envvar:`PATH` जैसा है)।"
 
 #: tutorial/modules.rst:198
 msgid ""
 "The installation-dependent default (by convention including a ``site-"
 "packages`` directory, handled by the :mod:`site` module)."
 msgstr ""
+"इंस्टॉलेशन पर निर्भर डिफ़ॉल्ट (परंपरा के अनुसार इसमें एक ``site-packages`` डायरेक्टरी "
+"शामिल होती है, जिसे :mod:`site` मॉड्यूल संभालता है)।"
 
 #: tutorial/modules.rst:201
 msgid "More details are at :ref:`sys-path-init`."
-msgstr ""
+msgstr "ज़्यादा जानकारी :ref:`sys-path-init` में है।"
 
 #: tutorial/modules.rst:204
 msgid ""
@@ -328,6 +446,9 @@ msgid ""
 "script is calculated after the symlink is followed. In other words the "
 "directory containing the symlink is **not** added to the module search path."
 msgstr ""
+"जो फ़ाइल सिस्टम सिमलिंक सपोर्ट करते हैं, उनमें इनपुट स्क्रिप्ट वाली डायरेक्टरी सिमलिंक को "
+"फ़ॉलो करने के बाद निकाली जाती है। दूसरे शब्दों में, सिमलिंक वाली डायरेक्टरी मॉड्यूल खोजने के "
+"पाथ में **नहीं** जोड़ी जाती।"
 
 #: tutorial/modules.rst:208
 msgid ""
@@ -338,10 +459,15 @@ msgid ""
 "library directory. This is an error unless the replacement is intended.  See "
 "section :ref:`tut-standardmodules` for more information."
 msgstr ""
+"इनिशियलाइज़ेशन के बाद, पायथन प्रोग्राम :data:`sys.path` को बदल सकते हैं। चलाई जा रही "
+"स्क्रिप्ट वाली डायरेक्टरी खोज पाथ की शुरुआत में, स्टैंडर्ड लाइब्रेरी पाथ से पहले, रखी जाती है। "
+"इसका मतलब है कि लाइब्रेरी डायरेक्टरी में उसी नाम के मॉड्यूलों के बजाय उस डायरेक्टरी की "
+"स्क्रिप्ट लोड होंगी। जब तक यह बदलाव जानबूझकर न किया गया हो, यह एक त्रुटि है। ज़्यादा "
+"जानकारी के लिए :ref:`tut-standardmodules` सेक्शन देखें।"
 
 #: tutorial/modules.rst:221
 msgid "\"Compiled\" Python files"
-msgstr ""
+msgstr "\"कंपाइल की गई\" पायथन फ़ाइलें"
 
 #: tutorial/modules.rst:223
 msgid ""
@@ -353,6 +479,12 @@ msgid ""
 "spam.cpython-33.pyc``.  This naming convention allows compiled modules from "
 "different releases and different versions of Python to coexist."
 msgstr ""
+"मॉड्यूल लोड करने की गति बढ़ाने के लिए, पायथन हर मॉड्यूल के कंपाइल किए गए रूप को "
+"``__pycache__`` डायरेक्टरी में :file:`module.{version}.pyc` नाम से कैश करता है, जहाँ "
+"version कंपाइल की गई फ़ाइल का फ़ॉर्मैट बताता है; इसमें आम तौर पर पायथन का वर्ज़न नंबर "
+"होता है। उदाहरण के लिए, CPython रिलीज़ 3.3 में spam.py का कंपाइल किया गया रूप "
+"``__pycache__/spam.cpython-33.pyc`` के रूप में कैश होगा। नाम रखने की इस परंपरा से "
+"पायथन की अलग-अलग रिलीज़ और अलग-अलग वर्ज़न के कंपाइल किए गए मॉड्यूल साथ-साथ रह सकते हैं।"
 
 #: tutorial/modules.rst:231
 msgid ""
@@ -362,6 +494,10 @@ msgid ""
 "independent, so the same library can be shared among systems with different "
 "architectures."
 msgstr ""
+"पायथन सोर्स के बदलाव की तारीख़ को कंपाइल किए गए रूप से मिलाकर देखता है कि कहीं वह "
+"पुराना तो नहीं हो गया और उसे फिर से कंपाइल करने की ज़रूरत तो नहीं। यह पूरी तरह अपने-आप "
+"होने वाली प्रक्रिया है। साथ ही, कंपाइल किए गए मॉड्यूल प्लेटफ़ॉर्म से स्वतंत्र होते हैं, इसलिए "
+"एक ही लाइब्रेरी अलग-अलग आर्किटेक्चर वाले सिस्टमों के बीच साझा की जा सकती है।"
 
 #: tutorial/modules.rst:236
 msgid ""
@@ -372,10 +508,15 @@ msgid ""
 "distribution, the compiled module must be in the source directory, and there "
 "must not be a source module."
 msgstr ""
+"पायथन दो स्थितियों में कैश नहीं देखता। पहली, कमांड लाइन से सीधे लोड किए गए मॉड्यूल को वह "
+"हमेशा फिर से कंपाइल करता है और नतीजा सेव नहीं करता। दूसरी, अगर कोई सोर्स मॉड्यूल नहीं "
+"है, तो वह कैश नहीं देखता। बिना सोर्स वाले (सिर्फ़ कंपाइल किए गए) डिस्ट्रिब्यूशन को सपोर्ट "
+"करने के लिए, कंपाइल किया गया मॉड्यूल सोर्स डायरेक्टरी में होना चाहिए, और कोई सोर्स "
+"मॉड्यूल नहीं होना चाहिए।"
 
 #: tutorial/modules.rst:243
 msgid "Some tips for experts:"
-msgstr ""
+msgstr "विशेषज्ञों के लिए कुछ सुझाव:"
 
 #: tutorial/modules.rst:245
 msgid ""
@@ -387,6 +528,12 @@ msgid ""
 "have an ``opt-`` tag and are usually smaller.  Future releases may change "
 "the effects of optimization."
 msgstr ""
+"कंपाइल किए गए मॉड्यूल का साइज़ घटाने के लिए आप पायथन कमांड पर :option:`-O` "
+"या :option:`-OO` स्विच इस्तेमाल कर सकते हैं। ``-O`` स्विच assert स्टेटमेंट हटा देता है, "
+"और ``-OO`` स्विच assert स्टेटमेंट और __doc__ स्ट्रिंग, दोनों हटा देता है। चूँकि कुछ "
+"प्रोग्राम इनके उपलब्ध होने पर निर्भर हो सकते हैं, इसलिए यह विकल्प सिर्फ़ तभी इस्तेमाल करें "
+"जब आप जानते हों कि आप क्या कर रहे हैं। \"ऑप्टिमाइज़ किए गए\" मॉड्यूलों में एक ``opt-`` टैग "
+"होता है और वे आम तौर पर छोटे होते हैं। आगे की रिलीज़ में ऑप्टिमाइज़ेशन का असर बदल सकता है।"
 
 #: tutorial/modules.rst:253
 msgid ""
@@ -394,22 +541,27 @@ msgid ""
 "when it is read from a ``.py`` file; the only thing that's faster about "
 "``.pyc`` files is the speed with which they are loaded."
 msgstr ""
+"``.pyc`` फ़ाइल से पढ़े जाने पर कोई प्रोग्राम ``.py`` फ़ाइल से पढ़े जाने की तुलना में ज़्यादा "
+"तेज़ नहीं चलता; ``.pyc`` फ़ाइलों में सिर्फ़ उनके लोड होने की गति ज़्यादा होती है।"
 
 #: tutorial/modules.rst:257
 msgid ""
 "The module :mod:`compileall` can create .pyc files for all modules in a "
 "directory."
 msgstr ""
+":mod:`compileall` मॉड्यूल किसी डायरेक्टरी के सभी मॉड्यूलों के लिए .pyc फ़ाइलें बना सकता "
+"है।"
 
 #: tutorial/modules.rst:260
 msgid ""
 "There is more detail on this process, including a flow chart of the "
 "decisions, in :pep:`3147`."
 msgstr ""
+"इस प्रक्रिया के बारे में ज़्यादा विवरण, फ़ैसलों के एक फ़्लो चार्ट सहित, :pep:`3147` में है।"
 
 #: tutorial/modules.rst:267
 msgid "Standard Modules"
-msgstr ""
+msgstr "स्टैंडर्ड मॉड्यूल"
 
 #: tutorial/modules.rst:271
 msgid ""
@@ -425,6 +577,14 @@ msgid ""
 "into every Python interpreter.  The variables ``sys.ps1`` and ``sys.ps2`` "
 "define the strings used as primary and secondary prompts::"
 msgstr ""
+"पायथन के साथ स्टैंडर्ड मॉड्यूलों की एक लाइब्रेरी आती है, जिसका विवरण एक अलग दस्तावेज़, "
+"पायथन लाइब्रेरी रेफ़रेंस (आगे \"लाइब्रेरी रेफ़रेंस\") में है। कुछ मॉड्यूल इंटरप्रेटर में ही बने होते "
+"हैं; ये ऐसे ऑपरेशनों तक पहुँच देते हैं जो भाषा के मूल हिस्से नहीं हैं, फिर भी बिल्ट-इन हैं, या तो "
+"कुशलता के लिए या सिस्टम कॉल जैसे ऑपरेटिंग सिस्टम प्रिमिटिव तक पहुँच देने के लिए। ऐसे मॉड्यूलों "
+"का सेट एक कॉन्फ़िगरेशन विकल्प है, जो नीचे के प्लेटफ़ॉर्म पर भी निर्भर करता है। उदाहरण के "
+"लिए, :mod:`winreg` मॉड्यूल सिर्फ़ Windows सिस्टम पर मिलता है। एक मॉड्यूल ख़ास ध्यान देने "
+"लायक है: :mod:`sys`, जो हर पायथन इंटरप्रेटर में बना होता है। वेरिएबल ``sys.ps1`` और "
+"``sys.ps2`` प्राइमरी और सेकेंडरी प्रॉम्प्ट के रूप में इस्तेमाल होने वाली स्ट्रिंग तय करते हैं::"
 
 #: tutorial/modules.rst:283
 msgid ""
@@ -438,12 +598,21 @@ msgid ""
 "Yuck!\n"
 "C>"
 msgstr ""
+">>> import sys\n"
+">>> sys.ps1\n"
+"'>>> '\n"
+">>> sys.ps2\n"
+"'... '\n"
+">>> sys.ps1 = 'C> '\n"
+"C> print('Yuck!')\n"
+"Yuck!\n"
+"C>"
 
 #: tutorial/modules.rst:294
 msgid ""
 "These two variables are only defined if the interpreter is in interactive "
 "mode."
-msgstr ""
+msgstr "ये दोनों वेरिएबल सिर्फ़ तब परिभाषित होते हैं जब इंटरप्रेटर इंटरैक्टिव मोड में हो।"
 
 #: tutorial/modules.rst:296
 msgid ""
@@ -453,22 +622,30 @@ msgid ""
 "default if :envvar:`PYTHONPATH` is not set.  You can modify it using "
 "standard list operations::"
 msgstr ""
+"``sys.path`` वेरिएबल स्ट्रिंग की एक लिस्ट है, जो मॉड्यूलों के लिए इंटरप्रेटर का खोज पाथ "
+"तय करती है। यह एनवायरनमेंट वेरिएबल :envvar:`PYTHONPATH` से लिए गए डिफ़ॉल्ट पाथ से "
+"इनिशियलाइज़ होती है, या, अगर :envvar:`PYTHONPATH` सेट नहीं है, तो एक बिल्ट-इन "
+"डिफ़ॉल्ट से। आप इसे सामान्य लिस्ट ऑपरेशनों से बदल सकते हैं::"
 
 #: tutorial/modules.rst:302
 msgid ""
 ">>> import sys\n"
 ">>> sys.path.append('/ufs/guido/lib/python')"
 msgstr ""
+">>> import sys\n"
+">>> sys.path.append('/ufs/guido/lib/python')"
 
 #: tutorial/modules.rst:309
 msgid "The :func:`dir` Function"
-msgstr ""
+msgstr ":func:`dir` फ़ंक्शन"
 
 #: tutorial/modules.rst:311
 msgid ""
 "The built-in function :func:`dir` is used to find out which names a module "
 "defines.  It returns a sorted list of strings::"
 msgstr ""
+"बिल्ट-इन फ़ंक्शन :func:`dir` यह पता करने के लिए इस्तेमाल होता है कि कोई मॉड्यूल कौन-से "
+"नाम परिभाषित करता है। यह स्ट्रिंग की एक सॉर्ट की गई लिस्ट लौटाता है::"
 
 #: tutorial/modules.rst:314
 msgid ""
@@ -505,11 +682,44 @@ msgid ""
 "'version_info',\n"
 " 'warnoptions']"
 msgstr ""
+">>> import fibo, sys\n"
+">>> dir(fibo)\n"
+"['__name__', 'fib', 'fib2']\n"
+">>> dir(sys)\n"
+"['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n"
+" '__interactivehook__', '__loader__', '__name__', '__package__', "
+"'__spec__',\n"
+" '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n"
+" '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n"
+" '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n"
+" 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n"
+" 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n"
+" 'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', "
+"'exc_info',\n"
+" 'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n"
+" 'float_repr_style', 'get_asyncgen_hooks', "
+"'get_coroutine_origin_tracking_depth',\n"
+" 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',\n"
+" 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n"
+" 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n"
+" 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n"
+" 'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n"
+" 'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n"
+" 'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', "
+"'pycache_prefix',\n"
+" 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', "
+"'setdlopenflags',\n"
+" 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', "
+"'stderr',\n"
+" 'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', "
+"'version_info',\n"
+" 'warnoptions']"
 
 #: tutorial/modules.rst:340
 msgid ""
 "Without arguments, :func:`dir` lists the names you have defined currently::"
 msgstr ""
+"बिना आर्ग्युमेंट के, :func:`dir` उन नामों की सूची देता है जो आपने अभी परिभाषित किए हैं::"
 
 #: tutorial/modules.rst:342
 msgid ""
@@ -519,11 +729,16 @@ msgid ""
 ">>> dir()\n"
 "['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']"
 msgstr ""
+">>> a = [1, 2, 3, 4, 5]\n"
+">>> import fibo\n"
+">>> fib = fibo.fib\n"
+">>> dir()\n"
+"['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']"
 
 #: tutorial/modules.rst:348
 msgid ""
 "Note that it lists all types of names: variables, modules, functions, etc."
-msgstr ""
+msgstr "ध्यान दें कि यह हर तरह के नाम दिखाता है: वेरिएबल, मॉड्यूल, फ़ंक्शन वगैरह।"
 
 #: tutorial/modules.rst:352
 msgid ""
@@ -531,6 +746,8 @@ msgid ""
 "you want a list of those, they are defined in the standard "
 "module :mod:`builtins`::"
 msgstr ""
+":func:`dir` बिल्ट-इन फ़ंक्शनों और वेरिएबलों के नाम नहीं दिखाता। अगर आपको उनकी सूची "
+"चाहिए, तो वे स्टैंडर्ड मॉड्यूल :mod:`builtins` में परिभाषित हैं::"
 
 #: tutorial/modules.rst:356
 msgid ""
@@ -567,10 +784,42 @@ msgid ""
 " 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n"
 " 'zip']"
 msgstr ""
+">>> import builtins\n"
+">>> dir(builtins)\n"
+"['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n"
+" 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n"
+" 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n"
+" 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n"
+" 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n"
+" 'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n"
+" 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',\n"
+" 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n"
+" 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n"
+" 'MemoryError', 'NameError', 'None', 'NotADirectoryError', "
+"'NotImplemented',\n"
+" 'NotImplementedError', 'OSError', 'OverflowError',\n"
+" 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n"
+" 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n"
+" 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n"
+" 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n"
+" 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n"
+" 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n"
+" 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n"
+" '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n"
+" 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n"
+" 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n"
+" 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n"
+" 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n"
+" 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n"
+" 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n"
+" 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n"
+" 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n"
+" 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n"
+" 'zip']"
 
 #: tutorial/modules.rst:391
 msgid "Packages"
-msgstr ""
+msgstr "पैकेज"
 
 #: tutorial/modules.rst:393
 msgid ""
@@ -582,6 +831,12 @@ msgid ""
 "saves the authors of multi-module packages like NumPy or Pillow from having "
 "to worry about each other's module names."
 msgstr ""
+"पैकेज \"डॉट वाले मॉड्यूल नामों\" के ज़रिए पायथन के मॉड्यूल नेमस्पेस को व्यवस्थित करने का एक "
+"तरीका हैं। उदाहरण के लिए, मॉड्यूल नाम :mod:`!A.B`, ``A`` नाम के पैकेज में ``B`` नाम का "
+"एक सबमॉड्यूल दर्शाता है। जैसे मॉड्यूलों के इस्तेमाल से अलग-अलग मॉड्यूलों के लेखकों को एक-दूसरे के "
+"ग्लोबल वेरिएबल नामों की चिंता नहीं करनी पड़ती, वैसे ही डॉट वाले मॉड्यूल नामों के इस्तेमाल से "
+"NumPy या Pillow जैसे कई मॉड्यूल वाले पैकेजों के लेखकों को एक-दूसरे के मॉड्यूल नामों की चिंता "
+"नहीं करनी पड़ती।"
 
 #: tutorial/modules.rst:401
 msgid ""
@@ -597,6 +852,15 @@ msgid ""
 "these operations.  Here's a possible structure for your package (expressed "
 "in terms of a hierarchical filesystem):"
 msgstr ""
+"मान लीजिए कि आप साउंड फ़ाइलों और साउंड डेटा को एक जैसे तरीके से संभालने के लिए मॉड्यूलों का "
+"एक संग्रह (एक \"पैकेज\") डिज़ाइन करना चाहते हैं। साउंड फ़ाइलों के कई अलग-अलग फ़ॉर्मैट हैं (आम "
+"तौर पर उनके एक्सटेंशन से पहचाने जाते हैं, "
+"जैसे: :file:`.wav`, :file:`.aiff`, :file:`.au`), इसलिए आपको अलग-अलग फ़ाइल फ़ॉर्मैट "
+"के बीच कन्वर्ज़न के लिए मॉड्यूलों का एक बढ़ता संग्रह बनाना और संभालना पड़ सकता है। साउंड "
+"डेटा पर आप कई अलग-अलग ऑपरेशन भी करना चाह सकते हैं (जैसे मिक्सिंग, इको जोड़ना, इक्वलाइज़र "
+"फ़ंक्शन लगाना, बनावटी स्टीरियो असर बनाना), इसलिए आप इन ऑपरेशनों के लिए कभी न ख़त्म "
+"होने वाले मॉड्यूल भी लिखते रहेंगे। आपके पैकेज का एक संभावित स्ट्रक्चर यह है (एक पदानुक्रमित "
+"फ़ाइल सिस्टम के रूप में दिखाया गया):"
 
 #: tutorial/modules.rst:412
 msgid ""
@@ -624,12 +888,37 @@ msgid ""
 "              karaoke.py\n"
 "              ..."
 msgstr ""
+"sound/                          Top-level package\n"
+"      __init__.py               Initialize the sound package\n"
+"      formats/                  Subpackage for file format conversions\n"
+"              __init__.py\n"
+"              wavread.py\n"
+"              wavwrite.py\n"
+"              aiffread.py\n"
+"              aiffwrite.py\n"
+"              auread.py\n"
+"              auwrite.py\n"
+"              ...\n"
+"      effects/                  Subpackage for sound effects\n"
+"              __init__.py\n"
+"              echo.py\n"
+"              surround.py\n"
+"              reverse.py\n"
+"              ...\n"
+"      filters/                  Subpackage for filters\n"
+"              __init__.py\n"
+"              equalizer.py\n"
+"              vocoder.py\n"
+"              karaoke.py\n"
+"              ..."
 
 #: tutorial/modules.rst:438
 msgid ""
 "When importing the package, Python searches through the directories on "
 "``sys.path`` looking for the package subdirectory."
 msgstr ""
+"पैकेज इम्पोर्ट करते समय, पायथन ``sys.path`` की डायरेक्टरियों में पैकेज की सबडायरेक्टरी "
+"खोजता है।"
 
 #: tutorial/modules.rst:441
 msgid ""
@@ -641,64 +930,77 @@ msgid ""
 "can just be an empty file, but it can also execute initialization code for "
 "the package or set the ``__all__`` variable, described later."
 msgstr ""
+"पायथन किसी डायरेक्टरी को पैकेज तभी मानता है जब उसमें :file:`__init__.py` फ़ाइल हो "
+"(जब तक :term:`नेमस्पेस पैकेज <namespace package>` इस्तेमाल न किया जाए, जो एक कुछ "
+"एडवांस्ड सुविधा है)। इससे ``string`` जैसे आम नाम वाली डायरेक्टरियाँ गलती से उन मान्य "
+"मॉड्यूलों को नहीं छिपातीं जो मॉड्यूल खोज पाथ में बाद में आते हैं। सबसे सरल मामले "
+"में, :file:`__init__.py` एक खाली फ़ाइल हो सकती है, लेकिन यह पैकेज का इनिशियलाइज़ेशन "
+"कोड भी चला सकती है या ``__all__`` वेरिएबल सेट कर सकती है, जिसके बारे में आगे बताया "
+"गया है।"
 
 #: tutorial/modules.rst:449
 msgid ""
 "Users of the package can import individual modules from the package, for "
 "example::"
-msgstr ""
+msgstr "पैकेज के यूज़र पैकेज से अलग-अलग मॉड्यूल इम्पोर्ट कर सकते हैं, उदाहरण के लिए::"
 
 #: tutorial/modules.rst:452
 msgid "import sound.effects.echo"
-msgstr ""
+msgstr "import sound.effects.echo"
 
 #: tutorial/modules.rst:454
 msgid ""
 "This loads the submodule :mod:`!sound.effects.echo`.  It must be referenced "
 "with its full name. ::"
 msgstr ""
+"यह सबमॉड्यूल :mod:`!sound.effects.echo` लोड करता है। इसे इसके पूरे नाम से इस्तेमाल "
+"करना होगा। ::"
 
 #: tutorial/modules.rst:457
 msgid "sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+msgstr "sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)"
 
 #: tutorial/modules.rst:459
 msgid "An alternative way of importing the submodule is::"
-msgstr ""
+msgstr "सबमॉड्यूल इम्पोर्ट करने का एक और तरीका है::"
 
 #: tutorial/modules.rst:461
 msgid "from sound.effects import echo"
-msgstr ""
+msgstr "from sound.effects import echo"
 
 #: tutorial/modules.rst:463
 msgid ""
 "This also loads the submodule :mod:`!echo`, and makes it available without "
 "its package prefix, so it can be used as follows::"
 msgstr ""
+"यह भी सबमॉड्यूल :mod:`!echo` लोड करता है, और उसे पैकेज प्रीफ़िक्स के बिना उपलब्ध कराता "
+"है, ताकि उसे इस तरह इस्तेमाल किया जा सके::"
 
 #: tutorial/modules.rst:466
 msgid "echo.echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+msgstr "echo.echofilter(input, output, delay=0.7, atten=4)"
 
 #: tutorial/modules.rst:468
 msgid ""
 "Yet another variation is to import the desired function or variable "
 "directly::"
-msgstr ""
+msgstr "एक और तरीका है मनचाहे फ़ंक्शन या वेरिएबल को सीधे इम्पोर्ट करना::"
 
 #: tutorial/modules.rst:470
 msgid "from sound.effects.echo import echofilter"
-msgstr ""
+msgstr "from sound.effects.echo import echofilter"
 
 #: tutorial/modules.rst:472
 msgid ""
 "Again, this loads the submodule :mod:`!echo`, but this makes its "
 "function :func:`!echofilter` directly available::"
 msgstr ""
+"यह भी सबमॉड्यूल :mod:`!echo` लोड करता है, लेकिन इसका फ़ंक्शन :func:`!echofilter` "
+"सीधे उपलब्ध कराता है::"
 
 #: tutorial/modules.rst:475
 msgid "echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+msgstr "echofilter(input, output, delay=0.7, atten=4)"
 
 #: tutorial/modules.rst:477
 msgid ""
@@ -709,6 +1011,11 @@ msgid ""
 "module and attempts to load it.  If it fails to find it, "
 "an :exc:`ImportError` exception is raised."
 msgstr ""
+"ध्यान दें कि ``from package import item`` इस्तेमाल करते समय, item या तो पैकेज का कोई "
+"सबमॉड्यूल (या सबपैकेज) हो सकता है, या पैकेज में परिभाषित कोई दूसरा नाम, जैसे फ़ंक्शन, क्लास "
+"या वेरिएबल। ``import`` स्टेटमेंट पहले जाँचता है कि item पैकेज में परिभाषित है या नहीं; अगर "
+"नहीं, तो वह उसे मॉड्यूल मानकर लोड करने की कोशिश करता है। अगर वह नहीं मिलता, "
+"तो :exc:`ImportError` एक्सेप्शन रेज़ होता है।"
 
 #: tutorial/modules.rst:484
 msgid ""
@@ -717,10 +1024,13 @@ msgid ""
 "a package but can't be a class or function or variable defined in the "
 "previous item."
 msgstr ""
+"इसके उलट, ``import item.subitem.subsubitem`` जैसा सिंटैक्स इस्तेमाल करते समय, आख़िरी "
+"को छोड़कर हर item एक पैकेज होना चाहिए; आख़िरी item एक मॉड्यूल या पैकेज हो सकता है, "
+"लेकिन पिछले item में परिभाषित कोई क्लास, फ़ंक्शन या वेरिएबल नहीं हो सकता।"
 
 #: tutorial/modules.rst:493
 msgid "Importing \\* From a Package"
-msgstr ""
+msgstr "पैकेज से \\* इम्पोर्ट करना"
 
 #: tutorial/modules.rst:497
 msgid ""
@@ -730,6 +1040,11 @@ msgid ""
 "could take a long time and importing sub-modules might have unwanted side-"
 "effects that should only happen when the sub-module is explicitly imported."
 msgstr ""
+"अब क्या होता है जब यूज़र ``from sound.effects import *`` लिखता है? आदर्श रूप से, कोई "
+"यह उम्मीद करेगा कि यह किसी तरह फ़ाइल सिस्टम में जाकर पता करे कि पैकेज में कौन-से सबमॉड्यूल "
+"मौजूद हैं, और उन सभी को इम्पोर्ट कर दे। इसमें काफ़ी समय लग सकता है, और सबमॉड्यूल इम्पोर्ट "
+"करने के ऐसे अनचाहे साइड इफ़ेक्ट हो सकते हैं जो सिर्फ़ तब होने चाहिए जब सबमॉड्यूल को स्पष्ट रूप "
+"से इम्पोर्ट किया जाए।"
 
 #: tutorial/modules.rst:503
 msgid ""
@@ -743,16 +1058,25 @@ msgid ""
 "importing \\* from their package.  For example, the file :file:`sound/"
 "effects/__init__.py` could contain the following code::"
 msgstr ""
+"इसका अकेला हल यह है कि पैकेज का लेखक पैकेज का एक स्पष्ट इंडेक्स दे। :keyword:`import` "
+"स्टेटमेंट यह परंपरा अपनाता है: अगर किसी पैकेज का :file:`__init__.py` कोड ``__all__`` "
+"नाम की एक लिस्ट परिभाषित करता है, तो उसे मॉड्यूल नामों की वह सूची माना जाता है जो "
+"``from package import *`` आने पर इम्पोर्ट होने चाहिए। पैकेज का नया वर्ज़न रिलीज़ होने "
+"पर इस सूची को अपडेट रखना पैकेज लेखक की ज़िम्मेदारी है। अगर पैकेज लेखकों को अपने पैकेज से \\* "
+"इम्पोर्ट करने का कोई फ़ायदा नहीं दिखता, तो वे इसे सपोर्ट न करने का फ़ैसला भी कर सकते हैं। "
+"उदाहरण के लिए, फ़ाइल :file:`sound/effects/__init__.py` में यह कोड हो सकता है::"
 
 #: tutorial/modules.rst:513
 msgid "__all__ = [\"echo\", \"surround\", \"reverse\"]"
-msgstr ""
+msgstr "__all__ = [\"echo\", \"surround\", \"reverse\"]"
 
 #: tutorial/modules.rst:515
 msgid ""
 "This would mean that ``from sound.effects import *`` would import the three "
 "named submodules of the :mod:`!sound.effects` package."
 msgstr ""
+"इसका मतलब होगा कि ``from sound.effects import *`` :mod:`!sound.effects` पैकेज "
+"के तीन नामित सबमॉड्यूल इम्पोर्ट करेगा।"
 
 #: tutorial/modules.rst:518
 msgid ""
@@ -763,6 +1087,11 @@ msgid ""
 "submodule, because it is shadowed by the locally defined ``reverse`` "
 "function::"
 msgstr ""
+"ध्यान रखें कि लोकल रूप से परिभाषित नाम सबमॉड्यूलों को ढक (शैडो कर) सकते हैं। उदाहरण के "
+"लिए, अगर आपने :file:`sound/effects/__init__.py` फ़ाइल में एक ``reverse`` फ़ंक्शन "
+"जोड़ा, तो ``from sound.effects import *`` सिर्फ़ दो सबमॉड्यूल ``echo`` और "
+"``surround`` इम्पोर्ट करेगा, ``reverse`` सबमॉड्यूल *नहीं*, क्योंकि उसे लोकल रूप से "
+"परिभाषित ``reverse`` फ़ंक्शन ने ढक दिया है::"
 
 #: tutorial/modules.rst:525
 msgid ""
@@ -775,6 +1104,14 @@ msgid ""
 "def reverse(msg: str):  # <-- this name shadows the 'reverse.py' submodule\n"
 "    return msg[::-1]    #     in the case of a 'from sound.effects import *'"
 msgstr ""
+"__all__ = [\n"
+"    \"echo\",      # refers to the 'echo.py' file\n"
+"    \"surround\",  # refers to the 'surround.py' file\n"
+"    \"reverse\",   # !!! refers to the 'reverse' function now !!!\n"
+"]\n"
+"\n"
+"def reverse(msg: str):  # <-- this name shadows the 'reverse.py' submodule\n"
+"    return msg[::-1]    #     in the case of a 'from sound.effects import *'"
 
 #: tutorial/modules.rst:534
 msgid ""
@@ -788,6 +1125,14 @@ msgid ""
 "were explicitly loaded by previous :keyword:`import` statements.  Consider "
 "this code::"
 msgstr ""
+"अगर ``__all__`` परिभाषित नहीं है, तो स्टेटमेंट ``from sound.effects import *`` "
+"पैकेज :mod:`!sound.effects` के सभी सबमॉड्यूल मौजूदा नेमस्पेस में इम्पोर्ट *नहीं* करता; यह "
+"सिर्फ़ यह पक्का करता है कि पैकेज :mod:`!sound.effects` इम्पोर्ट हो गया है "
+"(शायद :file:`__init__.py` का कोई इनिशियलाइज़ेशन कोड चलाते हुए), और फिर पैकेज में "
+"परिभाषित जो भी नाम हैं उन्हें इम्पोर्ट करता है। इसमें :file:`__init__.py` द्वारा "
+"परिभाषित कोई भी नाम (और स्पष्ट रूप से लोड किए गए सबमॉड्यूल) शामिल हैं। इसमें पैकेज के वे "
+"सबमॉड्यूल भी शामिल हैं जो पिछले :keyword:`import` स्टेटमेंट द्वारा स्पष्ट रूप से लोड किए "
+"गए थे। यह कोड देखें::"
 
 #: tutorial/modules.rst:543
 msgid ""
@@ -795,6 +1140,9 @@ msgid ""
 "import sound.effects.surround\n"
 "from sound.effects import *"
 msgstr ""
+"import sound.effects.echo\n"
+"import sound.effects.surround\n"
+"from sound.effects import *"
 
 #: tutorial/modules.rst:547
 msgid ""
@@ -803,6 +1151,9 @@ msgid ""
 "sound.effects` package when the ``from...import`` statement is executed.  "
 "(This also works when ``__all__`` is defined.)"
 msgstr ""
+"इस उदाहरण में, :mod:`!echo` और :mod:`!surround` मॉड्यूल मौजूदा नेमस्पेस में इम्पोर्ट होते "
+"हैं, क्योंकि ``from...import`` स्टेटमेंट चलने के समय वे :mod:`!sound.effects` पैकेज में "
+"परिभाषित होते हैं। (यह तब भी काम करता है जब ``__all__`` परिभाषित हो।)"
 
 #: tutorial/modules.rst:552
 msgid ""
@@ -810,6 +1161,9 @@ msgid ""
 "certain patterns when you use ``import *``, it is still considered bad "
 "practice in production code."
 msgstr ""
+"हालाँकि कुछ मॉड्यूल इस तरह डिज़ाइन किए गए हैं कि ``import *`` इस्तेमाल करने पर वे सिर्फ़ "
+"कुछ ख़ास पैटर्न वाले नाम ही एक्सपोर्ट करें, फिर भी प्रोडक्शन कोड में इसे बुरा तरीका माना "
+"जाता है।"
 
 #: tutorial/modules.rst:556
 msgid ""
@@ -818,10 +1172,13 @@ msgid ""
 "importing module needs to use submodules with the same name from different "
 "packages."
 msgstr ""
+"याद रखें, ``from package import specific_submodule`` इस्तेमाल करने में कुछ भी गलत "
+"नहीं है! असल में, यही सुझाया गया तरीका है, जब तक इम्पोर्ट करने वाले मॉड्यूल को अलग-अलग "
+"पैकेजों के एक ही नाम वाले सबमॉड्यूल इस्तेमाल करने की ज़रूरत न हो।"
 
 #: tutorial/modules.rst:565
 msgid "Intra-package References"
-msgstr ""
+msgstr "पैकेज के अंदर के रेफ़रेंस"
 
 #: tutorial/modules.rst:567
 msgid ""
@@ -831,6 +1188,11 @@ msgid ""
 "sound.filters.vocoder` needs to use the :mod:`!echo` module in the :mod:`!"
 "sound.effects` package, it can use ``from sound.effects import echo``."
 msgstr ""
+"जब पैकेज सबपैकेजों में बँटे होते हैं (जैसे उदाहरण के :mod:`!sound` पैकेज में), तो आप सहोदर पैकेजों "
+"के सबमॉड्यूलों तक पहुँचने के लिए एब्सोल्यूट इम्पोर्ट इस्तेमाल कर सकते हैं। उदाहरण के लिए, अगर "
+"मॉड्यूल :mod:`!sound.filters.vocoder` को :mod:`!sound.effects` पैकेज का :mod:`!"
+"echo` मॉड्यूल इस्तेमाल करना है, तो वह ``from sound.effects import echo`` इस्तेमाल "
+"कर सकता है।"
 
 #: tutorial/modules.rst:573
 msgid ""
@@ -839,6 +1201,9 @@ msgid ""
 "current and parent packages involved in the relative import.  From "
 "the :mod:`!surround` module for example, you might use::"
 msgstr ""
+"आप import स्टेटमेंट के ``from module import name`` रूप से रिलेटिव इम्पोर्ट भी लिख सकते "
+"हैं। ये इम्पोर्ट शुरुआत में डॉट लगाकर बताते हैं कि रिलेटिव इम्पोर्ट में मौजूदा और पैरेंट पैकेज कौन-"
+"से हैं। उदाहरण के लिए, :mod:`!surround` मॉड्यूल से आप यह इस्तेमाल कर सकते हैं::"
 
 #: tutorial/modules.rst:578
 msgid ""
@@ -846,6 +1211,9 @@ msgid ""
 "from .. import formats\n"
 "from ..filters import equalizer"
 msgstr ""
+"from . import echo\n"
+"from .. import formats\n"
+"from ..filters import equalizer"
 
 #: tutorial/modules.rst:582
 msgid ""
@@ -854,10 +1222,13 @@ msgid ""
 "use as the main module of a Python application must always use absolute "
 "imports."
 msgstr ""
+"ध्यान दें कि रिलेटिव इम्पोर्ट मौजूदा मॉड्यूल के पैकेज के नाम पर आधारित होते हैं। चूँकि main "
+"मॉड्यूल का कोई पैकेज नहीं होता, इसलिए जो मॉड्यूल किसी पायथन एप्लिकेशन के main मॉड्यूल के "
+"रूप में इस्तेमाल होने हैं, उन्हें हमेशा एब्सोल्यूट इम्पोर्ट इस्तेमाल करने चाहिए।"
 
 #: tutorial/modules.rst:588
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/modules.rst:589
 msgid ""
@@ -865,27 +1236,29 @@ msgid ""
 "execution of a module-level function definition adds the function name to "
 "the module's global namespace."
 msgstr ""
+"असल में फ़ंक्शन की परिभाषाएँ भी 'स्टेटमेंट' हैं जो 'चलाए' जाते हैं; मॉड्यूल-लेवल की फ़ंक्शन "
+"परिभाषा चलने पर फ़ंक्शन का नाम मॉड्यूल के ग्लोबल नेमस्पेस में जुड़ जाता है।"
 
 #: tutorial/modules.rst:186 tutorial/modules.rst:269 tutorial/modules.rst:350
 msgid "module"
-msgstr ""
+msgstr "मॉड्यूल"
 
 #: tutorial/modules.rst:186
 msgid "search"
-msgstr ""
+msgstr "खोज"
 
 #: tutorial/modules.rst:186
 msgid "path"
-msgstr ""
+msgstr "पाथ"
 
 #: tutorial/modules.rst:269
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
 #: tutorial/modules.rst:350
 msgid "builtins"
-msgstr ""
+msgstr "builtins"
 
 #: tutorial/modules.rst:495
 msgid "__all__"
-msgstr ""
+msgstr "__all__"
