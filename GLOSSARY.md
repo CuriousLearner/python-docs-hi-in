@@ -44,24 +44,37 @@ Propose new or changed terms in an issue or PR before using them widely.
 | English | हिंदी |
 | --- | --- |
 | abstract base class | ऐब्स्ट्रैक्ट बेस क्लास |
+| abstract data type | ऐब्स्ट्रैक्ट डेटा टाइप |
 | argument | आर्ग्युमेंट |
 | attribute | एट्रिब्यूट |
+| backslash | बैकस्लैश |
+| bound (method) | बाउंड |
 | bug | बग |
+| built-in | बिल्ट-इन |
+| call stack | कॉल स्टैक |
 | class | क्लास |
 | command line | कमांड लाइन |
 | comment | कमेंट |
+| debugging | डीबगिंग |
 | decorator | डेकोरेटर |
+| deep copy | डीप कॉपी |
 | default | डिफ़ॉल्ट |
 | dictionary | डिक्शनरी |
 | documentation | डॉक्यूमेंटेशन |
+| double quote | डबल कोट |
+| e.g. | जैसे |
 | error | त्रुटि |
 | example | उदाहरण |
 | exception | एक्सेप्शन |
 | expression | एक्सप्रेशन |
 | file | फ़ाइल |
 | function | फ़ंक्शन |
+| garbage collector | गार्बेज कलेक्टर |
+| identifier | आइडेंटिफ़ायर |
+| immutable | इम्यूटेबल |
 | import | इम्पोर्ट |
 | indented | इंडेंट किया गया |
+| installer | इंस्टॉलर |
 | instance | इंस्टेंस |
 | integer | पूर्णांक |
 | interactive | इंटरैक्टिव |
@@ -70,23 +83,35 @@ Propose new or changed terms in an issue or PR before using them widely.
 | iterator | इटरेटर |
 | keyword | कीवर्ड |
 | library | लाइब्रेरी |
+| -like (file-like object) | -जैसा (फ़ाइल-जैसा ऑब्जेक्ट) |
 | list | लिस्ट |
+| list comprehension | लिस्ट कॉम्प्रिहेंशन |
+| little-endian, big-endian | लिटिल-एंडियन, बिग-एंडियन |
 | loop | लूप |
 | method | मेथड |
 | module | मॉड्यूल |
+| mutable | म्यूटेबल |
+| namespace | नेमस्पेस |
 | object | ऑब्जेक्ट |
 | operator | ऑपरेटर |
 | package | पैकेज |
 | parameter | पैरामीटर |
 | patch | पैच |
 | prompt | प्रॉम्प्ट |
+| raise (an exception) | रेज़ करना |
+| regular expression | रेगुलर एक्सप्रेशन |
 | return (a value) | रिटर्न करना |
+| single quote | सिंगल कोट |
+| socket | सॉकेट |
 | standard library | स्टैंडर्ड लाइब्रेरी |
 | statement | स्टेटमेंट |
 | string | स्ट्रिंग |
+| subprocess | सबप्रोसेस |
 | syntax | सिंटैक्स |
+| thread | थ्रेड |
 | tuple | टपल |
 | tutorial | ट्यूटोरियल |
 | type | टाइप |
+| underscore | अंडरस्कोर |
 | value | मान |
 | variable | वेरिएबल |
