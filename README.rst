@@ -1,8 +1,8 @@
 Translation of the Python Documentation — Hindi
 ===============================================
 
-.. image:: https://travis-ci.org/CuriousLearner/python-docs-hi-in.svg?branch=3.7
-  :target: https://travis-ci.org/CuriousLearner/python-docs-hi-in
+.. image:: https://github.com/CuriousLearner/python-docs-hi-in/actions/workflows/test.yml/badge.svg?branch=3.15
+  :target: https://github.com/CuriousLearner/python-docs-hi-in/actions/workflows/test.yml
 
 
 Documentation Contribution Agreement
