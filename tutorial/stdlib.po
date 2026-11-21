@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: tutorial/stdlib.rst:5
 msgid "Brief tour of the standard library"
-msgstr ""
+msgstr "स्टैंडर्ड लाइब्रेरी की एक छोटी सैर"
 
 #: tutorial/stdlib.rst:11
 msgid "Operating system interface"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम इंटरफ़ेस"
 
 #: tutorial/stdlib.rst:13
 msgid ""
 "The :mod:`os` module provides dozens of functions for interacting with the "
 "operating system::"
-msgstr ""
+msgstr ":mod:`os` मॉड्यूल ऑपरेटिंग सिस्टम के साथ काम करने के लिए दर्जनों फ़ंक्शन देता है::"
 
 #: tutorial/stdlib.rst:16
 msgid ""
@@ -40,6 +40,12 @@ msgid ""
 ">>> os.system('mkdir today')   # Run the command mkdir in the system shell\n"
 "0"
 msgstr ""
+">>> import os\n"
+">>> os.getcwd()      # Return the current working directory\n"
+"'C:\\\\Python315'\n"
+">>> os.chdir('/server/accesslogs')   # Change current working directory\n"
+">>> os.system('mkdir today')   # Run the command mkdir in the system shell\n"
+"0"
 
 #: tutorial/stdlib.rst:23
 msgid ""
@@ -47,12 +53,17 @@ msgid ""
 "This will keep :func:`os.open` from shadowing the built-in :func:`open` "
 "function which operates much differently."
 msgstr ""
+"``from os import *`` के बजाय ``import os`` वाली शैली ज़रूर इस्तेमाल करें। "
+"इससे :func:`os.open` बिल्ट-इन :func:`open` फ़ंक्शन को नहीं ढकेगा, जो काफ़ी अलग तरह से "
+"काम करता है।"
 
 #: tutorial/stdlib.rst:29
 msgid ""
 "The built-in :func:`dir` and :func:`help` functions are useful as "
 "interactive aids for working with large modules like :mod:`os`::"
 msgstr ""
+"बिल्ट-इन :func:`dir` और :func:`help` फ़ंक्शन :mod:`os` जैसे बड़े मॉड्यूलों के साथ काम "
+"करते समय इंटरैक्टिव मदद के रूप में उपयोगी हैं::"
 
 #: tutorial/stdlib.rst:32
 msgid ""
@@ -62,12 +73,19 @@ msgid ""
 ">>> help(os)\n"
 "<returns an extensive manual page created from the module's docstrings>"
 msgstr ""
+">>> import os\n"
+">>> dir(os)\n"
+"<returns a list of all module functions>\n"
+">>> help(os)\n"
+"<returns an extensive manual page created from the module's docstrings>"
 
 #: tutorial/stdlib.rst:38
 msgid ""
 "For daily file and directory management tasks, the :mod:`shutil` module "
 "provides a higher-level interface that is easier to use::"
 msgstr ""
+"फ़ाइलों और डायरेक्टरियों को रोज़ मैनेज करने के कामों के लिए, :mod:`shutil` मॉड्यूल एक "
+"ज़्यादा हाई-लेवल इंटरफ़ेस देता है, जो इस्तेमाल करने में आसान है::"
 
 #: tutorial/stdlib.rst:41
 msgid ""
@@ -77,16 +95,23 @@ msgid ""
 ">>> shutil.move('/build/executables', 'installdir')\n"
 "'installdir'"
 msgstr ""
+">>> import shutil\n"
+">>> shutil.copyfile('data.db', 'archive.db')\n"
+"'archive.db'\n"
+">>> shutil.move('/build/executables', 'installdir')\n"
+"'installdir'"
 
 #: tutorial/stdlib.rst:51
 msgid "File wildcards"
-msgstr ""
+msgstr "फ़ाइल वाइल्डकार्ड"
 
 #: tutorial/stdlib.rst:53
 msgid ""
 "The :mod:`glob` module provides a function for making file lists from "
 "directory wildcard searches::"
 msgstr ""
+":mod:`glob` मॉड्यूल डायरेक्टरी में वाइल्डकार्ड से खोज करके फ़ाइलों की सूची बनाने का फ़ंक्शन "
+"देता है::"
 
 #: tutorial/stdlib.rst:56
 msgid ""
@@ -94,10 +119,13 @@ msgid ""
 ">>> glob.glob('*.py')\n"
 "['primes.py', 'random.py', 'quote.py']"
 msgstr ""
+">>> import glob\n"
+">>> glob.glob('*.py')\n"
+"['primes.py', 'random.py', 'quote.py']"
 
 #: tutorial/stdlib.rst:64
 msgid "Command-line arguments"
-msgstr ""
+msgstr "कमांड लाइन आर्ग्युमेंट"
 
 #: tutorial/stdlib.rst:66
 msgid ""
@@ -105,6 +133,9 @@ msgid ""
 "arguments are stored in the :mod:`sys` module's *argv* attribute as a list.  "
 "For instance, let's take the following :file:`demo.py` file::"
 msgstr ""
+"आम यूटिलिटी स्क्रिप्ट को अक्सर कमांड लाइन आर्ग्युमेंट प्रोसेस करने होते हैं। ये "
+"आर्ग्युमेंट :mod:`sys` मॉड्यूल के *argv* एट्रिब्यूट में एक लिस्ट के रूप में रखे जाते हैं। उदाहरण के "
+"लिए, यह :file:`demo.py` फ़ाइल लें::"
 
 #: tutorial/stdlib.rst:70
 msgid ""
@@ -112,16 +143,20 @@ msgid ""
 "import sys\n"
 "print(sys.argv)"
 msgstr ""
+"# File demo.py\n"
+"import sys\n"
+"print(sys.argv)"
 
 #: tutorial/stdlib.rst:74
 msgid ""
 "Here is the output from running ``python demo.py one two three`` at the "
 "command line::"
 msgstr ""
+"कमांड लाइन पर ``python demo.py one two three`` चलाने पर यह आउटपुट मिलता है::"
 
 #: tutorial/stdlib.rst:77
 msgid "['demo.py', 'one', 'two', 'three']"
-msgstr ""
+msgstr "['demo.py', 'one', 'two', 'three']"
 
 #: tutorial/stdlib.rst:79
 msgid ""
@@ -129,6 +164,9 @@ msgid ""
 "process command-line arguments.  The following script extracts one or more "
 "filenames and an optional number of lines to be displayed::"
 msgstr ""
+":mod:`argparse` मॉड्यूल कमांड लाइन आर्ग्युमेंट प्रोसेस करने का ज़्यादा परिष्कृत तरीका देता "
+"है। यह स्क्रिप्ट एक या ज़्यादा फ़ाइल नाम और दिखाई जाने वाली लाइनों की वैकल्पिक संख्या "
+"निकालती है::"
 
 #: tutorial/stdlib.rst:83
 msgid ""
@@ -142,6 +180,15 @@ msgid ""
 "args = parser.parse_args()\n"
 "print(args)"
 msgstr ""
+"import argparse\n"
+"\n"
+"parser = argparse.ArgumentParser(\n"
+"    prog='top',\n"
+"    description='Show top lines from each file')\n"
+"parser.add_argument('filenames', nargs='+')\n"
+"parser.add_argument('-l', '--lines', type=int, default=10)\n"
+"args = parser.parse_args()\n"
+"print(args)"
 
 #: tutorial/stdlib.rst:93
 msgid ""
@@ -149,10 +196,13 @@ msgid ""
 "beta.txt``, the script sets ``args.lines`` to ``5`` and ``args.filenames`` "
 "to ``['alpha.txt', 'beta.txt']``."
 msgstr ""
+"कमांड लाइन पर ``python top.py --lines=5 alpha.txt beta.txt`` के साथ चलाने पर, "
+"स्क्रिप्ट ``args.lines`` को ``5`` और ``args.filenames`` को ``['alpha.txt', "
+"'beta.txt']`` पर सेट करती है।"
 
 #: tutorial/stdlib.rst:101
 msgid "Error output redirection and program termination"
-msgstr ""
+msgstr "त्रुटि आउटपुट का रीडायरेक्शन और प्रोग्राम को समाप्त करना"
 
 #: tutorial/stdlib.rst:103
 msgid ""
@@ -160,20 +210,26 @@ msgid ""
 "*stderr*. The latter is useful for emitting warnings and error messages to "
 "make them visible even when *stdout* has been redirected::"
 msgstr ""
+":mod:`sys` मॉड्यूल में *stdin*, *stdout* और *stderr* के लिए भी एट्रिब्यूट हैं। इनमें से "
+"आख़िरी वाला चेतावनियाँ और त्रुटि संदेश भेजने के लिए उपयोगी है, ताकि वे तब भी दिखें जब "
+"*stdout* रीडायरेक्ट किया गया हो::"
 
 #: tutorial/stdlib.rst:107
 msgid ""
 ">>> sys.stderr.write('Warning, log file not found starting a new one\\n')\n"
 "Warning, log file not found starting a new one"
 msgstr ""
+">>> sys.stderr.write('Warning, log file not found starting a new one\\n')\n"
+"Warning, log file not found starting a new one"
 
 #: tutorial/stdlib.rst:110
 msgid "The most direct way to terminate a script is to use ``sys.exit()``."
 msgstr ""
+"किसी स्क्रिप्ट को समाप्त करने का सबसे सीधा तरीका ``sys.exit()`` इस्तेमाल करना है।"
 
 #: tutorial/stdlib.rst:116
 msgid "String pattern matching"
-msgstr ""
+msgstr "स्ट्रिंग पैटर्न मैचिंग"
 
 #: tutorial/stdlib.rst:118
 msgid ""
@@ -181,6 +237,8 @@ msgid ""
 "processing. For complex matching and manipulation, regular expressions offer "
 "succinct, optimized solutions::"
 msgstr ""
+":mod:`re` मॉड्यूल एडवांस्ड स्ट्रिंग प्रोसेसिंग के लिए रेगुलर एक्सप्रेशन टूल देता है। जटिल मैचिंग "
+"और बदलावों के लिए, रेगुलर एक्सप्रेशन संक्षिप्त और ऑप्टिमाइज़ किए गए हल देते हैं::"
 
 #: tutorial/stdlib.rst:122
 msgid ""
@@ -190,28 +248,39 @@ msgid ""
 ">>> re.sub(r'(\\b[a-z]+) \\1', r'\\1', 'cat in the the hat')\n"
 "'cat in the hat'"
 msgstr ""
+">>> import re\n"
+">>> re.findall(r'\\bf[a-z]*', 'which foot or hand fell fastest')\n"
+"['foot', 'fell', 'fastest']\n"
+">>> re.sub(r'(\\b[a-z]+) \\1', r'\\1', 'cat in the the hat')\n"
+"'cat in the hat'"
 
 #: tutorial/stdlib.rst:128
 msgid ""
 "When only simple capabilities are needed, string methods are preferred "
 "because they are easier to read and debug::"
 msgstr ""
+"जब सिर्फ़ सरल क्षमताओं की ज़रूरत हो, तो स्ट्रिंग मेथड बेहतर हैं, क्योंकि उन्हें पढ़ना और डीबग "
+"करना आसान है::"
 
 #: tutorial/stdlib.rst:131
 msgid ""
 ">>> 'tea for too'.replace('too', 'two')\n"
 "'tea for two'"
 msgstr ""
+">>> 'tea for too'.replace('too', 'two')\n"
+"'tea for two'"
 
 #: tutorial/stdlib.rst:138
 msgid "Mathematics"
-msgstr ""
+msgstr "गणित"
 
 #: tutorial/stdlib.rst:140
 msgid ""
 "The :mod:`math` module gives access to the underlying C library functions "
 "for floating-point math::"
 msgstr ""
+":mod:`math` मॉड्यूल फ़्लोटिंग-पॉइंट गणित के लिए आधारभूत C लाइब्रेरी के फ़ंक्शन उपलब्ध कराता "
+"है::"
 
 #: tutorial/stdlib.rst:143
 msgid ""
@@ -221,10 +290,15 @@ msgid ""
 ">>> math.log(1024, 2)\n"
 "10.0"
 msgstr ""
+">>> import math\n"
+">>> math.cos(math.pi / 4)\n"
+"0.70710678118654757\n"
+">>> math.log(1024, 2)\n"
+"10.0"
 
 #: tutorial/stdlib.rst:149
 msgid "The :mod:`random` module provides tools for making random selections::"
-msgstr ""
+msgstr ":mod:`random` मॉड्यूल रैंडम चुनाव करने के टूल देता है::"
 
 #: tutorial/stdlib.rst:151
 msgid ""
@@ -238,12 +312,23 @@ msgid ""
 ">>> random.randrange(6)    # random integer chosen from range(6)\n"
 "4"
 msgstr ""
+">>> import random\n"
+">>> random.choice(['apple', 'pear', 'banana'])\n"
+"'apple'\n"
+">>> random.sample(range(100), 10)   # sampling without replacement\n"
+"[30, 83, 16, 4, 8, 81, 41, 50, 18, 33]\n"
+">>> random.random()    # random float from the interval [0.0, 1.0)\n"
+"0.17970987693706186\n"
+">>> random.randrange(6)    # random integer chosen from range(6)\n"
+"4"
 
 #: tutorial/stdlib.rst:161
 msgid ""
 "The :mod:`statistics` module calculates basic statistical properties (the "
 "mean, median, variance, etc.) of numeric data::"
 msgstr ""
+":mod:`statistics` मॉड्यूल संख्यात्मक डेटा के बुनियादी सांख्यिकीय गुण (माध्य, माध्यिका, "
+"प्रसरण आदि) निकालता है::"
 
 #: tutorial/stdlib.rst:164
 msgid ""
@@ -256,16 +341,24 @@ msgid ""
 ">>> statistics.variance(data)\n"
 "1.3720238095238095"
 msgstr ""
+">>> import statistics\n"
+">>> data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]\n"
+">>> statistics.mean(data)\n"
+"1.6071428571428572\n"
+">>> statistics.median(data)\n"
+"1.25\n"
+">>> statistics.variance(data)\n"
+"1.3720238095238095"
 
 #: tutorial/stdlib.rst:173
 msgid ""
 "The SciPy project <https://scipy.org> has many other modules for numerical "
 "computations."
-msgstr ""
+msgstr "SciPy प्रोजेक्ट <https://scipy.org> में संख्यात्मक गणनाओं के लिए कई दूसरे मॉड्यूल हैं।"
 
 #: tutorial/stdlib.rst:179
 msgid "Internet access"
-msgstr ""
+msgstr "इंटरनेट एक्सेस"
 
 #: tutorial/stdlib.rst:181
 msgid ""
@@ -273,6 +366,9 @@ msgid ""
 "internet protocols. Two of the simplest are :mod:`urllib.request` for "
 "retrieving data from URLs and :mod:`smtplib` for sending mail::"
 msgstr ""
+"इंटरनेट एक्सेस करने और इंटरनेट प्रोटोकॉल प्रोसेस करने के लिए कई मॉड्यूल हैं। इनमें से दो सबसे "
+"सरल हैं: URL से डेटा लाने के लिए :mod:`urllib.request` और मेल भेजने के "
+"लिए :mod:`smtplib`::"
 
 #: tutorial/stdlib.rst:185
 msgid ""
@@ -295,14 +391,32 @@ msgid ""
 "... \"\"\")\n"
 ">>> server.quit()"
 msgstr ""
+">>> from urllib.request import urlopen\n"
+">>> with urlopen('https://docs.python.org/3/') as response:\n"
+"...     for line in response:\n"
+"...         line = line.decode()             # Convert bytes to a str\n"
+"...         if 'updated' in line:\n"
+"...             print(line.rstrip())         # Remove trailing newline\n"
+"...\n"
+"      Last updated on Nov 11, 2025 (20:11 UTC).\n"
+"\n"
+">>> import smtplib\n"
+">>> server = smtplib.SMTP('localhost')\n"
+">>> server.sendmail('soothsayer@example.org', 'jcaesar@example.org',\n"
+"... \"\"\"To: jcaesar@example.org\n"
+"... From: soothsayer@example.org\n"
+"...\n"
+"... Beware the Ides of March.\n"
+"... \"\"\")\n"
+">>> server.quit()"
 
 #: tutorial/stdlib.rst:204
 msgid "(Note that the second example needs a mailserver running on localhost.)"
-msgstr ""
+msgstr "(ध्यान दें कि दूसरे उदाहरण के लिए localhost पर मेलसर्वर चलना ज़रूरी है।)"
 
 #: tutorial/stdlib.rst:210
 msgid "Dates and times"
-msgstr ""
+msgstr "तारीख़ और समय"
 
 #: tutorial/stdlib.rst:212
 msgid ""
@@ -312,6 +426,10 @@ msgid ""
 "for output formatting and manipulation.  The module also supports objects "
 "that are timezone aware. ::"
 msgstr ""
+":mod:`datetime` मॉड्यूल तारीख़ों और समय के साथ सरल और जटिल, दोनों तरीकों से काम करने "
+"के लिए क्लास देता है। तारीख़ और समय का अंकगणित सपोर्ट होता है, लेकिन इसे लागू करने में "
+"ध्यान आउटपुट फ़ॉर्मैटिंग और बदलाव के लिए सदस्यों को कुशलता से निकालने पर है। यह मॉड्यूल "
+"टाइमज़ोन को ध्यान में रखने वाले ऑब्जेक्ट भी सपोर्ट करता है। ::"
 
 #: tutorial/stdlib.rst:218
 msgid ""
@@ -329,10 +447,23 @@ msgid ""
 ">>> age.days\n"
 "14368"
 msgstr ""
+">>> # dates are easily constructed and formatted\n"
+">>> import datetime as dt\n"
+">>> now = dt.date.today()\n"
+">>> now\n"
+"datetime.date(2003, 12, 2)\n"
+">>> now.strftime(\"%m-%d-%y. %d %b %Y is a %A on the %d day of %B.\")\n"
+"'12-02-03. 02 Dec 2003 is a Tuesday on the 02 day of December.'\n"
+"\n"
+">>> # dates support calendar arithmetic\n"
+">>> birthday = dt.date(1964, 7, 31)\n"
+">>> age = now - birthday\n"
+">>> age.days\n"
+"14368"
 
 #: tutorial/stdlib.rst:236
 msgid "Data compression"
-msgstr ""
+msgstr "डेटा कंप्रेशन"
 
 #: tutorial/stdlib.rst:238
 msgid ""
@@ -341,6 +472,9 @@ msgid ""
 "including: :mod:`zlib`, :mod:`gzip`, :mod:`bz2`, :mod:`lzma`, :mod:`zipfile` "
 "and :mod:`tarfile`. ::"
 msgstr ""
+"आम डेटा आर्काइविंग और कंप्रेशन फ़ॉर्मैट को सीधे सपोर्ट करने वाले मॉड्यूल "
+"हैं: :mod:`zlib`, :mod:`gzip`, :mod:`bz2`, :mod:`lzma`, :mod:`zipfile` "
+"और :mod:`tarfile`। ::"
 
 #: tutorial/stdlib.rst:242
 msgid ""
@@ -356,10 +490,21 @@ msgid ""
 ">>> zlib.crc32(s)\n"
 "226805979"
 msgstr ""
+">>> import zlib\n"
+">>> s = b'witch which has which witches wrist watch'\n"
+">>> len(s)\n"
+"41\n"
+">>> t = zlib.compress(s)\n"
+">>> len(t)\n"
+"37\n"
+">>> zlib.decompress(t)\n"
+"b'witch which has which witches wrist watch'\n"
+">>> zlib.crc32(s)\n"
+"226805979"
 
 #: tutorial/stdlib.rst:258
 msgid "Performance measurement"
-msgstr ""
+msgstr "परफ़ॉर्मेंस मापना"
 
 #: tutorial/stdlib.rst:260
 msgid ""
@@ -367,6 +512,8 @@ msgid ""
 "performance of different approaches to the same problem. Python provides a "
 "measurement tool that answers those questions immediately."
 msgstr ""
+"कुछ पायथन यूज़र एक ही समस्या के अलग-अलग तरीकों का तुलनात्मक परफ़ॉर्मेंस जानने में गहरी रुचि "
+"रखते हैं। पायथन एक मापने वाला टूल देता है जो इन सवालों का तुरंत जवाब देता है।"
 
 #: tutorial/stdlib.rst:264
 msgid ""
@@ -375,6 +522,9 @@ msgid ""
 "The :mod:`timeit` module quickly demonstrates a modest performance "
 "advantage::"
 msgstr ""
+"उदाहरण के लिए, आर्ग्युमेंट की अदला-बदली के पारंपरिक तरीके के बजाय टपल पैकिंग और अनपैकिंग "
+"की सुविधा इस्तेमाल करने का मन हो सकता है। :mod:`timeit` मॉड्यूल जल्दी दिखा देता है कि "
+"इससे परफ़ॉर्मेंस में थोड़ा फ़ायदा होता है::"
 
 #: tutorial/stdlib.rst:268
 msgid ""
@@ -384,6 +534,11 @@ msgid ""
 ">>> Timer('a,b = b,a', 'a=1; b=2').timeit()\n"
 "0.54962537085770791"
 msgstr ""
+">>> from timeit import Timer\n"
+">>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()\n"
+"0.57535828626024577\n"
+">>> Timer('a,b = b,a', 'a=1; b=2').timeit()\n"
+"0.54962537085770791"
 
 #: tutorial/stdlib.rst:274
 msgid ""
@@ -391,10 +546,12 @@ msgid ""
 "and :mod:`pstats` modules provide tools for identifying time critical "
 "sections in larger blocks of code."
 msgstr ""
+":mod:`timeit` के बारीक स्तर के उलट, :mod:`profile` और :mod:`pstats` मॉड्यूल कोड के "
+"बड़े ब्लॉकों में समय के लिहाज़ से अहम हिस्सों को पहचानने के टूल देते हैं।"
 
 #: tutorial/stdlib.rst:282
 msgid "Quality control"
-msgstr ""
+msgstr "क्वालिटी कंट्रोल"
 
 #: tutorial/stdlib.rst:284
 msgid ""
@@ -402,6 +559,8 @@ msgid ""
 "function as it is developed and to run those tests frequently during the "
 "development process."
 msgstr ""
+"अच्छी क्वालिटी का सॉफ़्टवेयर बनाने का एक तरीका यह है कि हर फ़ंक्शन को बनाते समय उसके लिए "
+"टेस्ट लिखें, और डेवलपमेंट के दौरान उन टेस्ट को बार-बार चलाएँ।"
 
 #: tutorial/stdlib.rst:288
 msgid ""
@@ -412,6 +571,11 @@ msgid ""
 "example and it allows the doctest module to make sure the code remains true "
 "to the documentation::"
 msgstr ""
+":mod:`doctest` मॉड्यूल किसी मॉड्यूल को स्कैन करने और प्रोग्राम के डॉकस्ट्रिंग में लिखे टेस्ट "
+"की जाँच करने का टूल देता है। टेस्ट बनाना उतना ही आसान है जितना किसी आम कॉल को उसके "
+"नतीजों के साथ कॉपी करके डॉकस्ट्रिंग में पेस्ट करना। इससे यूज़र को एक उदाहरण मिलता है, जिससे "
+"डॉक्यूमेंटेशन बेहतर होता है, और doctest मॉड्यूल यह पक्का कर पाता है कि कोड डॉक्यूमेंटेशन के "
+"मुताबिक बना रहे::"
 
 #: tutorial/stdlib.rst:295
 msgid ""
@@ -426,6 +590,16 @@ msgid ""
 "import doctest\n"
 "doctest.testmod()   # automatically validate the embedded tests"
 msgstr ""
+"def average(values):\n"
+"    \"\"\"Computes the arithmetic mean of a list of numbers.\n"
+"\n"
+"    >>> print(average([20, 30, 70]))\n"
+"    40.0\n"
+"    \"\"\"\n"
+"    return sum(values) / len(values)\n"
+"\n"
+"import doctest\n"
+"doctest.testmod()   # automatically validate the embedded tests"
 
 #: tutorial/stdlib.rst:306
 msgid ""
@@ -433,6 +607,8 @@ msgid ""
 "module, but it allows a more comprehensive set of tests to be maintained in "
 "a separate file::"
 msgstr ""
+":mod:`unittest` मॉड्यूल :mod:`doctest` मॉड्यूल जितना आसान नहीं है, लेकिन इससे टेस्ट का "
+"ज़्यादा व्यापक सेट एक अलग फ़ाइल में रखा जा सकता है::"
 
 #: tutorial/stdlib.rst:310
 msgid ""
@@ -450,10 +626,23 @@ msgid ""
 "\n"
 "unittest.main()  # Calling from the command line invokes all tests"
 msgstr ""
+"import unittest\n"
+"\n"
+"class TestStatisticalFunctions(unittest.TestCase):\n"
+"\n"
+"    def test_average(self):\n"
+"        self.assertEqual(average([20, 30, 70]), 40.0)\n"
+"        self.assertEqual(round(average([1, 5, 7]), 1), 4.3)\n"
+"        with self.assertRaises(ZeroDivisionError):\n"
+"            average([])\n"
+"        with self.assertRaises(TypeError):\n"
+"            average(20, 30, 70)\n"
+"\n"
+"unittest.main()  # Calling from the command line invokes all tests"
 
 #: tutorial/stdlib.rst:328
 msgid "Batteries included"
-msgstr ""
+msgstr "बैटरियाँ शामिल हैं"
 
 #: tutorial/stdlib.rst:330
 msgid ""
@@ -461,6 +650,8 @@ msgid ""
 "the sophisticated and robust capabilities of its larger packages. For "
 "example:"
 msgstr ""
+"पायथन का दर्शन \"बैटरियाँ शामिल हैं\" (batteries included) का है। यह इसके बड़े पैकेजों "
+"की परिष्कृत और मज़बूत क्षमताओं में सबसे अच्छी तरह दिखता है। उदाहरण के लिए:"
 
 #: tutorial/stdlib.rst:333
 msgid ""
@@ -468,6 +659,9 @@ msgid ""
 "remote procedure calls into an almost trivial task.  Despite the modules' "
 "names, no direct knowledge or handling of XML is needed."
 msgstr ""
+":mod:`xmlrpc.client` और :mod:`xmlrpc.server` मॉड्यूल रिमोट प्रोसीजर कॉल लागू "
+"करना लगभग मामूली काम बना देते हैं। मॉड्यूलों के नाम के बावजूद, XML की सीधी जानकारी या "
+"उसे संभालने की कोई ज़रूरत नहीं है।"
 
 #: tutorial/stdlib.rst:337
 msgid ""
@@ -478,6 +672,10 @@ msgid ""
 "structures (including attachments) and for implementing internet encoding "
 "and header protocols."
 msgstr ""
+":mod:`email` पैकेज ईमेल संदेशों को मैनेज करने की लाइब्रेरी है, जिसमें MIME और :rfc:`5322` "
+"पर आधारित दूसरे संदेश दस्तावेज़ शामिल हैं। :mod:`smtplib` और :mod:`poplib` के उलट, जो "
+"असल में संदेश भेजते और पाते हैं, email पैकेज में जटिल संदेश स्ट्रक्चर (अटैचमेंट सहित) बनाने या "
+"डिकोड करने, और इंटरनेट एन्कोडिंग और हेडर प्रोटोकॉल लागू करने के लिए टूल का पूरा सेट है।"
 
 #: tutorial/stdlib.rst:344
 msgid ""
@@ -489,6 +687,12 @@ msgid ""
 "packages. Together, these modules and packages greatly simplify data "
 "interchange between Python applications and other tools."
 msgstr ""
+":mod:`json` पैकेज इस लोकप्रिय डेटा इंटरचेंज फ़ॉर्मैट को पार्स करने के लिए मज़बूत सपोर्ट देता "
+"है। :mod:`csv` मॉड्यूल Comma-Separated Value फ़ॉर्मैट की फ़ाइलों को सीधे पढ़ने और लिखने "
+"को सपोर्ट करता है, जिसे डेटाबेस और स्प्रेडशीट आम तौर पर सपोर्ट करते हैं। XML "
+"प्रोसेसिंग :mod:`xml.etree.ElementTree`, :mod:`xml.dom` और :mod:`xml.sax` पैकेज से "
+"सपोर्ट होती है। ये मॉड्यूल और पैकेज मिलकर पायथन एप्लिकेशन और दूसरे टूल के बीच डेटा के आदान-"
+"प्रदान को बहुत आसान बना देते हैं।"
 
 #: tutorial/stdlib.rst:353
 msgid ""
@@ -496,17 +700,21 @@ msgid ""
 "providing a persistent database that can be updated and accessed using "
 "slightly nonstandard SQL syntax."
 msgstr ""
+":mod:`sqlite3` मॉड्यूल SQLite डेटाबेस लाइब्रेरी का एक रैपर है, जो एक स्थायी डेटाबेस देता "
+"है, जिसे थोड़े गैर-मानक SQL सिंटैक्स से अपडेट और एक्सेस किया जा सकता है।"
 
 #: tutorial/stdlib.rst:357
 msgid ""
 "Internationalization is supported by a number of modules "
 "including :mod:`gettext`, :mod:`locale`, and the :mod:`codecs` package."
 msgstr ""
+"अंतरराष्ट्रीयकरण कई मॉड्यूल से सपोर्ट होता है, जिनमें :mod:`gettext`, :mod:`locale` "
+"और :mod:`codecs` पैकेज शामिल हैं।"
 
 #: tutorial/stdlib.rst:27
 msgid "built-in function"
-msgstr ""
+msgstr "बिल्ट-इन फ़ंक्शन"
 
 #: tutorial/stdlib.rst:27
 msgid "help"
-msgstr ""
+msgstr "help"
