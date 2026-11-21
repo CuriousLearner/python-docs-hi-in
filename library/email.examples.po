@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/email.examples.rst:4
+#: library/email.examples.rst:4
 msgid ":mod:`email`: Examples"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:6
+#: library/email.examples.rst:6
 msgid ""
 "Here are a few examples of how to use the :mod:`email` package to read, "
 "write, and send simple email messages, as well as more complex MIME messages."
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:9
+#: library/email.examples.rst:9
 msgid ""
 "First, let's see how to create and send a simple text message (both the text "
-"content and the addresses may contain unicode characters):"
+"content and the addresses may contain Unicode characters):"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:12
+#: library/email.examples.rst:12
 msgid ""
 "# Import smtplib for the actual sending function\n"
 "import smtplib\n"
@@ -59,13 +59,13 @@ msgid ""
 "s.quit()\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:15
+#: library/email.examples.rst:15
 msgid ""
 "Parsing :rfc:`822` headers can easily be done by the using the classes from "
 "the :mod:`~email.parser` module:"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:18
+#: library/email.examples.rst:18
 msgid ""
 "# Import the email modules we'll need\n"
 "#from email.parser import BytesParser\n"
@@ -94,13 +94,13 @@ msgid ""
 "print('Sender name: {}'.format(headers['from'].addresses[0].display_name))\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:21
+#: library/email.examples.rst:21
 msgid ""
 "Here's an example of how to send a MIME message containing a bunch of family "
 "pictures that may be residing in a directory:"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:24
+#: library/email.examples.rst:24
 msgid ""
 "# Import smtplib for the actual sending function.\n"
 "import smtplib\n"
@@ -130,13 +130,13 @@ msgid ""
 "    s.send_message(msg)\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:27
+#: library/email.examples.rst:27
 msgid ""
 "Here's an example of how to send the entire contents of a directory as an "
 "email message: [1]_"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:30
+#: library/email.examples.rst:30
 msgid ""
 "#!/usr/bin/env python3\n"
 "\n"
@@ -224,13 +224,13 @@ msgid ""
 "    main()\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:33
+#: library/email.examples.rst:33
 msgid ""
 "Here's an example of how to unpack a MIME message like the one above, into a "
 "directory of files:"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:36
+#: library/email.examples.rst:36
 msgid ""
 "#!/usr/bin/env python3\n"
 "\n"
@@ -288,7 +288,7 @@ msgid ""
 "    main()\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:39
+#: library/email.examples.rst:39
 msgid ""
 "Here's an example of how to create an HTML message with an alternative plain "
 "text version.  To make things a bit more interesting, we include a related "
@@ -296,7 +296,7 @@ msgid ""
 "disk, as well as sending it."
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:44
+#: library/email.examples.rst:44
 msgid ""
 "#!/usr/bin/env python3\n"
 "\n"
@@ -359,13 +359,13 @@ msgid ""
 "    s.send_message(msg)\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:47
+#: library/email.examples.rst:47
 msgid ""
 "If we were sent the message from the last example, here is one way we could "
 "process it:"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:50
+#: library/email.examples.rst:50
 msgid ""
 "import os\n"
 "import sys\n"
@@ -425,8 +425,8 @@ msgid ""
 "    elif richest['content-type'].subtype == 'html':\n"
 "        body = richest\n"
 "    else:\n"
-"        print(\"Don't know how to display {}\".format(richest."
-"get_content_type()))\n"
+"        print(\"Don't know how to display {}"
+"\".format(richest.get_content_type()))\n"
 "        sys.exit()\n"
 "elif richest['content-type'].content_type == 'multipart/related':\n"
 "    body = richest.get_body(preferencelist=('html'))\n"
@@ -442,8 +442,8 @@ msgid ""
 "            # again strip the <> to go from email form of cid to html form.\n"
 "            partfiles[part['content-id'][1:-1]] = f.name\n"
 "else:\n"
-"    print(\"Don't know how to display {}\".format(richest."
-"get_content_type()))\n"
+"    print(\"Don't know how to display {}"
+"\".format(richest.get_content_type()))\n"
 "    sys.exit()\n"
 "with tempfile.NamedTemporaryFile(mode='w', delete=False) as f:\n"
 "    f.write(magic_html_parser(body.get_content(), partfiles))\n"
@@ -456,11 +456,11 @@ msgid ""
 "# minded program, but it will handle the most common ones.\n"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:52
+#: library/email.examples.rst:52
 msgid "Up to the prompt, the output from the above is:"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:54
+#: library/email.examples.rst:54
 msgid ""
 "To: Penelope Pussycat <penelope@example.com>, Fabrette Pussycat "
 "<fabrette@example.com>\n"
@@ -472,11 +472,11 @@ msgid ""
 "Cette recette [1] sera sûrement un très bon repas."
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:66
+#: library/email.examples.rst:66
 msgid "Footnotes"
 msgstr ""
 
-#: ../Doc/library/email.examples.rst:67
+#: library/email.examples.rst:67
 msgid ""
 "Thanks to Matthew Dixon Cowles for the original inspiration and examples."
 msgstr ""

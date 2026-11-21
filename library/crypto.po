@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/crypto.rst:5
+#: library/crypto.rst:5
 msgid "Cryptographic Services"
 msgstr ""
 
-#: ../Doc/library/crypto.rst:9
+#: library/crypto.rst:9
 msgid ""
 "The modules described in this chapter implement various algorithms of a "
 "cryptographic nature.  They are available at the discretion of the "
 "installation. Here's an overview:"
 msgstr ""
 
-#: ../Doc/library/crypto.rst:7
+#: library/crypto.rst:7
 msgid "cryptography"
 msgstr ""

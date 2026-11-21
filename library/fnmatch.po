@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,77 +17,77 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/fnmatch.rst:2
+#: library/fnmatch.rst:2
 msgid ":mod:`!fnmatch` --- Unix filename pattern matching"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:7
+#: library/fnmatch.rst:7
 msgid "**Source code:** :source:`Lib/fnmatch.py`"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:15
+#: library/fnmatch.rst:15
 msgid ""
 "This module provides support for Unix shell-style wildcards, which are *not* "
 "the same as regular expressions (which are documented in the :mod:`re` "
 "module).  The special characters used in shell-style wildcards are:"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:27
+#: library/fnmatch.rst:27
 msgid "Pattern"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:27
+#: library/fnmatch.rst:27
 msgid "Meaning"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:29
+#: library/fnmatch.rst:29
 msgid "``*``"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:29
+#: library/fnmatch.rst:29
 msgid "matches everything"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:31
+#: library/fnmatch.rst:31
 msgid "``?``"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:31
+#: library/fnmatch.rst:31
 msgid "matches any single character"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:33
+#: library/fnmatch.rst:33
 msgid "``[seq]``"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:33
+#: library/fnmatch.rst:33
 msgid "matches any character in *seq*"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:35
+#: library/fnmatch.rst:35
 msgid "``[!seq]``"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:35
+#: library/fnmatch.rst:35
 msgid "matches any character not in *seq*"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:38
+#: library/fnmatch.rst:38
 msgid ""
 "For a literal match, wrap the meta-characters in brackets. For example, "
 "``'[?]'`` matches the character ``'?'``."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:43
+#: library/fnmatch.rst:43
 msgid ""
 "Note that the filename separator (``'/'`` on Unix) is *not* special to this "
-"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` uses :"
-"func:`.filter` to match pathname segments).  Similarly, filenames starting "
-"with a period are not special for this module, and are matched by the ``*`` "
-"and ``?`` patterns."
+"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` "
+"uses :func:`.filter` to match pathname segments).  Similarly, filenames "
+"starting with a period are not special for this module, and are matched by "
+"the ``*`` and ``?`` patterns."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:49
+#: library/fnmatch.rst:49
 msgid ""
 "Unless stated otherwise, \"filename string\" and \"pattern string\" either "
 "refer to :class:`str` or ``ISO-8859-1`` encoded :class:`bytes` objects. Note "
@@ -95,29 +95,29 @@ msgid ""
 "pattern with a :class:`!str` filename, and vice-versa."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:54
+#: library/fnmatch.rst:54
 msgid ""
-"Finally, note that :func:`functools.lru_cache` with a *maxsize* of 32768 is "
+"Finally, note that :deco:`functools.lru_cache` with a *maxsize* of 32768 is "
 "used to cache the (typed) compiled regex patterns in the following "
-"functions: :func:`fnmatch`, :func:`fnmatchcase`, :func:`.filter`."
+"functions: :func:`~fnmatch.fnmatch`, :func:`fnmatchcase`, :func:`.filter`, :func:`.filterfalse`."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:61
+#: library/fnmatch.rst:62
 msgid ""
 "Test whether the filename string *name* matches the pattern string *pat*, "
-"returning ``True`` or ``False``.  Both parameters are case-normalized using :"
-"func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a case-"
-"sensitive comparison, regardless of whether that's standard for the "
+"returning ``True`` or ``False``.  Both parameters are case-normalized "
+"using :func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a "
+"case-sensitive comparison, regardless of whether that's standard for the "
 "operating system."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:67
+#: library/fnmatch.rst:68
 msgid ""
 "This example will print all file names in the current directory with the "
 "extension ``.txt``::"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:70
+#: library/fnmatch.rst:71
 msgid ""
 "import fnmatch\n"
 "import os\n"
@@ -127,78 +127,87 @@ msgid ""
 "        print(file)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:80
+#: library/fnmatch.rst:81
 msgid ""
 "Test whether the filename string *name* matches the pattern string *pat*, "
 "returning ``True`` or ``False``; the comparison is case-sensitive and does "
 "not apply :func:`os.path.normcase`."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:87
+#: library/fnmatch.rst:88
 msgid ""
 "Construct a list from those elements of the :term:`iterable` of filename "
 "strings *names* that match the pattern string *pat*. It is the same as ``[n "
 "for n in names if fnmatch(n, pat)]``, but implemented more efficiently."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:95
+#: library/fnmatch.rst:96
 msgid ""
-"Return the shell-style pattern *pat* converted to a regular expression for "
-"using with :func:`re.match`. The pattern is expected to be a :class:`str`."
+"Construct a list from those elements of the :term:`iterable` of filename "
+"strings *names* that do not match the pattern string *pat*. It is the same "
+"as ``[n for n in names if not fnmatch(n, pat)]``, but implemented more "
+"efficiently."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:98
+#: library/fnmatch.rst:106
+msgid ""
+"Return the shell-style pattern *pat* converted to a regular expression for "
+"using with :func:`re.prefixmatch`. The pattern is expected to be "
+"a :class:`str`."
+msgstr ""
+
+#: library/fnmatch.rst:110
 msgid "Example:"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:112
+#: library/fnmatch.rst:124
 msgid "Module :mod:`glob`"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:113
+#: library/fnmatch.rst:125
 msgid "Unix shell-style path expansion."
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:9
+#: library/fnmatch.rst:9
 msgid "filenames"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:9
+#: library/fnmatch.rst:9
 msgid "wildcard expansion"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:11 ../Doc/library/fnmatch.rst:41
+#: library/fnmatch.rst:11 library/fnmatch.rst:41
 msgid "module"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:11
+#: library/fnmatch.rst:11
 msgid "re"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "* (asterisk)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "in glob-style wildcards"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "? (question mark)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "[] (square brackets)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "! (exclamation)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:19
+#: library/fnmatch.rst:19
 msgid "- (minus)"
 msgstr ""
 
-#: ../Doc/library/fnmatch.rst:41
+#: library/fnmatch.rst:41
 msgid "glob"
 msgstr ""
