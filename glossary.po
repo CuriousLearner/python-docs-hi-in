@@ -19,7 +19,7 @@ msgstr ""
 
 #: glossary.rst:5
 msgid "Glossary"
-msgstr "शब्दकोष"
+msgstr "शब्दावली"
 
 #: glossary.rst:10
 msgid "``>>>``"
@@ -30,9 +30,8 @@ msgid ""
 "The default Python prompt of the :term:`interactive` shell.  Often seen for "
 "code examples which can be executed interactively in the interpreter."
 msgstr ""
-"यह :term:`इंटरैक्टिव <interactive>` शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट है। यह अक्सर कोड "
-"उदाहरणों के लिए देखा जाता है जिसे दुभाषिया में अंतःक्रियात्मक रूप से निष्पादित किया जा "
-"सकता है।"
+"यह :term:`इंटरैक्टिव <interactive>` शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट है। यह अक्सर उन कोड "
+"उदाहरणों में दिखता है, जिन्हें इंटरप्रेटर में इंटरैक्टिव रूप से चलाया जा सकता है।"
 
 #: glossary.rst:15
 msgid "``...``"
@@ -49,9 +48,9 @@ msgid ""
 "right delimiters (parentheses, square brackets, curly braces or triple "
 "quotes), or after specifying a decorator."
 msgstr ""
-"एक इंडेंट किए गए कोड ब्लॉक के लिए कोड दर्ज करते समय :term:`इंटरैक्टिव <interactive>` "
-"शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट, जब बाएं और दाएं सीमांकक (कोष्ठक, वर्ग ब्रैकेट, घुंघराले "
-"ब्रेसिज़ या ट्रिपल उद्धरण) की एक जोड़ी के भीतर, या एक डेकोरेटर निर्दिष्ट करने के बाद।"
+"जब आप इंडेंट किए गए कोड ब्लॉक का कोड लिख रहे हों, मेल खाते बाएँ और दाएँ सीमांककों "
+"(कोष्ठक, स्क्वेयर ब्रैकेट, कर्ली ब्रेसिज़ या ट्रिपल कोट) की जोड़ी के भीतर हों, या डेकोरेटर "
+"लिखने के बाद, तब :term:`इंटरैक्टिव <interactive>` शेल का डिफ़ॉल्ट पायथन प्रॉम्प्ट।"
 
 #: glossary.rst:26
 msgid ""
@@ -103,7 +102,7 @@ msgstr ""
 
 #: glossary.rst:48
 msgid "annotation"
-msgstr "टिप्पणी"
+msgstr "एनोटेशन"
 
 #: glossary.rst:50
 msgid ""
@@ -129,7 +128,7 @@ msgstr ""
 
 #: glossary.rst:63
 msgid "argument"
-msgstr "तर्क"
+msgstr "आर्ग्युमेंट"
 
 #: glossary.rst:65
 msgid ""
