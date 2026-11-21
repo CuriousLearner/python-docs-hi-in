@@ -237,7 +237,7 @@ msgid ""
 "etc.  (Consult the :ref:`installing-index` guide for complete documentation "
 "for ``pip``.)"
 msgstr ""
-"``pip`` के कई सबकमांड हैं: \"install\", \"uninstall\", \"freeze\" वगैरह। (``pip`` "
+"``pip`` के कई सबकमांड हैं: \"install\", \"uninstall\", \"freeze\" वग़ैरह। (``pip`` "
 "के पूरे डॉक्यूमेंटेशन के लिए :ref:`installing-index` गाइड देखें।)"
 
 #: tutorial/venv.rst:114
