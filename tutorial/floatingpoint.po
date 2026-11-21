@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: tutorial/floatingpoint.rst:10
 msgid "Floating-Point Arithmetic:  Issues and Limitations"
-msgstr ""
+msgstr "फ़्लोटिंग-पॉइंट अंकगणित: समस्याएँ और सीमाएँ"
 
 #: tutorial/floatingpoint.rst:12
 msgid ""
@@ -30,6 +30,11 @@ msgid ""
 "values, the only real difference being that the first is written in base 10 "
 "fractional notation, and the second in base 2."
 msgstr ""
+"कंप्यूटर हार्डवेयर में फ़्लोटिंग-पॉइंट नंबर आधार 2 (बाइनरी) भिन्नों के रूप में दर्शाए जाते हैं। "
+"उदाहरण के लिए, **दशमलव** भिन्न ``0.625`` का मान 6/10 + 2/100 + 5/1000 है, और "
+"इसी तरह **बाइनरी** भिन्न ``0.101`` का मान 1/2 + 0/4 + 1/8 है। इन दोनों भिन्नों के "
+"मान बिल्कुल बराबर हैं; असल अंतर सिर्फ़ इतना है कि पहली आधार 10 की भिन्न-पद्धति में लिखी "
+"गई है, और दूसरी आधार 2 में।"
 
 #: tutorial/floatingpoint.rst:19
 msgid ""
@@ -38,28 +43,33 @@ msgid ""
 "point numbers you enter are only approximated by the binary floating-point "
 "numbers actually stored in the machine."
 msgstr ""
+"दुर्भाग्य से, ज़्यादातर दशमलव भिन्नों को बाइनरी भिन्नों के रूप में सटीक रूप से नहीं दर्शाया जा "
+"सकता। इसका नतीजा यह है कि, आम तौर पर, आप जो दशमलव फ़्लोटिंग-पॉइंट नंबर डालते हैं, "
+"मशीन में असल में रखे गए बाइनरी फ़्लोटिंग-पॉइंट नंबर उनके सिर्फ़ सन्निकट मान होते हैं।"
 
 #: tutorial/floatingpoint.rst:24
 msgid ""
 "The problem is easier to understand at first in base 10.  Consider the "
 "fraction 1/3.  You can approximate that as a base 10 fraction::"
 msgstr ""
+"शुरुआत में यह समस्या आधार 10 में समझना आसान है। भिन्न 1/3 को लें। आप इसे आधार 10 की भिन्न "
+"के रूप में लगभग इस तरह लिख सकते हैं::"
 
 #: tutorial/floatingpoint.rst:27
 msgid "0.3"
-msgstr ""
+msgstr "0.3"
 
 #: tutorial/floatingpoint.rst:29 tutorial/floatingpoint.rst:33
 msgid "or, better, ::"
-msgstr ""
+msgstr "या, बेहतर, ::"
 
 #: tutorial/floatingpoint.rst:31
 msgid "0.33"
-msgstr ""
+msgstr "0.33"
 
 #: tutorial/floatingpoint.rst:35
 msgid "0.333"
-msgstr ""
+msgstr "0.333"
 
 #: tutorial/floatingpoint.rst:37
 msgid ""
@@ -67,6 +77,8 @@ msgid ""
 "result will never be exactly 1/3, but will be an increasingly better "
 "approximation of 1/3."
 msgstr ""
+"और इसी तरह आगे। आप चाहे जितने भी अंक लिखें, नतीजा कभी भी ठीक 1/3 नहीं होगा, लेकिन "
+"1/3 का लगातार बेहतर होता सन्निकट मान होगा।"
 
 #: tutorial/floatingpoint.rst:41
 msgid ""
@@ -74,10 +86,13 @@ msgid ""
 "decimal value 0.1 cannot be represented exactly as a base 2 fraction.  In "
 "base 2, 1/10 is the infinitely repeating fraction ::"
 msgstr ""
+"इसी तरह, आप आधार 2 के चाहे जितने भी अंक इस्तेमाल करें, दशमलव मान 0.1 को आधार 2 की "
+"भिन्न के रूप में सटीक रूप से नहीं दर्शाया जा सकता। आधार 2 में, 1/10 यह अनंत तक दोहराई "
+"जाने वाली भिन्न है ::"
 
 #: tutorial/floatingpoint.rst:45
 msgid "0.0001100110011001100110011001100110011001100110011..."
-msgstr ""
+msgstr "0.0001100110011001100110011001100110011001100110011..."
 
 #: tutorial/floatingpoint.rst:47
 msgid ""
@@ -88,6 +103,11 @@ msgid ""
 "fraction is ``3602879701896397 / 2 ** 55`` which is close to but not exactly "
 "equal to the true value of 1/10."
 msgstr ""
+"बिट की किसी भी सीमित संख्या पर रुकें, तो आपको एक सन्निकट मान मिलता है। आज ज़्यादातर "
+"मशीनों पर, फ़्लोट को एक ऐसी बाइनरी भिन्न से सन्निकट किया जाता है जिसका अंश सबसे "
+"महत्वपूर्ण बिट से शुरू होने वाले पहले 53 बिट इस्तेमाल करता है, और जिसका हर दो की कोई घात "
+"होता है। 1/10 के मामले में, बाइनरी भिन्न ``3602879701896397 / 2 ** 55`` है, जो 1/10 "
+"के असली मान के पास है, लेकिन ठीक उसके बराबर नहीं।"
 
 #: tutorial/floatingpoint.rst:54
 msgid ""
@@ -97,30 +117,42 @@ msgid ""
 "if Python were to print the true decimal value of the binary approximation "
 "stored for 0.1, it would have to display::"
 msgstr ""
+"बहुत से यूज़र इस सन्निकटन से अनजान रहते हैं, क्योंकि मान इस तरह दिखाए जाते हैं। पायथन मशीन "
+"में रखे बाइनरी सन्निकट मान के असली दशमलव मान का सिर्फ़ एक दशमलव सन्निकट मान प्रिंट "
+"करता है। ज़्यादातर मशीनों पर, अगर पायथन 0.1 के लिए रखे गए बाइनरी सन्निकट मान का "
+"असली दशमलव मान प्रिंट करता, तो उसे यह दिखाना पड़ता::"
 
 #: tutorial/floatingpoint.rst:60
 msgid ""
 ">>> 0.1\n"
 "0.1000000000000000055511151231257827021181583404541015625"
 msgstr ""
+">>> 0.1\n"
+"0.1000000000000000055511151231257827021181583404541015625"
 
 #: tutorial/floatingpoint.rst:63
 msgid ""
 "That is more digits than most people find useful, so Python keeps the number "
 "of digits manageable by displaying a rounded value instead:"
 msgstr ""
+"यह ज़्यादातर लोगों के काम आने वाले अंकों से कहीं ज़्यादा है, इसलिए पायथन इसके बजाय राउंड "
+"किया हुआ मान दिखाकर अंकों की संख्या संभालने लायक रखता है:"
 
 #: tutorial/floatingpoint.rst:66
 msgid ""
 ">>> 1 / 10\n"
 "0.1"
 msgstr ""
+">>> 1 / 10\n"
+"0.1"
 
 #: tutorial/floatingpoint.rst:71
 msgid ""
 "Just remember, even though the printed result looks like the exact value of "
 "1/10, the actual stored value is the nearest representable binary fraction."
 msgstr ""
+"बस याद रखें, भले ही प्रिंट किया गया नतीजा 1/10 के सटीक मान जैसा दिखे, असल में रखा गया "
+"मान सबसे पास की दर्शाने योग्य बाइनरी भिन्न है।"
 
 #: tutorial/floatingpoint.rst:74
 msgid ""
@@ -132,6 +164,12 @@ msgid ""
 "values share the same approximation, any one of them could be displayed "
 "while still preserving the invariant ``eval(repr(x)) == x``."
 msgstr ""
+"दिलचस्प बात यह है कि कई अलग-अलग दशमलव नंबरों की सबसे पास की सन्निकट बाइनरी भिन्न एक "
+"ही होती है। उदाहरण के लिए, ``0.1``, ``0.10000000000000001`` और "
+"``0.1000000000000000055511151231257827021181583404541015625``, इन सभी नंबरों "
+"का सन्निकट मान ``3602879701896397 / 2 ** 55`` है। चूँकि इन सभी दशमलव मानों का "
+"सन्निकट मान एक ही है, इनमें से कोई भी दिखाया जा सकता है, और फिर भी ``eval(repr(x)) "
+"== x`` वाली शर्त (इनवेरिएंट) बनी रहती है।"
 
 #: tutorial/floatingpoint.rst:82
 msgid ""
@@ -140,6 +178,9 @@ msgid ""
 "Starting with Python 3.1, Python (on most systems) is now able to choose the "
 "shortest of these and simply display ``0.1``."
 msgstr ""
+"पहले, पायथन प्रॉम्प्ट और बिल्ट-इन :func:`repr` फ़ंक्शन 17 सार्थक अंकों वाला नंबर "
+"``0.10000000000000001`` चुनते थे। पायथन 3.1 से, पायथन (ज़्यादातर सिस्टम पर) अब इनमें "
+"से सबसे छोटा चुनकर सीधे ``0.1`` दिखा सकता है।"
 
 #: tutorial/floatingpoint.rst:87
 msgid ""
@@ -149,12 +190,18 @@ msgid ""
 "arithmetic (although some languages may not *display* the difference by "
 "default, or in all output modes)."
 msgstr ""
+"ध्यान दें कि यह बाइनरी फ़्लोटिंग पॉइंट के स्वभाव में ही है: यह पायथन का बग नहीं है, और आपके "
+"कोड का बग भी नहीं है। आपको यही चीज़ उन सभी भाषाओं में दिखेगी जो आपके हार्डवेयर के "
+"फ़्लोटिंग-पॉइंट अंकगणित को सपोर्ट करती हैं (हालाँकि कुछ भाषाएँ यह अंतर डिफ़ॉल्ट रूप से, या "
+"हर आउटपुट मोड में, शायद *न दिखाएँ*)।"
 
 #: tutorial/floatingpoint.rst:93
 msgid ""
 "For more pleasant output, you may wish to use string formatting to produce a "
 "limited number of significant digits:"
 msgstr ""
+"ज़्यादा अच्छे आउटपुट के लिए, आप सीमित संख्या में सार्थक अंक दिखाने के लिए स्ट्रिंग फ़ॉर्मैटिंग "
+"इस्तेमाल कर सकते हैं:"
 
 #: tutorial/floatingpoint.rst:96
 msgid ""
@@ -167,24 +214,38 @@ msgid ""
 ">>> repr(math.pi)\n"
 "'3.141592653589793'"
 msgstr ""
+">>> format(math.pi, '.12g')  # give 12 significant digits\n"
+"'3.14159265359'\n"
+"\n"
+">>> format(math.pi, '.2f')   # give 2 digits after the point\n"
+"'3.14'\n"
+"\n"
+">>> repr(math.pi)\n"
+"'3.141592653589793'"
 
 #: tutorial/floatingpoint.rst:107
 msgid ""
 "It's important to realize that this is, in a real sense, an illusion: you're "
 "simply rounding the *display* of the true machine value."
 msgstr ""
+"यह समझना ज़रूरी है कि असल में यह एक भ्रम है: आप बस मशीन के असली मान के *प्रदर्शन* को "
+"राउंड कर रहे हैं।"
 
 #: tutorial/floatingpoint.rst:110
 msgid ""
 "One illusion may beget another.  For example, since 0.1 is not exactly 1/10, "
 "summing three values of 0.1 may not yield exactly 0.3, either:"
 msgstr ""
+"एक भ्रम दूसरे भ्रम को जन्म दे सकता है। उदाहरण के लिए, चूँकि 0.1 ठीक 1/10 नहीं है, इसलिए "
+"0.1 के तीन मानों को जोड़ने पर भी शायद ठीक 0.3 न मिले:"
 
 #: tutorial/floatingpoint.rst:113
 msgid ""
 ">>> 0.1 + 0.1 + 0.1 == 0.3\n"
 "False"
 msgstr ""
+">>> 0.1 + 0.1 + 0.1 == 0.3\n"
+"False"
 
 #: tutorial/floatingpoint.rst:118
 msgid ""
@@ -192,36 +253,49 @@ msgid ""
 "cannot get any closer to the exact value of 3/10, then pre-rounding "
 "with :func:`round` function cannot help:"
 msgstr ""
+"साथ ही, चूँकि 0.1 को 1/10 के सटीक मान के और पास नहीं लाया जा सकता, और 0.3 को 3/10 "
+"के सटीक मान के और पास नहीं लाया जा सकता, इसलिए :func:`round` फ़ंक्शन से पहले ही राउंड "
+"करने से भी मदद नहीं मिलती:"
 
 #: tutorial/floatingpoint.rst:122
 msgid ""
 ">>> round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)\n"
 "False"
 msgstr ""
+">>> round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)\n"
+"False"
 
 #: tutorial/floatingpoint.rst:127
 msgid ""
 "Though the numbers cannot be made closer to their intended exact values, "
 "the :func:`math.isclose` function can be useful for comparing inexact values:"
 msgstr ""
+"हालाँकि नंबरों को उनके इच्छित सटीक मानों के और पास नहीं लाया जा सकता, फिर भी असटीक "
+"मानों की तुलना के लिए :func:`math.isclose` फ़ंक्शन उपयोगी हो सकता है:"
 
 #: tutorial/floatingpoint.rst:130
 msgid ""
 ">>> math.isclose(0.1 + 0.1 + 0.1, 0.3)\n"
 "True"
 msgstr ""
+">>> math.isclose(0.1 + 0.1 + 0.1, 0.3)\n"
+"True"
 
 #: tutorial/floatingpoint.rst:135
 msgid ""
 "Alternatively, the :func:`round` function can be used to compare rough "
 "approximations:"
 msgstr ""
+"या फिर, मोटे सन्निकट मानों की तुलना के लिए :func:`round` फ़ंक्शन इस्तेमाल किया जा सकता "
+"है:"
 
 #: tutorial/floatingpoint.rst:138
 msgid ""
 ">>> round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)\n"
 "True"
 msgstr ""
+">>> round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)\n"
+"True"
 
 #: tutorial/floatingpoint.rst:143
 msgid ""
@@ -234,6 +308,13 @@ msgid ""
 "Point <http://www.indowsway.com/floatingpoint.htm>`_ for a more complete "
 "account of other common surprises."
 msgstr ""
+"बाइनरी फ़्लोटिंग-पॉइंट अंकगणित में ऐसी कई हैरानियाँ हैं। \"0.1\" वाली समस्या को नीचे "
+"\"निरूपण त्रुटि\" सेक्शन में बारीकी से समझाया गया है। बाइनरी फ़्लोटिंग पॉइंट कैसे काम करता "
+"है और व्यवहार में आम तौर पर किस तरह की समस्याएँ आती हैं, इसके अच्छे सार के लिए `Examples "
+"of Floating Point Problems <https://jvns.ca/blog/2023/01/13/examples-of-"
+"floating-point-problems/>`_ देखें। दूसरी आम हैरानियों के ज़्यादा पूरे विवरण के लिए `The "
+"Perils of Floating Point <http://www.indowsway.com/floatingpoint.htm>`_ भी "
+"देखें।"
 
 #: tutorial/floatingpoint.rst:152
 msgid ""
@@ -245,6 +326,11 @@ msgid ""
 "decimal arithmetic and that every float operation can suffer a new rounding "
 "error."
 msgstr ""
+"जैसा कि उसके आख़िर में कहा गया है, \"कोई आसान जवाब नहीं हैं।\" फिर भी, फ़्लोटिंग पॉइंट से "
+"ज़रूरत से ज़्यादा सावधान न हों! पायथन के फ़्लोट ऑपरेशनों की त्रुटियाँ फ़्लोटिंग-पॉइंट हार्डवेयर "
+"से आती हैं, और ज़्यादातर मशीनों पर हर ऑपरेशन में 2\\*\\*53 में 1 हिस्से से ज़्यादा नहीं होतीं। "
+"यह ज़्यादातर कामों के लिए काफ़ी से ज़्यादा है, लेकिन आपको याद रखना होगा कि यह दशमलव "
+"अंकगणित नहीं है, और हर फ़्लोट ऑपरेशन में राउंडिंग की एक नई त्रुटि आ सकती है।"
 
 #: tutorial/floatingpoint.rst:159
 msgid ""
@@ -254,6 +340,11 @@ msgid ""
 "expect. :func:`str` usually suffices, and for finer control see "
 "the :meth:`str.format` method's format specifiers in :ref:`formatstrings`."
 msgstr ""
+"हालाँकि असामान्य मामले होते हैं, फ़्लोटिंग-पॉइंट अंकगणित के ज़्यादातर सामान्य इस्तेमाल में, अगर "
+"आप अपने आख़िरी नतीजों के प्रदर्शन को उतने दशमलव अंकों तक राउंड कर दें जितनों की आप उम्मीद "
+"करते हैं, तो अंत में आपको वही नतीजा दिखेगा जिसकी आप उम्मीद करते हैं। आम तौर "
+"पर :func:`str` काफ़ी होता है, और ज़्यादा बारीक नियंत्रण के लिए :ref:`formatstrings` "
+"में :meth:`str.format` मेथड के फ़ॉर्मैट स्पेसिफ़ायर देखें।"
 
 #: tutorial/floatingpoint.rst:165
 msgid ""
@@ -261,6 +352,8 @@ msgid ""
 "the :mod:`decimal` module which implements decimal arithmetic suitable for "
 "accounting applications and high-precision applications."
 msgstr ""
+"जिन मामलों में सटीक दशमलव निरूपण ज़रूरी है, उनके लिए :mod:`decimal` मॉड्यूल आज़माएँ, जो "
+"अकाउंटिंग एप्लिकेशन और हाई-प्रिसिज़न एप्लिकेशन के लिए उपयुक्त दशमलव अंकगणित लागू करता है।"
 
 #: tutorial/floatingpoint.rst:169
 msgid ""
@@ -268,6 +361,8 @@ msgid ""
 "which implements arithmetic based on rational numbers (so the numbers like "
 "1/3 can be represented exactly)."
 msgstr ""
+"सटीक अंकगणित का एक और रूप :mod:`fractions` मॉड्यूल से सपोर्ट होता है, जो परिमेय "
+"संख्याओं पर आधारित अंकगणित लागू करता है (ताकि 1/3 जैसी संख्याएँ सटीक रूप से दर्शाई जा सकें)।"
 
 #: tutorial/floatingpoint.rst:173
 msgid ""
@@ -276,6 +371,9 @@ msgid ""
 "statistical operations supplied by the SciPy project. See <https://"
 "scipy.org>."
 msgstr ""
+"अगर आप फ़्लोटिंग-पॉइंट ऑपरेशन बहुत इस्तेमाल करते हैं, तो आपको NumPy पैकेज और SciPy प्रोजेक्ट "
+"के दिए गणितीय और सांख्यिकीय ऑपरेशनों के कई दूसरे पैकेज देखने चाहिए। <https://scipy.org> "
+"देखें।"
 
 #: tutorial/floatingpoint.rst:177
 msgid ""
@@ -284,6 +382,9 @@ msgid ""
 "The :meth:`float.as_integer_ratio` method expresses the value of a float as "
 "a fraction:"
 msgstr ""
+"पायथन ऐसे टूल देता है जो उन दुर्लभ मौकों पर मदद कर सकते हैं जब आप सच में किसी फ़्लोट का "
+"सटीक मान जानना *चाहते* हैं। :meth:`float.as_integer_ratio` मेथड फ़्लोट के मान को एक "
+"भिन्न के रूप में बताता है:"
 
 #: tutorial/floatingpoint.rst:182
 msgid ""
@@ -291,42 +392,55 @@ msgid ""
 ">>> x.as_integer_ratio()\n"
 "(3537115888337719, 1125899906842624)"
 msgstr ""
+">>> x = 3.14159\n"
+">>> x.as_integer_ratio()\n"
+"(3537115888337719, 1125899906842624)"
 
 #: tutorial/floatingpoint.rst:188
 msgid ""
 "Since the ratio is exact, it can be used to losslessly recreate the original "
 "value:"
 msgstr ""
+"चूँकि यह अनुपात सटीक है, इसलिए इससे मूल मान को बिना किसी नुकसान के फिर से बनाया जा "
+"सकता है:"
 
 #: tutorial/floatingpoint.rst:191
 msgid ""
 ">>> x == 3537115888337719 / 1125899906842624\n"
 "True"
 msgstr ""
+">>> x == 3537115888337719 / 1125899906842624\n"
+"True"
 
 #: tutorial/floatingpoint.rst:196
 msgid ""
 "The :meth:`float.hex` method expresses a float in hexadecimal (base 16), "
 "again giving the exact value stored by your computer:"
 msgstr ""
+":meth:`float.hex` मेथड फ़्लोट को हेक्साडेसिमल (आधार 16) में बताता है, जिससे फिर से आपके "
+"कंप्यूटर में रखा गया सटीक मान मिलता है:"
 
 #: tutorial/floatingpoint.rst:199
 msgid ""
 ">>> x.hex()\n"
 "'0x1.921f9f01b866ep+1'"
 msgstr ""
+">>> x.hex()\n"
+"'0x1.921f9f01b866ep+1'"
 
 #: tutorial/floatingpoint.rst:204
 msgid ""
 "This precise hexadecimal representation can be used to reconstruct the float "
 "value exactly:"
-msgstr ""
+msgstr "इस सटीक हेक्साडेसिमल निरूपण से फ़्लोट मान को ठीक-ठीक फिर से बनाया जा सकता है:"
 
 #: tutorial/floatingpoint.rst:207
 msgid ""
 ">>> x == float.fromhex('0x1.921f9f01b866ep+1')\n"
 "True"
 msgstr ""
+">>> x == float.fromhex('0x1.921f9f01b866ep+1')\n"
+"True"
 
 #: tutorial/floatingpoint.rst:212
 msgid ""
@@ -335,6 +449,9 @@ msgid ""
 "data with other languages that support the same format (such as Java and "
 "C99)."
 msgstr ""
+"चूँकि यह निरूपण सटीक है, यह मानों को पायथन के अलग-अलग वर्ज़न के बीच भरोसे से ले जाने "
+"(प्लेटफ़ॉर्म से स्वतंत्रता) और उन दूसरी भाषाओं के साथ डेटा का आदान-प्रदान करने के लिए "
+"उपयोगी है जो यही फ़ॉर्मैट सपोर्ट करती हैं (जैसे Java और C99)।"
 
 #: tutorial/floatingpoint.rst:216
 msgid ""
@@ -344,6 +461,10 @@ msgid ""
 "difference in overall accuracy so that the errors do not accumulate to the "
 "point where they affect the final total:"
 msgstr ""
+"एक और मददगार टूल :func:`sum` फ़ंक्शन है, जो जोड़ के दौरान प्रिसिज़न के नुकसान को कम करने "
+"में मदद करता है। जब मान चलते हुए कुल योग में जोड़े जाते हैं, तो यह बीच के राउंडिंग चरणों के "
+"लिए बढ़ी हुई प्रिसिज़न इस्तेमाल करता है। इससे कुल सटीकता में फ़र्क़ पड़ सकता है, ताकि त्रुटियाँ "
+"इतनी जमा न हों कि आख़िरी योग पर असर डालें:"
 
 #: tutorial/floatingpoint.rst:222
 msgid ""
@@ -352,6 +473,10 @@ msgid ""
 ">>> sum([0.1] * 10) == 1.0\n"
 "True"
 msgstr ""
+">>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0\n"
+"False\n"
+">>> sum([0.1] * 10) == 1.0\n"
+"True"
 
 #: tutorial/floatingpoint.rst:229
 msgid ""
@@ -361,6 +486,10 @@ msgid ""
 "uncommon cases where large magnitude inputs mostly cancel each other out "
 "leaving a final sum near zero:"
 msgstr ""
+":func:`math.fsum` इससे भी आगे जाता है: जब मान चलते हुए कुल योग में जोड़े जाते हैं, तो यह "
+"सभी \"खोए हुए अंकों\" का हिसाब रखता है, ताकि नतीजे में सिर्फ़ एक बार राउंडिंग हो। "
+"यह :func:`sum` से धीमा है, लेकिन उन असामान्य मामलों में ज़्यादा सटीक होगा जहाँ बड़े "
+"परिमाण वाले इनपुट ज़्यादातर एक-दूसरे को काट देते हैं और आख़िरी योग शून्य के पास रह जाता है:"
 
 #: tutorial/floatingpoint.rst:235
 msgid ""
@@ -382,10 +511,27 @@ msgid ""
 "digits!\n"
 "-0.0051575902860057365"
 msgstr ""
+">>> arr = [-0.10430216751806065, -266310978.67179024, 143401161448607.16,\n"
+"...        -143401161400469.7, 266262841.31058735, -0.003244936839808227]\n"
+">>> float(sum(map(Fraction, arr)))   # Exact summation with single rounding\n"
+"8.042173697819788e-13\n"
+">>> math.fsum(arr)                   # Single rounding\n"
+"8.042173697819788e-13\n"
+">>> sum(arr)                         # Multiple roundings in extended "
+"precision\n"
+"8.042178034628478e-13\n"
+">>> total = 0.0\n"
+">>> for x in arr:\n"
+"...     total += x                   # Multiple roundings in standard "
+"precision\n"
+"...\n"
+">>> total                            # Straight addition has no correct "
+"digits!\n"
+"-0.0051575902860057365"
 
 #: tutorial/floatingpoint.rst:256
 msgid "Representation Error"
-msgstr ""
+msgstr "निरूपण त्रुटि"
 
 #: tutorial/floatingpoint.rst:258
 msgid ""
@@ -393,6 +539,9 @@ msgid ""
 "perform an exact analysis of cases like this yourself.  Basic familiarity "
 "with binary floating-point representation is assumed."
 msgstr ""
+"यह सेक्शन \"0.1\" वाले उदाहरण को विस्तार से समझाता है, और दिखाता है कि आप ऐसे मामलों "
+"का सटीक विश्लेषण खुद कैसे कर सकते हैं। यह माना गया है कि आप बाइनरी फ़्लोटिंग-पॉइंट निरूपण "
+"से बुनियादी रूप से परिचित हैं।"
 
 #: tutorial/floatingpoint.rst:262
 msgid ""
@@ -402,6 +551,10 @@ msgid ""
 "Fortran, and many others) often won't display the exact decimal number you "
 "expect."
 msgstr ""
+":dfn:`निरूपण त्रुटि` (representation error) का मतलब है कि कुछ (असल में ज़्यादातर) "
+"दशमलव भिन्नों को बाइनरी (आधार 2) भिन्नों के रूप में सटीक रूप से नहीं दर्शाया जा सकता। "
+"यही मुख्य कारण है कि पायथन (या Perl, C, C++, Java, Fortran और कई दूसरी भाषाएँ) "
+"अक्सर वह सटीक दशमलव नंबर नहीं दिखाते जिसकी आप उम्मीद करते हैं।"
 
 #: tutorial/floatingpoint.rst:267
 msgid ""
@@ -413,36 +566,48 @@ msgid ""
 "fraction it can of the form *J*/2**\\ *N* where *J* is an integer containing "
 "exactly 53 bits. Rewriting ::"
 msgstr ""
+"ऐसा क्यों है? 1/10 को बाइनरी भिन्न के रूप में सटीक रूप से नहीं दर्शाया जा सकता। कम से कम "
+"2000 से, लगभग सभी मशीनें IEEE 754 बाइनरी फ़्लोटिंग-पॉइंट अंकगणित इस्तेमाल करती हैं, और "
+"लगभग सभी प्लेटफ़ॉर्म पायथन फ़्लोट को IEEE 754 binary64 \"डबल प्रिसिज़न\" मानों पर मैप "
+"करते हैं। IEEE 754 binary64 मानों में 53 बिट की प्रिसिज़न होती है, इसलिए इनपुट मिलने पर "
+"कंप्यूटर 0.1 को *J*/2**\\ *N* रूप की सबसे पास की भिन्न में बदलने की कोशिश करता है, जहाँ "
+"*J* ठीक 53 बिट वाला एक पूर्णांक है। समीकरण ::"
 
 #: tutorial/floatingpoint.rst:276
 msgid "1 / 10 ~= J / (2**N)"
-msgstr ""
+msgstr "1 / 10 ~= J / (2**N)"
 
 #: tutorial/floatingpoint.rst:278
 msgid "as ::"
-msgstr ""
+msgstr "को इस रूप में लिखने पर ::"
 
 #: tutorial/floatingpoint.rst:280
 msgid "J ~= 2**N / 10"
-msgstr ""
+msgstr "J ~= 2**N / 10"
 
 #: tutorial/floatingpoint.rst:282
 msgid ""
 "and recalling that *J* has exactly 53 bits (is ``>= 2**52`` but ``< "
 "2**53``), the best value for *N* is 56:"
 msgstr ""
+"और यह याद रखते हुए कि *J* में ठीक 53 बिट हैं (यह ``>= 2**52`` है लेकिन ``< 2**53``), "
+"*N* का सबसे अच्छा मान 56 है:"
 
 #: tutorial/floatingpoint.rst:285
 msgid ""
 ">>> 2**52 <=  2**56 // 10  < 2**53\n"
 "True"
 msgstr ""
+">>> 2**52 <=  2**56 // 10  < 2**53\n"
+"True"
 
 #: tutorial/floatingpoint.rst:290
 msgid ""
 "That is, 56 is the only value for *N* that leaves *J* with exactly 53 bits.  "
 "The best possible value for *J* is then that quotient rounded:"
 msgstr ""
+"यानी, 56 ही *N* का अकेला मान है जिससे *J* में ठीक 53 बिट रहते हैं। तब *J* का सबसे "
+"अच्छा संभव मान वह भागफल है, राउंड करके:"
 
 #: tutorial/floatingpoint.rst:293
 msgid ""
@@ -450,37 +615,44 @@ msgid ""
 ">>> r\n"
 "6"
 msgstr ""
+">>> q, r = divmod(2**56, 10)\n"
+">>> r\n"
+"6"
 
 #: tutorial/floatingpoint.rst:299
 msgid ""
 "Since the remainder is more than half of 10, the best approximation is "
 "obtained by rounding up:"
 msgstr ""
+"चूँकि शेषफल 10 के आधे से ज़्यादा है, इसलिए सबसे अच्छा सन्निकट मान ऊपर की ओर राउंड करके "
+"मिलता है:"
 
 #: tutorial/floatingpoint.rst:302
 msgid ""
 ">>> q+1\n"
 "7205759403792794"
 msgstr ""
+">>> q+1\n"
+"7205759403792794"
 
 #: tutorial/floatingpoint.rst:309
 msgid ""
 "Therefore the best possible approximation to 1/10 in IEEE 754 double "
 "precision is::"
-msgstr ""
+msgstr "इसलिए IEEE 754 डबल प्रिसिज़न में 1/10 का सबसे अच्छा संभव सन्निकट मान यह है::"
 
 #: tutorial/floatingpoint.rst:312
 msgid "7205759403792794 / 2 ** 56"
-msgstr ""
+msgstr "7205759403792794 / 2 ** 56"
 
 #: tutorial/floatingpoint.rst:314
 msgid ""
 "Dividing both the numerator and denominator by two reduces the fraction to::"
-msgstr ""
+msgstr "अंश और हर, दोनों को दो से भाग देने पर भिन्न छोटी होकर यह बनती है::"
 
 #: tutorial/floatingpoint.rst:316
 msgid "3602879701896397 / 2 ** 55"
-msgstr ""
+msgstr "3602879701896397 / 2 ** 55"
 
 #: tutorial/floatingpoint.rst:318
 msgid ""
@@ -488,30 +660,40 @@ msgid ""
 "1/10; if we had not rounded up, the quotient would have been a little bit "
 "smaller than 1/10.  But in no case can it be *exactly* 1/10!"
 msgstr ""
+"ध्यान दें कि चूँकि हमने ऊपर की ओर राउंड किया, यह असल में 1/10 से थोड़ा बड़ा है; अगर हमने "
+"ऊपर की ओर राउंड न किया होता, तो भागफल 1/10 से थोड़ा छोटा होता। लेकिन किसी भी "
+"स्थिति में यह *ठीक* 1/10 नहीं हो सकता!"
 
 #: tutorial/floatingpoint.rst:322
 msgid ""
 "So the computer never \"sees\" 1/10:  what it sees is the exact fraction "
 "given above, the best IEEE 754 double approximation it can get:"
 msgstr ""
+"इसलिए कंप्यूटर 1/10 को कभी \"देखता\" ही नहीं: वह जो देखता है, वह ऊपर दी गई सटीक "
+"भिन्न है, IEEE 754 डबल का सबसे अच्छा सन्निकट मान जो उसे मिल सकता है:"
 
 #: tutorial/floatingpoint.rst:325
 msgid ""
 ">>> 0.1 * 2 ** 55\n"
 "3602879701896397.0"
 msgstr ""
+">>> 0.1 * 2 ** 55\n"
+"3602879701896397.0"
 
 #: tutorial/floatingpoint.rst:330
 msgid ""
 "If we multiply that fraction by 10\\*\\*55, we can see the value out to 55 "
 "decimal digits:"
 msgstr ""
+"अगर हम उस भिन्न को 10\\*\\*55 से गुणा करें, तो हम मान को 55 दशमलव अंकों तक देख सकते हैं:"
 
 #: tutorial/floatingpoint.rst:333
 msgid ""
 ">>> 3602879701896397 * 10 ** 55 // 2 ** 55\n"
 "1000000000000000055511151231257827021181583404541015625"
 msgstr ""
+">>> 3602879701896397 * 10 ** 55 // 2 ** 55\n"
+"1000000000000000055511151231257827021181583404541015625"
 
 #: tutorial/floatingpoint.rst:338
 msgid ""
@@ -520,17 +702,23 @@ msgid ""
 "displaying the full decimal value, many languages (including older versions "
 "of Python), round the result to 17 significant digits:"
 msgstr ""
+"इसका मतलब है कि कंप्यूटर में रखा गया सटीक नंबर दशमलव मान "
+"0.1000000000000000055511151231257827021181583404541015625 के बराबर है। पूरा "
+"दशमलव मान दिखाने के बजाय, कई भाषाएँ (पायथन के पुराने वर्ज़न सहित) नतीजे को 17 सार्थक "
+"अंकों तक राउंड कर देती हैं:"
 
 #: tutorial/floatingpoint.rst:343
 msgid ""
 ">>> format(0.1, '.17f')\n"
 "'0.10000000000000001'"
 msgstr ""
+">>> format(0.1, '.17f')\n"
+"'0.10000000000000001'"
 
 #: tutorial/floatingpoint.rst:348
 msgid ""
 "The :mod:`fractions` and :mod:`decimal` modules make these calculations easy:"
-msgstr ""
+msgstr ":mod:`fractions` और :mod:`decimal` मॉड्यूल इन गणनाओं को आसान बनाते हैं:"
 
 #: tutorial/floatingpoint.rst:351
 msgid ""
@@ -549,3 +737,17 @@ msgid ""
 ">>> format(Decimal.from_float(0.1), '.17')\n"
 "'0.10000000000000001'"
 msgstr ""
+">>> from decimal import Decimal\n"
+">>> from fractions import Fraction\n"
+"\n"
+">>> Fraction.from_float(0.1)\n"
+"Fraction(3602879701896397, 36028797018963968)\n"
+"\n"
+">>> (0.1).as_integer_ratio()\n"
+"(3602879701896397, 36028797018963968)\n"
+"\n"
+">>> Decimal.from_float(0.1)\n"
+"Decimal('0.1000000000000000055511151231257827021181583404541015625')\n"
+"\n"
+">>> format(Decimal.from_float(0.1), '.17')\n"
+"'0.10000000000000001'"
