@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,23 +19,25 @@ msgstr ""
 
 #: tutorial/controlflow.rst:5
 msgid "More Control Flow Tools"
-msgstr ""
+msgstr "कंट्रोल फ़्लो के और टूल"
 
 #: tutorial/controlflow.rst:7
 msgid ""
 "As well as the :keyword:`while` statement just introduced, Python uses a few "
 "more that we will encounter in this chapter."
 msgstr ""
+"अभी परिचय कराए गए :keyword:`while` स्टेटमेंट के अलावा, पायथन कुछ और स्टेटमेंट इस्तेमाल "
+"करता है, जिन्हें हम इस अध्याय में देखेंगे।"
 
 #: tutorial/controlflow.rst:14
 msgid ":keyword:`!if` Statements"
-msgstr ""
+msgstr ":keyword:`!if` स्टेटमेंट"
 
 #: tutorial/controlflow.rst:16
 msgid ""
 "Perhaps the most well-known statement type is the :keyword:`if` statement.  "
 "For example::"
-msgstr ""
+msgstr "शायद सबसे जाना-पहचाना स्टेटमेंट टाइप :keyword:`if` स्टेटमेंट है। उदाहरण के लिए::"
 
 #: tutorial/controlflow.rst:19
 msgid ""
@@ -53,6 +55,19 @@ msgid ""
 "...\n"
 "More"
 msgstr ""
+">>> x = int(input(\"Please enter an integer: \"))\n"
+"Please enter an integer: 42\n"
+">>> if x < 0:\n"
+"...     x = 0\n"
+"...     print('Negative changed to zero')\n"
+"... elif x == 0:\n"
+"...     print('Zero')\n"
+"... elif x == 1:\n"
+"...     print('Single')\n"
+"... else:\n"
+"...     print('More')\n"
+"...\n"
+"More"
 
 #: tutorial/controlflow.rst:33
 msgid ""
@@ -62,6 +77,10 @@ msgid ""
 "if` ... :keyword:`!elif` ... :keyword:`!elif` ... sequence is a substitute "
 "for the ``switch`` or ``case`` statements found in other languages."
 msgstr ""
+"शून्य या ज़्यादा :keyword:`elif` हिस्से हो सकते हैं, और :keyword:`else` हिस्सा वैकल्पिक "
+"है। कीवर्ड ':keyword:`!elif`', 'else if' का छोटा रूप है, और ज़रूरत से ज़्यादा इंडेंटेशन से "
+"बचने के लिए उपयोगी है। एक :keyword:`!if` ... :keyword:`!elif` ... :keyword:`!"
+"elif` ... क्रम दूसरी भाषाओं में मिलने वाले ``switch`` या ``case`` स्टेटमेंट का विकल्प है।"
 
 #: tutorial/controlflow.rst:39
 msgid ""
@@ -69,10 +88,13 @@ msgid ""
 "specific types or attributes, you may also find the :keyword:`!match` "
 "statement useful. For more details see :ref:`tut-match`."
 msgstr ""
+"अगर आप एक ही मान की तुलना कई कॉन्स्टेंट से कर रहे हैं, या ख़ास टाइप या एट्रिब्यूट जाँच रहे "
+"हैं, तो :keyword:`!match` स्टेटमेंट भी आपको उपयोगी लग सकता है। ज़्यादा जानकारी के "
+"लिए :ref:`tut-match` देखें।"
 
 #: tutorial/controlflow.rst:46
 msgid ":keyword:`!for` Statements"
-msgstr ""
+msgstr ":keyword:`!for` स्टेटमेंट"
 
 #: tutorial/controlflow.rst:51
 msgid ""
@@ -84,6 +106,11 @@ msgid ""
 "(a list or a string), in the order that they appear in the sequence.  For "
 "example (no pun intended):"
 msgstr ""
+"पायथन का :keyword:`for` स्टेटमेंट C या Pascal में आपकी आदत वाले स्टेटमेंट से थोड़ा अलग है। "
+"हमेशा नंबरों की किसी समांतर श्रेणी (arithmetic progression) पर इटरेट करने (जैसे Pascal "
+"में), या यूज़र को इटरेशन का चरण और रुकने की शर्त, दोनों तय करने देने (जैसे C में) के बजाय, "
+"पायथन का :keyword:`!for` स्टेटमेंट किसी भी सीक्वेंस (लिस्ट या स्ट्रिंग) के आइटम पर उसी "
+"क्रम में इटरेट करता है जिसमें वे सीक्वेंस में आते हैं। उदाहरण के लिए:"
 
 #: tutorial/controlflow.rst:63
 msgid ""
@@ -96,6 +123,14 @@ msgid ""
 "window 6\n"
 "defenestrate 12"
 msgstr ""
+">>> # Measure some strings:\n"
+">>> words = ['cat', 'window', 'defenestrate']\n"
+">>> for w in words:\n"
+"...     print(w, len(w))\n"
+"...\n"
+"cat 3\n"
+"window 6\n"
+"defenestrate 12"
 
 #: tutorial/controlflow.rst:72
 msgid ""
@@ -103,6 +138,9 @@ msgid ""
 "can be tricky to get right.  Instead, it is usually more straight-forward to "
 "loop over a copy of the collection or to create a new collection::"
 msgstr ""
+"जो कोड किसी कलेक्शन पर इटरेट करते हुए उसी कलेक्शन को बदलता है, उसे सही लिखना मुश्किल हो "
+"सकता है। इसके बजाय, आम तौर पर कलेक्शन की एक कॉपी पर लूप चलाना या एक नया कलेक्शन "
+"बनाना ज़्यादा सीधा होता है::"
 
 #: tutorial/controlflow.rst:76
 msgid ""
@@ -120,10 +158,23 @@ msgid ""
 "    if status == 'active':\n"
 "        active_users[user] = status"
 msgstr ""
+"# Create a sample collection\n"
+"users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}\n"
+"\n"
+"# Strategy:  Iterate over a copy\n"
+"for user, status in users.copy().items():\n"
+"    if status == 'inactive':\n"
+"        del users[user]\n"
+"\n"
+"# Strategy:  Create a new collection\n"
+"active_users = {}\n"
+"for user, status in users.items():\n"
+"    if status == 'active':\n"
+"        active_users[user] = status"
 
 #: tutorial/controlflow.rst:94
 msgid "The :func:`range` Function"
-msgstr ""
+msgstr ":func:`range` फ़ंक्शन"
 
 #: tutorial/controlflow.rst:96
 msgid ""
@@ -131,6 +182,8 @@ msgid ""
 "function :func:`range` comes in handy.  It generates arithmetic "
 "progressions::"
 msgstr ""
+"अगर आपको सच में नंबरों के किसी सीक्वेंस पर इटरेट करना है, तो बिल्ट-इन "
+"फ़ंक्शन :func:`range` काम आता है। यह समांतर श्रेणियाँ बनाता है::"
 
 #: tutorial/controlflow.rst:99
 msgid ""
@@ -143,6 +196,14 @@ msgid ""
 "3\n"
 "4"
 msgstr ""
+">>> for i in range(5):\n"
+"...     print(i)\n"
+"...\n"
+"0\n"
+"1\n"
+"2\n"
+"3\n"
+"4"
 
 #: tutorial/controlflow.rst:108
 msgid ""
@@ -151,6 +212,10 @@ msgid ""
 "10.  It is possible to let the range start at another number, or to specify "
 "a different increment (even negative; sometimes this is called the 'step')::"
 msgstr ""
+"दिया गया अंतिम बिंदु बनाए गए सीक्वेंस का कभी हिस्सा नहीं होता; ``range(10)`` 10 मान "
+"बनाता है, जो लंबाई 10 वाले सीक्वेंस के आइटम के मान्य इंडेक्स हैं। रेंज को किसी दूसरे नंबर से शुरू "
+"करवाया जा सकता है, या कोई दूसरी बढ़ोतरी दी जा सकती है (ऋणात्मक भी; कभी-कभी इसे "
+"'step' कहते हैं)::"
 
 #: tutorial/controlflow.rst:113
 msgid ""
@@ -163,12 +228,22 @@ msgid ""
 ">>> list(range(-10, -100, -30))\n"
 "[-10, -40, -70]"
 msgstr ""
+">>> list(range(5, 10))\n"
+"[5, 6, 7, 8, 9]\n"
+"\n"
+">>> list(range(0, 10, 3))\n"
+"[0, 3, 6, 9]\n"
+"\n"
+">>> list(range(-10, -100, -30))\n"
+"[-10, -40, -70]"
 
 #: tutorial/controlflow.rst:122
 msgid ""
 "To iterate over the indices of a sequence, you can combine :func:`range` "
 "and :func:`len` as follows::"
 msgstr ""
+"किसी सीक्वेंस के इंडेक्स पर इटरेट करने के लिए, आप :func:`range` और :func:`len` को इस "
+"तरह मिला सकते हैं::"
 
 #: tutorial/controlflow.rst:125
 msgid ""
@@ -182,22 +257,35 @@ msgid ""
 "3 little\n"
 "4 lamb"
 msgstr ""
+">>> a = ['Mary', 'had', 'a', 'little', 'lamb']\n"
+">>> for i in range(len(a)):\n"
+"...     print(i, a[i])\n"
+"...\n"
+"0 Mary\n"
+"1 had\n"
+"2 a\n"
+"3 little\n"
+"4 lamb"
 
 #: tutorial/controlflow.rst:135
 msgid ""
 "In most such cases, however, it is convenient to use the :func:`enumerate` "
 "function, see :ref:`tut-loopidioms`."
 msgstr ""
+"लेकिन ऐसे ज़्यादातर मामलों में :func:`enumerate` फ़ंक्शन इस्तेमाल करना सुविधाजनक "
+"है, :ref:`tut-loopidioms` देखें।"
 
 #: tutorial/controlflow.rst:138
 msgid "A strange thing happens if you just print a range::"
-msgstr ""
+msgstr "अगर आप सिर्फ़ एक range प्रिंट करें, तो एक अजीब बात होती है::"
 
 #: tutorial/controlflow.rst:140
 msgid ""
 ">>> range(10)\n"
 "range(0, 10)"
 msgstr ""
+">>> range(10)\n"
+"range(0, 10)"
 
 #: tutorial/controlflow.rst:143
 msgid ""
@@ -206,6 +294,9 @@ msgid ""
 "items of the desired sequence when you iterate over it, but it doesn't "
 "really make the list, thus saving space."
 msgstr ""
+"कई मामलों में :func:`range` से लौटाया गया ऑब्जेक्ट लिस्ट की तरह व्यवहार करता है, लेकिन "
+"असल में वह लिस्ट नहीं है। यह एक ऐसा ऑब्जेक्ट है जो उस पर इटरेट करने पर मनचाहे सीक्वेंस के एक "
+"के बाद एक आइटम लौटाता है, लेकिन असल में लिस्ट नहीं बनाता, जिससे जगह बचती है।"
 
 #: tutorial/controlflow.rst:148
 msgid ""
@@ -215,12 +306,18 @@ msgid ""
 "the :keyword:`for` statement is such a construct, while an example of a "
 "function that takes an iterable is :func:`sum`::"
 msgstr ""
+"हम कहते हैं कि ऐसा ऑब्जेक्ट :term:`इटरेबल <iterable>` है, यानी उन फ़ंक्शनों और ढाँचों के "
+"लिए उपयुक्त है जो किसी ऐसी चीज़ की उम्मीद करते हैं जिससे वे एक के बाद एक आइटम तब तक ले "
+"सकें जब तक आपूर्ति :term:`ख़त्म <exhausted>` न हो जाए। हमने देखा है कि :keyword:`for` "
+"स्टेटमेंट ऐसा ही एक ढाँचा है, जबकि इटरेबल लेने वाले फ़ंक्शन का एक उदाहरण :func:`sum` है::"
 
 #: tutorial/controlflow.rst:154
 msgid ""
 ">>> sum(range(4))  # 0 + 1 + 2 + 3\n"
 "6"
 msgstr ""
+">>> sum(range(4))  # 0 + 1 + 2 + 3\n"
+"6"
 
 #: tutorial/controlflow.rst:157
 msgid ""
@@ -228,16 +325,20 @@ msgid ""
 "arguments.  In chapter :ref:`tut-structures`, we will discuss :func:`list` "
 "in more detail."
 msgstr ""
+"आगे हम ऐसे और फ़ंक्शन देखेंगे जो इटरेबल लौटाते हैं और इटरेबल को आर्ग्युमेंट के रूप में लेते "
+"हैं। :ref:`tut-structures` अध्याय में, हम :func:`list` पर ज़्यादा विस्तार से बात करेंगे।"
 
 #: tutorial/controlflow.rst:164
 msgid ":keyword:`!break` and :keyword:`!continue` Statements"
-msgstr ""
+msgstr ":keyword:`!break` और :keyword:`!continue` स्टेटमेंट"
 
 #: tutorial/controlflow.rst:166
 msgid ""
 "The :keyword:`break` statement breaks out of the innermost "
 "enclosing :keyword:`for` or :keyword:`while` loop::"
 msgstr ""
+":keyword:`break` स्टेटमेंट सबसे अंदर वाले :keyword:`for` या :keyword:`while` लूप से "
+"बाहर निकल जाता है::"
 
 #: tutorial/controlflow.rst:169
 msgid ""
@@ -252,12 +353,22 @@ msgid ""
 "8 equals 2 * 4\n"
 "9 equals 3 * 3"
 msgstr ""
+">>> for n in range(2, 10):\n"
+"...     for x in range(2, n):\n"
+"...         if n % x == 0:\n"
+"...             print(f\"{n} equals {x} * {n//x}\")\n"
+"...             break\n"
+"...\n"
+"4 equals 2 * 2\n"
+"6 equals 2 * 3\n"
+"8 equals 2 * 4\n"
+"9 equals 3 * 3"
 
 #: tutorial/controlflow.rst:180
 msgid ""
 "The :keyword:`continue` statement continues with the next iteration of the "
 "loop::"
-msgstr ""
+msgstr ":keyword:`continue` स्टेटमेंट लूप के अगले इटरेशन पर चला जाता है::"
 
 #: tutorial/controlflow.rst:183
 msgid ""
@@ -276,10 +387,24 @@ msgid ""
 "Found an even number 8\n"
 "Found an odd number 9"
 msgstr ""
+">>> for num in range(2, 10):\n"
+"...     if num % 2 == 0:\n"
+"...         print(f\"Found an even number {num}\")\n"
+"...         continue\n"
+"...     print(f\"Found an odd number {num}\")\n"
+"...\n"
+"Found an even number 2\n"
+"Found an odd number 3\n"
+"Found an even number 4\n"
+"Found an odd number 5\n"
+"Found an even number 6\n"
+"Found an odd number 7\n"
+"Found an even number 8\n"
+"Found an odd number 9"
 
 #: tutorial/controlflow.rst:202
 msgid ":keyword:`!else` Clauses on Loops"
-msgstr ""
+msgstr "लूप में :keyword:`!else` क्लॉज़"
 
 #: tutorial/controlflow.rst:204
 msgid ""
@@ -288,18 +413,23 @@ msgid ""
 "finishes without executing the :keyword:`!break`, the :keyword:`!else` "
 "clause executes."
 msgstr ""
+"किसी :keyword:`!for` या :keyword:`!while` लूप में :keyword:`!break` स्टेटमेंट के साथ "
+"एक :keyword:`!else` क्लॉज़ हो सकता है। अगर लूप :keyword:`!break` चलाए बिना पूरा "
+"होता है, तो :keyword:`!else` क्लॉज़ चलता है।"
 
 #: tutorial/controlflow.rst:208
 msgid ""
 "In a :keyword:`for` loop, the :keyword:`!else` clause is executed after the "
 "loop finishes its final iteration, that is, if no break occurred."
 msgstr ""
+":keyword:`for` लूप में, :keyword:`!else` क्लॉज़ लूप के आख़िरी इटरेशन के बाद चलता है, "
+"यानी अगर कोई break नहीं हुआ।"
 
 #: tutorial/controlflow.rst:211
 msgid ""
 "In a :keyword:`while` loop, it's executed after the loop's condition becomes "
 "false."
-msgstr ""
+msgstr ":keyword:`while` लूप में, यह लूप की शर्त के false होने के बाद चलता है।"
 
 #: tutorial/controlflow.rst:213
 msgid ""
@@ -308,12 +438,16 @@ msgid ""
 "ending the loop early, such as a :keyword:`return` or a raised exception, "
 "will also skip execution of the :keyword:`else` clause."
 msgstr ""
+"दोनों तरह के लूप में, अगर लूप :keyword:`break` से ख़त्म हुआ, तो :keyword:`!else` क्लॉज़ "
+"**नहीं** चलता। बेशक, लूप को जल्दी ख़त्म करने के दूसरे तरीक़े, जैसे :keyword:`return` या "
+"कोई रेज़ हुआ एक्सेप्शन, भी :keyword:`else` क्लॉज़ को नहीं चलने देंगे।"
 
 #: tutorial/controlflow.rst:218
 msgid ""
 "This is exemplified in the following :keyword:`!for` loop, which searches "
 "for prime numbers::"
 msgstr ""
+"इसका उदाहरण नीचे का :keyword:`!for` लूप है, जो अभाज्य संख्याएँ (प्राइम नंबर) खोजता है::"
 
 #: tutorial/controlflow.rst:221
 msgid ""
@@ -335,12 +469,31 @@ msgid ""
 "8 equals 2 * 4\n"
 "9 equals 3 * 3"
 msgstr ""
+">>> for n in range(2, 10):\n"
+"...     for x in range(2, n):\n"
+"...         if n % x == 0:\n"
+"...             print(n, 'equals', x, '*', n//x)\n"
+"...             break\n"
+"...     else:\n"
+"...         # loop fell through without finding a factor\n"
+"...         print(n, 'is a prime number')\n"
+"...\n"
+"2 is a prime number\n"
+"3 is a prime number\n"
+"4 equals 2 * 2\n"
+"5 is a prime number\n"
+"6 equals 2 * 3\n"
+"7 is a prime number\n"
+"8 equals 2 * 4\n"
+"9 equals 3 * 3"
 
 #: tutorial/controlflow.rst:239
 msgid ""
 "(Yes, this is the correct code.  Look closely: the ``else`` clause belongs "
 "to the ``for`` loop, **not** the ``if`` statement.)"
 msgstr ""
+"(हाँ, यह सही कोड है। ध्यान से देखें: ``else`` क्लॉज़ ``for`` लूप का है, ``if`` स्टेटमेंट का "
+"**नहीं**।)"
 
 #: tutorial/controlflow.rst:242
 msgid ""
@@ -350,6 +503,10 @@ msgid ""
 "condition is ever true, a ``break`` will happen. If the condition is never "
 "true, the ``else`` clause outside the loop will execute."
 msgstr ""
+"else क्लॉज़ के बारे में सोचने का एक तरीक़ा यह कल्पना करना है कि वह लूप के अंदर वाले ``if`` "
+"के साथ जुड़ा है। लूप चलते समय यह if/if/if/else जैसा क्रम चलाएगा। ``if`` लूप के अंदर है, "
+"और कई बार आता है। अगर शर्त कभी true होती है, तो ``break`` होगा। अगर शर्त कभी "
+"true नहीं होती, तो लूप के बाहर वाला ``else`` क्लॉज़ चलेगा।"
 
 #: tutorial/controlflow.rst:248
 msgid ""
@@ -360,16 +517,24 @@ msgid ""
 "occurs. For more on the ``try`` statement and exceptions, see :ref:`tut-"
 "handling`."
 msgstr ""
+"लूप के साथ इस्तेमाल होने पर, ``else`` क्लॉज़ में ``if`` स्टेटमेंट वाले क्लॉज़ की तुलना "
+"में :keyword:`try` स्टेटमेंट के ``else`` क्लॉज़ से ज़्यादा समानता है: ``try`` स्टेटमेंट का "
+"``else`` क्लॉज़ तब चलता है जब कोई एक्सेप्शन नहीं होता, और लूप का ``else`` क्लॉज़ तब "
+"चलता है जब कोई ``break`` नहीं होता। ``try`` स्टेटमेंट और एक्सेप्शन के बारे में और जानकारी "
+"के लिए :ref:`tut-handling` देखें।"
 
 #: tutorial/controlflow.rst:258
 msgid ":keyword:`!pass` Statements"
-msgstr ""
+msgstr ":keyword:`!pass` स्टेटमेंट"
 
 #: tutorial/controlflow.rst:260
 msgid ""
 "The :keyword:`pass` statement does nothing. It can be used when a statement "
 "is required syntactically but the program requires no action. For example::"
 msgstr ""
+":keyword:`pass` स्टेटमेंट कुछ नहीं करता। इसे तब इस्तेमाल किया जा सकता है जब सिंटैक्स के "
+"हिसाब से एक स्टेटमेंट ज़रूरी हो, लेकिन प्रोग्राम को कोई कार्रवाई न करनी हो। उदाहरण के "
+"लिए::"
 
 #: tutorial/controlflow.rst:263
 msgid ""
@@ -377,10 +542,13 @@ msgid ""
 "...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
 "..."
 msgstr ""
+">>> while True:\n"
+"...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
+"..."
 
 #: tutorial/controlflow.rst:267
 msgid "This is commonly used for creating minimal classes::"
-msgstr ""
+msgstr "इसका इस्तेमाल आम तौर पर न्यूनतम क्लास बनाने के लिए होता है::"
 
 #: tutorial/controlflow.rst:269
 msgid ""
@@ -388,6 +556,9 @@ msgid ""
 "...     pass\n"
 "..."
 msgstr ""
+">>> class MyEmptyClass:\n"
+"...     pass\n"
+"..."
 
 #: tutorial/controlflow.rst:273
 msgid ""
@@ -396,6 +567,10 @@ msgid ""
 "to keep thinking at a more abstract level.  The :keyword:`!pass` is silently "
 "ignored::"
 msgstr ""
+":keyword:`pass` को इस्तेमाल करने की एक और जगह है, जब आप नए कोड पर काम कर रहे हों, "
+"तो किसी फ़ंक्शन या शर्त की बॉडी के लिए जगह भरने (placeholder) के रूप में, ताकि आप "
+"ज़्यादा ऐब्स्ट्रैक्ट स्तर पर सोचते रह सकें। :keyword:`!pass` को चुपचाप नज़रअंदाज़ कर दिया "
+"जाता है::"
 
 #: tutorial/controlflow.rst:277
 msgid ""
@@ -403,6 +578,9 @@ msgid ""
 "...     pass   # Remember to implement this!\n"
 "..."
 msgstr ""
+">>> def initlog(*args):\n"
+"...     pass   # Remember to implement this!\n"
+"..."
 
 #: tutorial/controlflow.rst:281
 msgid ""
@@ -412,10 +590,15 @@ msgid ""
 "but :code:`...` is used conventionally as a placeholder body as well. "
 "See :ref:`bltin-ellipsis-object`."
 msgstr ""
+"इस आख़िरी मामले के लिए, कई लोग :code:`pass` के बजाय एलिप्सिस लिटरल :code:`...` "
+"इस्तेमाल करते हैं। पायथन के लिए इस इस्तेमाल का कोई ख़ास मतलब नहीं है, और यह भाषा की "
+"परिभाषा का हिस्सा नहीं है (आप यहाँ कोई भी कॉन्स्टेंट एक्सप्रेशन इस्तेमाल कर सकते हैं), लेकिन "
+"परंपरा के रूप में :code:`...` भी placeholder बॉडी की तरह इस्तेमाल होता "
+"है। :ref:`bltin-ellipsis-object` देखें।"
 
 #: tutorial/controlflow.rst:291
 msgid ":keyword:`!match` Statements"
-msgstr ""
+msgstr ":keyword:`!match` स्टेटमेंट"
 
 #: tutorial/controlflow.rst:293
 msgid ""
@@ -427,11 +610,17 @@ msgid ""
 "also extract components (sequence elements or object attributes) from the "
 "value into variables. If no case matches, none of the branches is executed."
 msgstr ""
+":keyword:`match` स्टेटमेंट एक एक्सप्रेशन लेता है और उसके मान की तुलना एक या ज़्यादा case "
+"ब्लॉक के रूप में दिए गए पैटर्न से एक-एक करके करता है। ऊपर से यह C, Java या JavaScript "
+"(और कई दूसरी भाषाओं) के switch स्टेटमेंट जैसा लगता है, लेकिन यह Rust या Haskell जैसी "
+"भाषाओं की पैटर्न मैचिंग से ज़्यादा मिलता-जुलता है। सिर्फ़ पहला मेल खाने वाला पैटर्न चलता है, "
+"और यह मान से हिस्से (सीक्वेंस के एलिमेंट या ऑब्जेक्ट के एट्रिब्यूट) निकालकर वेरिएबलों में भी रख "
+"सकता है। अगर कोई case मेल नहीं खाता, तो कोई भी शाखा नहीं चलती।"
 
 #: tutorial/controlflow.rst:302
 msgid ""
 "The simplest form compares a subject value against one or more literals::"
-msgstr ""
+msgstr "सबसे सरल रूप किसी सब्जेक्ट मान की तुलना एक या ज़्यादा लिटरल से करता है::"
 
 #: tutorial/controlflow.rst:304
 msgid ""
@@ -446,29 +635,45 @@ msgid ""
 "        case _:\n"
 "            return \"Something's wrong with the internet\""
 msgstr ""
+"def http_error(status):\n"
+"    match status:\n"
+"        case 400:\n"
+"            return \"Bad request\"\n"
+"        case 404:\n"
+"            return \"Not found\"\n"
+"        case 418:\n"
+"            return \"I'm a teapot\"\n"
+"        case _:\n"
+"            return \"Something's wrong with the internet\""
 
 #: tutorial/controlflow.rst:315
 msgid ""
 "Note the last block: the \"variable name\" ``_`` acts as a *wildcard* and "
 "never fails to match."
 msgstr ""
+"आख़िरी ब्लॉक पर ध्यान दें: \"वेरिएबल नाम\" ``_`` एक *वाइल्डकार्ड* की तरह काम करता है "
+"और हमेशा मेल खाता है।"
 
 #: tutorial/controlflow.rst:318
 msgid ""
 "You can combine several literals in a single pattern using ``|`` (\"or\")::"
-msgstr ""
+msgstr "आप ``|`` (\"or\") से कई लिटरल को एक ही पैटर्न में जोड़ सकते हैं::"
 
 #: tutorial/controlflow.rst:320
 msgid ""
 "case 401 | 403 | 404:\n"
 "    return \"Not allowed\""
 msgstr ""
+"case 401 | 403 | 404:\n"
+"    return \"Not allowed\""
 
 #: tutorial/controlflow.rst:323
 msgid ""
 "Patterns can look like unpacking assignments, and can be used to bind "
 "variables::"
 msgstr ""
+"पैटर्न अनपैकिंग असाइनमेंट जैसे दिख सकते हैं, और वेरिएबलों को बाँधने के लिए इस्तेमाल किए जा सकते "
+"हैं::"
 
 #: tutorial/controlflow.rst:326
 msgid ""
@@ -485,6 +690,18 @@ msgid ""
 "    case _:\n"
 "        raise ValueError(\"Not a point\")"
 msgstr ""
+"# point is an (x, y) tuple\n"
+"match point:\n"
+"    case (0, 0):\n"
+"        print(\"Origin\")\n"
+"    case (0, y):\n"
+"        print(f\"Y={y}\")\n"
+"    case (x, 0):\n"
+"        print(f\"X={x}\")\n"
+"    case (x, y):\n"
+"        print(f\"X={x}, Y={y}\")\n"
+"    case _:\n"
+"        raise ValueError(\"Not a point\")"
 
 #: tutorial/controlflow.rst:339
 msgid ""
@@ -495,6 +712,10 @@ msgid ""
 "which makes it conceptually similar to the unpacking assignment ``(x, y) = "
 "point``."
 msgstr ""
+"इसे ध्यान से समझें! पहले पैटर्न में दो लिटरल हैं, और इसे ऊपर दिखाए गए लिटरल पैटर्न का "
+"विस्तार माना जा सकता है। लेकिन अगले दो पैटर्न एक लिटरल और एक वेरिएबल को मिलाते हैं, और "
+"वेरिएबल सब्जेक्ट (``point``) के एक मान को *बाँधता* है। चौथा पैटर्न दो मान कैप्चर करता "
+"है, जो इसे विचार के स्तर पर अनपैकिंग असाइनमेंट ``(x, y) = point`` जैसा बनाता है।"
 
 #: tutorial/controlflow.rst:346
 msgid ""
@@ -502,6 +723,9 @@ msgid ""
 "followed by an argument list resembling a constructor, but with the ability "
 "to capture attributes into variables::"
 msgstr ""
+"अगर आप अपने डेटा को व्यवस्थित करने के लिए क्लास इस्तेमाल कर रहे हैं, तो आप क्लास का नाम "
+"और उसके बाद कंस्ट्रक्टर जैसी आर्ग्युमेंट लिस्ट इस्तेमाल कर सकते हैं, लेकिन इसमें एट्रिब्यूट को "
+"वेरिएबलों में कैप्चर करने की क्षमता होती है::"
 
 #: tutorial/controlflow.rst:350
 msgid ""
@@ -523,6 +747,23 @@ msgid ""
 "        case _:\n"
 "            print(\"Not a point\")"
 msgstr ""
+"class Point:\n"
+"    def __init__(self, x, y):\n"
+"        self.x = x\n"
+"        self.y = y\n"
+"\n"
+"def where_is(point):\n"
+"    match point:\n"
+"        case Point(x=0, y=0):\n"
+"            print(\"Origin\")\n"
+"        case Point(x=0, y=y):\n"
+"            print(f\"Y={y}\")\n"
+"        case Point(x=x, y=0):\n"
+"            print(f\"X={x}\")\n"
+"        case Point():\n"
+"            print(\"Somewhere else\")\n"
+"        case _:\n"
+"            print(\"Not a point\")"
 
 #: tutorial/controlflow.rst:368
 msgid ""
@@ -533,6 +774,11 @@ msgid ""
 "\"y\"), the following patterns are all equivalent (and all bind the ``y`` "
 "attribute to the ``var`` variable)::"
 msgstr ""
+"आप कुछ बिल्ट-इन क्लासों के साथ पोज़िशनल पैरामीटर इस्तेमाल कर सकते हैं, जो अपने एट्रिब्यूट का "
+"एक क्रम देती हैं (जैसे dataclasses)। आप अपनी क्लासों में ख़ास एट्रिब्यूट "
+"``__match_args__`` सेट करके पैटर्न में एट्रिब्यूट के लिए एक ख़ास स्थिति भी तय कर सकते हैं। "
+"अगर इसे (\"x\", \"y\") पर सेट किया गया है, तो नीचे के सभी पैटर्न बराबर हैं (और सभी "
+"``y`` एट्रिब्यूट को ``var`` वेरिएबल से बाँधते हैं)::"
 
 #: tutorial/controlflow.rst:374
 msgid ""
@@ -541,6 +787,10 @@ msgid ""
 "Point(x=1, y=var)\n"
 "Point(y=var, x=1)"
 msgstr ""
+"Point(1, var)\n"
+"Point(1, y=var)\n"
+"Point(x=1, y=var)\n"
+"Point(y=var, x=1)"
 
 #: tutorial/controlflow.rst:379
 msgid ""
@@ -552,12 +802,20 @@ msgid ""
 "(recognized by the \"(...)\" next to them like ``Point`` above) are never "
 "assigned to."
 msgstr ""
+"पैटर्न पढ़ने का एक सुझाया गया तरीक़ा है उन्हें उस चीज़ के विस्तारित रूप की तरह देखना जो आप "
+"किसी असाइनमेंट के बाईं ओर रखते, ताकि समझ सकें कि कौन-से वेरिएबल किस मान पर सेट होंगे। "
+"match स्टेटमेंट सिर्फ़ अकेले नामों (जैसे ऊपर ``var``) को असाइन करता है। डॉट वाले नाम (जैसे "
+"``foo.bar``), एट्रिब्यूट नाम (ऊपर ``x=`` और ``y=``) या क्लास नाम (जो अपने बगल वाले "
+"\"(...)\" से पहचाने जाते हैं, जैसे ऊपर ``Point``) कभी असाइन नहीं होते।"
 
 #: tutorial/controlflow.rst:386
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if we have a short list of "
 "Points, with ``__match_args__`` added, we could match it like this::"
 msgstr ""
+"पैटर्न को किसी भी गहराई तक नेस्ट किया जा सकता है। उदाहरण के लिए, अगर हमारे पास "
+"Points की एक छोटी लिस्ट है, जिनमें ``__match_args__`` जोड़ा गया है, तो हम उसे इस "
+"तरह मैच कर सकते हैं::"
 
 #: tutorial/controlflow.rst:389
 msgid ""
@@ -579,6 +837,23 @@ msgid ""
 "    case _:\n"
 "        print(\"Something else\")"
 msgstr ""
+"class Point:\n"
+"    __match_args__ = ('x', 'y')\n"
+"    def __init__(self, x, y):\n"
+"        self.x = x\n"
+"        self.y = y\n"
+"\n"
+"match points:\n"
+"    case []:\n"
+"        print(\"No points\")\n"
+"    case [Point(0, 0)]:\n"
+"        print(\"The origin\")\n"
+"    case [Point(x, y)]:\n"
+"        print(f\"Single point {x}, {y}\")\n"
+"    case [Point(0, y1), Point(0, y2)]:\n"
+"        print(f\"Two on the Y axis at {y1}, {y2}\")\n"
+"    case _:\n"
+"        print(\"Something else\")"
 
 #: tutorial/controlflow.rst:407
 msgid ""
@@ -586,6 +861,9 @@ msgid ""
 "guard is false, ``match`` goes on to try the next case block.  Note that "
 "value capture happens before the guard is evaluated::"
 msgstr ""
+"हम किसी पैटर्न में एक ``if`` क्लॉज़ जोड़ सकते हैं, जिसे \"guard\" कहते हैं। अगर guard "
+"false है, तो ``match`` अगला case ब्लॉक आज़माता है। ध्यान दें कि मान कैप्चर guard के "
+"इवैल्युएट होने से पहले होता है::"
 
 #: tutorial/controlflow.rst:411
 msgid ""
@@ -595,10 +873,15 @@ msgid ""
 "    case Point(x, y):\n"
 "        print(f\"Not on the diagonal\")"
 msgstr ""
+"match point:\n"
+"    case Point(x, y) if x == y:\n"
+"        print(f\"Y=X at {x}\")\n"
+"    case Point(x, y):\n"
+"        print(f\"Not on the diagonal\")"
 
 #: tutorial/controlflow.rst:417
 msgid "Several other key features of this statement:"
-msgstr ""
+msgstr "इस स्टेटमेंट की कुछ और अहम सुविधाएँ:"
 
 #: tutorial/controlflow.rst:419
 msgid ""
@@ -606,6 +889,8 @@ msgid ""
 "meaning and actually match arbitrary sequences.  An important exception is "
 "that they don't match iterators or strings."
 msgstr ""
+"अनपैकिंग असाइनमेंट की तरह, टपल और लिस्ट पैटर्न का मतलब बिल्कुल एक जैसा है, और ये असल में "
+"किसी भी सीक्वेंस से मेल खाते हैं। एक अहम अपवाद यह है कि ये इटरेटर या स्ट्रिंग से मेल नहीं खाते।"
 
 #: tutorial/controlflow.rst:423
 msgid ""
@@ -614,6 +899,10 @@ msgid ""
 "also be ``_``, so ``(x, y, *_)`` matches a sequence of at least two items "
 "without binding the remaining items."
 msgstr ""
+"सीक्वेंस पैटर्न विस्तारित अनपैकिंग सपोर्ट करते हैं: ``[x, y, *rest]`` और ``(x, y, "
+"*rest)`` अनपैकिंग असाइनमेंट की तरह काम करते हैं। ``*`` के बाद का नाम ``_`` भी हो "
+"सकता है, इसलिए ``(x, y, *_)`` कम से कम दो आइटम वाले सीक्वेंस से मेल खाता है, बाक़ी "
+"आइटम को बाँधे बिना।"
 
 #: tutorial/controlflow.rst:428
 msgid ""
@@ -622,32 +911,41 @@ msgid ""
 "sequence patterns, extra keys are ignored.  An unpacking like ``**rest`` is "
 "also supported.  (But ``**_`` would be redundant, so it is not allowed.)"
 msgstr ""
+"मैपिंग पैटर्न: ``{\"bandwidth\": b, \"latency\": l}`` किसी डिक्शनरी से "
+"``\"bandwidth\"`` और ``\"latency\"`` मान कैप्चर करता है। सीक्वेंस पैटर्न के उलट, "
+"अतिरिक्त कुंजियाँ नज़रअंदाज़ कर दी जाती हैं। ``**rest`` जैसी अनपैकिंग भी सपोर्ट होती है। "
+"(लेकिन ``**_`` बेकार होगा, इसलिए इसकी अनुमति नहीं है।)"
 
 #: tutorial/controlflow.rst:433
 msgid "Subpatterns may be captured using the ``as`` keyword::"
-msgstr ""
+msgstr "सबपैटर्न को ``as`` कीवर्ड से कैप्चर किया जा सकता है::"
 
 #: tutorial/controlflow.rst:435
 msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
-msgstr ""
+msgstr "case (Point(x1, y1), Point(x2, y2) as p2): ..."
 
 #: tutorial/controlflow.rst:437
 msgid ""
 "will capture the second element of the input as ``p2`` (as long as the input "
 "is a sequence of two points)"
 msgstr ""
+"इनपुट के दूसरे एलिमेंट को ``p2`` के रूप में कैप्चर करेगा (बशर्ते इनपुट दो पॉइंट का सीक्वेंस हो)"
 
 #: tutorial/controlflow.rst:440
 msgid ""
 "Most literals are compared by equality, however the singletons ``True``, "
 "``False`` and ``None`` are compared by identity."
 msgstr ""
+"ज़्यादातर लिटरल की तुलना बराबरी से होती है, लेकिन सिंगलटन ``True``, ``False`` और "
+"``None`` की तुलना पहचान (identity) से होती है।"
 
 #: tutorial/controlflow.rst:443
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
 "them from being interpreted as capture variables::"
 msgstr ""
+"पैटर्न में नाम वाले कॉन्स्टेंट इस्तेमाल हो सकते हैं। ये डॉट वाले नाम होने चाहिए, ताकि इन्हें "
+"कैप्चर वेरिएबल न समझ लिया जाए::"
 
 #: tutorial/controlflow.rst:446
 msgid ""
@@ -667,22 +965,39 @@ msgid ""
 "    case Color.BLUE:\n"
 "        print(\"I'm feeling the blues :(\")"
 msgstr ""
+"from enum import Enum\n"
+"class Color(Enum):\n"
+"    RED = 'red'\n"
+"    GREEN = 'green'\n"
+"    BLUE = 'blue'\n"
+"\n"
+"color = Color(input(\"Enter your choice of 'red', 'blue' or 'green': \"))\n"
+"\n"
+"match color:\n"
+"    case Color.RED:\n"
+"        print(\"I see red!\")\n"
+"    case Color.GREEN:\n"
+"        print(\"Grass is green\")\n"
+"    case Color.BLUE:\n"
+"        print(\"I'm feeling the blues :(\")"
 
 #: tutorial/controlflow.rst:462
 msgid ""
 "For a more detailed explanation and additional examples, you can look "
 "into :pep:`636` which is written in a tutorial format."
 msgstr ""
+"ज़्यादा विस्तृत व्याख्या और अतिरिक्त उदाहरणों के लिए, आप :pep:`636` देख सकते हैं, जो "
+"ट्यूटोरियल के रूप में लिखा गया है।"
 
 #: tutorial/controlflow.rst:468
 msgid "Defining Functions"
-msgstr ""
+msgstr "फ़ंक्शन परिभाषित करना"
 
 #: tutorial/controlflow.rst:470
 msgid ""
 "We can create a function that writes the Fibonacci series to an arbitrary "
 "boundary::"
-msgstr ""
+msgstr "हम एक फ़ंक्शन बना सकते हैं जो किसी भी सीमा तक फ़िबोनाची सीरीज़ लिखे::"
 
 #: tutorial/controlflow.rst:473
 msgid ""
@@ -698,6 +1013,17 @@ msgid ""
 ">>> fib(2000)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 msgstr ""
+">>> def fib(n):    # write Fibonacci series less than n\n"
+"...     \"\"\"Print a Fibonacci series less than n.\"\"\"\n"
+"...     a, b = 0, 1\n"
+"...     while a < n:\n"
+"...         print(a, end=' ')\n"
+"...         a, b = b, a+b\n"
+"...     print()\n"
+"...\n"
+">>> # Now call the function we just defined:\n"
+">>> fib(2000)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 
 #: tutorial/controlflow.rst:490
 msgid ""
@@ -706,6 +1032,9 @@ msgid ""
 "parameters. The statements that form the body of the function start at the "
 "next line, and must be indented."
 msgstr ""
+"कीवर्ड :keyword:`def` एक फ़ंक्शन *परिभाषा* शुरू करता है। इसके बाद फ़ंक्शन का नाम और "
+"कोष्ठक में फ़ॉर्मल पैरामीटर की लिस्ट होनी चाहिए। फ़ंक्शन की बॉडी बनाने वाले स्टेटमेंट अगली "
+"लाइन से शुरू होते हैं, और इंडेंट होने चाहिए।"
 
 #: tutorial/controlflow.rst:495
 msgid ""
@@ -717,6 +1046,11 @@ msgid ""
 "interactively browse through code; it's good practice to include docstrings "
 "in code that you write, so make a habit of it."
 msgstr ""
+"फ़ंक्शन बॉडी का पहला स्टेटमेंट वैकल्पिक रूप से एक स्ट्रिंग लिटरल हो सकता है; यह स्ट्रिंग लिटरल "
+"फ़ंक्शन की डॉक्यूमेंटेशन स्ट्रिंग, या :dfn:`डॉकस्ट्रिंग`, है। (डॉकस्ट्रिंग के बारे में और "
+"जानकारी :ref:`tut-docstrings` सेक्शन में है।) कुछ टूल डॉकस्ट्रिंग से अपने-आप ऑनलाइन या "
+"छपा हुआ डॉक्यूमेंटेशन बनाते हैं, या यूज़र को कोड इंटरैक्टिव रूप से ब्राउज़ करने देते हैं; अपने लिखे "
+"कोड में डॉकस्ट्रिंग शामिल करना अच्छा तरीक़ा है, इसलिए इसकी आदत डालें।"
 
 #: tutorial/controlflow.rst:502
 msgid ""
@@ -731,6 +1065,14 @@ msgid ""
 "for variables of enclosing functions, named in a :keyword:`nonlocal` "
 "statement), although they may be referenced."
 msgstr ""
+"किसी फ़ंक्शन के *चलने* से एक नई सिंबल टेबल बनती है, जो फ़ंक्शन के लोकल वेरिएबलों के लिए "
+"इस्तेमाल होती है। ज़्यादा सटीक रूप से कहें, तो फ़ंक्शन में सभी वेरिएबल असाइनमेंट मान को लोकल "
+"सिंबल टेबल में रखते हैं; जबकि वेरिएबल रेफ़रेंस पहले लोकल सिंबल टेबल में देखते हैं, फिर बाहरी "
+"(एनक्लोज़िंग) फ़ंक्शनों की लोकल सिंबल टेबल में, फिर ग्लोबल सिंबल टेबल में, और आख़िर में बिल्ट-इन "
+"नामों की टेबल में। इसलिए, किसी फ़ंक्शन के अंदर ग्लोबल वेरिएबलों और बाहरी फ़ंक्शनों के वेरिएबलों "
+"को सीधे कोई मान असाइन नहीं किया जा सकता (जब तक, ग्लोबल वेरिएबलों के लिए, उनका "
+"नाम :keyword:`global` स्टेटमेंट में न हो, या बाहरी फ़ंक्शनों के वेरिएबलों के "
+"लिए, :keyword:`nonlocal` स्टेटमेंट में न हो), हालाँकि उन्हें इस्तेमाल किया जा सकता है।"
 
 #: tutorial/controlflow.rst:513
 msgid ""
@@ -741,6 +1083,11 @@ msgid ""
 "another function, or calls itself recursively, a new local symbol table is "
 "created for that call."
 msgstr ""
+"फ़ंक्शन कॉल के असली पैरामीटर (आर्ग्युमेंट) कॉल होने पर कॉल किए गए फ़ंक्शन की लोकल सिंबल टेबल "
+"में डाले जाते हैं; इसलिए, आर्ग्युमेंट *call by value* से पास होते हैं (जहाँ *value* हमेशा "
+"ऑब्जेक्ट का *रेफ़रेंस* होता है, ऑब्जेक्ट का मान नहीं)। [#]_ जब कोई फ़ंक्शन किसी दूसरे फ़ंक्शन को "
+"कॉल करता है, या ख़ुद को रिकर्सिव रूप से कॉल करता है, तो उस कॉल के लिए एक नई लोकल "
+"सिंबल टेबल बनती है।"
 
 #: tutorial/controlflow.rst:520
 msgid ""
@@ -749,6 +1096,9 @@ msgid ""
 "to by that name as a user-defined function.  Other names can also point to "
 "that same function object and can also be used to access the function::"
 msgstr ""
+"फ़ंक्शन परिभाषा फ़ंक्शन के नाम को मौजूदा सिंबल टेबल में फ़ंक्शन ऑब्जेक्ट से जोड़ती है। इंटरप्रेटर उस "
+"नाम से इशारा किए गए ऑब्जेक्ट को यूज़र-डिफ़ाइंड फ़ंक्शन के रूप में पहचानता है। दूसरे नाम भी उसी "
+"फ़ंक्शन ऑब्जेक्ट की ओर इशारा कर सकते हैं, और उनसे भी फ़ंक्शन तक पहुँचा जा सकता है::"
 
 #: tutorial/controlflow.rst:525
 msgid ""
@@ -758,6 +1108,11 @@ msgid ""
 ">>> f(100)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89"
 msgstr ""
+">>> fib\n"
+"<function fib at 10042ed0>\n"
+">>> f = fib\n"
+">>> f(100)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89"
 
 #: tutorial/controlflow.rst:531
 msgid ""
@@ -769,6 +1124,11 @@ msgid ""
 "the only value written. You can see it if you really want to "
 "using :func:`print`::"
 msgstr ""
+"दूसरी भाषाओं से आने पर, आप आपत्ति कर सकते हैं कि ``fib`` फ़ंक्शन नहीं, बल्कि प्रोसीजर है, "
+"क्योंकि यह कोई मान नहीं लौटाता। असल में, :keyword:`return` स्टेटमेंट के बिना वाले फ़ंक्शन "
+"भी एक मान लौटाते हैं, भले ही वह काफ़ी उबाऊ हो। इस मान को ``None`` कहते हैं (यह एक "
+"बिल्ट-इन नाम है)। अगर ``None`` ही अकेला लिखा जाने वाला मान हो, तो आम तौर पर "
+"इंटरप्रेटर उसे नहीं दिखाता। अगर आप सच में देखना चाहें, तो :func:`print` से देख सकते हैं::"
 
 #: tutorial/controlflow.rst:538
 msgid ""
@@ -776,12 +1136,16 @@ msgid ""
 ">>> print(fib(0))\n"
 "None"
 msgstr ""
+">>> fib(0)\n"
+">>> print(fib(0))\n"
+"None"
 
 #: tutorial/controlflow.rst:542
 msgid ""
 "It is simple to write a function that returns a list of the numbers of the "
 "Fibonacci series, instead of printing it::"
 msgstr ""
+"फ़िबोनाची सीरीज़ के नंबर प्रिंट करने के बजाय उनकी लिस्ट लौटाने वाला फ़ंक्शन लिखना आसान है::"
 
 #: tutorial/controlflow.rst:545
 msgid ""
@@ -798,10 +1162,22 @@ msgid ""
 ">>> f100                # write the result\n"
 "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 msgstr ""
+">>> def fib2(n):  # return Fibonacci series up to n\n"
+"...     \"\"\"Return a list containing the Fibonacci series up to n.\"\"\"\n"
+"...     result = []\n"
+"...     a, b = 0, 1\n"
+"...     while a < n:\n"
+"...         result.append(a)    # see below\n"
+"...         a, b = b, a+b\n"
+"...     return result\n"
+"...\n"
+">>> f100 = fib2(100)    # call it\n"
+">>> f100                # write the result\n"
+"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 
 #: tutorial/controlflow.rst:558
 msgid "This example, as usual, demonstrates some new Python features:"
-msgstr ""
+msgstr "यह उदाहरण, हमेशा की तरह, पायथन की कुछ नई सुविधाएँ दिखाता है:"
 
 #: tutorial/controlflow.rst:560
 msgid ""
@@ -809,6 +1185,9 @@ msgid ""
 "function. :keyword:`!return` without an expression argument returns "
 "``None``. Falling off the end of a function also returns ``None``."
 msgstr ""
+":keyword:`return` स्टेटमेंट फ़ंक्शन से एक मान के साथ लौटता है। बिना एक्सप्रेशन आर्ग्युमेंट "
+"वाला :keyword:`!return`, ``None`` लौटाता है। फ़ंक्शन के अंत तक पहुँचकर बाहर निकलने पर "
+"भी ``None`` लौटता है।"
 
 #: tutorial/controlflow.rst:564
 msgid ""
@@ -824,20 +1203,31 @@ msgid ""
 "In this example it is equivalent to ``result = result + [a]``, but more "
 "efficient."
 msgstr ""
+"स्टेटमेंट ``result.append(a)`` लिस्ट ऑब्जेक्ट ``result`` का एक *मेथड* कॉल करता है। मेथड "
+"एक फ़ंक्शन है जो किसी ऑब्जेक्ट का 'होता है' और जिसका नाम ``obj.methodname`` होता है, "
+"जहाँ ``obj`` कोई ऑब्जेक्ट है (यह एक एक्सप्रेशन भी हो सकता है), और ``methodname`` उस "
+"मेथड का नाम है जो ऑब्जेक्ट के टाइप में परिभाषित है। अलग-अलग टाइप अलग-अलग मेथड परिभाषित "
+"करते हैं। अलग-अलग टाइप के मेथड का नाम एक जैसा हो सकता है, बिना कोई अस्पष्टता पैदा किए। "
+"(*क्लास* से अपने ख़ुद के ऑब्जेक्ट टाइप और मेथड परिभाषित किए जा सकते हैं, :ref:`tut-"
+"classes` देखें।) उदाहरण में दिखाया गया मेथड :meth:`~list.append` लिस्ट ऑब्जेक्ट के लिए "
+"परिभाषित है; यह लिस्ट के आख़िर में एक नया एलिमेंट जोड़ता है। इस उदाहरण में यह ``result = "
+"result + [a]`` के बराबर है, लेकिन ज़्यादा कुशल है।"
 
 #: tutorial/controlflow.rst:579
 msgid "More on Defining Functions"
-msgstr ""
+msgstr "फ़ंक्शन परिभाषित करने के बारे में और"
 
 #: tutorial/controlflow.rst:581
 msgid ""
 "It is also possible to define functions with a variable number of arguments. "
 "There are three forms, which can be combined."
 msgstr ""
+"अलग-अलग संख्या में आर्ग्युमेंट वाले फ़ंक्शन भी परिभाषित किए जा सकते हैं। इसके तीन रूप हैं, जिन्हें "
+"मिलाया जा सकता है।"
 
 #: tutorial/controlflow.rst:588
 msgid "Default Argument Values"
-msgstr ""
+msgstr "डिफ़ॉल्ट आर्ग्युमेंट मान"
 
 #: tutorial/controlflow.rst:590
 msgid ""
@@ -845,6 +1235,9 @@ msgid ""
 "arguments. This creates a function that can be called with fewer arguments "
 "than it is defined to allow.  For example::"
 msgstr ""
+"सबसे उपयोगी रूप है एक या ज़्यादा आर्ग्युमेंट के लिए डिफ़ॉल्ट मान देना। इससे एक ऐसा फ़ंक्शन "
+"बनता है जिसे उसकी परिभाषा में दिए गए आर्ग्युमेंट से कम आर्ग्युमेंट के साथ कॉल किया जा सकता "
+"है। उदाहरण के लिए::"
 
 #: tutorial/controlflow.rst:594
 msgid ""
@@ -860,39 +1253,56 @@ msgid ""
 "            raise ValueError('invalid user response')\n"
 "        print(reminder)"
 msgstr ""
+"def ask_ok(prompt, retries=4, reminder='Please try again!'):\n"
+"    while True:\n"
+"        reply = input(prompt)\n"
+"        if reply in {'y', 'ye', 'yes'}:\n"
+"            return True\n"
+"        if reply in {'n', 'no', 'nop', 'nope'}:\n"
+"            return False\n"
+"        retries = retries - 1\n"
+"        if retries < 0:\n"
+"            raise ValueError('invalid user response')\n"
+"        print(reminder)"
 
 #: tutorial/controlflow.rst:606
 msgid "This function can be called in several ways:"
-msgstr ""
+msgstr "इस फ़ंक्शन को कई तरीक़ों से कॉल किया जा सकता है:"
 
 #: tutorial/controlflow.rst:608
 msgid ""
 "giving only the mandatory argument: ``ask_ok('Do you really want to quit?')``"
-msgstr ""
+msgstr "सिर्फ़ ज़रूरी आर्ग्युमेंट देकर: ``ask_ok('Do you really want to quit?')``"
 
 #: tutorial/controlflow.rst:610
 msgid ""
 "giving one of the optional arguments: ``ask_ok('OK to overwrite the file?', "
 "2)``"
-msgstr ""
+msgstr "वैकल्पिक आर्ग्युमेंट में से एक देकर: ``ask_ok('OK to overwrite the file?', 2)``"
 
 #: tutorial/controlflow.rst:612
 msgid ""
 "or even giving all arguments: ``ask_ok('OK to overwrite the file?', 2, 'Come "
 "on, only yes or no!')``"
 msgstr ""
+"या सभी आर्ग्युमेंट देकर भी: ``ask_ok('OK to overwrite the file?', 2, 'Come on, "
+"only yes or no!')``"
 
 #: tutorial/controlflow.rst:615
 msgid ""
 "This example also introduces the :keyword:`in` keyword. This tests whether "
 "or not a sequence contains a certain value."
 msgstr ""
+"यह उदाहरण :keyword:`in` कीवर्ड से भी परिचय कराता है। यह जाँचता है कि किसी सीक्वेंस में "
+"कोई ख़ास मान है या नहीं।"
 
 #: tutorial/controlflow.rst:618
 msgid ""
 "The default values are evaluated at the point of function definition in the "
 "*defining* scope, so that ::"
 msgstr ""
+"डिफ़ॉल्ट मान फ़ंक्शन परिभाषा के समय *परिभाषित करने वाले* स्कोप में इवैल्युएट होते हैं, "
+"इसलिए ::"
 
 #: tutorial/controlflow.rst:621
 msgid ""
@@ -904,10 +1314,17 @@ msgid ""
 "i = 6\n"
 "f()"
 msgstr ""
+"i = 5\n"
+"\n"
+"def f(arg=i):\n"
+"    print(arg)\n"
+"\n"
+"i = 6\n"
+"f()"
 
 #: tutorial/controlflow.rst:629
 msgid "will print ``5``."
-msgstr ""
+msgstr "``5`` प्रिंट करेगा।"
 
 #: tutorial/controlflow.rst:631
 msgid ""
@@ -916,6 +1333,9 @@ msgid ""
 "dictionary, or instances of most classes.  For example, the following "
 "function accumulates the arguments passed to it on subsequent calls::"
 msgstr ""
+"**अहम चेतावनी:** डिफ़ॉल्ट मान सिर्फ़ एक बार इवैल्युएट होता है। इससे फ़र्क़ पड़ता है जब "
+"डिफ़ॉल्ट कोई म्यूटेबल ऑब्जेक्ट हो, जैसे लिस्ट, डिक्शनरी, या ज़्यादातर क्लासों के इंस्टेंस। उदाहरण "
+"के लिए, नीचे का फ़ंक्शन बाद की कॉल में उसे दिए गए आर्ग्युमेंट इकट्ठा करता जाता है::"
 
 #: tutorial/controlflow.rst:636
 msgid ""
@@ -927,10 +1347,17 @@ msgid ""
 "print(f(2))\n"
 "print(f(3))"
 msgstr ""
+"def f(a, L=[]):\n"
+"    L.append(a)\n"
+"    return L\n"
+"\n"
+"print(f(1))\n"
+"print(f(2))\n"
+"print(f(3))"
 
 #: tutorial/controlflow.rst:644
 msgid "This will print ::"
-msgstr ""
+msgstr "यह प्रिंट करेगा ::"
 
 #: tutorial/controlflow.rst:646
 msgid ""
@@ -938,12 +1365,17 @@ msgid ""
 "[1, 2]\n"
 "[1, 2, 3]"
 msgstr ""
+"[1]\n"
+"[1, 2]\n"
+"[1, 2, 3]"
 
 #: tutorial/controlflow.rst:650
 msgid ""
 "If you don't want the default to be shared between subsequent calls, you can "
 "write the function like this instead::"
 msgstr ""
+"अगर आप नहीं चाहते कि डिफ़ॉल्ट मान बाद की कॉल के बीच साझा हो, तो आप फ़ंक्शन को इसके "
+"बजाय इस तरह लिख सकते हैं::"
 
 #: tutorial/controlflow.rst:653
 msgid ""
@@ -953,10 +1385,15 @@ msgid ""
 "    L.append(a)\n"
 "    return L"
 msgstr ""
+"def f(a, L=None):\n"
+"    if L is None:\n"
+"        L = []\n"
+"    L.append(a)\n"
+"    return L"
 
 #: tutorial/controlflow.rst:663
 msgid "Keyword Arguments"
-msgstr ""
+msgstr "कीवर्ड आर्ग्युमेंट"
 
 #: tutorial/controlflow.rst:665
 msgid ""
@@ -964,6 +1401,8 @@ msgid ""
 "argument>` of the form ``kwarg=value``.  For instance, the following "
 "function::"
 msgstr ""
+"फ़ंक्शन को ``kwarg=value`` रूप के :term:`कीवर्ड आर्ग्युमेंट <keyword argument>` से भी "
+"कॉल किया जा सकता है। उदाहरण के लिए, यह फ़ंक्शन::"
 
 #: tutorial/controlflow.rst:668
 msgid ""
@@ -973,6 +1412,11 @@ msgid ""
 "    print(\"-- Lovely plumage, the\", type)\n"
 "    print(\"-- It's\", state, \"!\")"
 msgstr ""
+"def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):\n"
+"    print(\"-- This parrot wouldn't\", action, end=' ')\n"
+"    print(\"if you put\", voltage, \"volts through it.\")\n"
+"    print(\"-- Lovely plumage, the\", type)\n"
+"    print(\"-- It's\", state, \"!\")"
 
 #: tutorial/controlflow.rst:674
 msgid ""
@@ -980,6 +1424,8 @@ msgid ""
 "(``state``, ``action``, and ``type``).  This function can be called in any "
 "of the following ways::"
 msgstr ""
+"एक ज़रूरी आर्ग्युमेंट (``voltage``) और तीन वैकल्पिक आर्ग्युमेंट (``state``, ``action`` और "
+"``type``) लेता है। इस फ़ंक्शन को नीचे के किसी भी तरीक़े से कॉल किया जा सकता है::"
 
 #: tutorial/controlflow.rst:678
 msgid ""
@@ -993,10 +1439,19 @@ msgid ""
 "parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 "
 "keyword"
 msgstr ""
+"parrot(1000)                                          # 1 positional "
+"argument\n"
+"parrot(voltage=1000)                                  # 1 keyword argument\n"
+"parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments\n"
+"parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments\n"
+"parrot('a million', 'bereft of life', 'jump')         # 3 positional "
+"arguments\n"
+"parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 "
+"keyword"
 
 #: tutorial/controlflow.rst:685
 msgid "but all the following calls would be invalid::"
-msgstr ""
+msgstr "लेकिन नीचे की सभी कॉल अमान्य होंगी::"
 
 #: tutorial/controlflow.rst:687
 msgid ""
@@ -1006,6 +1461,11 @@ msgid ""
 "parrot(110, voltage=220)     # duplicate value for the same argument\n"
 "parrot(actor='John Cleese')  # unknown keyword argument"
 msgstr ""
+"parrot()                     # required argument missing\n"
+"parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword "
+"argument\n"
+"parrot(110, voltage=220)     # duplicate value for the same argument\n"
+"parrot(actor='John Cleese')  # unknown keyword argument"
 
 #: tutorial/controlflow.rst:692
 msgid ""
@@ -1017,6 +1477,12 @@ msgid ""
 "may receive a value more than once. Here's an example that fails due to this "
 "restriction::"
 msgstr ""
+"फ़ंक्शन कॉल में, कीवर्ड आर्ग्युमेंट पोज़िशनल आर्ग्युमेंट के बाद आने चाहिए। दिए गए सभी कीवर्ड "
+"आर्ग्युमेंट फ़ंक्शन द्वारा स्वीकार किए जाने वाले किसी आर्ग्युमेंट से मेल खाने चाहिए (जैसे "
+"``actor``, ``parrot`` फ़ंक्शन के लिए मान्य आर्ग्युमेंट नहीं है), और उनका क्रम मायने नहीं "
+"रखता। इसमें ग़ैर-वैकल्पिक आर्ग्युमेंट भी शामिल हैं (जैसे ``parrot(voltage=1000)`` भी मान्य "
+"है)। किसी भी आर्ग्युमेंट को एक से ज़्यादा बार मान नहीं मिल सकता। यह एक उदाहरण है जो इस "
+"प्रतिबंध की वजह से विफल होता है::"
 
 #: tutorial/controlflow.rst:700
 msgid ""
@@ -1028,6 +1494,13 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: function() got multiple values for argument 'a'"
 msgstr ""
+">>> def function(a):\n"
+"...     pass\n"
+"...\n"
+">>> function(0, a=0)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: function() got multiple values for argument 'a'"
 
 #: tutorial/controlflow.rst:708
 msgid ""
@@ -1039,6 +1512,13 @@ msgid ""
 "positional arguments beyond the formal parameter list.  (``*name`` must "
 "occur before ``**name``.) For example, if we define a function like this::"
 msgstr ""
+"जब ``**name`` रूप का आख़िरी फ़ॉर्मल पैरामीटर मौजूद हो, तो उसे एक डिक्शनरी "
+"(:ref:`typesmapping` देखें) मिलती है, जिसमें फ़ॉर्मल पैरामीटर से संगत आर्ग्युमेंट को छोड़कर "
+"सभी कीवर्ड आर्ग्युमेंट होते हैं। इसे ``*name`` रूप के फ़ॉर्मल पैरामीटर (जिसके बारे में अगले उप-"
+"सेक्शन में बताया गया है) के साथ मिलाया जा सकता है, जिसे फ़ॉर्मल पैरामीटर लिस्ट से आगे के "
+"पोज़िशनल आर्ग्युमेंट वाला एक :ref:`टपल <tut-tuples>` मिलता है। (``*name`` को "
+"``**name`` से पहले आना चाहिए।) उदाहरण के लिए, अगर हम इस तरह का फ़ंक्शन परिभाषित "
+"करें::"
 
 #: tutorial/controlflow.rst:716
 msgid ""
@@ -1051,10 +1531,18 @@ msgid ""
 "    for kw in keywords:\n"
 "        print(kw, \":\", keywords[kw])"
 msgstr ""
+"def cheeseshop(kind, *arguments, **keywords):\n"
+"    print(\"-- Do you have any\", kind, \"?\")\n"
+"    print(\"-- I'm sorry, we're all out of\", kind)\n"
+"    for arg in arguments:\n"
+"        print(arg)\n"
+"    print(\"-\" * 40)\n"
+"    for kw in keywords:\n"
+"        print(kw, \":\", keywords[kw])"
 
 #: tutorial/controlflow.rst:725
 msgid "It could be called like this::"
-msgstr ""
+msgstr "तो इसे इस तरह कॉल किया जा सकता है::"
 
 #: tutorial/controlflow.rst:727
 msgid ""
@@ -1064,10 +1552,15 @@ msgid ""
 "           client=\"John Cleese\",\n"
 "           sketch=\"Cheese Shop Sketch\")"
 msgstr ""
+"cheeseshop(\"Limburger\", \"It's very runny, sir.\",\n"
+"           \"It's really very, VERY runny, sir.\",\n"
+"           shopkeeper=\"Michael Palin\",\n"
+"           client=\"John Cleese\",\n"
+"           sketch=\"Cheese Shop Sketch\")"
 
 #: tutorial/controlflow.rst:733
 msgid "and of course it would print:"
-msgstr ""
+msgstr "और बेशक यह प्रिंट करेगा:"
 
 #: tutorial/controlflow.rst:735
 msgid ""
@@ -1080,16 +1573,26 @@ msgid ""
 "client : John Cleese\n"
 "sketch : Cheese Shop Sketch"
 msgstr ""
+"-- Do you have any Limburger ?\n"
+"-- I'm sorry, we're all out of Limburger\n"
+"It's very runny, sir.\n"
+"It's really very, VERY runny, sir.\n"
+"----------------------------------------\n"
+"shopkeeper : Michael Palin\n"
+"client : John Cleese\n"
+"sketch : Cheese Shop Sketch"
 
 #: tutorial/controlflow.rst:746
 msgid ""
 "Note that the order in which the keyword arguments are printed is guaranteed "
 "to match the order in which they were provided in the function call."
 msgstr ""
+"ध्यान दें कि कीवर्ड आर्ग्युमेंट जिस क्रम में प्रिंट होते हैं, वह उसी क्रम से मेल खाने की गारंटी है "
+"जिसमें वे फ़ंक्शन कॉल में दिए गए थे।"
 
 #: tutorial/controlflow.rst:750
 msgid "Special parameters"
-msgstr ""
+msgstr "ख़ास पैरामीटर"
 
 #: tutorial/controlflow.rst:752
 msgid ""
@@ -1099,10 +1602,14 @@ msgid ""
 "at the function definition to determine if items are passed by position, by "
 "position or keyword, or by keyword."
 msgstr ""
+"डिफ़ॉल्ट रूप से, पायथन फ़ंक्शन को आर्ग्युमेंट या तो स्थिति (पोज़िशन) से या स्पष्ट रूप से कीवर्ड "
+"से पास किए जा सकते हैं। पढ़ने में आसानी और परफ़ॉर्मेंस के लिए, आर्ग्युमेंट पास करने के तरीक़े को "
+"सीमित करना समझदारी है, ताकि डेवलपर को सिर्फ़ फ़ंक्शन परिभाषा देखकर पता चल जाए कि "
+"आइटम स्थिति से, स्थिति या कीवर्ड से, या कीवर्ड से पास होते हैं।"
 
 #: tutorial/controlflow.rst:758
 msgid "A function definition may look like:"
-msgstr ""
+msgstr "फ़ंक्शन परिभाषा ऐसी दिख सकती है:"
 
 #: tutorial/controlflow.rst:760
 msgid ""
@@ -1113,6 +1620,12 @@ msgid ""
 "        |                                - Keyword only\n"
 "         -- Positional only"
 msgstr ""
+"def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n"
+"      -----------    ----------     ----------\n"
+"        |             |                  |\n"
+"        |        Positional or keyword   |\n"
+"        |                                - Keyword only\n"
+"         -- Positional only"
 
 #: tutorial/controlflow.rst:769
 msgid ""
@@ -1121,20 +1634,25 @@ msgid ""
 "only, positional-or-keyword, and keyword-only. Keyword parameters are also "
 "referred to as named parameters."
 msgstr ""
+"जहाँ ``/`` और ``*`` वैकल्पिक हैं। अगर इस्तेमाल किए जाएँ, तो ये चिह्न इस आधार पर "
+"पैरामीटर का प्रकार बताते हैं कि फ़ंक्शन को आर्ग्युमेंट कैसे पास किए जा सकते हैं: सिर्फ़-पोज़िशनल, "
+"पोज़िशनल-या-कीवर्ड, और सिर्फ़-कीवर्ड। कीवर्ड पैरामीटर को नाम वाले पैरामीटर भी कहते हैं।"
 
 #: tutorial/controlflow.rst:776
 msgid "Positional-or-Keyword Arguments"
-msgstr ""
+msgstr "पोज़िशनल-या-कीवर्ड आर्ग्युमेंट"
 
 #: tutorial/controlflow.rst:778
 msgid ""
 "If ``/`` and ``*`` are not present in the function definition, arguments may "
 "be passed to a function by position or by keyword."
 msgstr ""
+"अगर फ़ंक्शन परिभाषा में ``/`` और ``*`` मौजूद नहीं हैं, तो फ़ंक्शन को आर्ग्युमेंट स्थिति से या "
+"कीवर्ड से पास किए जा सकते हैं।"
 
 #: tutorial/controlflow.rst:783
 msgid "Positional-Only Parameters"
-msgstr ""
+msgstr "सिर्फ़-पोज़िशनल पैरामीटर"
 
 #: tutorial/controlflow.rst:785
 msgid ""
@@ -1146,16 +1664,22 @@ msgid ""
 "parameters. If there is no ``/`` in the function definition, there are no "
 "positional-only parameters."
 msgstr ""
+"इसे थोड़ा और विस्तार से देखें, तो कुछ पैरामीटर को *सिर्फ़-पोज़िशनल* के रूप में चिह्नित किया "
+"जा सकता है। अगर पैरामीटर *सिर्फ़-पोज़िशनल* हैं, तो उनका क्रम मायने रखता है, और उन्हें "
+"कीवर्ड से पास नहीं किया जा सकता। सिर्फ़-पोज़िशनल पैरामीटर ``/`` (फ़ॉरवर्ड-स्लैश) से पहले "
+"रखे जाते हैं। ``/`` का इस्तेमाल सिर्फ़-पोज़िशनल पैरामीटर को बाक़ी पैरामीटर से तार्किक रूप से "
+"अलग करने के लिए होता है। अगर फ़ंक्शन परिभाषा में कोई ``/`` नहीं है, तो कोई सिर्फ़-"
+"पोज़िशनल पैरामीटर नहीं है।"
 
 #: tutorial/controlflow.rst:793
 msgid ""
 "Parameters following the ``/`` may be *positional-or-keyword* or *keyword-"
 "only*."
-msgstr ""
+msgstr "``/`` के बाद वाले पैरामीटर *पोज़िशनल-या-कीवर्ड* या *सिर्फ़-कीवर्ड* हो सकते हैं।"
 
 #: tutorial/controlflow.rst:797
 msgid "Keyword-Only Arguments"
-msgstr ""
+msgstr "सिर्फ़-कीवर्ड आर्ग्युमेंट"
 
 #: tutorial/controlflow.rst:799
 msgid ""
@@ -1163,16 +1687,20 @@ msgid ""
 "passed by keyword argument, place an ``*`` in the arguments list just before "
 "the first *keyword-only* parameter."
 msgstr ""
+"पैरामीटर को *सिर्फ़-कीवर्ड* के रूप में चिह्नित करने के लिए, यानी यह बताने के लिए कि "
+"पैरामीटर कीवर्ड आर्ग्युमेंट से ही पास होने चाहिए, आर्ग्युमेंट लिस्ट में पहले *सिर्फ़-कीवर्ड* "
+"पैरामीटर से ठीक पहले एक ``*`` रखें।"
 
 #: tutorial/controlflow.rst:805
 msgid "Function Examples"
-msgstr ""
+msgstr "फ़ंक्शन के उदाहरण"
 
 #: tutorial/controlflow.rst:807
 msgid ""
 "Consider the following example function definitions paying close attention "
 "to the markers ``/`` and ``*``::"
 msgstr ""
+"नीचे के उदाहरण फ़ंक्शन परिभाषाओं को देखें, और चिह्नों ``/`` और ``*`` पर ख़ास ध्यान दें::"
 
 #: tutorial/controlflow.rst:810
 msgid ""
@@ -1188,6 +1716,17 @@ msgid ""
 ">>> def combined_example(pos_only, /, standard, *, kwd_only):\n"
 "...     print(pos_only, standard, kwd_only)"
 msgstr ""
+">>> def standard_arg(arg):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def pos_only_arg(arg, /):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def kwd_only_arg(*, arg):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def combined_example(pos_only, /, standard, *, kwd_only):\n"
+"...     print(pos_only, standard, kwd_only)"
 
 #: tutorial/controlflow.rst:823
 msgid ""
@@ -1195,6 +1734,8 @@ msgid ""
 "places no restrictions on the calling convention and arguments may be passed "
 "by position or keyword::"
 msgstr ""
+"पहली फ़ंक्शन परिभाषा, ``standard_arg``, सबसे जाना-पहचाना रूप है, जो कॉल करने के तरीक़े "
+"पर कोई प्रतिबंध नहीं लगाता, और आर्ग्युमेंट स्थिति या कीवर्ड से पास किए जा सकते हैं::"
 
 #: tutorial/controlflow.rst:827
 msgid ""
@@ -1204,12 +1745,19 @@ msgid ""
 ">>> standard_arg(arg=2)\n"
 "2"
 msgstr ""
+">>> standard_arg(2)\n"
+"2\n"
+"\n"
+">>> standard_arg(arg=2)\n"
+"2"
 
 #: tutorial/controlflow.rst:833
 msgid ""
 "The second function ``pos_only_arg`` is restricted to only use positional "
 "parameters as there is a ``/`` in the function definition::"
 msgstr ""
+"दूसरा फ़ंक्शन ``pos_only_arg`` सिर्फ़ पोज़िशनल पैरामीटर इस्तेमाल करने तक सीमित है, क्योंकि "
+"फ़ंक्शन परिभाषा में एक ``/`` है::"
 
 #: tutorial/controlflow.rst:836
 msgid ""
@@ -1222,12 +1770,22 @@ msgid ""
 "TypeError: pos_only_arg() got some positional-only arguments passed as "
 "keyword arguments: 'arg'"
 msgstr ""
+">>> pos_only_arg(1)\n"
+"1\n"
+"\n"
+">>> pos_only_arg(arg=1)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: pos_only_arg() got some positional-only arguments passed as "
+"keyword arguments: 'arg'"
 
 #: tutorial/controlflow.rst:844
 msgid ""
 "The third function ``kwd_only_arg`` only allows keyword arguments as "
 "indicated by a ``*`` in the function definition::"
 msgstr ""
+"तीसरा फ़ंक्शन ``kwd_only_arg`` सिर्फ़ कीवर्ड आर्ग्युमेंट की अनुमति देता है, जैसा फ़ंक्शन "
+"परिभाषा में ``*`` से बताया गया है::"
 
 #: tutorial/controlflow.rst:847
 msgid ""
@@ -1239,12 +1797,19 @@ msgid ""
 ">>> kwd_only_arg(arg=3)\n"
 "3"
 msgstr ""
+">>> kwd_only_arg(3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given\n"
+"\n"
+">>> kwd_only_arg(arg=3)\n"
+"3"
 
 #: tutorial/controlflow.rst:855
 msgid ""
 "And the last uses all three calling conventions in the same function "
 "definition::"
-msgstr ""
+msgstr "और आख़िरी वाला एक ही फ़ंक्शन परिभाषा में कॉल करने के तीनों तरीक़े इस्तेमाल करता है::"
 
 #: tutorial/controlflow.rst:858
 msgid ""
@@ -1265,6 +1830,22 @@ msgid ""
 "TypeError: combined_example() got some positional-only arguments passed as "
 "keyword arguments: 'pos_only'"
 msgstr ""
+">>> combined_example(1, 2, 3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: combined_example() takes 2 positional arguments but 3 were given\n"
+"\n"
+">>> combined_example(1, 2, kwd_only=3)\n"
+"1 2 3\n"
+"\n"
+">>> combined_example(1, standard=2, kwd_only=3)\n"
+"1 2 3\n"
+"\n"
+">>> combined_example(pos_only=1, standard=2, kwd_only=3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: combined_example() got some positional-only arguments passed as "
+"keyword arguments: 'pos_only'"
 
 #: tutorial/controlflow.rst:875
 msgid ""
@@ -1272,18 +1853,24 @@ msgid ""
 "between the positional argument ``name``  and ``**kwds`` which has ``name`` "
 "as a key::"
 msgstr ""
+"आख़िर में, इस फ़ंक्शन परिभाषा को देखें, जिसमें पोज़िशनल आर्ग्युमेंट ``name`` और ``**kwds`` के "
+"बीच टकराव की संभावना है, जिसमें ``name`` एक कुंजी है::"
 
 #: tutorial/controlflow.rst:877
 msgid ""
 "def foo(name, **kwds):\n"
 "    return 'name' in kwds"
 msgstr ""
+"def foo(name, **kwds):\n"
+"    return 'name' in kwds"
 
 #: tutorial/controlflow.rst:880
 msgid ""
 "There is no possible call that will make it return ``True`` as the keyword "
 "``'name'`` will always bind to the first parameter. For example::"
 msgstr ""
+"ऐसी कोई कॉल संभव नहीं है जो इससे ``True`` लौटवाए, क्योंकि कीवर्ड ``'name'`` हमेशा "
+"पहले पैरामीटर से बंधेगा। उदाहरण के लिए::"
 
 #: tutorial/controlflow.rst:883
 msgid ""
@@ -1293,6 +1880,11 @@ msgid ""
 "TypeError: foo() got multiple values for argument 'name'\n"
 ">>>"
 msgstr ""
+">>> foo(1, **{'name': 2})\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: foo() got multiple values for argument 'name'\n"
+">>>"
 
 #: tutorial/controlflow.rst:889
 msgid ""
@@ -1300,6 +1892,8 @@ msgid ""
 "``name`` as a positional argument and ``'name'`` as a key in the keyword "
 "arguments::"
 msgstr ""
+"लेकिन ``/`` (सिर्फ़-पोज़िशनल आर्ग्युमेंट) इस्तेमाल करके यह संभव है, क्योंकि यह ``name`` को "
+"पोज़िशनल आर्ग्युमेंट के रूप में और ``'name'`` को कीवर्ड आर्ग्युमेंट में कुंजी के रूप में रहने देता है::"
 
 #: tutorial/controlflow.rst:891
 msgid ""
@@ -1309,30 +1903,38 @@ msgid ""
 ">>> foo(1, **{'name': 2})\n"
 "True"
 msgstr ""
+">>> def foo(name, /, **kwds):\n"
+"...     return 'name' in kwds\n"
+"...\n"
+">>> foo(1, **{'name': 2})\n"
+"True"
 
 #: tutorial/controlflow.rst:897
 msgid ""
 "In other words, the names of positional-only parameters can be used in "
 "``**kwds`` without ambiguity."
 msgstr ""
+"दूसरे शब्दों में, सिर्फ़-पोज़िशनल पैरामीटर के नाम ``**kwds`` में बिना किसी अस्पष्टता के "
+"इस्तेमाल किए जा सकते हैं।"
 
 #: tutorial/controlflow.rst:902
 msgid "Recap"
-msgstr ""
+msgstr "सारांश"
 
 #: tutorial/controlflow.rst:904
 msgid ""
 "The use case will determine which parameters to use in the function "
 "definition::"
 msgstr ""
+"फ़ंक्शन परिभाषा में कौन-से पैरामीटर इस्तेमाल करने हैं, यह इस्तेमाल के मामले से तय होगा::"
 
 #: tutorial/controlflow.rst:906
 msgid "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
-msgstr ""
+msgstr "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
 
 #: tutorial/controlflow.rst:908
 msgid "As guidance:"
-msgstr ""
+msgstr "मार्गदर्शन के लिए:"
 
 #: tutorial/controlflow.rst:910
 msgid ""
@@ -1342,6 +1944,10 @@ msgid ""
 "is called or if you need to take some positional parameters and arbitrary "
 "keywords."
 msgstr ""
+"अगर आप चाहते हैं कि पैरामीटर के नाम यूज़र के लिए उपलब्ध न हों, तो सिर्फ़-पोज़िशनल इस्तेमाल "
+"करें। यह तब उपयोगी है जब पैरामीटर के नामों का कोई असली मतलब न हो, अगर आप फ़ंक्शन कॉल "
+"होने पर आर्ग्युमेंट का क्रम लागू करना चाहते हैं, या अगर आपको कुछ पोज़िशनल पैरामीटर और "
+"मनमाने कीवर्ड लेने हैं।"
 
 #: tutorial/controlflow.rst:915
 msgid ""
@@ -1349,16 +1955,21 @@ msgid ""
 "understandable by being explicit with names or you want to prevent users "
 "relying on the position of the argument being passed."
 msgstr ""
+"सिर्फ़-कीवर्ड तब इस्तेमाल करें जब नामों का मतलब हो और नामों को स्पष्ट रखने से फ़ंक्शन "
+"परिभाषा ज़्यादा समझ में आए, या आप नहीं चाहते कि यूज़र पास किए गए आर्ग्युमेंट की स्थिति पर "
+"निर्भर रहें।"
 
 #: tutorial/controlflow.rst:918
 msgid ""
 "For an API, use positional-only to prevent breaking API changes if the "
 "parameter's name is modified in the future."
 msgstr ""
+"किसी API के लिए, सिर्फ़-पोज़िशनल इस्तेमाल करें, ताकि भविष्य में पैरामीटर का नाम बदलने पर "
+"API में तोड़ने वाले बदलाव न हों।"
 
 #: tutorial/controlflow.rst:924
 msgid "Arbitrary Argument Lists"
-msgstr ""
+msgstr "मनमानी आर्ग्युमेंट लिस्ट"
 
 #: tutorial/controlflow.rst:929
 msgid ""
@@ -1367,12 +1978,18 @@ msgid ""
 "wrapped up in a tuple (see :ref:`tut-tuples`).  Before the variable number "
 "of arguments, zero or more normal arguments may occur. ::"
 msgstr ""
+"आख़िर में, सबसे कम इस्तेमाल होने वाला विकल्प यह बताना है कि किसी फ़ंक्शन को कितने भी "
+"आर्ग्युमेंट के साथ कॉल किया जा सकता है। ये आर्ग्युमेंट एक टपल में लपेट दिए जाएँगे (:ref:`tut-"
+"tuples` देखें)। अलग-अलग संख्या वाले आर्ग्युमेंट से पहले शून्य या ज़्यादा सामान्य आर्ग्युमेंट हो सकते "
+"हैं। ::"
 
 #: tutorial/controlflow.rst:934
 msgid ""
 "def write_multiple_items(file, separator, *args):\n"
 "    file.write(separator.join(args))"
 msgstr ""
+"def write_multiple_items(file, separator, *args):\n"
+"    file.write(separator.join(args))"
 
 #: tutorial/controlflow.rst:938
 msgid ""
@@ -1382,6 +1999,10 @@ msgid ""
 "``*args`` parameter are 'keyword-only' arguments, meaning that they can only "
 "be used as keywords rather than positional arguments. ::"
 msgstr ""
+"आम तौर पर, ये *वेरिएडिक* आर्ग्युमेंट फ़ॉर्मल पैरामीटर की लिस्ट में आख़िर में होंगे, क्योंकि ये "
+"फ़ंक्शन को पास किए गए बाक़ी सभी इनपुट आर्ग्युमेंट समेट लेते हैं। ``*args`` पैरामीटर के बाद आने "
+"वाले कोई भी फ़ॉर्मल पैरामीटर 'सिर्फ़-कीवर्ड' आर्ग्युमेंट होते हैं, यानी इन्हें पोज़िशनल आर्ग्युमेंट "
+"के बजाय सिर्फ़ कीवर्ड के रूप में इस्तेमाल किया जा सकता है। ::"
 
 #: tutorial/controlflow.rst:944
 msgid ""
@@ -1393,10 +2014,17 @@ msgid ""
 ">>> concat(\"earth\", \"mars\", \"venus\", sep=\".\")\n"
 "'earth.mars.venus'"
 msgstr ""
+">>> def concat(*args, sep=\"/\"):\n"
+"...     return sep.join(args)\n"
+"...\n"
+">>> concat(\"earth\", \"mars\", \"venus\")\n"
+"'earth/mars/venus'\n"
+">>> concat(\"earth\", \"mars\", \"venus\", sep=\".\")\n"
+"'earth.mars.venus'"
 
 #: tutorial/controlflow.rst:955
 msgid "Unpacking Argument Lists"
-msgstr ""
+msgstr "आर्ग्युमेंट लिस्ट अनपैक करना"
 
 #: tutorial/controlflow.rst:957
 msgid ""
@@ -1407,6 +2035,11 @@ msgid ""
 "separately, write the function call with the  ``*``\\ -operator to unpack "
 "the arguments out of a list or tuple::"
 msgstr ""
+"उल्टी स्थिति तब आती है जब आर्ग्युमेंट पहले से किसी लिस्ट या टपल में हों, लेकिन उन्हें ऐसी फ़ंक्शन "
+"कॉल के लिए अनपैक करना हो जिसे अलग-अलग पोज़िशनल आर्ग्युमेंट चाहिए। उदाहरण के लिए, बिल्ट-"
+"इन :func:`range` फ़ंक्शन अलग-अलग *start* और *stop* आर्ग्युमेंट की उम्मीद करता है। अगर "
+"वे अलग-अलग उपलब्ध नहीं हैं, तो लिस्ट या टपल से आर्ग्युमेंट अनपैक करने के लिए फ़ंक्शन कॉल "
+"``*``\\ -ऑपरेटर के साथ लिखें::"
 
 #: tutorial/controlflow.rst:964
 msgid ""
@@ -1417,12 +2050,18 @@ msgid ""
 "list\n"
 "[3, 4, 5]"
 msgstr ""
+">>> list(range(3, 6))            # normal call with separate arguments\n"
+"[3, 4, 5]\n"
+">>> args = [3, 6]\n"
+">>> list(range(*args))            # call with arguments unpacked from a "
+"list\n"
+"[3, 4, 5]"
 
 #: tutorial/controlflow.rst:973
 msgid ""
 "In the same fashion, dictionaries can deliver keyword arguments with the "
 "``**``\\ -operator::"
-msgstr ""
+msgstr "इसी तरह, डिक्शनरी ``**``\\ -ऑपरेटर से कीवर्ड आर्ग्युमेंट दे सकती हैं::"
 
 #: tutorial/controlflow.rst:976
 msgid ""
@@ -1437,10 +2076,20 @@ msgid ""
 "-- This parrot wouldn't VOOM if you put four million volts through it. E's "
 "bleedin' demised !"
 msgstr ""
+">>> def parrot(voltage, state='a stiff', action='voom'):\n"
+"...     print(\"-- This parrot wouldn't\", action, end=' ')\n"
+"...     print(\"if you put\", voltage, \"volts through it.\", end=' ')\n"
+"...     print(\"E's\", state, \"!\")\n"
+"...\n"
+">>> d = {\"voltage\": \"four million\", \"state\": \"bleedin' demised\", "
+"\"action\": \"VOOM\"}\n"
+">>> parrot(**d)\n"
+"-- This parrot wouldn't VOOM if you put four million volts through it. E's "
+"bleedin' demised !"
 
 #: tutorial/controlflow.rst:989
 msgid "Lambda Expressions"
-msgstr ""
+msgstr "लैम्डा एक्सप्रेशन"
 
 #: tutorial/controlflow.rst:991
 msgid ""
@@ -1452,6 +2101,12 @@ msgid ""
 "definitions, lambda functions can reference variables from the containing "
 "scope::"
 msgstr ""
+"छोटे गुमनाम (anonymous) फ़ंक्शन :keyword:`lambda` कीवर्ड से बनाए जा सकते हैं। यह फ़ंक्शन "
+"अपने दो आर्ग्युमेंट का योग लौटाता है: ``lambda a, b: a+b``। लैम्डा फ़ंक्शन वहाँ इस्तेमाल "
+"किए जा सकते हैं जहाँ फ़ंक्शन ऑब्जेक्ट चाहिए। सिंटैक्स के हिसाब से ये एक अकेले एक्सप्रेशन तक सीमित "
+"हैं। सिमैंटिक्स के हिसाब से, ये सामान्य फ़ंक्शन परिभाषा के लिए बस सिंटैक्स की सुविधा "
+"(syntactic sugar) हैं। नेस्ट की गई फ़ंक्शन परिभाषाओं की तरह, लैम्डा फ़ंक्शन बाहर वाले स्कोप "
+"के वेरिएबल इस्तेमाल कर सकते हैं::"
 
 #: tutorial/controlflow.rst:999
 msgid ""
@@ -1464,6 +2119,14 @@ msgid ""
 ">>> f(1)\n"
 "43"
 msgstr ""
+">>> def make_incrementor(n):\n"
+"...     return lambda x: x + n\n"
+"...\n"
+">>> f = make_incrementor(42)\n"
+">>> f(0)\n"
+"42\n"
+">>> f(1)\n"
+"43"
 
 #: tutorial/controlflow.rst:1008
 msgid ""
@@ -1472,6 +2135,9 @@ msgid ""
 "instance, :meth:`list.sort` takes a sorting key function *key* which can be "
 "a lambda function::"
 msgstr ""
+"ऊपर का उदाहरण एक फ़ंक्शन लौटाने के लिए लैम्डा एक्सप्रेशन इस्तेमाल करता है। एक और इस्तेमाल है "
+"किसी छोटे फ़ंक्शन को आर्ग्युमेंट के रूप में पास करना। उदाहरण के लिए, :meth:`list.sort` एक "
+"सॉर्टिंग कुंजी फ़ंक्शन *key* लेता है, जो लैम्डा फ़ंक्शन हो सकता है::"
 
 #: tutorial/controlflow.rst:1012
 msgid ""
@@ -1480,16 +2146,20 @@ msgid ""
 ">>> pairs\n"
 "[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]"
 msgstr ""
+">>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]\n"
+">>> pairs.sort(key=lambda pair: pair[1])\n"
+">>> pairs\n"
+"[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]"
 
 #: tutorial/controlflow.rst:1021
 msgid "Documentation Strings"
-msgstr ""
+msgstr "डॉक्यूमेंटेशन स्ट्रिंग"
 
 #: tutorial/controlflow.rst:1028
 msgid ""
 "Here are some conventions about the content and formatting of documentation "
 "strings."
-msgstr ""
+msgstr "डॉक्यूमेंटेशन स्ट्रिंग की सामग्री और फ़ॉर्मैटिंग के बारे में कुछ परंपराएँ ये हैं।"
 
 #: tutorial/controlflow.rst:1031
 msgid ""
@@ -1499,6 +2169,10 @@ msgid ""
 "to be a verb describing a function's operation).  This line should begin "
 "with a capital letter and end with a period."
 msgstr ""
+"पहली लाइन हमेशा ऑब्जेक्ट के उद्देश्य का एक छोटा, संक्षिप्त सार होनी चाहिए। संक्षेप के लिए, "
+"इसमें ऑब्जेक्ट का नाम या टाइप स्पष्ट रूप से नहीं लिखना चाहिए, क्योंकि ये दूसरे तरीक़ों से "
+"उपलब्ध हैं (सिवाय तब जब नाम कोई ऐसी क्रिया हो जो फ़ंक्शन का काम बताती हो)। यह लाइन "
+"बड़े अक्षर (capital letter) से शुरू होकर पूर्ण विराम पर ख़त्म होनी चाहिए।"
 
 #: tutorial/controlflow.rst:1037
 msgid ""
@@ -1507,16 +2181,21 @@ msgid ""
 "The following lines should be one or more paragraphs describing the object's "
 "calling conventions, its side effects, etc."
 msgstr ""
+"अगर डॉक्यूमेंटेशन स्ट्रिंग में और लाइनें हैं, तो दूसरी लाइन ख़ाली होनी चाहिए, जो सार को बाक़ी "
+"विवरण से दिखने में अलग करे। उसके बाद की लाइनें एक या ज़्यादा पैराग्राफ़ होनी चाहिए, जो "
+"ऑब्जेक्ट को कॉल करने की परंपराएँ, उसके साइड इफ़ेक्ट वगैरह बताएँ।"
 
 #: tutorial/controlflow.rst:1042
 msgid ""
 "The Python parser strips indentation from multi-line string literals when "
 "they serve as module, class, or function docstrings."
 msgstr ""
+"जब कई लाइनों वाले स्ट्रिंग लिटरल मॉड्यूल, क्लास या फ़ंक्शन की डॉकस्ट्रिंग के रूप में होते हैं, तो "
+"पायथन पार्सर उनका इंडेंटेशन हटा देता है।"
 
 #: tutorial/controlflow.rst:1045
 msgid "Here is an example of a multi-line docstring::"
-msgstr ""
+msgstr "कई लाइनों वाली डॉकस्ट्रिंग का एक उदाहरण::"
 
 #: tutorial/controlflow.rst:1047
 msgid ""
@@ -1538,10 +2217,27 @@ msgid ""
 "    >>> my_function()\n"
 "    >>>"
 msgstr ""
+">>> def my_function():\n"
+"...     \"\"\"Do nothing, but document it.\n"
+"...\n"
+"...     No, really, it doesn't do anything:\n"
+"...\n"
+"...         >>> my_function()\n"
+"...         >>>\n"
+"...     \"\"\"\n"
+"...     pass\n"
+"...\n"
+">>> print(my_function.__doc__)\n"
+"Do nothing, but document it.\n"
+"\n"
+"No, really, it doesn't do anything:\n"
+"\n"
+"    >>> my_function()\n"
+"    >>>"
 
 #: tutorial/controlflow.rst:1069
 msgid "Function Annotations"
-msgstr ""
+msgstr "फ़ंक्शन एनोटेशन"
 
 #: tutorial/controlflow.rst:1076
 msgid ""
@@ -1549,6 +2245,9 @@ msgid ""
 "information about the types used by user-defined functions (see :pep:`3107` "
 "and :pep:`484` for more information)."
 msgstr ""
+":ref:`फ़ंक्शन एनोटेशन <function>` यूज़र-डिफ़ाइंड फ़ंक्शनों में इस्तेमाल होने वाले टाइप के बारे में "
+"पूरी तरह वैकल्पिक मेटाडेटा जानकारी हैं (ज़्यादा जानकारी के लिए :pep:`3107` "
+"और :pep:`484` देखें)।"
 
 #: tutorial/controlflow.rst:1080
 msgid ""
@@ -1562,6 +2261,13 @@ msgid ""
 "statement.  The following example has a required argument, an optional "
 "argument, and the return value annotated::"
 msgstr ""
+":term:`एनोटेशन <function annotation>` फ़ंक्शन के :attr:`~object.__annotations__` "
+"एट्रिब्यूट में एक डिक्शनरी के रूप में रखे जाते हैं, और फ़ंक्शन के किसी दूसरे हिस्से पर इनका कोई "
+"असर नहीं होता। पैरामीटर एनोटेशन पैरामीटर के नाम के बाद एक कोलन से परिभाषित होते हैं, "
+"जिसके बाद एक एक्सप्रेशन होता है जिसका मान एनोटेशन का मान होता है। रिटर्न एनोटेशन "
+"पैरामीटर लिस्ट और :keyword:`def` स्टेटमेंट का अंत बताने वाले कोलन के बीच, एक लिटरल ``-"
+">`` और उसके बाद एक एक्सप्रेशन से परिभाषित होते हैं। नीचे के उदाहरण में एक ज़रूरी आर्ग्युमेंट, "
+"एक वैकल्पिक आर्ग्युमेंट और लौटाया गया मान एनोटेट किए गए हैं::"
 
 #: tutorial/controlflow.rst:1089
 msgid ""
@@ -1576,10 +2282,20 @@ msgid ""
 "Arguments: spam eggs\n"
 "'spam and eggs'"
 msgstr ""
+">>> def f(ham: str, eggs: str = 'eggs') -> str:\n"
+"...     print(\"Annotations:\", f.__annotations__)\n"
+"...     print(\"Arguments:\", ham, eggs)\n"
+"...     return ham + ' and ' + eggs\n"
+"...\n"
+">>> f('spam')\n"
+"Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class "
+"'str'>}\n"
+"Arguments: spam eggs\n"
+"'spam and eggs'"
 
 #: tutorial/controlflow.rst:1102
 msgid "Intermezzo: Coding Style"
-msgstr ""
+msgstr "बीच का विराम: कोडिंग स्टाइल"
 
 #: tutorial/controlflow.rst:1106
 msgid ""
@@ -1589,6 +2305,11 @@ msgid ""
 "than others. Making it easy for others to read your code is always a good "
 "idea, and adopting a nice coding style helps tremendously for that."
 msgstr ""
+"अब जब आप पायथन के ज़्यादा लंबे और जटिल कोड लिखने वाले हैं, तो *कोडिंग स्टाइल* के बारे में "
+"बात करने का यह अच्छा समय है। ज़्यादातर भाषाएँ अलग-अलग स्टाइल में लिखी (या संक्षेप में कहें, "
+"*फ़ॉर्मैट* की) जा सकती हैं; कुछ स्टाइल दूसरों से ज़्यादा पढ़ने लायक होती हैं। अपने कोड को "
+"दूसरों के लिए पढ़ने में आसान बनाना हमेशा अच्छा है, और एक अच्छी कोडिंग स्टाइल अपनाने से इसमें "
+"बहुत मदद मिलती है।"
 
 #: tutorial/controlflow.rst:1112
 msgid ""
@@ -1597,10 +2318,13 @@ msgid ""
 "Python developer should read it at some point; here are the most important "
 "points extracted for you:"
 msgstr ""
+"पायथन के लिए, :pep:`8` वह स्टाइल गाइड बनकर उभरा है जिसका पालन ज़्यादातर प्रोजेक्ट "
+"करते हैं; यह बहुत पढ़ने लायक और आँखों को अच्छी लगने वाली कोडिंग स्टाइल को बढ़ावा देता है। "
+"हर पायथन डेवलपर को इसे कभी न कभी पढ़ना चाहिए; आपके लिए इसकी सबसे अहम बातें ये हैं:"
 
 #: tutorial/controlflow.rst:1117
 msgid "Use 4-space indentation, and no tabs."
-msgstr ""
+msgstr "4 स्पेस का इंडेंटेशन इस्तेमाल करें, टैब नहीं।"
 
 #: tutorial/controlflow.rst:1119
 msgid ""
@@ -1608,36 +2332,44 @@ msgid ""
 "nesting depth) and large indentation (easier to read).  Tabs introduce "
 "confusion, and are best left out."
 msgstr ""
+"4 स्पेस छोटे इंडेंटेशन (जिससे ज़्यादा गहराई तक नेस्टिंग हो सकती है) और बड़े इंडेंटेशन (जो पढ़ने में "
+"आसान है) के बीच एक अच्छा समझौता है। टैब से भ्रम होता है, और उन्हें छोड़ देना ही बेहतर है।"
 
 #: tutorial/controlflow.rst:1123
 msgid "Wrap lines so that they don't exceed 79 characters."
-msgstr ""
+msgstr "लाइनों को इस तरह तोड़ें कि वे 79 कैरेक्टर से ज़्यादा न हों।"
 
 #: tutorial/controlflow.rst:1125
 msgid ""
 "This helps users with small displays and makes it possible to have several "
 "code files side-by-side on larger displays."
 msgstr ""
+"इससे छोटी स्क्रीन वाले यूज़र को मदद मिलती है, और बड़ी स्क्रीन पर कई कोड फ़ाइलें साथ-साथ "
+"रखना संभव होता है।"
 
 #: tutorial/controlflow.rst:1128
 msgid ""
 "Use blank lines to separate functions and classes, and larger blocks of code "
 "inside functions."
 msgstr ""
+"फ़ंक्शनों और क्लासों को, और फ़ंक्शनों के अंदर कोड के बड़े ब्लॉकों को अलग करने के लिए ख़ाली लाइनें "
+"इस्तेमाल करें।"
 
 #: tutorial/controlflow.rst:1131
 msgid "When possible, put comments on a line of their own."
-msgstr ""
+msgstr "जहाँ संभव हो, कमेंट को उनकी अपनी अलग लाइन पर रखें।"
 
 #: tutorial/controlflow.rst:1133
 msgid "Use docstrings."
-msgstr ""
+msgstr "डॉकस्ट्रिंग इस्तेमाल करें।"
 
 #: tutorial/controlflow.rst:1135
 msgid ""
 "Use spaces around operators and after commas, but not directly inside "
 "bracketing constructs: ``a = f(1, 2) + g(3, 4)``."
 msgstr ""
+"ऑपरेटरों के आसपास और कॉमा के बाद स्पेस इस्तेमाल करें, लेकिन ब्रैकेट वाले ढाँचों के ठीक अंदर "
+"नहीं: ``a = f(1, 2) + g(3, 4)``।"
 
 #: tutorial/controlflow.rst:1138
 msgid ""
@@ -1646,6 +2378,10 @@ msgid ""
 "functions and methods.  Always use ``self`` as the name for the first method "
 "argument (see :ref:`tut-firstclasses` for more on classes and methods)."
 msgstr ""
+"अपनी क्लासों और फ़ंक्शनों के नाम एक जैसे ढंग से रखें; परंपरा यह है कि क्लासों के लिए "
+"``UpperCamelCase`` और फ़ंक्शनों और मेथड के लिए ``lowercase_with_underscores`` "
+"इस्तेमाल किया जाए। मेथड के पहले आर्ग्युमेंट के नाम के रूप में हमेशा ``self`` इस्तेमाल करें (क्लास "
+"और मेथड के बारे में और जानकारी के लिए :ref:`tut-firstclasses` देखें)।"
 
 #: tutorial/controlflow.rst:1143
 msgid ""
@@ -1653,6 +2389,9 @@ msgid ""
 "environments.  Python's default, UTF-8, or even plain ASCII work best in any "
 "case."
 msgstr ""
+"अगर आपका कोड अंतरराष्ट्रीय वातावरण में इस्तेमाल होने के लिए है, तो अनोखी एन्कोडिंग "
+"इस्तेमाल न करें। पायथन का डिफ़ॉल्ट, UTF-8, या सादा ASCII भी, हर स्थिति में सबसे अच्छा "
+"काम करता है।"
 
 #: tutorial/controlflow.rst:1147
 msgid ""
@@ -1660,10 +2399,12 @@ msgid ""
 "slightest chance people speaking a different language will read or maintain "
 "the code."
 msgstr ""
+"इसी तरह, अगर इस बात की ज़रा-सी भी संभावना है कि कोई दूसरी भाषा बोलने वाले लोग कोड "
+"को पढ़ेंगे या संभालेंगे, तो आइडेंटिफ़ायर में नॉन-ASCII कैरेक्टर इस्तेमाल न करें।"
 
 #: tutorial/controlflow.rst:1153
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/controlflow.rst:1154
 msgid ""
@@ -1671,71 +2412,74 @@ msgid ""
 "a mutable object is passed, the caller will see any changes the callee makes "
 "to it (items inserted into a list)."
 msgstr ""
+"असल में, *call by object reference* बेहतर विवरण होगा, क्योंकि अगर कोई म्यूटेबल ऑब्जेक्ट "
+"पास किया जाता है, तो कॉल किया गया फ़ंक्शन उसमें जो भी बदलाव करता है (जैसे लिस्ट में डाले "
+"गए आइटम), वे कॉल करने वाले को दिखेंगे।"
 
 #: tutorial/controlflow.rst:48
 msgid "statement"
-msgstr ""
+msgstr "स्टेटमेंट"
 
 #: tutorial/controlflow.rst:48
 msgid "for"
-msgstr ""
+msgstr "for"
 
 #: tutorial/controlflow.rst:254
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: tutorial/controlflow.rst:254
 msgid "ellipsis literal"
-msgstr ""
+msgstr "एलिप्सिस लिटरल"
 
 #: tutorial/controlflow.rst:485 tutorial/controlflow.rst:1023
 msgid "documentation strings"
-msgstr ""
+msgstr "डॉक्यूमेंटेशन स्ट्रिंग"
 
 #: tutorial/controlflow.rst:485 tutorial/controlflow.rst:1023
 msgid "docstrings"
-msgstr ""
+msgstr "डॉकस्ट्रिंग"
 
 #: tutorial/controlflow.rst:485 tutorial/controlflow.rst:1023
 msgid "strings, documentation"
-msgstr ""
+msgstr "स्ट्रिंग, डॉक्यूमेंटेशन"
 
 #: tutorial/controlflow.rst:926
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (तारांकन)"
 
 #: tutorial/controlflow.rst:926 tutorial/controlflow.rst:970
 msgid "in function calls"
-msgstr ""
+msgstr "फ़ंक्शन कॉल में"
 
 #: tutorial/controlflow.rst:970
 msgid "**"
-msgstr ""
+msgstr "**"
 
 #: tutorial/controlflow.rst:1071
 msgid "function"
-msgstr ""
+msgstr "फ़ंक्शन"
 
 #: tutorial/controlflow.rst:1071
 msgid "annotations"
-msgstr ""
+msgstr "एनोटेशन"
 
 #: tutorial/controlflow.rst:1071
 msgid "->"
-msgstr ""
+msgstr "->"
 
 #: tutorial/controlflow.rst:1071
 msgid "function annotations"
-msgstr ""
+msgstr "फ़ंक्शन एनोटेशन"
 
 #: tutorial/controlflow.rst:1071
 msgid ": (colon)"
-msgstr ""
+msgstr ": (कोलन)"
 
 #: tutorial/controlflow.rst:1104
 msgid "coding"
-msgstr ""
+msgstr "कोडिंग"
 
 #: tutorial/controlflow.rst:1104
 msgid "style"
-msgstr ""
+msgstr "स्टाइल"
