@@ -62,7 +62,6 @@ msgid "abstract base class"
 msgstr "ऐब्स्ट्रैक्ट बेस क्लास "
 
 #: glossary.rst:29
-#, fuzzy
 msgid ""
 "Abstract base classes complement :term:`duck-typing` by providing a way to "
 "define interfaces when other techniques like :func:`hasattr` would be clumsy "
@@ -76,20 +75,19 @@ msgid ""
 "the :mod:`importlib.abc` module).  You can create your own ABCs with "
 "the :mod:`abc` module."
 msgstr ""
-"ऐब्स्ट्रैक्ट बेस क्लासिस पूरक :term:`duck-typing` इंटरफेस को परिभाषित करने का एक तरीका "
-"प्रदान करता है जबकि अन्य तकनीक जैसे :func:`hasattr` अनाड़ी या सूक्ष्म रूप से गलत होंगे "
-"(उदाहरण के लिए :ref:`magic methods <special-lookup>` देखें)।  एबीसी वर्चूअल क्लासिस "
-"का परिचय देते हैं, जो ऐसी क्लासिस हैं जो किसी वर्ग से विरासत में नहीं आती हैं, लेकिन फिर भी "
-"उन्हें पहचाना जाता है :func:`isinstance` और :func:`issubclass` देखें; :mod:`abc` "
-"मॉड्यूल प्रलेखन देखें।  पायथन डेटा संरचनाओं के लिए कई अंतर्निहित एबीसी के साथ आता है (:mod: "
-"`collection.abc` मॉड्यूल में), नम्बर (:mod:`numbers` मॉड्यूल में), आइ ओ (:mod:`io` "
-"मॉड्यूल में) , इंपोर्ट फ़ाइंडर और लोडर्स (:mod:`importlib.abc` मॉड्यूल में)। आप के साथ अपने "
-"खुद के एबीसी बना सकते हैं :mod:`abc` मॉड्यूल।"
+"ऐब्स्ट्रैक्ट बेस क्लास :term:`duck-typing` की पूरक हैं: जब :func:`hasattr` जैसी दूसरी "
+"तकनीकें बेढंगी या सूक्ष्म रूप से गलत हों (जैसे :ref:`मैजिक मेथड <special-lookup>` के साथ), "
+"तब ये इंटरफ़ेस परिभाषित करने का तरीका देती हैं। ABC :term:`वर्चुअल सबक्लास <virtual "
+"subclass>` लाती हैं, जो ऐसी क्लास हैं जो किसी क्लास से इनहेरिट नहीं करतीं, फिर "
+"भी :func:`isinstance` और :func:`issubclass` उन्हें पहचानते हैं; :mod:`abc` मॉड्यूल "
+"का डॉक्यूमेंटेशन देखें। पायथन में डेटा स्ट्रक्चर (:mod:`collections.abc` मॉड्यूल में), नंबर "
+"(:mod:`numbers` मॉड्यूल में), स्ट्रीम (:mod:`io` मॉड्यूल में), और इम्पोर्ट फ़ाइंडर और लोडर "
+"(:mod:`importlib.abc` मॉड्यूल में) के लिए कई बिल्ट-इन ABC पहले से मौजूद हैं। "
+"आप :mod:`abc` मॉड्यूल से अपनी ABC बना सकते हैं।"
 
 #: glossary.rst:41
-#, fuzzy
 msgid "annotate function"
-msgstr "टिप्पणी"
+msgstr "एनोटेट फ़ंक्शन"
 
 #: glossary.rst:43
 msgid ""
@@ -3131,9 +3129,8 @@ msgid ""
 msgstr ""
 
 #: glossary.rst:24
-#, fuzzy
 msgid "..."
-msgstr "``...``"
+msgstr "..."
 
 #: glossary.rst:24
 msgid "ellipsis literal"
