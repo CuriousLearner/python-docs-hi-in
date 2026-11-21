@@ -45,11 +45,13 @@ Propose new or changed terms in an issue or PR before using them widely.
 | --- | --- |
 | abstract base class | ऐब्स्ट्रैक्ट बेस क्लास |
 | abstract data type | ऐब्स्ट्रैक्ट डेटा टाइप |
+| annotation | एनोटेशन |
 | argument | आर्ग्युमेंट |
 | attribute | एट्रिब्यूट |
 | backslash | बैकस्लैश |
 | bound (method) | बाउंड |
 | bug | बग |
+| bug report | बग रिपोर्ट |
 | built-in | बिल्ट-इन |
 | call stack | कॉल स्टैक |
 | class | क्लास |
@@ -59,17 +61,23 @@ Propose new or changed terms in an issue or PR before using them widely.
 | decorator | डेकोरेटर |
 | deep copy | डीप कॉपी |
 | default | डिफ़ॉल्ट |
+| delimiter | सीमांकक |
 | dictionary | डिक्शनरी |
 | documentation | डॉक्यूमेंटेशन |
 | double quote | डबल कोट |
 | e.g. | जैसे |
+| environment (where a program runs) | वातावरण |
+| environment variable | एनवायरनमेंट वेरिएबल |
 | error | त्रुटि |
 | example | उदाहरण |
 | exception | एक्सेप्शन |
+| executable | एग्ज़िक्यूटेबल |
+| exit status | एग्ज़िट स्टेटस |
 | expression | एक्सप्रेशन |
 | file | फ़ाइल |
 | function | फ़ंक्शन |
 | garbage collector | गार्बेज कलेक्टर |
+| glossary | शब्दावली |
 | identifier | आइडेंटिफ़ायर |
 | immutable | इम्यूटेबल |
 | import | इम्पोर्ट |
@@ -80,6 +88,7 @@ Propose new or changed terms in an issue or PR before using them widely.
 | interactive | इंटरैक्टिव |
 | interpreter | इंटरप्रेटर |
 | issue (in a tracker) | इश्यू |
+| issue tracker | इश्यू ट्रैकर |
 | iterator | इटरेटर |
 | keyword | कीवर्ड |
 | library | लाइब्रेरी |
@@ -100,7 +109,10 @@ Propose new or changed terms in an issue or PR before using them widely.
 | prompt | प्रॉम्प्ट |
 | raise (an exception) | रेज़ करना |
 | regular expression | रेगुलर एक्सप्रेशन |
+| release | रिलीज़ |
+| repository | रिपॉज़िटरी |
 | return (a value) | रिटर्न करना |
+| shell | शेल |
 | single quote | सिंगल कोट |
 | socket | सॉकेट |
 | standard library | स्टैंडर्ड लाइब्रेरी |
@@ -109,9 +121,11 @@ Propose new or changed terms in an issue or PR before using them widely.
 | subprocess | सबप्रोसेस |
 | syntax | सिंटैक्स |
 | thread | थ्रेड |
+| triple quote | ट्रिपल कोट |
 | tuple | टपल |
 | tutorial | ट्यूटोरियल |
 | type | टाइप |
 | underscore | अंडरस्कोर |
 | value | मान |
 | variable | वेरिएबल |
+| version | वर्ज़न |
