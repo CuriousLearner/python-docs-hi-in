@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: tutorial/appendix.rst:5
 msgid "Appendix"
-msgstr ""
+msgstr "परिशिष्ट"
 
 #: tutorial/appendix.rst:11
 msgid "Interactive Mode"
-msgstr ""
+msgstr "इंटरैक्टिव मोड"
 
 #: tutorial/appendix.rst:13
 msgid ""
@@ -31,6 +31,8 @@ msgid ""
 "interpreter is supported on all platforms with minimal line control "
 "capabilities."
 msgstr ""
+"इंटरैक्टिव :term:`REPL` के दो रूप हैं। क्लासिक बेसिक इंटरप्रेटर सभी प्लेटफ़ॉर्म पर उपलब्ध है, "
+"लेकिन इसमें लाइन को नियंत्रित करने की क्षमताएँ बहुत कम हैं।"
 
 #: tutorial/appendix.rst:17
 msgid ""
@@ -43,22 +45,33 @@ msgid ""
 "prompts. :kbd:`F3` enters \"paste mode\", which makes pasting larger blocks "
 "of code easier. Press :kbd:`F3` to return to the regular prompt."
 msgstr ""
+"पायथन 3.13 से, डिफ़ॉल्ट रूप से एक नया इंटरैक्टिव शेल इस्तेमाल होता है। यह रंग, कई लाइनों "
+"की एडिटिंग, हिस्ट्री ब्राउज़िंग और पेस्ट मोड को सपोर्ट करता है। रंग बंद करने के बारे में "
+"जानकारी के लिए :ref:`using-on-controlling-color` देखें। फ़ंक्शन कुंजियाँ कुछ अतिरिक्त "
+"सुविधाएँ देती हैं। :kbd:`F1` इंटरैक्टिव हेल्प ब्राउज़र :mod:`pydoc` खोलती है। :kbd:`F2` से "
+"कमांड-लाइन हिस्ट्री को बिना आउटपुट और बिना :term:`>>>` और :term:`...` प्रॉम्प्ट के "
+"ब्राउज़ किया जा सकता है। :kbd:`F3` \"पेस्ट मोड\" चालू करती है, जिससे कोड के बड़े ब्लॉक "
+"पेस्ट करना आसान हो जाता है। सामान्य प्रॉम्प्ट पर लौटने के लिए :kbd:`F3` दबाएँ।"
 
 #: tutorial/appendix.rst:27
 msgid ""
 "When using the new interactive shell, exit the shell by typing :kbd:`exit` "
 "or :kbd:`quit`. Adding call parentheses after those commands is not required."
 msgstr ""
+"नया इंटरैक्टिव शेल इस्तेमाल करते समय, शेल से बाहर निकलने के लिए :kbd:`exit` "
+"या :kbd:`quit` टाइप करें। इन कमांड के बाद कॉल वाले कोष्ठक लगाने की ज़रूरत नहीं है।"
 
 #: tutorial/appendix.rst:31
 msgid ""
 "If the new interactive shell is not desired, it can be disabled via "
 "the :envvar:`PYTHON_BASIC_REPL` environment variable."
 msgstr ""
+"अगर नया इंटरैक्टिव शेल नहीं चाहिए, तो उसे :envvar:`PYTHON_BASIC_REPL` एनवायरनमेंट "
+"वेरिएबल से बंद किया जा सकता है।"
 
 #: tutorial/appendix.rst:37
 msgid "Error Handling"
-msgstr ""
+msgstr "त्रुटियों को संभालना"
 
 #: tutorial/appendix.rst:39
 msgid ""
@@ -72,6 +85,14 @@ msgid ""
 "memory.  All error messages are written to the standard error stream; normal "
 "output from executed commands is written to standard output."
 msgstr ""
+"जब कोई त्रुटि होती है, तो इंटरप्रेटर एक त्रुटि संदेश और स्टैक ट्रेस प्रिंट करता है। इंटरैक्टिव "
+"मोड में, वह फिर प्राइमरी प्रॉम्प्ट पर लौट आता है; जब इनपुट किसी फ़ाइल से आया हो, तो वह "
+"स्टैक ट्रेस प्रिंट करने के बाद शून्य से अलग एग्ज़िट स्टेटस के साथ बंद हो जाता है। "
+"(किसी :keyword:`try` स्टेटमेंट के :keyword:`except` क्लॉज़ द्वारा संभाले गए एक्सेप्शन इस "
+"संदर्भ में त्रुटियाँ नहीं हैं।) कुछ त्रुटियाँ बिना किसी शर्त के घातक होती हैं और शून्य से अलग "
+"एग्ज़िट स्टेटस के साथ प्रोग्राम बंद कर देती हैं; यह आंतरिक असंगतियों और मेमोरी ख़त्म होने के कुछ "
+"मामलों पर लागू होता है। सभी त्रुटि संदेश स्टैंडर्ड एरर स्ट्रीम में लिखे जाते हैं; चलाए गए कमांड "
+"का सामान्य आउटपुट स्टैंडर्ड आउटपुट में लिखा जाता है।"
 
 #: tutorial/appendix.rst:49
 msgid ""
@@ -81,20 +102,26 @@ msgid ""
 "the :exc:`KeyboardInterrupt` exception, which may be handled by "
 "a :keyword:`try` statement."
 msgstr ""
+"प्राइमरी या सेकेंडरी प्रॉम्प्ट पर इंटरप्ट कैरेक्टर (आम तौर पर :kbd:`Control-C` "
+"या :kbd:`Delete`) टाइप करने से इनपुट रद्द हो जाता है और प्राइमरी प्रॉम्प्ट वापस आ "
+"जाता है। [#]_ किसी कमांड के चलते समय इंटरप्ट टाइप करने से :exc:`KeyboardInterrupt` "
+"एक्सेप्शन रेज़ होता है, जिसे :keyword:`try` स्टेटमेंट से संभाला जा सकता है।"
 
 #: tutorial/appendix.rst:59
 msgid "Executable Python Scripts"
-msgstr ""
+msgstr "एग्ज़िक्यूटेबल पायथन स्क्रिप्ट"
 
 #: tutorial/appendix.rst:61
 msgid ""
 "On BSD'ish Unix systems, Python scripts can be made directly executable, "
 "like shell scripts, by putting the line ::"
 msgstr ""
+"BSD जैसे Unix सिस्टम पर, पायथन स्क्रिप्ट को शेल स्क्रिप्ट की तरह सीधे एग्ज़िक्यूटेबल बनाया "
+"जा सकता है। इसके लिए स्क्रिप्ट की शुरुआत में यह लाइन ::"
 
 #: tutorial/appendix.rst:64
 msgid "#!/usr/bin/env python3"
-msgstr ""
+msgstr "#!/usr/bin/env python3"
 
 #: tutorial/appendix.rst:66
 msgid ""
@@ -105,16 +132,22 @@ msgid ""
 "(``'\\r\\n'``) line ending.  Note that the hash, or pound, character, "
 "``'#'``, is used to start a comment in Python."
 msgstr ""
+"(यह मानते हुए कि इंटरप्रेटर यूज़र के :envvar:`PATH` में है) रखें और फ़ाइल को एग्ज़िक्यूटेबल मोड "
+"दें। ``#!`` फ़ाइल के पहले दो कैरेक्टर होने चाहिए। कुछ प्लेटफ़ॉर्म पर, इस पहली लाइन का अंत "
+"Unix-शैली के लाइन एंडिंग (``'\\n'``) से होना चाहिए, Windows (``'\\r\\n'``) लाइन "
+"एंडिंग से नहीं। ध्यान दें कि हैश या पाउंड कैरेक्टर, ``'#'``, पायथन में कमेंट शुरू करने के लिए "
+"इस्तेमाल होता है।"
 
 #: tutorial/appendix.rst:73
 msgid ""
 "The script can be given an executable mode, or permission, using "
 "the :program:`chmod` command."
 msgstr ""
+"स्क्रिप्ट को :program:`chmod` कमांड से एग्ज़िक्यूटेबल मोड, यानी अनुमति, दी जा सकती है।"
 
 #: tutorial/appendix.rst:76
 msgid "$ chmod +x myscript.py"
-msgstr ""
+msgstr "$ chmod +x myscript.py"
 
 #: tutorial/appendix.rst:80
 msgid ""
@@ -124,10 +157,14 @@ msgid ""
 "extension can also be ``.pyw``, in that case, the console window that "
 "normally appears is suppressed."
 msgstr ""
+"Windows सिस्टम पर \"एग्ज़िक्यूटेबल मोड\" जैसी कोई अवधारणा नहीं है। पायथन इंस्टॉलर "
+"``.py`` फ़ाइलों को अपने-आप ``python.exe`` से जोड़ देता है, ताकि किसी पायथन फ़ाइल पर "
+"डबल-क्लिक करने से वह स्क्रिप्ट के रूप में चले। एक्सटेंशन ``.pyw`` भी हो सकता है; उस स्थिति "
+"में, आम तौर पर दिखने वाली कंसोल विंडो नहीं दिखती।"
 
 #: tutorial/appendix.rst:90
 msgid "The Interactive Startup File"
-msgstr ""
+msgstr "इंटरैक्टिव स्टार्टअप फ़ाइल"
 
 #: tutorial/appendix.rst:92
 msgid ""
@@ -137,6 +174,10 @@ msgid ""
 "the name of a file containing your start-up commands.  This is similar to "
 "the :file:`.profile` feature of the Unix shells."
 msgstr ""
+"जब आप पायथन को इंटरैक्टिव रूप से इस्तेमाल करते हैं, तो अक्सर यह सुविधाजनक होता है कि हर "
+"बार इंटरप्रेटर शुरू होने पर कुछ स्टैंडर्ड कमांड चल जाएँ। ऐसा करने के "
+"लिए :envvar:`PYTHONSTARTUP` नाम का एनवायरनमेंट वेरिएबल सेट करें, जिसका मान आपके "
+"स्टार्टअप कमांड वाली फ़ाइल का नाम हो। यह Unix शेल की :file:`.profile` सुविधा जैसा है।"
 
 #: tutorial/appendix.rst:98
 msgid ""
@@ -148,6 +189,12 @@ msgid ""
 "qualification in the interactive session. You can also change the prompts "
 "``sys.ps1`` and ``sys.ps2`` in this file."
 msgstr ""
+"यह फ़ाइल सिर्फ़ इंटरैक्टिव सेशन में पढ़ी जाती है; तब नहीं जब पायथन किसी स्क्रिप्ट से कमांड "
+"पढ़ता है, और तब भी नहीं जब :file:`/dev/tty` को कमांड के स्पष्ट स्रोत के रूप में दिया गया "
+"हो (जो वैसे इंटरैक्टिव सेशन की तरह ही काम करता है)। इसे उसी नेमस्पेस में चलाया जाता है "
+"जिसमें इंटरैक्टिव कमांड चलते हैं, ताकि इसके द्वारा डिफ़ाइन या इम्पोर्ट किए गए ऑब्जेक्ट "
+"इंटरैक्टिव सेशन में बिना क्वालिफ़िकेशन के इस्तेमाल किए जा सकें। आप इस फ़ाइल में प्रॉम्प्ट "
+"``sys.ps1`` और ``sys.ps2`` भी बदल सकते हैं।"
 
 #: tutorial/appendix.rst:106
 msgid ""
@@ -157,6 +204,11 @@ msgid ""
 "want to use the startup file in a script, you must do this explicitly in the "
 "script::"
 msgstr ""
+"अगर आप मौजूदा डायरेक्टरी से एक अतिरिक्त स्टार्टअप फ़ाइल पढ़ना चाहते हैं, तो ग्लोबल "
+"स्टार्टअप फ़ाइल में ``if os.path.isfile('.pythonrc.py'): "
+"exec(open('.pythonrc.py').read())`` जैसे कोड से ऐसा कर सकते हैं। अगर आप किसी "
+"स्क्रिप्ट में स्टार्टअप फ़ाइल इस्तेमाल करना चाहते हैं, तो आपको स्क्रिप्ट में यह स्पष्ट रूप से करना "
+"होगा::"
 
 #: tutorial/appendix.rst:112
 msgid ""
@@ -167,10 +219,16 @@ msgid ""
 "        startup_file = fobj.read()\n"
 "    exec(startup_file)"
 msgstr ""
+"import os\n"
+"filename = os.environ.get('PYTHONSTARTUP')\n"
+"if filename and os.path.isfile(filename):\n"
+"    with open(filename) as fobj:\n"
+"        startup_file = fobj.read()\n"
+"    exec(startup_file)"
 
 #: tutorial/appendix.rst:123
 msgid "The Customization Modules"
-msgstr ""
+msgstr "कस्टमाइज़ेशन मॉड्यूल"
 
 #: tutorial/appendix.rst:125
 msgid ""
@@ -179,6 +237,9 @@ msgid ""
 "location of your user site-packages directory.  Start Python and run this "
 "code::"
 msgstr ""
+"पायथन को कस्टमाइज़ करने के लिए वह आपको दो हुक देता है: :index:`sitecustomize` "
+"और :index:`usercustomize`। यह कैसे काम करता है, यह देखने के लिए पहले आपको अपनी यूज़र "
+"site-packages डायरेक्टरी की जगह पता करनी होगी। पायथन शुरू करें और यह कोड चलाएँ::"
 
 #: tutorial/appendix.rst:129
 msgid ""
@@ -186,6 +247,9 @@ msgid ""
 ">>> site.getusersitepackages()\n"
 "'/home/user/.local/lib/python3.x/site-packages'"
 msgstr ""
+">>> import site\n"
+">>> site.getusersitepackages()\n"
+"'/home/user/.local/lib/python3.x/site-packages'"
 
 #: tutorial/appendix.rst:133
 msgid ""
@@ -194,6 +258,9 @@ msgid ""
 "unless it is started with the :option:`-s` option to disable the automatic "
 "import."
 msgstr ""
+"अब आप उस डायरेक्टरी में :file:`usercustomize.py` नाम की फ़ाइल बना सकते हैं और उसमें जो "
+"चाहें रख सकते हैं। यह पायथन के हर बार चलने पर असर डालेगी, जब तक कि उसे अपने-आप होने वाले "
+"इम्पोर्ट को बंद करने वाले :option:`-s` विकल्प के साथ शुरू न किया जाए।"
 
 #: tutorial/appendix.rst:137
 msgid ""
@@ -202,11 +269,15 @@ msgid ""
 "imported before :index:`usercustomize`.  See the documentation of "
 "the :mod:`site` module for more details."
 msgstr ""
+":index:`sitecustomize` भी इसी तरह काम करता है, लेकिन आम तौर पर इसे कंप्यूटर का "
+"एडमिनिस्ट्रेटर ग्लोबल site-packages डायरेक्टरी में बनाता है, और "
+"इसे :index:`usercustomize` से पहले इम्पोर्ट किया जाता है। ज़्यादा जानकारी के "
+"लिए :mod:`site` मॉड्यूल का डॉक्यूमेंटेशन देखें।"
 
 #: tutorial/appendix.rst:144
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/appendix.rst:145
 msgid "A problem with the GNU Readline package may prevent this."
-msgstr ""
+msgstr "GNU Readline पैकेज में कोई समस्या इसे रोक सकती है।"
