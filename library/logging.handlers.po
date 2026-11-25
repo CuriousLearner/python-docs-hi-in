@@ -6,134 +6,138 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.7\n"
+"Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-11-25 13:18+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/library/logging.handlers.rst:2
+#: library/logging.handlers.rst:2
 msgid ":mod:`!logging.handlers` --- Logging handlers"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:10
+#: library/logging.handlers.rst:7
 msgid "**Source code:** :source:`Lib/logging/handlers.py`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:14
+#: library/logging.handlers.rst:9
+msgid "Important"
+msgstr ""
+
+#: library/logging.handlers.rst:11
 msgid ""
 "This page contains only reference information. For tutorials, please see"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:17
+#: library/logging.handlers.rst:14
 msgid ":ref:`Basic Tutorial <logging-basic-tutorial>`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:18
+#: library/logging.handlers.rst:15
 msgid ":ref:`Advanced Tutorial <logging-advanced-tutorial>`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:19
+#: library/logging.handlers.rst:16
 msgid ":ref:`Logging Cookbook <logging-cookbook>`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:25
+#: library/logging.handlers.rst:22
 msgid ""
 "The following useful handlers are provided in the package. Note that three "
-"of the handlers (:class:`StreamHandler`, :class:`FileHandler` and :class:"
-"`NullHandler`) are actually defined in the :mod:`logging` module itself, but "
-"have been documented here along with the other handlers."
+"of the handlers (:class:`StreamHandler`, :class:`FileHandler` "
+"and :class:`NullHandler`) are actually defined in the :mod:`logging` module "
+"itself, but have been documented here along with the other handlers."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:33
+#: library/logging.handlers.rst:30
 msgid "StreamHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:35
+#: library/logging.handlers.rst:32
 msgid ""
 "The :class:`StreamHandler` class, located in the core :mod:`logging` "
 "package, sends logging output to streams such as *sys.stdout*, *sys.stderr* "
-"or any file-like object (or, more precisely, any object which supports :meth:"
-"`write` and :meth:`flush` methods)."
+"or any file-like object (or, more precisely, any object which "
+"supports :meth:`write` and :meth:`flush` methods)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:43
+#: library/logging.handlers.rst:40
 msgid ""
 "Returns a new instance of the :class:`StreamHandler` class. If *stream* is "
-"specified, the instance will use it for logging output; otherwise, *sys."
-"stderr* will be used."
+"specified, the instance will use it for logging output; otherwise, "
+"*sys.stderr* will be used."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:50
+#: library/logging.handlers.rst:47
 msgid ""
 "If a formatter is specified, it is used to format the record. The record is "
 "then written to the stream followed by :attr:`terminator`. If exception "
-"information is present, it is formatted using :func:`traceback."
-"print_exception` and appended to the stream."
+"information is present, it is formatted "
+"using :func:`traceback.print_exception` and appended to the stream."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:58
+#: library/logging.handlers.rst:55
 msgid ""
-"Flushes the stream by calling its :meth:`flush` method. Note that the :meth:"
-"`close` method is inherited from :class:`~logging.Handler` and so does no "
-"output, so an explicit :meth:`flush` call may be needed at times."
+"Flushes the stream by calling its :meth:`flush` method. Note that "
+"the :meth:`close` method is inherited from :class:`~logging.Handler` and so "
+"does no output, so an explicit :meth:`flush` call may be needed at times."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:64
+#: library/logging.handlers.rst:61
 msgid ""
 "Sets the instance's stream to the specified value, if it is different. The "
 "old stream is flushed before the new stream is set."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:0
+#: library/logging.handlers.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:67
+#: library/logging.handlers.rst:64
 msgid "The stream that the handler should use."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:0
+#: library/logging.handlers.rst:0
 msgid "Returns"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:69
+#: library/logging.handlers.rst:66
 msgid "the old stream, if the stream was changed, or ``None`` if it wasn't."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:75
+#: library/logging.handlers.rst:72
 msgid ""
 "String used as the terminator when writing a formatted record to a stream. "
 "Default value is ``'\\n'``."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:78
+#: library/logging.handlers.rst:75
 msgid ""
 "If you don't want a newline termination, you can set the handler instance's "
 "``terminator`` attribute to the empty string."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:81
+#: library/logging.handlers.rst:78
 msgid "In earlier versions, the terminator was hardcoded as ``'\\n'``."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:89
+#: library/logging.handlers.rst:86
 msgid "FileHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:91
+#: library/logging.handlers.rst:88
 msgid ""
 "The :class:`FileHandler` class, located in the core :mod:`logging` package, "
 "sends logging output to a disk file.  It inherits the output functionality "
 "from :class:`StreamHandler`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:98
+#: library/logging.handlers.rst:95
 msgid ""
 "Returns a new instance of the :class:`FileHandler` class. The specified file "
 "is opened and used as the stream for logging. If *mode* is not specified, "
@@ -144,81 +148,76 @@ msgid ""
 "handled."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:105
-#: ../Doc/library/logging.handlers.rst:190
-#: ../Doc/library/logging.handlers.rst:338
-#: ../Doc/library/logging.handlers.rst:448
+#: library/logging.handlers.rst:102 library/logging.handlers.rst:187
+#: library/logging.handlers.rst:335 library/logging.handlers.rst:445
 msgid ""
 "As well as string values, :class:`~pathlib.Path` objects are also accepted "
 "for the *filename* argument."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:109
-#: ../Doc/library/logging.handlers.rst:194
-#: ../Doc/library/logging.handlers.rst:342
-#: ../Doc/library/logging.handlers.rst:452
+#: library/logging.handlers.rst:106 library/logging.handlers.rst:191
+#: library/logging.handlers.rst:339 library/logging.handlers.rst:449
 msgid "The *errors* parameter was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:114
+#: library/logging.handlers.rst:111
 msgid "Closes the file."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:118
+#: library/logging.handlers.rst:115
 msgid "Outputs the record to the file."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:120
+#: library/logging.handlers.rst:117
 msgid ""
 "Note that if the file was closed due to logging shutdown at exit and the "
 "file mode is 'w', the record will not be emitted (see :issue:`42378`)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:127
+#: library/logging.handlers.rst:124
 msgid "NullHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:131
+#: library/logging.handlers.rst:128
 msgid ""
 "The :class:`NullHandler` class, located in the core :mod:`logging` package, "
 "does not do any formatting or output. It is essentially a 'no-op' handler "
 "for use by library developers."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:137
+#: library/logging.handlers.rst:134
 msgid "Returns a new instance of the :class:`NullHandler` class."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:141
-#: ../Doc/library/logging.handlers.rst:145
+#: library/logging.handlers.rst:138 library/logging.handlers.rst:142
 msgid "This method does nothing."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:149
+#: library/logging.handlers.rst:146
 msgid ""
 "This method returns ``None`` for the lock, since there is no underlying I/O "
 "to which access needs to be serialized."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:153
+#: library/logging.handlers.rst:150
 msgid ""
-"See :ref:`library-config` for more information on how to use :class:"
-"`NullHandler`."
+"See :ref:`library-config` for more information on how to "
+"use :class:`NullHandler`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:159
+#: library/logging.handlers.rst:156
 msgid "WatchedFileHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:163
+#: library/logging.handlers.rst:160
 msgid ""
-"The :class:`WatchedFileHandler` class, located in the :mod:`logging."
-"handlers` module, is a :class:`FileHandler` which watches the file it is "
-"logging to. If the file changes, it is closed and reopened using the file "
-"name."
+"The :class:`WatchedFileHandler` class, located in the :mod:`!"
+"logging.handlers` module, is a :class:`FileHandler` which watches the file "
+"it is logging to. If the file changes, it is closed and reopened using the "
+"file name."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:167
+#: library/logging.handlers.rst:164
 msgid ""
 "A file change can happen because of usage of programs such as *newsyslog* "
 "and *logrotate* which perform log file rotation. This handler, intended for "
@@ -228,7 +227,7 @@ msgid ""
 "file opened to get a new stream."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:174
+#: library/logging.handlers.rst:171
 msgid ""
 "This handler is not appropriate for use under Windows, because under Windows "
 "open log files cannot be moved or renamed - logging opens the files with "
@@ -237,7 +236,7 @@ msgid ""
 "zero for this value."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:183
+#: library/logging.handlers.rst:180
 msgid ""
 "Returns a new instance of the :class:`WatchedFileHandler` class. The "
 "specified file is opened and used as the stream for logging. If *mode* is "
@@ -248,44 +247,44 @@ msgid ""
 "errors are handled."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:199
+#: library/logging.handlers.rst:196
 msgid ""
 "Checks to see if the file has changed.  If it has, the existing stream is "
 "flushed and closed and the file opened again, typically as a precursor to "
 "outputting the record to the file."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:208
+#: library/logging.handlers.rst:205
 msgid ""
 "Outputs the record to the file, but first calls :meth:`reopenIfNeeded` to "
 "reopen the file if it has changed."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:214
+#: library/logging.handlers.rst:211
 msgid "BaseRotatingHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:216
+#: library/logging.handlers.rst:213
 msgid ""
-"The :class:`BaseRotatingHandler` class, located in the :mod:`logging."
-"handlers` module, is the base class for the rotating file handlers, :class:"
-"`RotatingFileHandler` and :class:`TimedRotatingFileHandler`. You should not "
-"need to instantiate this class, but it has attributes and methods you may "
-"need to override."
+"The :class:`BaseRotatingHandler` class, located in the :mod:`!"
+"logging.handlers` module, is the base class for the rotating file "
+"handlers, :class:`RotatingFileHandler` "
+"and :class:`TimedRotatingFileHandler`. You should not need to instantiate "
+"this class, but it has attributes and methods you may need to override."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:224
+#: library/logging.handlers.rst:221
 msgid "The parameters are as for :class:`FileHandler`. The attributes are:"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:228
+#: library/logging.handlers.rst:225
 msgid ""
 "If this attribute is set to a callable, the :meth:`rotation_filename` method "
 "delegates to this callable. The parameters passed to the callable are those "
 "passed to :meth:`rotation_filename`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:232
+#: library/logging.handlers.rst:229
 msgid ""
 "The namer function is called quite a few times during rollover, so it should "
 "be as simple and as fast as possible. It should also return the same output "
@@ -293,7 +292,7 @@ msgid ""
 "as expected."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:237
+#: library/logging.handlers.rst:234
 msgid ""
 "It's also worth noting that care should be taken when using a namer to "
 "preserve certain attributes in the filename which are used during rotation. "
@@ -304,43 +303,43 @@ msgid ""
 "determining the oldest files to delete. For this to happen, the filenames "
 "should be sortable using the date/time portion of the filename, and a namer "
 "needs to respect this. (If a namer is wanted that doesn't respect this "
-"scheme, it will need to be used in a subclass of :class:"
-"`TimedRotatingFileHandler` which overrides the :meth:"
-"`~TimedRotatingFileHandler.getFilesToDelete` method to fit in with the "
-"custom naming scheme.)"
+"scheme, it will need to be used in a subclass "
+"of :class:`TimedRotatingFileHandler` which overrides "
+"the :meth:`~TimedRotatingFileHandler.getFilesToDelete` method to fit in with "
+"the custom naming scheme.)"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:255
+#: library/logging.handlers.rst:252
 msgid ""
 "If this attribute is set to a callable, the :meth:`rotate` method delegates "
 "to this callable.  The parameters passed to the callable are those passed "
 "to :meth:`rotate`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:263
+#: library/logging.handlers.rst:260
 msgid "Modify the filename of a log file when rotating."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:265
+#: library/logging.handlers.rst:262
 msgid "This is provided so that a custom filename can be provided."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:267
+#: library/logging.handlers.rst:264
 msgid ""
 "The default implementation calls the 'namer' attribute of the handler, if "
 "it's callable, passing the default name to it. If the attribute isn't "
 "callable (the default is ``None``), the name is returned unchanged."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:271
+#: library/logging.handlers.rst:268
 msgid "The default name for the log file."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:278
+#: library/logging.handlers.rst:275
 msgid "When rotating, rotate the current log."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:280
+#: library/logging.handlers.rst:277
 msgid ""
 "The default implementation calls the 'rotator' attribute of the handler, if "
 "it's callable, passing the source and dest arguments to it. If the attribute "
@@ -348,48 +347,48 @@ msgid ""
 "the destination."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:285
+#: library/logging.handlers.rst:282
 msgid ""
 "The source filename. This is normally the base filename, e.g. 'test.log'."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:287
+#: library/logging.handlers.rst:284
 msgid ""
-"The destination filename. This is normally what the source is rotated to, e."
-"g. 'test.log.1'."
+"The destination filename. This is normally what the source is rotated to, "
+"e.g. 'test.log.1'."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:292
+#: library/logging.handlers.rst:289
 msgid ""
 "The reason the attributes exist is to save you having to subclass - you can "
-"use the same callables for instances of :class:`RotatingFileHandler` and :"
-"class:`TimedRotatingFileHandler`. If either the namer or rotator callable "
-"raises an exception, this will be handled in the same way as any other "
-"exception during an :meth:`emit` call, i.e. via the :meth:`handleError` "
-"method of the handler."
+"use the same callables for instances of :class:`RotatingFileHandler` "
+"and :class:`TimedRotatingFileHandler`. If either the namer or rotator "
+"callable raises an exception, this will be handled in the same way as any "
+"other exception during an :meth:`emit` call, i.e. via "
+"the :meth:`handleError` method of the handler."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:299
+#: library/logging.handlers.rst:296
 msgid ""
 "If you need to make more significant changes to rotation processing, you can "
 "override the methods."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:302
+#: library/logging.handlers.rst:299
 msgid "For an example, see :ref:`cookbook-rotator-namer`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:308
+#: library/logging.handlers.rst:305
 msgid "RotatingFileHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:310
+#: library/logging.handlers.rst:307
 msgid ""
-"The :class:`RotatingFileHandler` class, located in the :mod:`logging."
-"handlers` module, supports rotation of disk log files."
+"The :class:`RotatingFileHandler` class, located in the :mod:`!"
+"logging.handlers` module, supports rotation of disk log files."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:316
+#: library/logging.handlers.rst:313
 msgid ""
 "Returns a new instance of the :class:`RotatingFileHandler` class. The "
 "specified file is opened and used as the stream for logging. If *mode* is "
@@ -400,53 +399,53 @@ msgid ""
 "errors are handled."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:323
+#: library/logging.handlers.rst:320
 msgid ""
-"You can use the *maxBytes* and *backupCount* values to allow the file to :"
-"dfn:`rollover` at a predetermined size. When the size is about to be "
+"You can use the *maxBytes* and *backupCount* values to allow the file "
+"to :dfn:`rollover` at a predetermined size. When the size is about to be "
 "exceeded, the file is closed and a new file is silently opened for output. "
 "Rollover occurs whenever the current log file is nearly *maxBytes* in "
 "length; but if either of *maxBytes* or *backupCount* is zero, rollover never "
 "occurs, so you generally want to set *backupCount* to at least 1, and have a "
 "non-zero *maxBytes*. When *backupCount* is non-zero, the system will save "
 "old log files by appending the extensions '.1', '.2' etc., to the filename. "
-"For example, with a *backupCount* of 5 and a base file name of :file:`app."
-"log`, you would get :file:`app.log`, :file:`app.log.1`, :file:`app.log.2`, "
-"up to :file:`app.log.5`. The file being written to is always :file:`app."
-"log`.  When this file is filled, it is closed and renamed to :file:`app."
-"log.1`, and if files :file:`app.log.1`, :file:`app.log.2`, etc. exist, then "
-"they are renamed to :file:`app.log.2`, :file:`app.log.3` etc. respectively."
+"For example, with a *backupCount* of 5 and a base file name "
+"of :file:`app.log`, you would "
+"get :file:`app.log`, :file:`app.log.1`, :file:`app.log.2`, up "
+"to :file:`app.log.5`. The file being written to is always :file:`app.log`.  "
+"When this file is filled, it is closed and renamed to :file:`app.log.1`, and "
+"if files :file:`app.log.1`, :file:`app.log.2`, etc. exist, then they are "
+"renamed to :file:`app.log.2`, :file:`app.log.3` etc. respectively."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:347
-#: ../Doc/library/logging.handlers.rst:457
+#: library/logging.handlers.rst:344 library/logging.handlers.rst:454
 msgid "Does a rollover, as described above."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:352
+#: library/logging.handlers.rst:349
 msgid ""
 "Outputs the record to the file, catering for rollover as described "
 "previously."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:357
+#: library/logging.handlers.rst:354
 msgid ""
 "See if the supplied record would cause the file to exceed the configured "
 "size limit."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:362
+#: library/logging.handlers.rst:359
 msgid "TimedRotatingFileHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:364
+#: library/logging.handlers.rst:361
 msgid ""
-"The :class:`TimedRotatingFileHandler` class, located in the :mod:`logging."
-"handlers` module, supports rotation of disk log files at certain timed "
-"intervals."
+"The :class:`TimedRotatingFileHandler` class, located in the :mod:`!"
+"logging.handlers` module, supports rotation of disk log files at certain "
+"timed intervals."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:371
+#: library/logging.handlers.rst:368
 msgid ""
 "Returns a new instance of the :class:`TimedRotatingFileHandler` class. The "
 "specified file is opened and used as the stream for logging. On rotating it "
@@ -454,112 +453,110 @@ msgid ""
 "*when* and *interval*."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:376
+#: library/logging.handlers.rst:373
 msgid ""
 "You can use the *when* to specify the type of *interval*. The list of "
 "possible values is below.  Note that they are not case sensitive."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:380
+#: library/logging.handlers.rst:377
 msgid "Value"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:380
+#: library/logging.handlers.rst:377
 msgid "Type of interval"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:380
+#: library/logging.handlers.rst:377
 msgid "If/how *atTime* is used"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:382
+#: library/logging.handlers.rst:379
 msgid "``'S'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:382
+#: library/logging.handlers.rst:379
 msgid "Seconds"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:382
-#: ../Doc/library/logging.handlers.rst:384
-#: ../Doc/library/logging.handlers.rst:386
-#: ../Doc/library/logging.handlers.rst:388
+#: library/logging.handlers.rst:379 library/logging.handlers.rst:381
+#: library/logging.handlers.rst:383 library/logging.handlers.rst:385
 msgid "Ignored"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:384
+#: library/logging.handlers.rst:381
 msgid "``'M'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:384
+#: library/logging.handlers.rst:381
 msgid "Minutes"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:386
+#: library/logging.handlers.rst:383
 msgid "``'H'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:386
+#: library/logging.handlers.rst:383
 msgid "Hours"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:388
+#: library/logging.handlers.rst:385
 msgid "``'D'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:388
+#: library/logging.handlers.rst:385
 msgid "Days"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:390
+#: library/logging.handlers.rst:387
 msgid "``'W0'-'W6'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:390
+#: library/logging.handlers.rst:387
 msgid "Weekday (0=Monday)"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:390
-#: ../Doc/library/logging.handlers.rst:393
+#: library/logging.handlers.rst:387 library/logging.handlers.rst:390
 msgid "Used to compute initial rollover time"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:393
+#: library/logging.handlers.rst:390
 msgid "``'midnight'``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:393
+#: library/logging.handlers.rst:390
 msgid "Roll over at midnight, if *atTime* not specified, else at time *atTime*"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:398
+#: library/logging.handlers.rst:395
 msgid ""
 "When using weekday-based rotation, specify 'W0' for Monday, 'W1' for "
 "Tuesday, and so on up to 'W6' for Sunday. In this case, the value passed for "
 "*interval* isn't used."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:402
+#: library/logging.handlers.rst:399
 msgid ""
 "The system will save old log files by appending extensions to the filename. "
-"The extensions are date-and-time based, using the strftime format ``%Y-%m-%d_"
-"%H-%M-%S`` or a leading portion thereof, depending on the rollover interval."
+"The extensions are date-and-time based, using the strftime format ``%Y-%m-"
+"%d_%H-%M-%S`` or a leading portion thereof, depending on the rollover "
+"interval."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:407
+#: library/logging.handlers.rst:404
 msgid ""
 "When computing the next rollover time for the first time (when the handler "
 "is created), the last modification time of an existing log file, or else the "
 "current time, is used to compute when the next rotation will occur."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:411
+#: library/logging.handlers.rst:408
 msgid ""
 "If the *utc* argument is true, times in UTC will be used; otherwise local "
 "time is used."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:414
+#: library/logging.handlers.rst:411
 msgid ""
 "If *backupCount* is nonzero, at most *backupCount* files will be kept, and "
 "if more would be created when rollover occurs, the oldest one is deleted. "
@@ -567,13 +564,13 @@ msgid ""
 "changing the interval may leave old files lying around."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:419
+#: library/logging.handlers.rst:416
 msgid ""
-"If *delay* is true, then file opening is deferred until the first call to :"
-"meth:`emit`."
+"If *delay* is true, then file opening is deferred until the first call "
+"to :meth:`emit`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:422
+#: library/logging.handlers.rst:419
 msgid ""
 "If *atTime* is not ``None``, it must be a ``datetime.time`` instance which "
 "specifies the time of day when rollover occurs, for the cases where rollover "
@@ -583,13 +580,13 @@ msgid ""
 "normal interval calculation."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:429
+#: library/logging.handlers.rst:426
 msgid ""
 "If *errors* is specified, it's used to determine how encoding errors are "
 "handled."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:432
+#: library/logging.handlers.rst:429
 msgid ""
 "Calculation of the initial rollover time is done when the handler is "
 "initialised. Calculation of subsequent rollover times is done only when "
@@ -604,93 +601,95 @@ msgid ""
 "to the minutes where no output (and hence no rollover) occurred."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:445
+#: library/logging.handlers.rst:442
 msgid "*atTime* parameter was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:461
+#: library/logging.handlers.rst:458
 msgid ""
 "Outputs the record to the file, catering for rollover as described above."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:465
+#: library/logging.handlers.rst:462
 msgid ""
 "Returns a list of filenames which should be deleted as part of rollover. "
-"These"
+"These are the absolute paths of the oldest backup log files written by the "
+"handler."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:469
+#: library/logging.handlers.rst:467
 msgid ""
 "See if enough time has passed for a rollover to occur and if it has, compute "
 "the next rollover time."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:475
+#: library/logging.handlers.rst:473
 msgid "SocketHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:477
+#: library/logging.handlers.rst:475
 msgid ""
-"The :class:`SocketHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`SocketHandler` class, located in the :mod:`!logging.handlers` "
 "module, sends logging output to a network socket. The base class uses a TCP "
 "socket."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:483
+#: library/logging.handlers.rst:481
 msgid ""
 "Returns a new instance of the :class:`SocketHandler` class intended to "
 "communicate with a remote machine whose address is given by *host* and "
 "*port*."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:486
+#: library/logging.handlers.rst:484
 msgid ""
 "If ``port`` is specified as ``None``, a Unix domain socket is created using "
 "the value in ``host`` - otherwise, a TCP socket is created."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:492
+#: library/logging.handlers.rst:490
 msgid "Closes the socket."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:497
+#: library/logging.handlers.rst:495
 msgid ""
 "Pickles the record's attribute dictionary and writes it to the socket in "
 "binary format. If there is an error with the socket, silently drops the "
 "packet. If the connection was previously lost, re-establishes the "
-"connection. To unpickle the record at the receiving end into a :class:"
-"`~logging.LogRecord`, use the :func:`~logging.makeLogRecord` function."
+"connection. To unpickle the record at the receiving end into "
+"a :class:`~logging.LogRecord`, use the :func:`~logging.makeLogRecord` "
+"function."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:507
+#: library/logging.handlers.rst:505
 msgid ""
 "Handles an error which has occurred during :meth:`emit`. The most likely "
 "cause is a lost connection. Closes the socket so that we can retry on the "
 "next event."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:514
+#: library/logging.handlers.rst:512
 msgid ""
 "This is a factory method which allows subclasses to define the precise type "
-"of socket they want. The default implementation creates a TCP socket (:const:"
-"`socket.SOCK_STREAM`)."
+"of socket they want. The default implementation creates a TCP socket "
+"(:const:`socket.SOCK_STREAM`)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:521
+#: library/logging.handlers.rst:519
 msgid ""
 "Pickles the record's attribute dictionary in binary format with a length "
 "prefix, and returns it ready for transmission across the socket. The details "
 "of this operation are equivalent to::"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:525
+#: library/logging.handlers.rst:523
 msgid ""
 "data = pickle.dumps(record_attr_dict, 1)\n"
 "datalen = struct.pack('>L', len(data))\n"
 "return datalen + data"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:529
+#: library/logging.handlers.rst:527
 msgid ""
 "Note that pickles aren't completely secure. If you are concerned about "
 "security, you may want to override this method to implement a more secure "
@@ -699,20 +698,20 @@ msgid ""
 "objects on the receiving end."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:538
+#: library/logging.handlers.rst:536
 msgid ""
 "Send a pickled byte-string *packet* to the socket. The format of the sent "
-"byte-string is as described in the documentation for :meth:`~SocketHandler."
-"makePickle`."
+"byte-string is as described in the documentation "
+"for :meth:`~SocketHandler.makePickle`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:542
+#: library/logging.handlers.rst:540
 msgid ""
 "This function allows for partial sends, which can happen when the network is "
 "busy."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:548
+#: library/logging.handlers.rst:546
 msgid ""
 "Tries to create a socket; on failure, uses an exponential back-off "
 "algorithm.  On initial failure, the handler will drop the message it was "
@@ -723,23 +722,23 @@ msgid ""
 "each time up to a maximum of 30 seconds."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:556
+#: library/logging.handlers.rst:554
 msgid "This behaviour is controlled by the following handler attributes:"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:558
+#: library/logging.handlers.rst:556
 msgid "``retryStart`` (initial delay, defaulting to 1.0 seconds)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:559
+#: library/logging.handlers.rst:557
 msgid "``retryFactor`` (multiplier, defaulting to 2.0)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:560
+#: library/logging.handlers.rst:558
 msgid "``retryMax`` (maximum delay, defaulting to 30.0 seconds)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:562
+#: library/logging.handlers.rst:560
 msgid ""
 "This means that if the remote listener starts up *after* the handler has "
 "been used, you could lose messages (since the handler won't even attempt a "
@@ -747,25 +746,25 @@ msgid ""
 "during the delay period)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:571
+#: library/logging.handlers.rst:569
 msgid "DatagramHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:573
+#: library/logging.handlers.rst:571
 msgid ""
-"The :class:`DatagramHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`DatagramHandler` class, located in the :mod:`!logging.handlers` "
 "module, inherits from :class:`SocketHandler` to support sending logging "
 "messages over UDP sockets."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:580
+#: library/logging.handlers.rst:578
 msgid ""
 "Returns a new instance of the :class:`DatagramHandler` class intended to "
 "communicate with a remote machine whose address is given by *host* and "
 "*port*."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:583
+#: library/logging.handlers.rst:581
 msgid ""
 "As UDP is not a streaming protocol, there is no persistent connection "
 "between an instance of this handler and *host*. For this reason, when using "
@@ -775,43 +774,44 @@ msgid ""
 "looked-up IP address rather than the hostname."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:590
+#: library/logging.handlers.rst:588
 msgid ""
 "If ``port`` is specified as ``None``, a Unix domain socket is created using "
 "the value in ``host`` - otherwise, a UDP socket is created."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:596
+#: library/logging.handlers.rst:594
 msgid ""
 "Pickles the record's attribute dictionary and writes it to the socket in "
 "binary format. If there is an error with the socket, silently drops the "
-"packet. To unpickle the record at the receiving end into a :class:`~logging."
-"LogRecord`, use the :func:`~logging.makeLogRecord` function."
+"packet. To unpickle the record at the receiving end into "
+"a :class:`~logging.LogRecord`, use the :func:`~logging.makeLogRecord` "
+"function."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:605
+#: library/logging.handlers.rst:603
 msgid ""
 "The factory method of :class:`SocketHandler` is here overridden to create a "
 "UDP socket (:const:`socket.SOCK_DGRAM`)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:611
+#: library/logging.handlers.rst:609
 msgid ""
 "Send a pickled byte-string to a socket. The format of the sent byte-string "
 "is as described in the documentation for :meth:`SocketHandler.makePickle`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:618
+#: library/logging.handlers.rst:616
 msgid "SysLogHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:620
+#: library/logging.handlers.rst:618
 msgid ""
-"The :class:`SysLogHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`SysLogHandler` class, located in the :mod:`!logging.handlers` "
 "module, supports sending logging messages to a remote or local Unix syslog."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:626
+#: library/logging.handlers.rst:624
 msgid ""
 "Returns a new instance of the :class:`SysLogHandler` class intended to "
 "communicate with a remote Unix machine whose address is given by *address* "
@@ -819,44 +819,53 @@ msgid ""
 "``('localhost', 514)`` is used.  The address is used to open a socket.  An "
 "alternative to providing a ``(host, port)`` tuple is providing an address as "
 "a string, for example '/dev/log'. In this case, a Unix domain socket is used "
-"to send the message to the syslog. If *facility* is not specified, :const:"
-"`LOG_USER` is used. The type of socket opened depends on the *socktype* "
-"argument, which defaults to :const:`socket.SOCK_DGRAM` and thus opens a UDP "
-"socket. To open a TCP socket (for use with the newer syslog daemons such as "
-"rsyslog), specify a value of :const:`socket.SOCK_STREAM`."
+"to send the message to the syslog. If *facility* is not "
+"specified, :const:`LOG_USER` is used. The type of socket opened depends on "
+"the *socktype* argument, which defaults to :const:`socket.SOCK_DGRAM` and "
+"thus opens a UDP socket. To open a TCP socket (for use with the newer syslog "
+"daemons such as rsyslog), specify a value of :const:`socket.SOCK_STREAM`. If "
+"*timeout* is specified, it sets a timeout (in seconds) for the socket "
+"operations. This can help prevent the program from hanging indefinitely if "
+"the syslog server is unreachable. By default, *timeout* is ``None``, meaning "
+"no timeout is applied."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:638
+#: library/logging.handlers.rst:641
 msgid ""
-"Note that if your server is not listening on UDP port 514, :class:"
-"`SysLogHandler` may appear not to work. In that case, check what address you "
-"should be using for a domain socket - it's system dependent. For example, on "
-"Linux it's usually '/dev/log' but on OS/X it's '/var/run/syslog'. You'll "
-"need to check your platform and use the appropriate address (you may need to "
-"do this check at runtime if your application needs to run on several "
-"platforms). On Windows, you pretty much have to use the UDP option."
+"Note that if your server is not listening on UDP port "
+"514, :class:`SysLogHandler` may appear not to work. In that case, check what "
+"address you should be using for a domain socket - it's system dependent. For "
+"example, on Linux it's usually '/dev/log' but on OS/X it's '/var/run/"
+"syslog'. You'll need to check your platform and use the appropriate address "
+"(you may need to do this check at runtime if your application needs to run "
+"on several platforms). On Windows, you pretty much have to use the UDP "
+"option."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:647
+#: library/logging.handlers.rst:650
 msgid ""
 "On macOS 12.x (Monterey), Apple has changed the behaviour of their syslog "
 "daemon - it no longer listens on a domain socket. Therefore, you cannot "
 "expect :class:`SysLogHandler` to work on this system."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:651
+#: library/logging.handlers.rst:654
 msgid "See :gh:`91070` for more information."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:653
+#: library/logging.handlers.rst:656
 msgid "*socktype* was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:659
+#: library/logging.handlers.rst:659
+msgid "*timeout* was added."
+msgstr ""
+
+#: library/logging.handlers.rst:664
 msgid "Closes the socket to the remote host."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:663
+#: library/logging.handlers.rst:668
 msgid ""
 "Tries to create a socket and, if it's not a datagram socket, connect it to "
 "the other end. This method is called during handler initialization, but it's "
@@ -865,13 +874,13 @@ msgid ""
 "socket at that point."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:673
+#: library/logging.handlers.rst:678
 msgid ""
 "The record is formatted, and then sent to the syslog server. If exception "
 "information is present, it is *not* sent to the server."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:676
+#: library/logging.handlers.rst:681
 msgid ""
 "(See: :issue:`12168`.) In earlier versions, the message sent to the syslog "
 "daemons was always terminated with a NUL byte, because early versions of "
@@ -882,7 +891,7 @@ msgid ""
 "byte on as part of the message."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:685
+#: library/logging.handlers.rst:690
 msgid ""
 "To enable easier handling of syslog messages in the face of all these "
 "differing daemon behaviours, the appending of the NUL byte has been made "
@@ -892,7 +901,7 @@ msgid ""
 "*not* append the NUL terminator."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:692
+#: library/logging.handlers.rst:697
 msgid ""
 "(See: :issue:`12419`.) In earlier versions, there was no facility for an "
 "\"ident\" or \"tag\" prefix to identify the source of the message. This can "
@@ -903,262 +912,260 @@ msgid ""
 "bytes, and is prepended to the message exactly as is."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:703
+#: library/logging.handlers.rst:708
 msgid ""
 "Encodes the facility and priority into an integer. You can pass in strings "
 "or integers - if strings are passed, internal mapping dictionaries are used "
 "to convert them to integers."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:707
+#: library/logging.handlers.rst:712
 msgid ""
 "The symbolic ``LOG_`` values are defined in :class:`SysLogHandler` and "
 "mirror the values defined in the ``sys/syslog.h`` header file."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:710
+#: library/logging.handlers.rst:715
 msgid "**Priorities**"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:713
-#: ../Doc/library/logging.handlers.rst:735
+#: library/logging.handlers.rst:718 library/logging.handlers.rst:740
 msgid "Name (string)"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:713
-#: ../Doc/library/logging.handlers.rst:735
+#: library/logging.handlers.rst:718 library/logging.handlers.rst:740
 msgid "Symbolic value"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:715
+#: library/logging.handlers.rst:720
 msgid "``alert``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:715
+#: library/logging.handlers.rst:720
 msgid "LOG_ALERT"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:717
+#: library/logging.handlers.rst:722
 msgid "``crit`` or ``critical``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:717
+#: library/logging.handlers.rst:722
 msgid "LOG_CRIT"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:719
+#: library/logging.handlers.rst:724
 msgid "``debug``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:719
+#: library/logging.handlers.rst:724
 msgid "LOG_DEBUG"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:721
+#: library/logging.handlers.rst:726
 msgid "``emerg`` or ``panic``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:721
+#: library/logging.handlers.rst:726
 msgid "LOG_EMERG"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:723
+#: library/logging.handlers.rst:728
 msgid "``err`` or ``error``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:723
+#: library/logging.handlers.rst:728
 msgid "LOG_ERR"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:725
+#: library/logging.handlers.rst:730
 msgid "``info``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:725
+#: library/logging.handlers.rst:730
 msgid "LOG_INFO"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:727
+#: library/logging.handlers.rst:732
 msgid "``notice``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:727
+#: library/logging.handlers.rst:732
 msgid "LOG_NOTICE"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:729
+#: library/logging.handlers.rst:734
 msgid "``warn`` or ``warning``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:729
+#: library/logging.handlers.rst:734
 msgid "LOG_WARNING"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:732
+#: library/logging.handlers.rst:737
 msgid "**Facilities**"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:737
+#: library/logging.handlers.rst:742
 msgid "``auth``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:737
+#: library/logging.handlers.rst:742
 msgid "LOG_AUTH"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:739
+#: library/logging.handlers.rst:744
 msgid "``authpriv``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:739
+#: library/logging.handlers.rst:744
 msgid "LOG_AUTHPRIV"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:741
+#: library/logging.handlers.rst:746
 msgid "``cron``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:741
+#: library/logging.handlers.rst:746
 msgid "LOG_CRON"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:743
+#: library/logging.handlers.rst:748
 msgid "``daemon``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:743
+#: library/logging.handlers.rst:748
 msgid "LOG_DAEMON"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:745
+#: library/logging.handlers.rst:750
 msgid "``ftp``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:745
+#: library/logging.handlers.rst:750
 msgid "LOG_FTP"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:747
+#: library/logging.handlers.rst:752
 msgid "``kern``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:747
+#: library/logging.handlers.rst:752
 msgid "LOG_KERN"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:749
+#: library/logging.handlers.rst:754
 msgid "``lpr``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:749
+#: library/logging.handlers.rst:754
 msgid "LOG_LPR"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:751
+#: library/logging.handlers.rst:756
 msgid "``mail``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:751
+#: library/logging.handlers.rst:756
 msgid "LOG_MAIL"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:753
+#: library/logging.handlers.rst:758
 msgid "``news``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:753
+#: library/logging.handlers.rst:758
 msgid "LOG_NEWS"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:755
+#: library/logging.handlers.rst:760
 msgid "``syslog``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:755
+#: library/logging.handlers.rst:760
 msgid "LOG_SYSLOG"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:757
+#: library/logging.handlers.rst:762
 msgid "``user``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:757
+#: library/logging.handlers.rst:762
 msgid "LOG_USER"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:759
+#: library/logging.handlers.rst:764
 msgid "``uucp``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:759
+#: library/logging.handlers.rst:764
 msgid "LOG_UUCP"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:761
+#: library/logging.handlers.rst:766
 msgid "``local0``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:761
+#: library/logging.handlers.rst:766
 msgid "LOG_LOCAL0"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:763
+#: library/logging.handlers.rst:768
 msgid "``local1``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:763
+#: library/logging.handlers.rst:768
 msgid "LOG_LOCAL1"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:765
+#: library/logging.handlers.rst:770
 msgid "``local2``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:765
+#: library/logging.handlers.rst:770
 msgid "LOG_LOCAL2"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:767
+#: library/logging.handlers.rst:772
 msgid "``local3``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:767
+#: library/logging.handlers.rst:772
 msgid "LOG_LOCAL3"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:769
+#: library/logging.handlers.rst:774
 msgid "``local4``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:769
+#: library/logging.handlers.rst:774
 msgid "LOG_LOCAL4"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:771
+#: library/logging.handlers.rst:776
 msgid "``local5``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:771
+#: library/logging.handlers.rst:776
 msgid "LOG_LOCAL5"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:773
+#: library/logging.handlers.rst:778
 msgid "``local6``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:773
+#: library/logging.handlers.rst:778
 msgid "LOG_LOCAL6"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:775
+#: library/logging.handlers.rst:780
 msgid "``local7``"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:775
+#: library/logging.handlers.rst:780
 msgid "LOG_LOCAL7"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:780
+#: library/logging.handlers.rst:785
 msgid ""
 "Maps a logging level name to a syslog priority name. You may need to "
 "override this if you are using custom levels, or if the default algorithm is "
@@ -1167,35 +1174,35 @@ msgid ""
 "all other level names to 'warning'."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:790
+#: library/logging.handlers.rst:795
 msgid "NTEventLogHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:792
+#: library/logging.handlers.rst:797
 msgid ""
-"The :class:`NTEventLogHandler` class, located in the :mod:`logging.handlers` "
-"module, supports sending logging messages to a local Windows NT, Windows "
-"2000 or Windows XP event log. Before you can use it, you need Mark Hammond's "
-"Win32 extensions for Python installed."
+"The :class:`NTEventLogHandler` class, located in the :mod:`!"
+"logging.handlers` module, supports sending logging messages to a local "
+"Windows NT, Windows 2000 or Windows XP event log. Before you can use it, you "
+"need Mark Hammond's Win32 extensions for Python installed."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:800
+#: library/logging.handlers.rst:805
 msgid ""
 "Returns a new instance of the :class:`NTEventLogHandler` class. The "
 "*appname* is used to define the application name as it appears in the event "
 "log. An appropriate registry entry is created using this name. The *dllname* "
 "should give the fully qualified pathname of a .dll or .exe which contains "
-"message definitions to hold in the log (if not specified, ``'win32service."
-"pyd'`` is used - this is installed with the Win32 extensions and contains "
-"some basic placeholder message definitions. Note that use of these "
-"placeholders will make your event logs big, as the entire message source is "
-"held in the log. If you want slimmer logs, you have to pass in the name of "
-"your own .dll or .exe which contains the message definitions you want to use "
-"in the event log). The *logtype* is one of ``'Application'``, ``'System'`` "
-"or ``'Security'``, and defaults to ``'Application'``."
+"message definitions to hold in the log (if not specified, "
+"``'win32service.pyd'`` is used - this is installed with the Win32 extensions "
+"and contains some basic placeholder message definitions. Note that use of "
+"these placeholders will make your event logs big, as the entire message "
+"source is held in the log. If you want slimmer logs, you have to pass in the "
+"name of your own .dll or .exe which contains the message definitions you "
+"want to use in the event log). The *logtype* is one of ``'Application'``, "
+"``'System'`` or ``'Security'``, and defaults to ``'Application'``."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:816
+#: library/logging.handlers.rst:821
 msgid ""
 "At this point, you can remove the application name from the registry as a "
 "source of event log entries. However, if you do this, you will not be able "
@@ -1204,30 +1211,31 @@ msgid ""
 "not do this."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:825
+#: library/logging.handlers.rst:830
 msgid ""
 "Determines the message ID, event category and event type, and then logs the "
 "message in the NT event log."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:831
+#: library/logging.handlers.rst:836
 msgid ""
 "Returns the event category for the record. Override this if you want to "
 "specify your own categories. This version returns 0."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:837
+#: library/logging.handlers.rst:842
 msgid ""
 "Returns the event type for the record. Override this if you want to specify "
 "your own types. This version does a mapping using the handler's typemap "
 "attribute, which is set up in :meth:`__init__` to a dictionary which "
-"contains mappings for :const:`DEBUG`, :const:`INFO`, :const:`WARNING`, :"
-"const:`ERROR` and :const:`CRITICAL`. If you are using your own levels, you "
-"will either need to override this method or place a suitable dictionary in "
-"the handler's *typemap* attribute."
+"contains mappings "
+"for :const:`DEBUG`, :const:`INFO`, :const:`WARNING`, :const:`ERROR` "
+"and :const:`CRITICAL`. If you are using your own levels, you will either "
+"need to override this method or place a suitable dictionary in the handler's "
+"*typemap* attribute."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:848
+#: library/logging.handlers.rst:853
 msgid ""
 "Returns the message ID for the record. If you are using your own messages, "
 "you could do this by having the *msg* passed to the logger being an ID "
@@ -1236,17 +1244,17 @@ msgid ""
 "message ID in :file:`win32service.pyd`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:857
+#: library/logging.handlers.rst:862
 msgid "SMTPHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:859
+#: library/logging.handlers.rst:864
 msgid ""
-"The :class:`SMTPHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`SMTPHandler` class, located in the :mod:`!logging.handlers` "
 "module, supports sending logging messages to an email address via SMTP."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:865
+#: library/logging.handlers.rst:870
 msgid ""
 "Returns a new instance of the :class:`SMTPHandler` class. The instance is "
 "initialized with the from and to addresses and subject line of the email. "
@@ -1257,83 +1265,83 @@ msgid ""
 "*credentials* argument."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:872
+#: library/logging.handlers.rst:877
 msgid ""
 "To specify the use of a secure protocol (TLS), pass in a tuple to the "
 "*secure* argument. This will only be used when authentication credentials "
 "are supplied. The tuple should be either an empty tuple, or a single-value "
 "tuple with the name of a keyfile, or a 2-value tuple with the names of the "
-"keyfile and certificate file. (This tuple is passed to the :meth:`smtplib."
-"SMTP.starttls` method.)"
+"keyfile and certificate file. (This tuple is passed to "
+"the :meth:`smtplib.SMTP.starttls` method.)"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:879
+#: library/logging.handlers.rst:884
 msgid ""
 "A timeout can be specified for communication with the SMTP server using the "
 "*timeout* argument."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:882
+#: library/logging.handlers.rst:887
 msgid "Added the *timeout* parameter."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:887
+#: library/logging.handlers.rst:892
 msgid "Formats the record and sends it to the specified addressees."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:892
+#: library/logging.handlers.rst:897
 msgid ""
 "If you want to specify a subject line which is record-dependent, override "
 "this method."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:898
+#: library/logging.handlers.rst:903
 msgid "MemoryHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:900
+#: library/logging.handlers.rst:905
 msgid ""
-"The :class:`MemoryHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`MemoryHandler` class, located in the :mod:`!logging.handlers` "
 "module, supports buffering of logging records in memory, periodically "
 "flushing them to a :dfn:`target` handler. Flushing occurs whenever the "
 "buffer is full, or when an event of a certain severity or greater is seen."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:905
+#: library/logging.handlers.rst:910
 msgid ""
-":class:`MemoryHandler` is a subclass of the more general :class:"
-"`BufferingHandler`, which is an abstract class. This buffers logging records "
-"in memory. Whenever each record is added to the buffer, a check is made by "
-"calling :meth:`shouldFlush` to see if the buffer should be flushed.  If it "
-"should, then :meth:`flush` is expected to do the flushing."
+":class:`MemoryHandler` is a subclass of the more "
+"general :class:`BufferingHandler`, which is an abstract class. This buffers "
+"logging records in memory. Whenever each record is added to the buffer, a "
+"check is made by calling :meth:`shouldFlush` to see if the buffer should be "
+"flushed.  If it should, then :meth:`flush` is expected to do the flushing."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:914
+#: library/logging.handlers.rst:919
 msgid ""
 "Initializes the handler with a buffer of the specified capacity. Here, "
 "*capacity* means the number of logging records buffered."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:920
+#: library/logging.handlers.rst:925
 msgid ""
-"Append the record to the buffer. If :meth:`shouldFlush` returns true, call :"
-"meth:`flush` to process the buffer."
+"Append the record to the buffer. If :meth:`shouldFlush` returns true, "
+"call :meth:`flush` to process the buffer."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:926
+#: library/logging.handlers.rst:931
 msgid ""
 "For a :class:`BufferingHandler` instance, flushing means that it sets the "
 "buffer to an empty list. This method can be overwritten to implement more "
 "useful flushing behavior."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:933
+#: library/logging.handlers.rst:938
 msgid ""
 "Return ``True`` if the buffer is up to capacity. This method can be "
 "overridden to implement custom flushing strategies."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:939
+#: library/logging.handlers.rst:944
 msgid ""
 "Returns a new instance of the :class:`MemoryHandler` class. The instance is "
 "initialized with a buffer size of *capacity* (number of records buffered). "
@@ -1345,15 +1353,15 @@ msgid ""
 "the buffer will occur when the handler is closed."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:948
+#: library/logging.handlers.rst:953
 msgid "The *flushOnClose* parameter was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:954
+#: library/logging.handlers.rst:959
 msgid "Calls :meth:`flush`, sets the target to ``None`` and clears the buffer."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:960
+#: library/logging.handlers.rst:965
 msgid ""
 "For a :class:`MemoryHandler` instance, flushing means just sending the "
 "buffered records to the target, if there is one. The buffer is also cleared "
@@ -1361,60 +1369,60 @@ msgid ""
 "behavior."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:967
+#: library/logging.handlers.rst:972
 msgid "Sets the target handler for this handler."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:972
+#: library/logging.handlers.rst:977
 msgid "Checks for buffer full or a record at the *flushLevel* or higher."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:978
+#: library/logging.handlers.rst:983
 msgid "HTTPHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:980
+#: library/logging.handlers.rst:985
 msgid ""
-"The :class:`HTTPHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`HTTPHandler` class, located in the :mod:`!logging.handlers` "
 "module, supports sending logging messages to a web server, using either "
 "``GET`` or ``POST`` semantics."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:987
+#: library/logging.handlers.rst:992
 msgid ""
 "Returns a new instance of the :class:`HTTPHandler` class. The *host* can be "
 "of the form ``host:port``, should you need to use a specific port number.  "
 "If no *method* is specified, ``GET`` is used. If *secure* is true, a HTTPS "
-"connection will be used. The *context* parameter may be set to a :class:`ssl."
-"SSLContext` instance to configure the SSL settings used for the HTTPS "
-"connection. If *credentials* is specified, it should be a 2-tuple consisting "
-"of userid and password, which will be placed in a HTTP 'Authorization' "
-"header using Basic authentication. If you specify credentials, you should "
-"also specify secure=True so that your userid and password are not passed in "
-"cleartext across the wire."
+"connection will be used. The *context* parameter may be set to "
+"a :class:`ssl.SSLContext` instance to configure the SSL settings used for "
+"the HTTPS connection. If *credentials* is specified, it should be a 2-tuple "
+"consisting of userid and password, which will be placed in a HTTP "
+"'Authorization' header using Basic authentication. If you specify "
+"credentials, you should also specify secure=True so that your userid and "
+"password are not passed in cleartext across the wire."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:998
+#: library/logging.handlers.rst:1003
 msgid "The *context* parameter was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1003
+#: library/logging.handlers.rst:1008
 msgid ""
 "Provides a dictionary, based on ``record``, which is to be URL-encoded and "
-"sent to the web server. The default implementation just returns ``record."
-"__dict__``. This method can be overridden if e.g. only a subset of :class:"
-"`~logging.LogRecord` is to be sent to the web server, or if more specific "
-"customization of what's sent to the server is required."
+"sent to the web server. The default implementation just returns "
+"``record.__dict__``. This method can be overridden if e.g. only a subset "
+"of :class:`~logging.LogRecord` is to be sent to the web server, or if more "
+"specific customization of what's sent to the server is required."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1011
+#: library/logging.handlers.rst:1016
 msgid ""
-"Sends the record to the web server as a URL-encoded dictionary. The :meth:"
-"`mapLogRecord` method is used to convert the record to the dictionary to be "
-"sent."
+"Sends the record to the web server as a URL-encoded dictionary. "
+"The :meth:`mapLogRecord` method is used to convert the record to the "
+"dictionary to be sent."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1015
+#: library/logging.handlers.rst:1020
 msgid ""
 "Since preparing a record for sending it to a web server is not the same as a "
 "generic formatting operation, using :meth:`~logging.Handler.setFormatter` to "
@@ -1424,18 +1432,18 @@ msgid ""
 "the dictionary in a form suitable for sending to a web server."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1028
+#: library/logging.handlers.rst:1033
 msgid "QueueHandler"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1032
+#: library/logging.handlers.rst:1037
 msgid ""
-"The :class:`QueueHandler` class, located in the :mod:`logging.handlers` "
+"The :class:`QueueHandler` class, located in the :mod:`!logging.handlers` "
 "module, supports sending logging messages to a queue, such as those "
 "implemented in the :mod:`queue` or :mod:`multiprocessing` modules."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1036
+#: library/logging.handlers.rst:1041
 msgid ""
 "Along with the :class:`QueueListener` class, :class:`QueueHandler` can be "
 "used to let handlers do their work on a separate thread from the one which "
@@ -1445,7 +1453,7 @@ msgid ""
 "an email via :class:`SMTPHandler`) are done on a separate thread."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1045
+#: library/logging.handlers.rst:1050
 msgid ""
 "Returns a new instance of the :class:`QueueHandler` class. The instance is "
 "initialized with the queue to send messages to. The *queue* can be any queue-"
@@ -1455,63 +1463,65 @@ msgid ""
 "instances for *queue*."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1052
-#: ../Doc/library/logging.handlers.rst:1150
+#: library/logging.handlers.rst:1057 library/logging.handlers.rst:1155
 msgid ""
-"If you are using :mod:`multiprocessing`, you should avoid using :class:"
-"`~queue.SimpleQueue` and instead use :class:`multiprocessing.Queue`."
+"If you are using :mod:`multiprocessing`, you should avoid "
+"using :class:`~queue.SimpleQueue` and instead "
+"use :class:`multiprocessing.Queue`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1057
+#: library/logging.handlers.rst:1062
 msgid ""
 "The :mod:`multiprocessing` module uses an internal logger created and "
-"accessed via :meth:`~multiprocessing.get_logger`. :class:`multiprocessing."
-"Queue` will log ``DEBUG`` level messages upon items being queued. If those "
-"log messages are processed by a :class:`QueueHandler` using the same :class:"
-"`multiprocessing.Queue` instance, it will cause a deadlock or infinite "
-"recursion."
+"accessed "
+"via :meth:`~multiprocessing.get_logger`. :class:`multiprocessing.Queue` will "
+"log ``DEBUG`` level messages upon items being queued. If those log messages "
+"are processed by a :class:`QueueHandler` using the "
+"same :class:`multiprocessing.Queue` instance, it will cause a deadlock or "
+"infinite recursion."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1066
+#: library/logging.handlers.rst:1071
 msgid ""
-"Enqueues the result of preparing the LogRecord. Should an exception occur (e."
-"g. because a bounded queue has filled up), the :meth:`~logging.Handler."
-"handleError` method is called to handle the error. This can result in the "
-"record silently being dropped (if :data:`logging.raiseExceptions` is "
-"``False``) or a message printed to ``sys.stderr`` (if :data:`logging."
-"raiseExceptions` is ``True``)."
+"Enqueues the result of preparing the LogRecord. Should an exception occur "
+"(e.g. because a bounded queue has filled up), "
+"the :meth:`~logging.Handler.handleError` method is called to handle the "
+"error. This can result in the record silently being dropped "
+"(if :data:`logging.raiseExceptions` is ``False``) or a message printed to "
+"``sys.stderr`` (if :data:`logging.raiseExceptions` is ``True``)."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1075
+#: library/logging.handlers.rst:1080
 msgid ""
 "Prepares a record for queuing. The object returned by this method is "
 "enqueued."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1078
+#: library/logging.handlers.rst:1083
 msgid ""
 "The base implementation formats the record to merge the message, arguments, "
 "exception and stack information, if present.  It also removes unpickleable "
-"items from the record in-place. Specifically, it overwrites the record's :"
-"attr:`msg` and :attr:`message` attributes with the merged message (obtained "
-"by calling the handler's :meth:`format` method), and sets the :attr:`args`, :"
-"attr:`exc_info` and :attr:`exc_text` attributes to ``None``."
+"items from the record in-place. Specifically, it overwrites the "
+"record's :attr:`msg` and :attr:`message` attributes with the merged message "
+"(obtained by calling the handler's :meth:`format` method), and sets "
+"the :attr:`args`, :attr:`exc_info` and :attr:`exc_text` attributes to "
+"``None``."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1086
+#: library/logging.handlers.rst:1091
 msgid ""
 "You might want to override this method if you want to convert the record to "
 "a dict or JSON string, or send a modified copy of the record while leaving "
 "the original intact."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1090
+#: library/logging.handlers.rst:1095
 msgid ""
 "The base implementation formats the message with arguments, sets the "
 "``message`` and ``msg`` attributes to the formatted message and sets the "
 "``args`` and ``exc_text`` attributes to ``None`` to allow pickling and to "
-"prevent further attempts at formatting. This means that a handler on the :"
-"class:`QueueListener` side won't have the information to do custom "
+"prevent further attempts at formatting. This means that a handler on "
+"the :class:`QueueListener` side won't have the information to do custom "
 "formatting, e.g. of exceptions. You may wish to subclass ``QueueHandler`` "
 "and override this method to e.g. avoid setting ``exc_text`` to ``None``. "
 "Note that the ``message`` / ``msg`` / ``args`` changes are related to "
@@ -1521,36 +1531,36 @@ msgid ""
 "libraries that you use.)"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1106
+#: library/logging.handlers.rst:1111
 msgid ""
 "Enqueues the record on the queue using ``put_nowait()``; you may want to "
 "override this if you want to use blocking behaviour, or a timeout, or a "
 "customized queue implementation."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1112
+#: library/logging.handlers.rst:1117
 msgid ""
 "When created via configuration using :func:`~logging.config.dictConfig`, "
 "this attribute will contain a :class:`QueueListener` instance for use with "
 "this handler. Otherwise, it will be ``None``."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1121
+#: library/logging.handlers.rst:1126
 msgid "QueueListener"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1125
+#: library/logging.handlers.rst:1130
 msgid ""
-"The :class:`QueueListener` class, located in the :mod:`logging.handlers` "
+"The :class:`QueueListener` class, located in the :mod:`!logging.handlers` "
 "module, supports receiving logging messages from a queue, such as those "
 "implemented in the :mod:`queue` or :mod:`multiprocessing` modules. The "
 "messages are received from a queue in an internal thread and passed, on the "
-"same thread, to one or more handlers for processing. While :class:"
-"`QueueListener` is not itself a handler, it is documented here because it "
-"works hand-in-hand with :class:`QueueHandler`."
+"same thread, to one or more handlers for processing. "
+"While :class:`QueueListener` is not itself a handler, it is documented here "
+"because it works hand-in-hand with :class:`QueueHandler`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1133
+#: library/logging.handlers.rst:1138
 msgid ""
 "Along with the :class:`QueueHandler` class, :class:`QueueListener` can be "
 "used to let handlers do their work on a separate thread from the one which "
@@ -1560,18 +1570,18 @@ msgid ""
 "an email via :class:`SMTPHandler`) are done on a separate thread."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1142
+#: library/logging.handlers.rst:1147
 msgid ""
 "Returns a new instance of the :class:`QueueListener` class. The instance is "
 "initialized with the queue to send messages to and a list of handlers which "
 "will handle entries placed on the queue. The queue can be any queue-like "
 "object; it's passed as-is to the :meth:`dequeue` method, which needs to know "
 "how to get messages from it. The queue is not *required* to have the task "
-"tracking API (though it's used if available), which means that you can use :"
-"class:`~queue.SimpleQueue` instances for *queue*."
+"tracking API (though it's used if available), which means that you can "
+"use :class:`~queue.SimpleQueue` instances for *queue*."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1153
+#: library/logging.handlers.rst:1158
 msgid ""
 "If ``respect_handler_level`` is ``True``, a handler's level is respected "
 "(compared with the level for the message) when deciding whether to pass "
@@ -1579,87 +1589,96 @@ msgid ""
 "versions - to always pass each message to each handler."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1158
+#: library/logging.handlers.rst:1163
 msgid "The ``respect_handler_level`` argument was added."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1163
+#: library/logging.handlers.rst:1166
+msgid ""
+":class:`QueueListener` can now be used as a context manager "
+"via :keyword:`with`. When entering the context, the listener is started. "
+"When exiting the context, the listener is "
+"stopped. :meth:`~contextmanager.__enter__` returns "
+"the :class:`QueueListener` object."
+msgstr ""
+
+#: library/logging.handlers.rst:1175
 msgid "Dequeues a record and return it, optionally blocking."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1165
+#: library/logging.handlers.rst:1177
 msgid ""
 "The base implementation uses ``get()``. You may want to override this method "
 "if you want to use timeouts or work with custom queue implementations."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1171
+#: library/logging.handlers.rst:1183
 msgid "Prepare a record for handling."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1173
+#: library/logging.handlers.rst:1185
 msgid ""
 "This implementation just returns the passed-in record. You may want to "
 "override this method if you need to do any custom marshalling or "
 "manipulation of the record before passing it to the handlers."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1179
+#: library/logging.handlers.rst:1191
 msgid "Handle a record."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1181
+#: library/logging.handlers.rst:1193
 msgid ""
 "This just loops through the handlers offering them the record to handle. The "
-"actual object passed to the handlers is that which is returned from :meth:"
-"`prepare`."
+"actual object passed to the handlers is that which is returned "
+"from :meth:`prepare`."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1187
+#: library/logging.handlers.rst:1199
 msgid "Starts the listener."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1189
+#: library/logging.handlers.rst:1201
 msgid ""
 "This starts up a background thread to monitor the queue for LogRecords to "
 "process."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1192
+#: library/logging.handlers.rst:1204
 msgid ""
 "Raises :exc:`RuntimeError` if called and the listener is already running."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1198
+#: library/logging.handlers.rst:1210
 msgid "Stops the listener."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1200
+#: library/logging.handlers.rst:1212
 msgid ""
 "This asks the thread to terminate, and then waits for it to do so. Note that "
 "if you don't call this before your application exits, there may be some "
 "records still left on the queue, which won't be processed."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1206
+#: library/logging.handlers.rst:1218
 msgid ""
 "Writes a sentinel to the queue to tell the listener to quit. This "
 "implementation uses ``put_nowait()``.  You may want to override this method "
 "if you want to use timeouts or work with custom queue implementations."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1216
+#: library/logging.handlers.rst:1228
 msgid "Module :mod:`logging`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1217
+#: library/logging.handlers.rst:1229
 msgid "API reference for the logging module."
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1219
+#: library/logging.handlers.rst:1231
 msgid "Module :mod:`logging.config`"
 msgstr ""
 
-#: ../Doc/library/logging.handlers.rst:1220
+#: library/logging.handlers.rst:1232
 msgid "Configuration API for the logging module."
 msgstr ""

@@ -6,39 +6,39 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.7\n"
+"Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 06:24+0530\n"
+"POT-Creation-Date: 2026-11-25 13:18+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Doc/tutorial/errors.rst:5
+#: tutorial/errors.rst:5
 msgid "Errors and Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:7
+#: tutorial/errors.rst:7
 msgid ""
 "Until now error messages haven't been more than mentioned, but if you have "
 "tried out the examples you have probably seen some.  There are (at least) "
 "two distinguishable kinds of errors: *syntax errors* and *exceptions*."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:15
+#: tutorial/errors.rst:15
 msgid "Syntax Errors"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:17
+#: tutorial/errors.rst:17
 msgid ""
 "Syntax errors, also known as parsing errors, are perhaps the most common "
 "kind of complaint you get while you are still learning Python::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:20
+#: tutorial/errors.rst:20
 msgid ""
 ">>> while True print('Hello world')\n"
 "  File \"<stdin>\", line 1\n"
@@ -47,7 +47,7 @@ msgid ""
 "SyntaxError: invalid syntax"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:26
+#: tutorial/errors.rst:26
 msgid ""
 "The parser repeats the offending line and displays little arrows pointing at "
 "the place where the error was detected.  Note that this is not always the "
@@ -55,17 +55,17 @@ msgid ""
 "function :func:`print`, since a colon (``':'``) is missing just before it."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:31
+#: tutorial/errors.rst:31
 msgid ""
 "The file name (``<stdin>`` in our example) and line number are printed so "
 "you know where to look in case the input came from a file."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:38
+#: tutorial/errors.rst:38
 msgid "Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:40
+#: tutorial/errors.rst:40
 msgid ""
 "Even if a statement or expression is syntactically correct, it may cause an "
 "error when an attempt is made to execute it. Errors detected during "
@@ -75,7 +75,7 @@ msgid ""
 "here::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:46
+#: tutorial/errors.rst:46
 msgid ""
 ">>> 10 * (1/0)\n"
 "Traceback (most recent call last):\n"
@@ -97,25 +97,25 @@ msgid ""
 "TypeError: can only concatenate str (not \"int\") to str"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:65
+#: tutorial/errors.rst:65
 msgid ""
 "The last line of the error message indicates what happened. Exceptions come "
 "in different types, and the type is printed as part of the message: the "
-"types in the example are :exc:`ZeroDivisionError`, :exc:`NameError` and :exc:"
-"`TypeError`. The string printed as the exception type is the name of the "
-"built-in exception that occurred.  This is true for all built-in exceptions, "
-"but need not be true for user-defined exceptions (although it is a useful "
-"convention). Standard exception names are built-in identifiers (not reserved "
-"keywords)."
+"types in the example are :exc:`ZeroDivisionError`, :exc:`NameError` "
+"and :exc:`TypeError`. The string printed as the exception type is the name "
+"of the built-in exception that occurred.  This is true for all built-in "
+"exceptions, but need not be true for user-defined exceptions (although it is "
+"a useful convention). Standard exception names are built-in identifiers (not "
+"reserved keywords)."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:73
+#: tutorial/errors.rst:73
 msgid ""
 "The rest of the line provides detail based on the type of exception and what "
 "caused it."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:76
+#: tutorial/errors.rst:76
 msgid ""
 "The preceding part of the error message shows the context where the "
 "exception occurred, in the form of a stack traceback. In general it contains "
@@ -123,26 +123,26 @@ msgid ""
 "read from standard input."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:81
+#: tutorial/errors.rst:81
 msgid ""
 ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:87
+#: tutorial/errors.rst:87
 msgid "Handling Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:89
+#: tutorial/errors.rst:89
 msgid ""
 "It is possible to write programs that handle selected exceptions. Look at "
 "the following example, which asks the user for input until a valid integer "
-"has been entered, but allows the user to interrupt the program (using :kbd:"
-"`Control-C` or whatever the operating system supports); note that a user-"
-"generated interruption is signalled by raising the :exc:`KeyboardInterrupt` "
-"exception. ::"
+"has been entered, but allows the user to interrupt the program "
+"(using :kbd:`Control-C` or whatever the operating system supports); note "
+"that a user-generated interruption is signalled by raising "
+"the :exc:`KeyboardInterrupt` exception. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:95
+#: tutorial/errors.rst:95
 msgid ""
 ">>> while True:\n"
 "...     try:\n"
@@ -153,23 +153,23 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:103
+#: tutorial/errors.rst:103
 msgid "The :keyword:`try` statement works as follows."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:105
+#: tutorial/errors.rst:105
 msgid ""
-"First, the *try clause* (the statement(s) between the :keyword:`try` and :"
-"keyword:`except` keywords) is executed."
+"First, the *try clause* (the statement(s) between the :keyword:`try` "
+"and :keyword:`except` keywords) is executed."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:108
+#: tutorial/errors.rst:108
 msgid ""
-"If no exception occurs, the *except clause* is skipped and execution of the :"
-"keyword:`try` statement is finished."
+"If no exception occurs, the *except clause* is skipped and execution of "
+"the :keyword:`try` statement is finished."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:111
+#: tutorial/errors.rst:111
 msgid ""
 "If an exception occurs during execution of the :keyword:`try` clause, the "
 "rest of the clause is skipped.  Then, if its type matches the exception "
@@ -177,7 +177,7 @@ msgid ""
 "and then execution continues after the try/except block."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:116
+#: tutorial/errors.rst:116
 msgid ""
 "If an exception occurs which does not match the exception named in the "
 "*except clause*, it is passed on to outer :keyword:`try` statements; if no "
@@ -185,23 +185,22 @@ msgid ""
 "error message."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:120
+#: tutorial/errors.rst:120
 msgid ""
 "A :keyword:`try` statement may have more than one *except clause*, to "
 "specify handlers for different exceptions.  At most one handler will be "
 "executed. Handlers only handle exceptions that occur in the corresponding "
 "*try clause*, not in other handlers of the same :keyword:`!try` statement.  "
-"An *except clause* may name multiple exceptions as a parenthesized tuple, "
-"for example::"
+"An *except clause* may name multiple exceptions, for example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:126
+#: tutorial/errors.rst:126
 msgid ""
-"... except (RuntimeError, TypeError, NameError):\n"
+"... except RuntimeError, TypeError, NameError:\n"
 "...     pass"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:129
+#: tutorial/errors.rst:129
 msgid ""
 "A class in an :keyword:`except` clause matches exceptions which are "
 "instances of the class itself or one of its derived classes (but not the "
@@ -210,7 +209,7 @@ msgid ""
 "print B, C, D in that order::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:134
+#: tutorial/errors.rst:134
 msgid ""
 "class B(Exception):\n"
 "    pass\n"
@@ -232,21 +231,21 @@ msgid ""
 "        print(\"B\")"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:153
+#: tutorial/errors.rst:153
 msgid ""
 "Note that if the *except clauses* were reversed (with ``except B`` first), "
 "it would have printed B, B, B --- the first matching *except clause* is "
 "triggered."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:156
+#: tutorial/errors.rst:156
 msgid ""
 "When an exception occurs, it may have associated values, also known as the "
 "exception's *arguments*. The presence and types of the arguments depend on "
 "the exception type."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:160
+#: tutorial/errors.rst:160
 msgid ""
 "The *except clause* may specify a variable after the exception name.  The "
 "variable is bound to the exception instance which typically has an ``args`` "
@@ -255,7 +254,7 @@ msgid ""
 "explicitly accessing ``.args``.  ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:166
+#: tutorial/errors.rst:166
 msgid ""
 ">>> try:\n"
 "...     raise Exception('spam', 'eggs')\n"
@@ -276,24 +275,24 @@ msgid ""
 "y = eggs"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:183
+#: tutorial/errors.rst:183
 msgid ""
 "The exception's :meth:`~object.__str__` output is printed as the last part "
 "('detail') of the message for unhandled exceptions."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:186
+#: tutorial/errors.rst:186
 msgid ""
 ":exc:`BaseException` is the common base class of all exceptions. One of its "
 "subclasses, :exc:`Exception`, is the base class of all the non-fatal "
 "exceptions. Exceptions which are not subclasses of :exc:`Exception` are not "
 "typically handled, because they are used to indicate that the program should "
-"terminate. They include :exc:`SystemExit` which is raised by :meth:`sys."
-"exit` and :exc:`KeyboardInterrupt` which is raised when a user wishes to "
-"interrupt the program."
+"terminate. They include :exc:`SystemExit` which is raised "
+"by :meth:`sys.exit` and :exc:`KeyboardInterrupt` which is raised when a user "
+"wishes to interrupt the program."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:194
+#: tutorial/errors.rst:194
 msgid ""
 ":exc:`Exception` can be used as a wildcard that catches (almost) everything. "
 "However, it is good practice to be as specific as possible with the types of "
@@ -301,14 +300,14 @@ msgid ""
 "to propagate on."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:199
+#: tutorial/errors.rst:199
 msgid ""
 "The most common pattern for handling :exc:`Exception` is to print or log the "
 "exception and then re-raise it (allowing a caller to handle the exception as "
 "well)::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:203
+#: tutorial/errors.rst:203
 msgid ""
 "import sys\n"
 "\n"
@@ -325,7 +324,7 @@ msgid ""
 "    raise"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:217
+#: tutorial/errors.rst:217
 msgid ""
 "The :keyword:`try` ... :keyword:`except` statement has an optional *else "
 "clause*, which, when present, must follow all *except clauses*.  It is "
@@ -333,7 +332,7 @@ msgid ""
 "exception. For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:222
+#: tutorial/errors.rst:222
 msgid ""
 "for arg in sys.argv[1:]:\n"
 "    try:\n"
@@ -345,7 +344,7 @@ msgid ""
 "        f.close()"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:231
+#: tutorial/errors.rst:231
 msgid ""
 "The use of the :keyword:`!else` clause is better than adding additional code "
 "to the :keyword:`try` clause because it avoids accidentally catching an "
@@ -353,14 +352,14 @@ msgid ""
 "try` ... :keyword:`!except` statement."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:236
+#: tutorial/errors.rst:236
 msgid ""
 "Exception handlers do not handle only exceptions that occur immediately in "
 "the *try clause*, but also those that occur inside functions that are called "
 "(even indirectly) in the *try clause*. For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:240
+#: tutorial/errors.rst:240
 msgid ""
 ">>> def this_fails():\n"
 "...     x = 1/0\n"
@@ -373,17 +372,17 @@ msgid ""
 "Handling run-time error: division by zero"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:254
+#: tutorial/errors.rst:254
 msgid "Raising Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:256
+#: tutorial/errors.rst:256
 msgid ""
 "The :keyword:`raise` statement allows the programmer to force a specified "
 "exception to occur. For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:259
+#: tutorial/errors.rst:259
 msgid ""
 ">>> raise NameError('HiThere')\n"
 "Traceback (most recent call last):\n"
@@ -392,7 +391,7 @@ msgid ""
 "NameError: HiThere"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:265
+#: tutorial/errors.rst:265
 msgid ""
 "The sole argument to :keyword:`raise` indicates the exception to be raised. "
 "This must be either an exception instance or an exception class (a class "
@@ -401,18 +400,18 @@ msgid ""
 "instantiated by calling its constructor with no arguments::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:271
+#: tutorial/errors.rst:271
 msgid "raise ValueError  # shorthand for 'raise ValueError()'"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:273
+#: tutorial/errors.rst:273
 msgid ""
 "If you need to determine whether an exception was raised but don't intend to "
 "handle it, a simpler form of the :keyword:`raise` statement allows you to re-"
 "raise the exception::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:277
+#: tutorial/errors.rst:277
 msgid ""
 ">>> try:\n"
 "...     raise NameError('HiThere')\n"
@@ -427,18 +426,18 @@ msgid ""
 "NameError: HiThere"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:293
+#: tutorial/errors.rst:293
 msgid "Exception Chaining"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:295
+#: tutorial/errors.rst:295
 msgid ""
 "If an unhandled exception occurs inside an :keyword:`except` section, it "
 "will have the exception being handled attached to it and included in the "
 "error message::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:299
+#: tutorial/errors.rst:299
 msgid ""
 ">>> try:\n"
 "...     open(\"database.sqlite\")\n"
@@ -459,23 +458,24 @@ msgid ""
 "RuntimeError: unable to handle error"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:317
+#: tutorial/errors.rst:317
 msgid ""
-"To indicate that an exception is a direct consequence of another, the :"
-"keyword:`raise` statement allows an optional :keyword:`from<raise>` clause::"
+"To indicate that an exception is a direct consequence of another, "
+"the :keyword:`raise` statement allows an optional :keyword:`from<raise>` "
+"clause::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:320
+#: tutorial/errors.rst:320
 msgid ""
 "# exc must be exception instance or None.\n"
 "raise RuntimeError from exc"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:323
+#: tutorial/errors.rst:323
 msgid "This can be useful when you are transforming exceptions. For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:325
+#: tutorial/errors.rst:325
 msgid ""
 ">>> def func():\n"
 "...     raise ConnectionError\n"
@@ -500,13 +500,13 @@ msgid ""
 "RuntimeError: Failed to open database"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:347
+#: tutorial/errors.rst:347
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:350
+#: tutorial/errors.rst:350
 msgid ""
 ">>> try:\n"
 "...     open('database.sqlite')\n"
@@ -519,16 +519,16 @@ msgid ""
 "RuntimeError"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:360
+#: tutorial/errors.rst:360
 msgid ""
 "For more information about chaining mechanics, see :ref:`bltin-exceptions`."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:366
+#: tutorial/errors.rst:366
 msgid "User-defined Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:368
+#: tutorial/errors.rst:368
 msgid ""
 "Programs may name their own exceptions by creating a new exception class "
 "(see :ref:`tut-classes` for more about Python classes).  Exceptions should "
@@ -536,7 +536,7 @@ msgid ""
 "indirectly."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:372
+#: tutorial/errors.rst:372
 msgid ""
 "Exception classes can be defined which do anything any other class can do, "
 "but are usually kept simple, often only offering a number of attributes that "
@@ -544,30 +544,30 @@ msgid ""
 "exception."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:376
+#: tutorial/errors.rst:376
 msgid ""
 "Most exceptions are defined with names that end in \"Error\", similar to the "
 "naming of the standard exceptions."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:379
+#: tutorial/errors.rst:379
 msgid ""
 "Many standard modules define their own exceptions to report errors that may "
 "occur in functions they define."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:386
+#: tutorial/errors.rst:386
 msgid "Defining Clean-up Actions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:388
+#: tutorial/errors.rst:388
 msgid ""
 "The :keyword:`try` statement has another optional clause which is intended "
 "to define clean-up actions that must be executed under all circumstances.  "
 "For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:392
+#: tutorial/errors.rst:392
 msgid ""
 ">>> try:\n"
 "...     raise KeyboardInterrupt\n"
@@ -581,7 +581,7 @@ msgid ""
 "KeyboardInterrupt"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:403
+#: tutorial/errors.rst:403
 msgid ""
 "If a :keyword:`finally` clause is present, the :keyword:`!finally` clause "
 "will execute as the last task before the :keyword:`try` statement completes. "
@@ -590,7 +590,7 @@ msgid ""
 "cases when an exception occurs:"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:409
+#: tutorial/errors.rst:409
 msgid ""
 "If an exception occurs during execution of the :keyword:`!try` clause, the "
 "exception may be handled by an :keyword:`except` clause. If the exception is "
@@ -598,40 +598,45 @@ msgid ""
 "after the :keyword:`!finally` clause has been executed."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:415
+#: tutorial/errors.rst:415
 msgid ""
-"An exception could occur during execution of an :keyword:`!except` or :"
-"keyword:`!else` clause. Again, the exception is re-raised after the :keyword:"
-"`!finally` clause has been executed."
+"An exception could occur during execution of an :keyword:`!except` "
+"or :keyword:`!else` clause. Again, the exception is re-raised after "
+"the :keyword:`!finally` clause has been executed."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:419
+#: tutorial/errors.rst:419
 msgid ""
-"If the :keyword:`!finally` clause executes a :keyword:`break`, :keyword:"
-"`continue` or :keyword:`return` statement, exceptions are not re-raised."
+"If the :keyword:`!finally` clause executes "
+"a :keyword:`break`, :keyword:`continue` or :keyword:`return` statement, "
+"exceptions are not re-raised. This can be confusing and is therefore "
+"discouraged. From version 3.14 the compiler emits a :exc:`SyntaxWarning` for "
+"it (see :pep:`765`)."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:423
+#: tutorial/errors.rst:425
 msgid ""
-"If the :keyword:`!try` statement reaches a :keyword:`break`, :keyword:"
-"`continue` or :keyword:`return` statement, the :keyword:`!finally` clause "
-"will execute just prior to the :keyword:`!break`, :keyword:`!continue` or :"
-"keyword:`!return` statement's execution."
+"If the :keyword:`!try` statement reaches "
+"a :keyword:`break`, :keyword:`continue` or :keyword:`return` statement, "
+"the :keyword:`!finally` clause will execute just prior to the :keyword:`!"
+"break`, :keyword:`!continue` or :keyword:`!return` statement's execution."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:429
+#: tutorial/errors.rst:431
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the "
-"returned value will be the one from the :keyword:`!finally` clause's :"
-"keyword:`!return` statement, not the value from the :keyword:`!try` "
-"clause's :keyword:`!return` statement."
+"returned value will be the one from the :keyword:`!finally` "
+"clause's :keyword:`!return` statement, not the value from the :keyword:`!"
+"try` clause's :keyword:`!return` statement. This can be confusing and is "
+"therefore discouraged. From version 3.14 the compiler emits "
+"a :exc:`SyntaxWarning` for it (see :pep:`765`)."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:435
+#: tutorial/errors.rst:439
 msgid "For example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:437
+#: tutorial/errors.rst:441
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -643,11 +648,11 @@ msgid ""
 "False"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:446
+#: tutorial/errors.rst:450
 msgid "A more complicated example::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:448
+#: tutorial/errors.rst:452
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -677,26 +682,26 @@ msgid ""
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:475
+#: tutorial/errors.rst:479
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  "
-"The :exc:`TypeError` raised by dividing two strings is not handled by the :"
-"keyword:`except` clause and therefore re-raised after the :keyword:`!"
+"The :exc:`TypeError` raised by dividing two strings is not handled by "
+"the :keyword:`except` clause and therefore re-raised after the :keyword:`!"
 "finally` clause has been executed."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:480
+#: tutorial/errors.rst:484
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
 "regardless of whether the use of the resource was successful."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:488
+#: tutorial/errors.rst:492
 msgid "Predefined Clean-up Actions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:490
+#: tutorial/errors.rst:494
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation using "
@@ -704,13 +709,13 @@ msgid ""
 "to open a file and print its contents to the screen. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:495
+#: tutorial/errors.rst:499
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:498
+#: tutorial/errors.rst:502
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -720,14 +725,14 @@ msgid ""
 "correctly. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:504
+#: tutorial/errors.rst:508
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
 "        print(line, end=\"\")"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:508
+#: tutorial/errors.rst:512
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a "
 "problem was encountered while processing the lines. Objects which, like "
@@ -735,11 +740,11 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:516
+#: tutorial/errors.rst:520
 msgid "Raising and Handling Multiple Unrelated Exceptions"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:518
+#: tutorial/errors.rst:522
 msgid ""
 "There are situations where it is necessary to report several exceptions that "
 "have occurred. This is often the case in concurrency frameworks, when "
@@ -748,14 +753,14 @@ msgid ""
 "errors rather than raise the first exception."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:524
+#: tutorial/errors.rst:528
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be "
 "caught like any other exception. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:528
+#: tutorial/errors.rst:532
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -777,13 +782,13 @@ msgid ""
 ">>> try:\n"
 "...     f()\n"
 "... except Exception as e:\n"
-"...     print(f'caught {type(e)}: e')\n"
+"...     print(f'caught {type(e)}: {e}')\n"
 "...\n"
-"caught <class 'ExceptionGroup'>: e\n"
+"caught <class 'ExceptionGroup'>: there were problems (2 sub-exceptions)\n"
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:553
+#: tutorial/errors.rst:557
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle only "
 "the exceptions in the group that match a certain type. In the following "
@@ -792,7 +797,7 @@ msgid ""
 "exceptions propagate to other clauses and eventually to be reraised. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:560
+#: tutorial/errors.rst:564
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -836,7 +841,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:601
+#: tutorial/errors.rst:605
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, not "
 "types. This is because in practice the exceptions would typically be ones "
@@ -844,10 +849,10 @@ msgid ""
 "pattern::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:606
+#: tutorial/errors.rst:610
 msgid ""
 ">>> excs = []\n"
-"... for test in tests:\n"
+">>> for test in tests:\n"
 "...     try:\n"
 "...         test.run()\n"
 "...     except Exception as e:\n"
@@ -858,11 +863,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:621
+#: tutorial/errors.rst:625
 msgid "Enriching Exceptions with Notes"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:623
+#: tutorial/errors.rst:627
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -873,7 +878,7 @@ msgid ""
 "added, after the exception. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:630
+#: tutorial/errors.rst:634
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -891,14 +896,14 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:645
+#: tutorial/errors.rst:649
 msgid ""
 "For example, when collecting exceptions into an exception group, we may want "
 "to add context information for the individual errors. In the following each "
 "exception in the group has a note indicating when this error has occurred. ::"
 msgstr ""
 
-#: ../Doc/tutorial/errors.rst:649
+#: tutorial/errors.rst:653
 msgid ""
 ">>> def f():\n"
 "...     raise OSError('operation failed')\n"
