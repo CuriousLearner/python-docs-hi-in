@@ -141,7 +141,9 @@ keeping the documentation up to date (find them using ``make fuzzy``).
 You can also proofread already translated entries, and finally
 translate untranslated ones (find them using ``make todo``)..
 
-- Do not translate content of ``:ref:...`` and ``:term:...``
+- Keep every ``:ref:``, ``:term:`` and other role, and never translate
+  its target: ``:term:`इंटरैक्टिव <interactive>```.
+- Use the terms and conventions in `GLOSSARY.md <GLOSSARY.md>`_.
 - Put english words, if you have to use them, in *italics* (surrounded
   by stars).
 - If you translate a link title, please translate the link too
@@ -161,52 +163,9 @@ Translation Resources
 Glossary
 --------
 
-For consistency in our translations, here are some propositions and
-reminders for frequent terms you'll have to translate, don't hesitate
-to open an issue if you disagree.
-
-To easily find how a term is already translated in our documentation,
-you may use
-`find_in_po.py <https://gist.github.com/JulienPalard/c430ac23446da2081060ab17bf006ac1>`_.
-
-========================== ===========================================
-Term                       Proposed Translation
-========================== ===========================================
--like
-abstract data type
-argument
-backslash
-bound
-bug
-built-in
-call stack
-debugging
-deep copy
-double quote
-e.g.
-garbage collector
-identifier
-immutable
-installer
-interpreter
-library
-list comprehension
-little-endian, big-endian
-mutable
-namespace
-parameter
-prompt
-raise
-regular expression
-return
-simple quote
-socket
-statement
-subprocess
-thread
-underscore
-expression
-========================== ===========================================
+Frequent terms and their Hindi translations are in
+`GLOSSARY.md <GLOSSARY.md>`_. Open an issue or a pull request if
+you disagree with one or want to add a term.
 
 
 Simplify git diffs
