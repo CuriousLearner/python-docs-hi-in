@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/whatnow.rst:5
 msgid "What Now?"
-msgstr ""
+msgstr "अब आगे क्या?"
 
 #: tutorial/whatnow.rst:7
 msgid ""
@@ -27,18 +27,21 @@ msgid ""
 "--- you should be eager to apply Python to solving your real-world problems. "
 "Where should you go to learn more?"
 msgstr ""
+"इस ट्यूटोरियल को पढ़कर शायद पायथन इस्तेमाल करने में आपकी रुचि और बढ़ी होगी --- अब आप "
+"अपनी असल दुनिया की समस्याएँ हल करने में पायथन लगाने के लिए उत्सुक होंगे। और सीखने के लिए "
+"आपको कहाँ जाना चाहिए?"
 
 #: tutorial/whatnow.rst:11
 msgid ""
 "This tutorial is part of Python's documentation set.   Some other documents "
 "in the set are:"
-msgstr ""
+msgstr "यह ट्यूटोरियल पायथन के डॉक्यूमेंटेशन सेट का हिस्सा है। इस सेट के कुछ और दस्तावेज़ ये हैं:"
 
 #: tutorial/whatnow.rst:14
 msgid ""
 ":ref:`builtins-index`: gives details about Python's built-in types and "
 "functions."
-msgstr ""
+msgstr ":ref:`builtins-index`: पायथन के बिल्ट-इन टाइप और फ़ंक्शन का विवरण देता है।"
 
 #: tutorial/whatnow.rst:17
 msgid ""
@@ -50,12 +53,19 @@ msgid ""
 "Skimming through the Library Reference will give you an idea of what's "
 "available."
 msgstr ""
+":ref:`library-index`: स्टैंडर्ड लाइब्रेरी के टाइप, फ़ंक्शन और मॉड्यूल के बारे में पूरी "
+"(हालाँकि संक्षिप्त) संदर्भ सामग्री देता है। स्टैंडर्ड पायथन डिस्ट्रिब्यूशन में *बहुत सारा* "
+"अतिरिक्त कोड शामिल है। Unix मेलबॉक्स पढ़ने, HTTP से दस्तावेज़ लाने, रैंडम नंबर बनाने, कमांड "
+"लाइन विकल्प पार्स करने, डेटा कंप्रेस करने और कई दूसरे कामों के लिए मॉड्यूल हैं। लाइब्रेरी रेफ़रेंस "
+"पर सरसरी नज़र डालने से आपको अंदाज़ा हो जाएगा कि क्या-क्या उपलब्ध है।"
 
 #: tutorial/whatnow.rst:25
 msgid ""
 ":ref:`installing-index` explains how to install additional modules written "
 "by other Python users."
 msgstr ""
+":ref:`installing-index` बताता है कि दूसरे पायथन यूज़र के लिखे अतिरिक्त मॉड्यूल कैसे "
+"इंस्टॉल करें।"
 
 #: tutorial/whatnow.rst:28
 msgid ""
@@ -63,20 +73,24 @@ msgid ""
 "semantics.  It's heavy reading, but is useful as a complete guide to the "
 "language itself."
 msgstr ""
+":ref:`reference-index`: पायथन के सिंटैक्स और सिमैंटिक्स की विस्तृत व्याख्या। इसे पढ़ना "
+"भारी है, लेकिन भाषा की पूरी गाइड के रूप में यह उपयोगी है।"
 
 #: tutorial/whatnow.rst:32
 msgid "More Python resources:"
-msgstr ""
+msgstr "पायथन के और संसाधन:"
 
 #: tutorial/whatnow.rst:34
 msgid ""
 "https://www.python.org:  The major Python website.  It contains code, "
 "documentation, and pointers to Python-related pages around the web."
 msgstr ""
+"https://www.python.org: पायथन की मुख्य वेबसाइट। इसमें कोड, डॉक्यूमेंटेशन, और वेब पर "
+"पायथन से जुड़े पेजों के लिंक हैं।"
 
 #: tutorial/whatnow.rst:37
 msgid "https://docs.python.org:  Fast access to Python's  documentation."
-msgstr ""
+msgstr "https://docs.python.org: पायथन के डॉक्यूमेंटेशन तक तेज़ पहुँच।"
 
 #: tutorial/whatnow.rst:39
 msgid ""
@@ -85,6 +99,9 @@ msgid ""
 "available for download.  Once you begin releasing code, you can register it "
 "here so that others can find it."
 msgstr ""
+"https://pypi.org: पायथन पैकेज इंडेक्स, जिसे पहले चीज़ शॉप [#]_ भी कहा जाता था, यूज़र के "
+"बनाए पायथन मॉड्यूलों का इंडेक्स है, जिन्हें डाउनलोड किया जा सकता है। जब आप अपना कोड "
+"रिलीज़ करना शुरू करें, तो उसे यहाँ रजिस्टर कर सकते हैं, ताकि दूसरे उसे ढूँढ सकें।"
 
 #: tutorial/whatnow.rst:44
 msgid ""
@@ -93,12 +110,18 @@ msgid ""
 "Particularly notable contributions are collected in a book also titled "
 "Python Cookbook (O'Reilly & Associates, ISBN 0-596-00797-3.)"
 msgstr ""
+"https://code.activestate.com/recipes/langs/python/: Python Cookbook कोड "
+"उदाहरणों, बड़े मॉड्यूलों और उपयोगी स्क्रिप्ट का एक बड़ा संग्रह है। ख़ास तौर पर उल्लेखनीय "
+"योगदान एक किताब में इकट्ठा किए गए हैं, जिसका नाम भी Python Cookbook है (O'Reilly & "
+"Associates, ISBN 0-596-00797-3)।"
 
 #: tutorial/whatnow.rst:49
 msgid ""
 "https://pyvideo.org collects links to Python-related videos from conferences "
 "and user-group meetings."
 msgstr ""
+"https://pyvideo.org सम्मेलनों और यूज़र-ग्रुप मीटिंग के पायथन से जुड़े वीडियो के लिंक इकट्ठा "
+"करता है।"
 
 #: tutorial/whatnow.rst:52
 msgid ""
@@ -107,6 +130,9 @@ msgid ""
 "as linear algebra, Fourier transforms, non-linear solvers, random number "
 "distributions, statistical analysis and the like."
 msgstr ""
+"https://scipy.org: Scientific Python प्रोजेक्ट में ऐरे पर तेज़ गणनाओं और उनमें बदलाव के "
+"लिए मॉड्यूल हैं, साथ ही लीनियर एलजेब्रा, फ़ूरिये ट्रांसफ़ॉर्म, नॉन-लीनियर सॉल्वर, रैंडम नंबर "
+"डिस्ट्रिब्यूशन, सांख्यिकीय विश्लेषण जैसी चीज़ों के लिए ढेर सारे पैकेज भी हैं।"
 
 #: tutorial/whatnow.rst:57
 msgid ""
@@ -118,6 +144,12 @@ msgid ""
 "new features, and announcing new modules. Mailing list archives are "
 "available at https://mail.python.org/pipermail/."
 msgstr ""
+"पायथन से जुड़े सवालों और समस्याओं की रिपोर्ट के लिए, आप "
+"न्यूज़ग्रुप :newsgroup:`comp.lang.python` पर पोस्ट कर सकते हैं, या उन्हें python-"
+"list@python.org मेलिंग लिस्ट पर भेज सकते हैं। न्यूज़ग्रुप और मेलिंग लिस्ट आपस में जुड़े हैं, इसलिए "
+"एक पर पोस्ट किए गए संदेश अपने-आप दूसरे पर भी पहुँच जाते हैं। रोज़ सैकड़ों पोस्ट आती हैं, जिनमें "
+"सवाल पूछे (और जवाब दिए) जाते हैं, नई सुविधाएँ सुझाई जाती हैं, और नए मॉड्यूलों की घोषणा "
+"होती है। मेलिंग लिस्ट के आर्काइव https://mail.python.org/pipermail/ पर उपलब्ध हैं।"
 
 #: tutorial/whatnow.rst:65
 msgid ""
@@ -126,13 +158,18 @@ msgid ""
 "questions that come up again and again, and may already contain the solution "
 "for your problem."
 msgstr ""
+"पोस्ट करने से पहले, :ref:`अक्सर पूछे जाने वाले सवालों <faq-index>` (जिन्हें FAQ भी कहा "
+"जाता है) की सूची ज़रूर देखें। FAQ में ऐसे कई सवालों के जवाब हैं जो बार-बार पूछे जाते हैं, और हो "
+"सकता है उसमें आपकी समस्या का हल पहले से हो।"
 
 #: tutorial/whatnow.rst:71
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/whatnow.rst:72
 msgid ""
 "\"Cheese Shop\" is a Monty Python sketch: a customer enters a cheese shop, "
 "but whatever cheese he asks for, the clerk says it's missing."
 msgstr ""
+"\"Cheese Shop\" Monty Python का एक स्किट है: एक ग्राहक चीज़ (cheese) की दुकान में "
+"जाता है, लेकिन वह जो भी चीज़ माँगता है, दुकानदार कहता है कि वह ख़त्म है।"
