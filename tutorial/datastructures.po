@@ -3,49 +3,52 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/datastructures.rst:5
 msgid "Data Structures"
-msgstr ""
+msgstr "डेटा स्ट्रक्चर"
 
 #: tutorial/datastructures.rst:7
 msgid ""
 "This chapter describes some things you've learned about already in more "
 "detail, and adds some new things as well."
 msgstr ""
+"यह अध्याय उन कुछ चीज़ों को ज़्यादा विस्तार से बताता है जिनके बारे में आप पहले सीख चुके हैं, और "
+"कुछ नई चीज़ें भी जोड़ता है।"
 
 #: tutorial/datastructures.rst:13
 msgid "More on Lists"
-msgstr ""
+msgstr "लिस्ट के बारे में और"
 
 #: tutorial/datastructures.rst:15
 msgid ""
 "The :ref:`list <typesseq-list>` data type has some more methods. Here are "
 "all of the methods of list objects:"
 msgstr ""
+":ref:`लिस्ट <typesseq-list>` डेटा टाइप के कुछ और मेथड हैं। लिस्ट ऑब्जेक्ट के सभी मेथड ये हैं:"
 
 #: tutorial/datastructures.rst:21
 msgid "Add an item to the end of the list.  Similar to ``a[len(a):] = [x]``."
-msgstr ""
+msgstr "लिस्ट के आख़िर में एक आइटम जोड़ता है। ``a[len(a):] = [x]`` जैसा।"
 
 #: tutorial/datastructures.rst:27
 msgid ""
 "Extend the list by appending all the items from the iterable.  Similar to "
 "``a[len(a):] = iterable``."
-msgstr ""
+msgstr "इटरेबल के सभी आइटम जोड़कर लिस्ट को बढ़ाता है। ``a[len(a):] = iterable`` जैसा।"
 
 #: tutorial/datastructures.rst:34
 msgid ""
@@ -53,12 +56,17 @@ msgid ""
 "element before which to insert, so ``a.insert(0, x)`` inserts at the front "
 "of the list, and ``a.insert(len(a), x)`` is equivalent to ``a.append(x)``."
 msgstr ""
+"दी गई स्थिति पर एक आइटम डालता है। पहला आर्ग्युमेंट उस एलिमेंट का इंडेक्स है जिसके पहले "
+"डालना है, इसलिए ``a.insert(0, x)`` लिस्ट की शुरुआत में डालता है, और "
+"``a.insert(len(a), x)``, ``a.append(x)`` के बराबर है।"
 
 #: tutorial/datastructures.rst:42
 msgid ""
 "Remove the first item from the list whose value is equal to *value*.  It "
 "raises a :exc:`ValueError` if there is no such item."
 msgstr ""
+"लिस्ट का वह पहला आइटम हटाता है जिसका मान *value* के बराबर हो। अगर ऐसा कोई आइटम "
+"नहीं है, तो यह :exc:`ValueError` रेज़ करता है।"
 
 #: tutorial/datastructures.rst:49
 msgid ""
@@ -67,16 +75,21 @@ msgid ""
 "list. It raises an :exc:`IndexError` if the list is empty or the index is "
 "outside the list range."
 msgstr ""
+"लिस्ट में दी गई स्थिति वाला आइटम हटाकर उसे लौटाता है। अगर कोई इंडेक्स नहीं दिया गया, "
+"तो ``a.pop()`` लिस्ट का आख़िरी आइटम हटाकर लौटाता है। अगर लिस्ट ख़ाली है या इंडेक्स "
+"लिस्ट की सीमा से बाहर है, तो यह :exc:`IndexError` रेज़ करता है।"
 
 #: tutorial/datastructures.rst:58
 msgid "Remove all items from the list.  Similar to ``del a[:]``."
-msgstr ""
+msgstr "लिस्ट के सभी आइटम हटाता है। ``del a[:]`` जैसा।"
 
 #: tutorial/datastructures.rst:64
 msgid ""
 "Return zero-based index of the first occurrence of *value* in the list. "
 "Raises a :exc:`ValueError` if there is no such item."
 msgstr ""
+"लिस्ट में *value* जहाँ पहली बार आता है, उसका शून्य से शुरू होने वाला इंडेक्स लौटाता है। अगर "
+"ऐसा कोई आइटम नहीं है, तो :exc:`ValueError` रेज़ करता है।"
 
 #: tutorial/datastructures.rst:67
 msgid ""
@@ -85,28 +98,33 @@ msgid ""
 "list.  The returned index is computed relative to the beginning of the full "
 "sequence rather than the *start* argument."
 msgstr ""
+"वैकल्पिक आर्ग्युमेंट *start* और *end* को स्लाइस नोटेशन की तरह समझा जाता है, और इनसे खोज "
+"को लिस्ट के किसी ख़ास हिस्से (सबसीक्वेंस) तक सीमित किया जाता है। लौटाया गया इंडेक्स "
+"*start* आर्ग्युमेंट के बजाय पूरे सीक्वेंस की शुरुआत के सापेक्ष निकाला जाता है।"
 
 #: tutorial/datastructures.rst:76
 msgid "Return the number of times *value* appears in the list."
-msgstr ""
+msgstr "लिस्ट में *value* कितनी बार आता है, यह संख्या लौटाता है।"
 
 #: tutorial/datastructures.rst:82
 msgid ""
 "Sort the items of the list in place (the arguments can be used for sort "
 "customization, see :func:`sorted` for their explanation)."
 msgstr ""
+"लिस्ट के आइटमों को उसी जगह (इन-प्लेस) सॉर्ट करता है (सॉर्टिंग को कस्टमाइज़ करने के लिए "
+"आर्ग्युमेंट इस्तेमाल किए जा सकते हैं, उनकी व्याख्या के लिए :func:`sorted` देखें)।"
 
 #: tutorial/datastructures.rst:89
 msgid "Reverse the elements of the list in place."
-msgstr ""
+msgstr "लिस्ट के एलिमेंट को उसी जगह (इन-प्लेस) उल्टे क्रम में करता है।"
 
 #: tutorial/datastructures.rst:95
 msgid "Return a shallow copy of the list.  Similar to ``a[:]``."
-msgstr ""
+msgstr "लिस्ट की एक शैलो कॉपी लौटाता है। ``a[:]`` जैसा।"
 
 #: tutorial/datastructures.rst:98
 msgid "An example that uses most of the list methods::"
-msgstr ""
+msgstr "एक उदाहरण जिसमें लिस्ट के ज़्यादातर मेथड इस्तेमाल हुए हैं::"
 
 #: tutorial/datastructures.rst:100
 msgid ""
@@ -132,6 +150,27 @@ msgid ""
 ">>> fruits.pop()\n"
 "'pear'"
 msgstr ""
+">>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', "
+"'banana']\n"
+">>> fruits.count('apple')\n"
+"2\n"
+">>> fruits.count('tangerine')\n"
+"0\n"
+">>> fruits.index('banana')\n"
+"3\n"
+">>> fruits.index('banana', 4)  # Find next banana starting at position 4\n"
+"6\n"
+">>> fruits.reverse()\n"
+">>> fruits\n"
+"['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']\n"
+">>> fruits.append('grape')\n"
+">>> fruits\n"
+"['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']\n"
+">>> fruits.sort()\n"
+">>> fruits\n"
+"['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']\n"
+">>> fruits.pop()\n"
+"'pear'"
 
 #: tutorial/datastructures.rst:121
 msgid ""
@@ -140,6 +179,10 @@ msgid ""
 "default ``None``. [#]_  This is a design principle for all mutable data "
 "structures in Python."
 msgstr ""
+"आपने शायद ध्यान दिया होगा कि ``insert``, ``remove`` या ``sort`` जैसे मेथड, जो "
+"सिर्फ़ लिस्ट को बदलते हैं, उनका लौटाया गया कोई मान प्रिंट नहीं होता -- वे डिफ़ॉल्ट "
+"``None`` लौटाते हैं। [#]_ पायथन के सभी म्यूटेबल डेटा स्ट्रक्चर के लिए यह एक डिज़ाइन "
+"सिद्धांत है।"
 
 #: tutorial/datastructures.rst:126
 msgid ""
@@ -149,10 +192,15 @@ msgid ""
 "other types.  Also, there are some types that don't have a defined ordering "
 "relation.  For example, ``3+4j < 5+7j`` isn't a valid comparison."
 msgstr ""
+"एक और बात जो आप शायद देखें, वह यह है कि हर तरह का डेटा सॉर्ट या तुलना के लायक नहीं "
+"होता। उदाहरण के लिए, ``[None, 'hello', 10]`` सॉर्ट नहीं होता, क्योंकि पूर्णांकों की "
+"तुलना स्ट्रिंग से नहीं हो सकती, और ``None`` की तुलना दूसरे टाइप से नहीं हो सकती। साथ "
+"ही, कुछ टाइप ऐसे हैं जिनके लिए कोई क्रम परिभाषित नहीं है। उदाहरण के लिए, ``3+4j < "
+"5+7j`` एक मान्य तुलना नहीं है।"
 
 #: tutorial/datastructures.rst:137
 msgid "Using Lists as Stacks"
-msgstr ""
+msgstr "लिस्ट को स्टैक की तरह इस्तेमाल करना"
 
 #: tutorial/datastructures.rst:139
 msgid ""
@@ -162,6 +210,10 @@ msgid ""
 "an item from the top of the stack, use :meth:`~list.pop` without an explicit "
 "index.  For example::"
 msgstr ""
+"लिस्ट के मेथड से लिस्ट को स्टैक की तरह इस्तेमाल करना बहुत आसान है, जिसमें आख़िर में जोड़ा गया "
+"एलिमेंट सबसे पहले निकाला जाता है (\"last-in, first-out\")। स्टैक के ऊपर आइटम जोड़ने के "
+"लिए :meth:`~list.append` इस्तेमाल करें। स्टैक के ऊपर से आइटम निकालने के लिए बिना इंडेक्स "
+"दिए :meth:`~list.pop` इस्तेमाल करें। उदाहरण के लिए::"
 
 #: tutorial/datastructures.rst:144
 msgid ""
@@ -181,10 +233,25 @@ msgid ""
 ">>> stack\n"
 "[3, 4]"
 msgstr ""
+">>> stack = [3, 4, 5]\n"
+">>> stack.append(6)\n"
+">>> stack.append(7)\n"
+">>> stack\n"
+"[3, 4, 5, 6, 7]\n"
+">>> stack.pop()\n"
+"7\n"
+">>> stack\n"
+"[3, 4, 5, 6]\n"
+">>> stack.pop()\n"
+"6\n"
+">>> stack.pop()\n"
+"5\n"
+">>> stack\n"
+"[3, 4]"
 
 #: tutorial/datastructures.rst:164
 msgid "Using Lists as Queues"
-msgstr ""
+msgstr "लिस्ट को क्यू की तरह इस्तेमाल करना"
 
 #: tutorial/datastructures.rst:166
 msgid ""
@@ -195,12 +262,19 @@ msgid ""
 "(because all of the other elements have to be shifted by one).  "
 "See :ref:`time-complexity` for more information."
 msgstr ""
+"लिस्ट को क्यू की तरह भी इस्तेमाल किया जा सकता है, जिसमें सबसे पहले जोड़ा गया एलिमेंट सबसे "
+"पहले निकाला जाता है (\"first-in, first-out\"); लेकिन इस काम के लिए लिस्ट कुशल नहीं "
+"हैं। लिस्ट के आख़िर में जोड़ना और वहाँ से निकालना तेज़ है, लेकिन लिस्ट की शुरुआत में डालना या "
+"वहाँ से निकालना धीमा है (क्योंकि बाक़ी सभी एलिमेंट को एक स्थान खिसकाना पड़ता है)। ज़्यादा "
+"जानकारी के लिए :ref:`time-complexity` देखें।"
 
 #: tutorial/datastructures.rst:173
 msgid ""
 "To implement a queue, use :class:`collections.deque` which was designed to "
 "have fast appends and pops from both ends.  For example::"
 msgstr ""
+"क्यू लागू करने के लिए :class:`collections.deque` इस्तेमाल करें, जिसे दोनों सिरों से तेज़ी से "
+"जोड़ने और निकालने के लिए डिज़ाइन किया गया है। उदाहरण के लिए::"
 
 #: tutorial/datastructures.rst:176
 msgid ""
@@ -215,10 +289,20 @@ msgid ""
 ">>> queue                           # Remaining queue in order of arrival\n"
 "deque(['Michael', 'Terry', 'Graham'])"
 msgstr ""
+">>> from collections import deque\n"
+">>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n"
+">>> queue.append(\"Terry\")           # Terry arrives\n"
+">>> queue.append(\"Graham\")          # Graham arrives\n"
+">>> queue.popleft()                 # The first to arrive now leaves\n"
+"'Eric'\n"
+">>> queue.popleft()                 # The second to arrive now leaves\n"
+"'John'\n"
+">>> queue                           # Remaining queue in order of arrival\n"
+"deque(['Michael', 'Terry', 'Graham'])"
 
 #: tutorial/datastructures.rst:191
 msgid "List Comprehensions"
-msgstr ""
+msgstr "लिस्ट कॉम्प्रिहेंशन"
 
 #: tutorial/datastructures.rst:193
 msgid ""
@@ -227,10 +311,14 @@ msgid ""
 "operations applied to each member of another sequence or iterable, or to "
 "create a subsequence of those elements that satisfy a certain condition."
 msgstr ""
+"लिस्ट कॉम्प्रिहेंशन लिस्ट बनाने का एक संक्षिप्त तरीक़ा है। इनका आम इस्तेमाल ऐसी नई लिस्ट "
+"बनाने में होता है जिनका हर एलिमेंट किसी दूसरे सीक्वेंस या इटरेबल के हर सदस्य पर कुछ ऑपरेशन "
+"लगाने का नतीजा हो, या उन एलिमेंट का ऐसा सबसीक्वेंस बनाने में जो किसी ख़ास शर्त को पूरा "
+"करते हों।"
 
 #: tutorial/datastructures.rst:198
 msgid "For example, assume we want to create a list of squares, like::"
-msgstr ""
+msgstr "उदाहरण के लिए, मान लीजिए हम वर्गों की एक लिस्ट बनाना चाहते हैं, जैसे::"
 
 #: tutorial/datastructures.rst:200
 msgid ""
@@ -241,6 +329,12 @@ msgid ""
 ">>> squares\n"
 "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
 msgstr ""
+">>> squares = []\n"
+">>> for x in range(10):\n"
+"...     squares.append(x**2)\n"
+"...\n"
+">>> squares\n"
+"[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
 
 #: tutorial/datastructures.rst:207
 msgid ""
@@ -248,22 +342,25 @@ msgid ""
 "exists after the loop completes.  We can calculate the list of squares "
 "without any side effects using::"
 msgstr ""
+"ध्यान दें कि इससे ``x`` नाम का एक वेरिएबल बनता है (या उसका पुराना मान बदल जाता है), "
+"जो लूप पूरा होने के बाद भी मौजूद रहता है। हम बिना किसी साइड इफ़ेक्ट के वर्गों की लिस्ट इस "
+"तरह निकाल सकते हैं::"
 
 #: tutorial/datastructures.rst:211
 msgid "squares = list(map(lambda x: x**2, range(10)))"
-msgstr ""
+msgstr "squares = list(map(lambda x: x**2, range(10)))"
 
 #: tutorial/datastructures.rst:213
 msgid "or, equivalently::"
-msgstr ""
+msgstr "या, इसके बराबर::"
 
 #: tutorial/datastructures.rst:215
 msgid "squares = [x**2 for x in range(10)]"
-msgstr ""
+msgstr "squares = [x**2 for x in range(10)]"
 
 #: tutorial/datastructures.rst:217
 msgid "which is more concise and readable."
-msgstr ""
+msgstr "जो ज़्यादा संक्षिप्त और पढ़ने में आसान है।"
 
 #: tutorial/datastructures.rst:219
 msgid ""
@@ -274,16 +371,23 @@ msgid ""
 "which follow it. For example, this listcomp combines the elements of two "
 "lists if they are not equal::"
 msgstr ""
+"लिस्ट कॉम्प्रिहेंशन में ब्रैकेट होते हैं, जिनमें एक एक्सप्रेशन, उसके बाद एक :keyword:`!for` "
+"क्लॉज़, और फिर शून्य या ज़्यादा :keyword:`!for` या :keyword:`!if` क्लॉज़ होते हैं। "
+"नतीजा एक नई लिस्ट होगी, जो उसके बाद आने वाले :keyword:`!for` और :keyword:`!if` "
+"क्लॉज़ के संदर्भ में एक्सप्रेशन को इवैल्युएट करके बनती है। उदाहरण के लिए, यह listcomp दो "
+"लिस्ट के एलिमेंट को जोड़ता है अगर वे बराबर नहीं हैं::"
 
 #: tutorial/datastructures.rst:226
 msgid ""
 ">>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n"
 "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 msgstr ""
+">>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n"
+"[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 
 #: tutorial/datastructures.rst:229
 msgid "and it's equivalent to::"
-msgstr ""
+msgstr "और यह इसके बराबर है::"
 
 #: tutorial/datastructures.rst:231
 msgid ""
@@ -296,18 +400,29 @@ msgid ""
 ">>> combs\n"
 "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 msgstr ""
+">>> combs = []\n"
+">>> for x in [1,2,3]:\n"
+"...     for y in [3,1,4]:\n"
+"...         if x != y:\n"
+"...             combs.append((x, y))\n"
+"...\n"
+">>> combs\n"
+"[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
 
 #: tutorial/datastructures.rst:240
 msgid ""
 "Note how the order of the :keyword:`for` and :keyword:`if` statements is the "
 "same in both these snippets."
 msgstr ""
+"ध्यान दें कि दोनों कोड में :keyword:`for` और :keyword:`if` स्टेटमेंट का क्रम एक ही है।"
 
 #: tutorial/datastructures.rst:243
 msgid ""
 "If the expression is a tuple (e.g. the ``(x, y)`` in the previous example), "
 "it must be parenthesized. ::"
 msgstr ""
+"अगर एक्सप्रेशन एक टपल है (जैसे पिछले उदाहरण में ``(x, y)``), तो उसे कोष्ठक में रखना ज़रूरी "
+"है। ::"
 
 #: tutorial/datastructures.rst:246
 msgid ""
@@ -339,11 +454,38 @@ msgid ""
 ">>> [num for elem in vec for num in elem]\n"
 "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
 msgstr ""
+">>> vec = [-4, -2, 0, 2, 4]\n"
+">>> # create a new list with the values doubled\n"
+">>> [x*2 for x in vec]\n"
+"[-8, -4, 0, 4, 8]\n"
+">>> # filter the list to exclude negative numbers\n"
+">>> [x for x in vec if x >= 0]\n"
+"[0, 2, 4]\n"
+">>> # apply a function to all the elements\n"
+">>> [abs(x) for x in vec]\n"
+"[4, 2, 0, 2, 4]\n"
+">>> # call a method on each element\n"
+">>> freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']\n"
+">>> [weapon.strip() for weapon in freshfruit]\n"
+"['banana', 'loganberry', 'passion fruit']\n"
+">>> # create a list of 2-tuples like (number, square)\n"
+">>> [(x, x**2) for x in range(6)]\n"
+"[(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n"
+">>> # the tuple must be parenthesized, otherwise an error is raised\n"
+">>> [x, x**2 for x in range(6)]\n"
+"  File \"<stdin>\", line 1\n"
+"    [x, x**2 for x in range(6)]\n"
+"     ^^^^^^^\n"
+"SyntaxError: did you forget parentheses around the comprehension target?\n"
+">>> # flatten a list using a listcomp with two 'for'\n"
+">>> vec = [[1,2,3], [4,5,6], [7,8,9]]\n"
+">>> [num for elem in vec for num in elem]\n"
+"[1, 2, 3, 4, 5, 6, 7, 8, 9]"
 
 #: tutorial/datastructures.rst:274
 msgid ""
 "List comprehensions can contain complex expressions and nested functions::"
-msgstr ""
+msgstr "लिस्ट कॉम्प्रिहेंशन में जटिल एक्सप्रेशन और नेस्ट किए गए फ़ंक्शन हो सकते हैं::"
 
 #: tutorial/datastructures.rst:276
 msgid ""
@@ -351,22 +493,29 @@ msgid ""
 ">>> [str(round(pi, i)) for i in range(1, 6)]\n"
 "['3.1', '3.14', '3.142', '3.1416', '3.14159']"
 msgstr ""
+">>> from math import pi\n"
+">>> [str(round(pi, i)) for i in range(1, 6)]\n"
+"['3.1', '3.14', '3.142', '3.1416', '3.14159']"
 
 #: tutorial/datastructures.rst:281
 msgid "Nested List Comprehensions"
-msgstr ""
+msgstr "नेस्ट किए गए लिस्ट कॉम्प्रिहेंशन"
 
 #: tutorial/datastructures.rst:283
 msgid ""
 "The initial expression in a list comprehension can be any arbitrary "
 "expression, including another list comprehension."
 msgstr ""
+"लिस्ट कॉम्प्रिहेंशन का शुरुआती एक्सप्रेशन कोई भी एक्सप्रेशन हो सकता है, जिसमें दूसरा लिस्ट "
+"कॉम्प्रिहेंशन भी शामिल है।"
 
 #: tutorial/datastructures.rst:286
 msgid ""
 "Consider the following example of a 3x4 matrix implemented as a list of 3 "
 "lists of length 4::"
 msgstr ""
+"एक 3x4 मैट्रिक्स का यह उदाहरण देखें, जिसे लंबाई 4 वाली 3 लिस्ट की लिस्ट के रूप में लागू "
+"किया गया है::"
 
 #: tutorial/datastructures.rst:289
 msgid ""
@@ -376,16 +525,23 @@ msgid ""
 "...     [9, 10, 11, 12],\n"
 "... ]"
 msgstr ""
+">>> matrix = [\n"
+"...     [1, 2, 3, 4],\n"
+"...     [5, 6, 7, 8],\n"
+"...     [9, 10, 11, 12],\n"
+"... ]"
 
 #: tutorial/datastructures.rst:295
 msgid "The following list comprehension will transpose rows and columns::"
-msgstr ""
+msgstr "यह लिस्ट कॉम्प्रिहेंशन पंक्तियों और कॉलमों को आपस में बदल (ट्रांसपोज़ कर) देगा::"
 
 #: tutorial/datastructures.rst:297
 msgid ""
 ">>> [[row[i] for row in matrix] for i in range(4)]\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 msgstr ""
+">>> [[row[i] for row in matrix] for i in range(4)]\n"
+"[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
 #: tutorial/datastructures.rst:300
 msgid ""
@@ -393,6 +549,8 @@ msgid ""
 "in the context of the :keyword:`for` that follows it, so this example is "
 "equivalent to::"
 msgstr ""
+"जैसा हमने पिछले सेक्शन में देखा, अंदर वाला लिस्ट कॉम्प्रिहेंशन उसके बाद आने "
+"वाले :keyword:`for` के संदर्भ में इवैल्युएट होता है, इसलिए यह उदाहरण इसके बराबर है::"
 
 #: tutorial/datastructures.rst:304
 msgid ""
@@ -403,10 +561,16 @@ msgid ""
 ">>> transposed\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 msgstr ""
+">>> transposed = []\n"
+">>> for i in range(4):\n"
+"...     transposed.append([row[i] for row in matrix])\n"
+"...\n"
+">>> transposed\n"
+"[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
 #: tutorial/datastructures.rst:311
 msgid "which, in turn, is the same as::"
-msgstr ""
+msgstr "जो, बदले में, इसके जैसा ही है::"
 
 #: tutorial/datastructures.rst:313
 msgid ""
@@ -421,27 +585,42 @@ msgid ""
 ">>> transposed\n"
 "[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 msgstr ""
+">>> transposed = []\n"
+">>> for i in range(4):\n"
+"...     # the following 3 lines implement the nested listcomp\n"
+"...     transposed_row = []\n"
+"...     for row in matrix:\n"
+"...         transposed_row.append(row[i])\n"
+"...     transposed.append(transposed_row)\n"
+"...\n"
+">>> transposed\n"
+"[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]"
 
 #: tutorial/datastructures.rst:324
 msgid ""
 "In the real world, you should prefer built-in functions to complex flow "
 "statements. The :func:`zip` function would do a great job for this use case::"
 msgstr ""
+"असल दुनिया में, आपको जटिल फ़्लो स्टेटमेंट के बजाय बिल्ट-इन फ़ंक्शन को प्राथमिकता देनी चाहिए। "
+"इस काम के लिए :func:`zip` फ़ंक्शन बहुत अच्छा रहेगा::"
 
 #: tutorial/datastructures.rst:327
 msgid ""
 ">>> list(zip(*matrix))\n"
 "[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]"
 msgstr ""
+">>> list(zip(*matrix))\n"
+"[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]"
 
 #: tutorial/datastructures.rst:330
 msgid ""
 "See :ref:`tut-unpacking-arguments` for details on the asterisk in this line."
 msgstr ""
+"इस लाइन में तारांकन (एस्टरिस्क) के विवरण के लिए :ref:`tut-unpacking-arguments` देखें।"
 
 #: tutorial/datastructures.rst:333
 msgid "Unpacking in Lists and List Comprehensions"
-msgstr ""
+msgstr "लिस्ट और लिस्ट कॉम्प्रिहेंशन में अनपैकिंग"
 
 #: tutorial/datastructures.rst:335
 msgid ""
@@ -452,6 +631,11 @@ msgid ""
 "prefixing an expression by a ``*`` will unpack the result of that "
 "expression, adding each of its elements to the list we're creating::"
 msgstr ""
+":ref:`tut-unpacking-arguments` वाला सेक्शन बताता है कि किसी इटरेबल ऑब्जेक्ट के एलिमेंट "
+"को \"अनपैक\" करके, हर एक को अलग आर्ग्युमेंट के रूप में किसी फ़ंक्शन को देने के लिए ``*`` कैसे "
+"इस्तेमाल होता है। अनपैकिंग दूसरे संदर्भों में भी इस्तेमाल हो सकती है, जैसे लिस्ट बनाते समय। "
+"लिस्ट के एलिमेंट लिखते समय, किसी एक्सप्रेशन से पहले ``*`` लगाने पर उस एक्सप्रेशन का नतीजा "
+"अनपैक होता है, और उसका हर एलिमेंट हमारी बनाई जा रही लिस्ट में जुड़ जाता है::"
 
 #: tutorial/datastructures.rst:342
 msgid ""
@@ -459,6 +643,9 @@ msgid ""
 ">>> [0, *x, 4, 5, 6]\n"
 "[0, 1, 2, 3, 4, 5, 6]"
 msgstr ""
+">>> x = [1, 2, 3]\n"
+">>> [0, *x, 4, 5, 6]\n"
+"[0, 1, 2, 3, 4, 5, 6]"
 
 #: tutorial/datastructures.rst:346
 msgid ""
@@ -466,6 +653,8 @@ msgid ""
 "iterable object; trying to unpack a non-iterable object will raise an "
 "exception::"
 msgstr ""
+"यह सिर्फ़ तब काम करता है जब ``*`` के बाद वाले एक्सप्रेशन का नतीजा कोई इटरेबल ऑब्जेक्ट "
+"हो; किसी नॉन-इटरेबल ऑब्जेक्ट को अनपैक करने की कोशिश करने पर एक्सेप्शन रेज़ होगा::"
 
 #: tutorial/datastructures.rst:349
 msgid ""
@@ -476,12 +665,20 @@ msgid ""
 "    [0, *x, 2, 3, 4]\n"
 "TypeError: Value after * must be an iterable, not int"
 msgstr ""
+">>> x = 1\n"
+">>> [0, *x, 2, 3, 4]\n"
+"Traceback (most recent call last):\n"
+"  File \"<python-input-1>\", line 1, in <module>\n"
+"    [0, *x, 2, 3, 4]\n"
+"TypeError: Value after * must be an iterable, not int"
 
 #: tutorial/datastructures.rst:356
 msgid ""
 "Unpacking can also be used in list comprehensions, as a way to build a new "
 "list representing the concatenation of an arbitrary number of iterables::"
 msgstr ""
+"लिस्ट कॉम्प्रिहेंशन में भी अनपैकिंग इस्तेमाल की जा सकती है, जिससे कितने भी इटरेबल को जोड़कर "
+"एक नई लिस्ट बनाई जा सकती है::"
 
 #: tutorial/datastructures.rst:359
 msgid ""
@@ -489,12 +686,17 @@ msgid ""
 ">>> [*element for element in x]\n"
 "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
 msgstr ""
+">>> x = [[1, 2, 3], [4, 5, 6], [], [7], [8, 9]]\n"
+">>> [*element for element in x]\n"
+"[1, 2, 3, 4, 5, 6, 7, 8, 9]"
 
 #: tutorial/datastructures.rst:363
 msgid ""
 "Note that the effect is that each element from ``x`` is unpacked.  This "
 "works for arbitrary iterable objects, not just lists::"
 msgstr ""
+"ध्यान दें कि इसका असर यह होता है कि ``x`` का हर एलिमेंट अनपैक हो जाता है। यह सिर्फ़ "
+"लिस्ट नहीं, किसी भी इटरेबल ऑब्जेक्ट के लिए काम करता है::"
 
 #: tutorial/datastructures.rst:366
 msgid ""
@@ -502,16 +704,20 @@ msgid ""
 ">>> [*element for element in x]\n"
 "[1, 2, 3, 'c', 'a', 't', 'spam']"
 msgstr ""
+">>> x = [[1, 2, 3], 'cat', {'spam': 'eggs'}]\n"
+">>> [*element for element in x]\n"
+"[1, 2, 3, 'c', 'a', 't', 'spam']"
 
 #: tutorial/datastructures.rst:370
 msgid ""
 "But if the objects in ``x`` are not iterable, this expression would again "
 "raise an exception."
 msgstr ""
+"लेकिन अगर ``x`` के ऑब्जेक्ट इटरेबल नहीं हैं, तो यह एक्सप्रेशन फिर से एक्सेप्शन रेज़ करेगा।"
 
 #: tutorial/datastructures.rst:376
 msgid "The :keyword:`!del` statement"
-msgstr ""
+msgstr ":keyword:`!del` स्टेटमेंट"
 
 #: tutorial/datastructures.rst:378
 msgid ""
@@ -522,6 +728,11 @@ msgid ""
 "list (which we did earlier by assignment of an empty list to the slice).  "
 "For example::"
 msgstr ""
+"लिस्ट से किसी आइटम को उसके मान के बजाय उसके इंडेक्स से हटाने का एक तरीक़ा "
+"है: :keyword:`del` स्टेटमेंट। यह :meth:`~list.pop` मेथड से अलग है, जो एक मान लौटाता "
+"है। :keyword:`!del` स्टेटमेंट से लिस्ट से स्लाइस भी हटाए जा सकते हैं या पूरी लिस्ट ख़ाली की "
+"जा सकती है (जो हमने पहले स्लाइस को एक ख़ाली लिस्ट असाइन करके किया था)। उदाहरण के "
+"लिए::"
 
 #: tutorial/datastructures.rst:384
 msgid ""
@@ -536,24 +747,36 @@ msgid ""
 ">>> a\n"
 "[]"
 msgstr ""
+">>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n"
+">>> del a[0]\n"
+">>> a\n"
+"[1, 66.25, 333, 333, 1234.5]\n"
+">>> del a[2:4]\n"
+">>> a\n"
+"[1, 66.25, 1234.5]\n"
+">>> del a[:]\n"
+">>> a\n"
+"[]"
 
 #: tutorial/datastructures.rst:395
 msgid ":keyword:`del` can also be used to delete entire variables::"
-msgstr ""
+msgstr ":keyword:`del` से पूरे वेरिएबल भी मिटाए जा सकते हैं::"
 
 #: tutorial/datastructures.rst:397
 msgid ">>> del a"
-msgstr ""
+msgstr ">>> del a"
 
 #: tutorial/datastructures.rst:399
 msgid ""
 "Referencing the name ``a`` hereafter is an error (at least until another "
 "value is assigned to it).  We'll find other uses for :keyword:`del` later."
 msgstr ""
+"इसके बाद ``a`` नाम का इस्तेमाल करना एक त्रुटि है (कम से कम तब तक जब तक उसे कोई दूसरा "
+"मान असाइन न किया जाए)। :keyword:`del` के दूसरे इस्तेमाल हम आगे देखेंगे।"
 
 #: tutorial/datastructures.rst:406
 msgid "Tuples and Sequences"
-msgstr ""
+msgstr "टपल और सीक्वेंस"
 
 #: tutorial/datastructures.rst:408
 msgid ""
@@ -563,11 +786,15 @@ msgid ""
 "data types may be added.  There is also another standard sequence data type: "
 "the *tuple*."
 msgstr ""
+"हमने देखा कि लिस्ट और स्ट्रिंग में कई साझा गुण हैं, जैसे इंडेक्सिंग और स्लाइसिंग ऑपरेशन। ये "
+"*सीक्वेंस* डेटा टाइप के दो उदाहरण हैं (:ref:`typesseq` देखें)। चूँकि पायथन एक विकसित हो "
+"रही भाषा है, इसलिए दूसरे सीक्वेंस डेटा टाइप भी जोड़े जा सकते हैं। एक और स्टैंडर्ड सीक्वेंस डेटा "
+"टाइप भी है: *टपल*।"
 
 #: tutorial/datastructures.rst:414
 msgid ""
 "A tuple consists of a number of values separated by commas, for instance::"
-msgstr ""
+msgstr "टपल कॉमा से अलग किए गए कुछ मानों से बनता है, उदाहरण के लिए::"
 
 #: tutorial/datastructures.rst:416
 msgid ""
@@ -594,6 +821,28 @@ msgid ""
 ">>> 0, *x, 4\n"
 "(0, 1, 2, 3, 4)"
 msgstr ""
+">>> t = 12345, 54321, 'hello!'\n"
+">>> t[0]\n"
+"12345\n"
+">>> t\n"
+"(12345, 54321, 'hello!')\n"
+">>> # Tuples may be nested:\n"
+">>> u = t, (1, 2, 3, 4, 5)\n"
+">>> u\n"
+"((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n"
+">>> # Tuples are immutable:\n"
+">>> t[0] = 88888\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: 'tuple' object does not support item assignment\n"
+">>> # but they can contain mutable objects:\n"
+">>> v = ([1, 2, 3], [3, 2, 1])\n"
+">>> v\n"
+"([1, 2, 3], [3, 2, 1])\n"
+">>> # they support unpacking just like lists:\n"
+">>> x = [1, 2, 3]\n"
+">>> 0, *x, 4\n"
+"(0, 1, 2, 3, 4)"
 
 #: tutorial/datastructures.rst:439
 msgid ""
@@ -604,6 +853,11 @@ msgid ""
 "the individual items of a tuple, however it is possible to create tuples "
 "which contain mutable objects, such as lists."
 msgstr ""
+"जैसा आप देख सकते हैं, आउटपुट में टपल हमेशा कोष्ठक में होते हैं, ताकि नेस्ट किए गए टपल सही तरह "
+"समझे जाएँ; इनपुट करते समय इन्हें कोष्ठक के साथ या बिना लिखा जा सकता है, हालाँकि अक्सर "
+"कोष्ठक वैसे भी ज़रूरी होते हैं (अगर टपल किसी बड़े एक्सप्रेशन का हिस्सा है)। टपल के अलग-अलग "
+"आइटम को असाइन करना संभव नहीं है, लेकिन ऐसे टपल बनाए जा सकते हैं जिनमें लिस्ट जैसे म्यूटेबल "
+"ऑब्जेक्ट हों।"
 
 #: tutorial/datastructures.rst:446
 msgid ""
@@ -615,6 +869,12 @@ msgid ""
 "are :term:`mutable`, and their elements are usually homogeneous and are "
 "accessed by iterating over the list."
 msgstr ""
+"हालाँकि टपल लिस्ट जैसे लग सकते हैं, लेकिन वे अक्सर अलग स्थितियों में और अलग उद्देश्यों के लिए "
+"इस्तेमाल होते हैं। टपल :term:`इम्यूटेबल <immutable>` होते हैं, और आम तौर पर उनमें अलग-अलग "
+"तरह के एलिमेंट का सीक्वेंस होता है, जिन तक अनपैकिंग (इस सेक्शन में आगे देखें) या इंडेक्सिंग से "
+"पहुँचा जाता है (या :func:`namedtuples <collections.namedtuple>` के मामले में "
+"एट्रिब्यूट से भी)। लिस्ट :term:`म्यूटेबल <mutable>` होती हैं, उनके एलिमेंट आम तौर पर एक "
+"ही तरह के होते हैं, और उन तक लिस्ट पर इटरेट करके पहुँचा जाता है।"
 
 #: tutorial/datastructures.rst:454
 msgid ""
@@ -624,6 +884,10 @@ msgid ""
 "constructed by following a value with a comma (it is not sufficient to "
 "enclose a single value in parentheses). Ugly, but effective.  For example::"
 msgstr ""
+"0 या 1 आइटम वाले टपल बनाना एक ख़ास समस्या है: इनके लिए सिंटैक्स में कुछ अतिरिक्त अजीब "
+"बातें हैं। ख़ाली टपल कोष्ठकों की एक ख़ाली जोड़ी से बनते हैं; एक आइटम वाला टपल किसी मान के "
+"बाद कॉमा लगाकर बनता है (किसी अकेले मान को कोष्ठक में रखना काफ़ी नहीं है)। भद्दा, लेकिन "
+"कारगर। उदाहरण के लिए::"
 
 #: tutorial/datastructures.rst:460
 msgid ""
@@ -636,6 +900,14 @@ msgid ""
 ">>> singleton\n"
 "('hello',)"
 msgstr ""
+">>> empty = ()\n"
+">>> singleton = 'hello',    # <-- note trailing comma\n"
+">>> len(empty)\n"
+"0\n"
+">>> len(singleton)\n"
+"1\n"
+">>> singleton\n"
+"('hello',)"
 
 #: tutorial/datastructures.rst:469
 msgid ""
@@ -643,10 +915,13 @@ msgid ""
 "packing*: the values ``12345``, ``54321`` and ``'hello!'`` are packed "
 "together in a tuple. The reverse operation is also possible::"
 msgstr ""
+"स्टेटमेंट ``t = 12345, 54321, 'hello!'`` *टपल पैकिंग* का एक उदाहरण है: मान "
+"``12345``, ``54321`` और ``'hello!'`` एक टपल में एक साथ पैक किए गए हैं। इसका उल्टा "
+"ऑपरेशन भी संभव है::"
 
 #: tutorial/datastructures.rst:473
 msgid ">>> x, y, z = t"
-msgstr ""
+msgstr ">>> x, y, z = t"
 
 #: tutorial/datastructures.rst:475
 msgid ""
@@ -656,10 +931,14 @@ msgid ""
 "in the sequence.  Note that multiple assignment is really just a combination "
 "of tuple packing and sequence unpacking."
 msgstr ""
+"इसे, बिल्कुल सही नाम से, *सीक्वेंस अनपैकिंग* कहते हैं, और यह दाईं ओर के किसी भी सीक्वेंस के "
+"लिए काम करता है। सीक्वेंस अनपैकिंग के लिए ज़रूरी है कि बराबर के चिह्न के बाईं ओर उतने ही "
+"वेरिएबल हों जितने सीक्वेंस में एलिमेंट हैं। ध्यान दें कि मल्टीपल असाइनमेंट असल में टपल पैकिंग और "
+"सीक्वेंस अनपैकिंग का मेल ही है।"
 
 #: tutorial/datastructures.rst:485
 msgid "Sets"
-msgstr ""
+msgstr "सेट"
 
 #: tutorial/datastructures.rst:487
 msgid ""
@@ -669,6 +948,10 @@ msgid ""
 "support mathematical operations like union, intersection, difference, and "
 "symmetric difference."
 msgstr ""
+"पायथन में :ref:`सेट <types-set>` के लिए भी एक डेटा टाइप है। सेट बिना क्रम वाला संग्रह "
+"है जिसमें कोई एलिमेंट दोहराया नहीं जाता। इसके बुनियादी इस्तेमाल में सदस्यता की जाँच और "
+"दोहराई गई एंट्री हटाना शामिल है। सेट ऑब्जेक्ट यूनियन, इंटरसेक्शन, डिफ़रेंस और सिमेट्रिक "
+"डिफ़रेंस जैसे गणितीय ऑपरेशन भी सपोर्ट करते हैं।"
 
 #: tutorial/datastructures.rst:493
 msgid ""
@@ -677,16 +960,21 @@ msgid ""
 "creates an empty dictionary, a data structure that we discuss in the next "
 "section."
 msgstr ""
+"सेट बनाने के लिए कर्ली ब्रेसिज़ या :func:`set` फ़ंक्शन इस्तेमाल किया जा सकता है। ध्यान दें: "
+"ख़ाली सेट बनाने के लिए आपको ``set()`` इस्तेमाल करना होगा, ``{}`` नहीं; बाद वाला एक "
+"ख़ाली डिक्शनरी बनाता है, जो एक डेटा स्ट्रक्चर है जिस पर हम अगले सेक्शन में बात करेंगे।"
 
 #: tutorial/datastructures.rst:497
 msgid ""
 "Because sets are unordered, iterating over them or printing them can produce "
 "the elements in a different order than you expect."
 msgstr ""
+"चूँकि सेट में कोई क्रम नहीं होता, इसलिए उन पर इटरेट करने या उन्हें प्रिंट करने पर एलिमेंट "
+"आपकी उम्मीद से अलग क्रम में आ सकते हैं।"
 
 #: tutorial/datastructures.rst:500
 msgid "Here is a brief demonstration::"
-msgstr ""
+msgstr "यह एक छोटा प्रदर्शन है::"
 
 #: tutorial/datastructures.rst:502
 msgid ""
@@ -714,12 +1002,37 @@ msgid ""
 ">>> a ^ b                              # letters in a or b but not both\n"
 "{'r', 'd', 'b', 'm', 'z', 'l'}"
 msgstr ""
+">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n"
+">>> print(basket)                      # show that duplicates have been "
+"removed\n"
+"{'orange', 'banana', 'pear', 'apple'}\n"
+">>> 'orange' in basket                 # fast membership testing\n"
+"True\n"
+">>> 'crabgrass' in basket\n"
+"False\n"
+"\n"
+">>> # Demonstrate set operations on unique letters from two words\n"
+">>>\n"
+">>> a = set('abracadabra')\n"
+">>> b = set('alacazam')\n"
+">>> a                                  # unique letters in a\n"
+"{'a', 'r', 'b', 'c', 'd'}\n"
+">>> a - b                              # letters in a but not in b\n"
+"{'r', 'd', 'b'}\n"
+">>> a | b                              # letters in a or b or both\n"
+"{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n"
+">>> a & b                              # letters in both a and b\n"
+"{'a', 'c'}\n"
+">>> a ^ b                              # letters in a or b but not both\n"
+"{'r', 'd', 'b', 'm', 'z', 'l'}"
 
 #: tutorial/datastructures.rst:525
 msgid ""
 "Similarly to :ref:`list comprehensions <tut-listcomps>`, set comprehensions "
 "are also supported, including comprehensions with unpacking::"
 msgstr ""
+":ref:`लिस्ट कॉम्प्रिहेंशन <tut-listcomps>` की तरह, सेट कॉम्प्रिहेंशन भी सपोर्ट होते हैं, "
+"जिनमें अनपैकिंग वाले कॉम्प्रिहेंशन भी शामिल हैं::"
 
 #: tutorial/datastructures.rst:528
 msgid ""
@@ -731,10 +1044,17 @@ msgid ""
 ">>> {*fruit for fruit in fruits}\n"
 "{'blueberry', 'banana', 'avocado', 'apple', 'apricot'}"
 msgstr ""
+">>> a = {x for x in 'abracadabra' if x not in 'abc'}\n"
+">>> a\n"
+"{'r', 'd'}\n"
+"\n"
+">>> fruits = [{'apple', 'avocado', 'apricot'}, {'banana', 'blueberry'}]\n"
+">>> {*fruit for fruit in fruits}\n"
+"{'blueberry', 'banana', 'avocado', 'apple', 'apricot'}"
 
 #: tutorial/datastructures.rst:540
 msgid "Dictionaries"
-msgstr ""
+msgstr "डिक्शनरी"
 
 #: tutorial/datastructures.rst:542
 msgid ""
@@ -749,6 +1069,16 @@ msgid ""
 "lists can be modified in place using index assignments, slice assignments, "
 "or methods like :meth:`~list.append` and :meth:`~list.extend`."
 msgstr ""
+"पायथन में बना एक और उपयोगी डेटा टाइप *डिक्शनरी* है (:ref:`typesmapping` देखें)। दूसरी "
+"भाषाओं में डिक्शनरी कभी-कभी \"associative memories\" या \"associative arrays\" के "
+"नाम से मिलती हैं। सीक्वेंस के उलट, जिन्हें नंबरों की एक रेंज से इंडेक्स किया जाता है, डिक्शनरी "
+"को *कुंजियों* (keys) से इंडेक्स किया जाता है, जो कोई भी इम्यूटेबल टाइप हो सकती हैं; स्ट्रिंग "
+"और नंबर हमेशा कुंजी हो सकते हैं। टपल को कुंजी के रूप में इस्तेमाल किया जा सकता है अगर उनमें "
+"सिर्फ़ स्ट्रिंग, नंबर या टपल हों; अगर किसी टपल में सीधे या परोक्ष रूप से कोई म्यूटेबल ऑब्जेक्ट "
+"है, तो उसे कुंजी के रूप में इस्तेमाल नहीं किया जा सकता। आप लिस्ट को कुंजी के रूप में इस्तेमाल "
+"नहीं कर सकते, क्योंकि लिस्ट को इंडेक्स असाइनमेंट, स्लाइस असाइनमेंट, "
+"या :meth:`~list.append` और :meth:`~list.extend` जैसे मेथड से उसी जगह बदला जा "
+"सकता है।"
 
 #: tutorial/datastructures.rst:553
 msgid ""
@@ -758,6 +1088,10 @@ msgid ""
 "of key:value pairs within the braces adds initial key:value pairs to the "
 "dictionary; this is also the way dictionaries are written on output."
 msgstr ""
+"डिक्शनरी को *key: value* जोड़ियों का एक सेट मानना सबसे अच्छा है, इस शर्त के साथ कि "
+"कुंजियाँ (एक डिक्शनरी के अंदर) यूनीक हों। ब्रेसिज़ की एक जोड़ी एक ख़ाली डिक्शनरी बनाती है: "
+"``{}``। ब्रेसिज़ के अंदर कॉमा से अलग की गई key:value जोड़ियों की सूची रखने से डिक्शनरी में "
+"शुरुआती key:value जोड़ियाँ जुड़ जाती हैं; आउटपुट में भी डिक्शनरी इसी तरह लिखी जाती हैं।"
 
 #: tutorial/datastructures.rst:559
 msgid ""
@@ -766,6 +1100,9 @@ msgid ""
 "key:value pair with ``del``. If you store using a key that is already in "
 "use, the old value associated with that key is forgotten."
 msgstr ""
+"डिक्शनरी के मुख्य ऑपरेशन किसी कुंजी के साथ मान रखना और कुंजी देकर मान निकालना हैं। "
+"``del`` से किसी key:value जोड़ी को मिटाया भी जा सकता है। अगर आप ऐसी कुंजी के साथ "
+"मान रखते हैं जो पहले से इस्तेमाल में है, तो उस कुंजी से जुड़ा पुराना मान भुला दिया जाता है।"
 
 #: tutorial/datastructures.rst:564
 msgid ""
@@ -775,6 +1112,10 @@ msgid ""
 "returns ``None`` (or a specified default value) if the key is not in the "
 "dictionary."
 msgstr ""
+"सबस्क्रिप्ट (``d[key]``) से किसी ऐसी कुंजी का मान निकालने पर जो मौजूद नहीं "
+"है, :exc:`KeyError` रेज़ होता है। जो कुंजी शायद मौजूद न हो, उस तक पहुँचते समय इस त्रुटि "
+"से बचने के लिए, इसके बजाय :meth:`~dict.get` मेथड इस्तेमाल करें, जो कुंजी डिक्शनरी में न "
+"होने पर ``None`` (या दिया गया डिफ़ॉल्ट मान) लौटाता है।"
 
 #: tutorial/datastructures.rst:569
 msgid ""
@@ -783,10 +1124,14 @@ msgid ""
 "``sorted(d)`` instead). To check whether a single key is in the dictionary, "
 "use the :keyword:`in` keyword."
 msgstr ""
+"किसी डिक्शनरी पर ``list(d)`` चलाने से डिक्शनरी में इस्तेमाल हुई सभी कुंजियों की एक लिस्ट "
+"मिलती है, उसी क्रम में जिसमें उन्हें डाला गया था (अगर आप इसे सॉर्ट किया हुआ चाहते हैं, तो "
+"इसके बजाय ``sorted(d)`` इस्तेमाल करें)। यह जाँचने के लिए कि कोई एक कुंजी डिक्शनरी में है "
+"या नहीं, :keyword:`in` कीवर्ड इस्तेमाल करें।"
 
 #: tutorial/datastructures.rst:574
 msgid "Here is a small example using a dictionary::"
-msgstr ""
+msgstr "डिक्शनरी इस्तेमाल करने का एक छोटा उदाहरण::"
 
 #: tutorial/datastructures.rst:576
 msgid ""
@@ -815,36 +1160,68 @@ msgid ""
 ">>> 'jack' not in tel\n"
 "False"
 msgstr ""
+">>> tel = {'jack': 4098, 'sape': 4139}\n"
+">>> tel['guido'] = 4127\n"
+">>> tel\n"
+"{'jack': 4098, 'sape': 4139, 'guido': 4127}\n"
+">>> tel['jack']\n"
+"4098\n"
+">>> tel['irv']\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"KeyError: 'irv'\n"
+">>> print(tel.get('irv'))\n"
+"None\n"
+">>> del tel['sape']\n"
+">>> tel['irv'] = 4127\n"
+">>> tel\n"
+"{'jack': 4098, 'guido': 4127, 'irv': 4127}\n"
+">>> list(tel)\n"
+"['jack', 'guido', 'irv']\n"
+">>> sorted(tel)\n"
+"['guido', 'irv', 'jack']\n"
+">>> 'guido' in tel\n"
+"True\n"
+">>> 'jack' not in tel\n"
+"False"
 
 #: tutorial/datastructures.rst:601
 msgid ""
 "The :func:`dict` constructor builds dictionaries directly from sequences of "
 "key-value pairs::"
-msgstr ""
+msgstr ":func:`dict` कंस्ट्रक्टर कुंजी-मान जोड़ियों के सीक्वेंस से सीधे डिक्शनरी बनाता है::"
 
 #: tutorial/datastructures.rst:604
 msgid ""
 ">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 msgstr ""
+">>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n"
+"{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
 #: tutorial/datastructures.rst:607
 msgid ""
 "In addition, dict comprehensions can be used to create dictionaries from "
 "arbitrary key and value expressions::"
 msgstr ""
+"इसके अलावा, dict कॉम्प्रिहेंशन से किसी भी कुंजी और मान एक्सप्रेशन से डिक्शनरी बनाई जा "
+"सकती हैं::"
 
 #: tutorial/datastructures.rst:610
 msgid ""
 ">>> {x: x**2 for x in (2, 4, 6)}\n"
 "{2: 4, 4: 16, 6: 36}"
 msgstr ""
+">>> {x: x**2 for x in (2, 4, 6)}\n"
+"{2: 4, 4: 16, 6: 36}"
 
 #: tutorial/datastructures.rst:613
 msgid ""
 "And dictionary unpacking (via ``**``) can be used to merge multiple "
 "dictionaries::"
 msgstr ""
+"और कई डिक्शनरी को मिलाने के लिए डिक्शनरी अनपैकिंग (``**`` के ज़रिए) इस्तेमाल की जा "
+"सकती है::"
 
 #: tutorial/datastructures.rst:616
 msgid ""
@@ -857,28 +1234,41 @@ msgid ""
 ">>> {**i for i in all_values}\n"
 "{1: 1, 3: 9, 5: 25, 2: 4, 4: 16, 6: 36, 0: 0}"
 msgstr ""
+">>> odds = {i: i**2 for i in (1, 3, 5)}\n"
+">>> evens = {i: i**2 for i in (2, 4, 6)}\n"
+">>> {**odds, **evens}\n"
+"{1: 1, 3: 9, 5: 25, 2: 4, 4: 16, 6: 36}\n"
+"\n"
+">>> all_values = [odds, evens, {0: 0}]\n"
+">>> {**i for i in all_values}\n"
+"{1: 1, 3: 9, 5: 25, 2: 4, 4: 16, 6: 36, 0: 0}"
 
 #: tutorial/datastructures.rst:625
 msgid ""
 "When the keys are simple strings, it is sometimes easier to specify pairs "
 "using keyword arguments::"
 msgstr ""
+"जब कुंजियाँ सरल स्ट्रिंग हों, तो कभी-कभी कीवर्ड आर्ग्युमेंट से जोड़ियाँ देना आसान होता है::"
 
 #: tutorial/datastructures.rst:628
 msgid ""
 ">>> dict(sape=4139, guido=4127, jack=4098)\n"
 "{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 msgstr ""
+">>> dict(sape=4139, guido=4127, jack=4098)\n"
+"{'sape': 4139, 'guido': 4127, 'jack': 4098}"
 
 #: tutorial/datastructures.rst:635
 msgid "Looping Techniques"
-msgstr ""
+msgstr "लूप की तकनीकें"
 
 #: tutorial/datastructures.rst:637
 msgid ""
 "When looping through dictionaries, the key and corresponding value can be "
 "retrieved at the same time using the :meth:`~dict.items` method. ::"
 msgstr ""
+"डिक्शनरी पर लूप चलाते समय, :meth:`~dict.items` मेथड से कुंजी और उसका मान एक साथ "
+"निकाले जा सकते हैं। ::"
 
 #: tutorial/datastructures.rst:640
 msgid ""
@@ -889,12 +1279,20 @@ msgid ""
 "gallahad the pure\n"
 "robin the brave"
 msgstr ""
+">>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}\n"
+">>> for k, v in knights.items():\n"
+"...     print(k, v)\n"
+"...\n"
+"gallahad the pure\n"
+"robin the brave"
 
 #: tutorial/datastructures.rst:647
 msgid ""
 "When looping through a sequence, the position index and corresponding value "
 "can be retrieved at the same time using the :func:`enumerate` function. ::"
 msgstr ""
+"किसी सीक्वेंस पर लूप चलाते समय, :func:`enumerate` फ़ंक्शन से स्थिति का इंडेक्स और उसका "
+"मान एक साथ निकाले जा सकते हैं। ::"
 
 #: tutorial/datastructures.rst:650
 msgid ""
@@ -905,12 +1303,20 @@ msgid ""
 "1 tac\n"
 "2 toe"
 msgstr ""
+">>> for i, v in enumerate(['tic', 'tac', 'toe']):\n"
+"...     print(i, v)\n"
+"...\n"
+"0 tic\n"
+"1 tac\n"
+"2 toe"
 
 #: tutorial/datastructures.rst:657
 msgid ""
 "To loop over two or more sequences at the same time, the entries can be "
 "paired with the :func:`zip` function. ::"
 msgstr ""
+"एक साथ दो या ज़्यादा सीक्वेंस पर लूप चलाने के लिए, उनकी एंट्री को :func:`zip` फ़ंक्शन से "
+"जोड़ा जा सकता है। ::"
 
 #: tutorial/datastructures.rst:660
 msgid ""
@@ -923,12 +1329,22 @@ msgid ""
 "What is your quest?  It is the holy grail.\n"
 "What is your favorite color?  It is blue."
 msgstr ""
+">>> questions = ['name', 'quest', 'favorite color']\n"
+">>> answers = ['lancelot', 'the holy grail', 'blue']\n"
+">>> for q, a in zip(questions, answers):\n"
+"...     print('What is your {0}?  It is {1}.'.format(q, a))\n"
+"...\n"
+"What is your name?  It is lancelot.\n"
+"What is your quest?  It is the holy grail.\n"
+"What is your favorite color?  It is blue."
 
 #: tutorial/datastructures.rst:669
 msgid ""
 "To loop over a sequence in reverse, first specify the sequence in a forward "
 "direction and then call the :func:`reversed` function. ::"
 msgstr ""
+"किसी सीक्वेंस पर उल्टे क्रम में लूप चलाने के लिए, पहले सीक्वेंस को सीधे क्रम में लिखें और "
+"फिर :func:`reversed` फ़ंक्शन कॉल करें। ::"
 
 #: tutorial/datastructures.rst:672
 msgid ""
@@ -941,12 +1357,22 @@ msgid ""
 "3\n"
 "1"
 msgstr ""
+">>> for i in reversed(range(1, 10, 2)):\n"
+"...     print(i)\n"
+"...\n"
+"9\n"
+"7\n"
+"5\n"
+"3\n"
+"1"
 
 #: tutorial/datastructures.rst:681
 msgid ""
 "To loop over a sequence in sorted order, use the :func:`sorted` function "
 "which returns a new sorted list while leaving the source unaltered. ::"
 msgstr ""
+"किसी सीक्वेंस पर सॉर्ट किए गए क्रम में लूप चलाने के लिए, :func:`sorted` फ़ंक्शन इस्तेमाल "
+"करें, जो मूल सीक्वेंस को बदले बिना एक नई सॉर्ट की गई लिस्ट लौटाता है। ::"
 
 #: tutorial/datastructures.rst:684
 msgid ""
@@ -961,6 +1387,16 @@ msgid ""
 "orange\n"
 "pear"
 msgstr ""
+">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
+">>> for i in sorted(basket):\n"
+"...     print(i)\n"
+"...\n"
+"apple\n"
+"apple\n"
+"banana\n"
+"orange\n"
+"orange\n"
+"pear"
 
 #: tutorial/datastructures.rst:695
 msgid ""
@@ -969,6 +1405,9 @@ msgid ""
 "idiomatic way to loop over unique elements of the sequence in sorted "
 "order. ::"
 msgstr ""
+"किसी सीक्वेंस पर :func:`set` इस्तेमाल करने से दोहराए गए एलिमेंट हट जाते हैं। किसी सीक्वेंस "
+"पर :func:`set` के साथ :func:`sorted` इस्तेमाल करना, सीक्वेंस के यूनीक एलिमेंट पर सॉर्ट "
+"किए गए क्रम में लूप चलाने का आम तरीक़ा है। ::"
 
 #: tutorial/datastructures.rst:699
 msgid ""
@@ -981,12 +1420,22 @@ msgid ""
 "orange\n"
 "pear"
 msgstr ""
+">>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n"
+">>> for f in sorted(set(basket)):\n"
+"...     print(f)\n"
+"...\n"
+"apple\n"
+"banana\n"
+"orange\n"
+"pear"
 
 #: tutorial/datastructures.rst:708
 msgid ""
 "It is sometimes tempting to change a list while you are looping over it; "
 "however, it is often simpler and safer to create a new list instead. ::"
 msgstr ""
+"कभी-कभी लूप चलाते समय लिस्ट को बदलने का मन होता है; लेकिन अक्सर इसके बजाय नई लिस्ट "
+"बनाना ज़्यादा आसान और सुरक्षित होता है। ::"
 
 #: tutorial/datastructures.rst:711
 msgid ""
@@ -1000,16 +1449,27 @@ msgid ""
 ">>> filtered_data\n"
 "[56.2, 51.7, 55.3, 52.5, 47.8]"
 msgstr ""
+">>> import math\n"
+">>> raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]\n"
+">>> filtered_data = []\n"
+">>> for value in raw_data:\n"
+"...     if not math.isnan(value):\n"
+"...         filtered_data.append(value)\n"
+"...\n"
+">>> filtered_data\n"
+"[56.2, 51.7, 55.3, 52.5, 47.8]"
 
 #: tutorial/datastructures.rst:725
 msgid "More on Conditions"
-msgstr ""
+msgstr "शर्तों के बारे में और"
 
 #: tutorial/datastructures.rst:727
 msgid ""
 "The conditions used in ``while`` and ``if`` statements can contain any "
 "operators, not just comparisons."
 msgstr ""
+"``while`` और ``if`` स्टेटमेंट में इस्तेमाल होने वाली शर्तों में सिर्फ़ तुलनाएँ नहीं, कोई भी "
+"ऑपरेटर हो सकते हैं।"
 
 #: tutorial/datastructures.rst:731
 msgid ""
@@ -1019,12 +1479,18 @@ msgid ""
 "object.  All comparison operators have the same priority, which is lower "
 "than that of all numerical operators."
 msgstr ""
+"तुलना ऑपरेटर ``in`` और ``not in`` सदस्यता की जाँच करते हैं, जो तय करती है कि कोई मान "
+"किसी कंटेनर में है (या नहीं है)। ऑपरेटर ``is`` और ``is not`` यह तुलना करते हैं कि दो "
+"ऑब्जेक्ट असल में एक ही ऑब्जेक्ट हैं या नहीं। सभी तुलना ऑपरेटरों की प्राथमिकता एक जैसी है, जो "
+"सभी संख्यात्मक ऑपरेटरों से कम है।"
 
 #: tutorial/datastructures.rst:737
 msgid ""
 "Comparisons can be chained.  For example, ``a < b == c`` tests whether ``a`` "
 "is less than ``b`` and moreover ``b`` equals ``c``."
 msgstr ""
+"तुलनाओं को चेन किया जा सकता है। उदाहरण के लिए, ``a < b == c`` यह जाँचता है कि "
+"``a``, ``b`` से कम है और साथ ही ``b``, ``c`` के बराबर है।"
 
 #: tutorial/datastructures.rst:740
 msgid ""
@@ -1035,6 +1501,11 @@ msgid ""
 "lowest, so that ``A and not B or C`` is equivalent to ``(A and (not B)) or "
 "C``. As always, parentheses can be used to express the desired composition."
 msgstr ""
+"तुलनाओं को बूलियन ऑपरेटर ``and`` और ``or`` से जोड़ा जा सकता है, और किसी तुलना (या "
+"किसी दूसरे बूलियन एक्सप्रेशन) के नतीजे को ``not`` से उल्टा किया जा सकता है। इनकी "
+"प्राथमिकता तुलना ऑपरेटरों से कम है; इनमें ``not`` की प्राथमिकता सबसे ज़्यादा और ``or`` "
+"की सबसे कम है, इसलिए ``A and not B or C``, ``(A and (not B)) or C`` के बराबर है। "
+"हमेशा की तरह, मनचाहा मेल दिखाने के लिए कोष्ठक इस्तेमाल किए जा सकते हैं।"
 
 #: tutorial/datastructures.rst:747
 msgid ""
@@ -1045,12 +1516,20 @@ msgid ""
 "expression ``C``.  When used as a general value and not as a Boolean, the "
 "return value of a short-circuit operator is the last evaluated argument."
 msgstr ""
+"बूलियन ऑपरेटर ``and`` और ``or`` तथाकथित *शॉर्ट-सर्किट* ऑपरेटर हैं: इनके आर्ग्युमेंट बाएँ से "
+"दाएँ इवैल्युएट होते हैं, और नतीजा तय होते ही इवैल्युएशन रुक जाता है। उदाहरण के लिए, अगर "
+"``A`` और ``C`` true हैं लेकिन ``B`` false है, तो ``A and B and C`` एक्सप्रेशन ``C`` "
+"को इवैल्युएट नहीं करता। जब इन्हें बूलियन के रूप में नहीं, बल्कि सामान्य मान के रूप में इस्तेमाल "
+"किया जाता है, तो शॉर्ट-सर्किट ऑपरेटर का लौटाया गया मान आख़िरी इवैल्युएट हुआ आर्ग्युमेंट "
+"होता है।"
 
 #: tutorial/datastructures.rst:754
 msgid ""
 "It is possible to assign the result of a comparison or other Boolean "
 "expression to a variable.  For example, ::"
 msgstr ""
+"किसी तुलना या दूसरे बूलियन एक्सप्रेशन का नतीजा किसी वेरिएबल को असाइन किया जा सकता है। "
+"उदाहरण के लिए, ::"
 
 #: tutorial/datastructures.rst:757
 msgid ""
@@ -1059,6 +1538,10 @@ msgid ""
 ">>> non_null\n"
 "'Trondheim'"
 msgstr ""
+">>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'\n"
+">>> non_null = string1 or string2 or string3\n"
+">>> non_null\n"
+"'Trondheim'"
 
 #: tutorial/datastructures.rst:762
 msgid ""
@@ -1067,10 +1550,14 @@ msgid ""
 "an-expression>` ``:=``. This avoids a common class of problems encountered "
 "in C programs: typing ``=`` in an expression when ``==`` was intended."
 msgstr ""
+"ध्यान दें कि पायथन में, C के उलट, एक्सप्रेशन के अंदर असाइनमेंट :ref:`वॉलरस ऑपरेटर <why-can-"
+"t-i-use-an-assignment-in-an-expression>` ``:=`` से स्पष्ट रूप से करना होता है। इससे "
+"C प्रोग्रामों में आने वाली एक आम तरह की समस्या से बचा जाता है: लिखना ``==`` था, लेकिन "
+"एक्सप्रेशन में ``=`` टाइप हो गया।"
 
 #: tutorial/datastructures.rst:772
 msgid "Comparing Sequences and Other Types"
-msgstr ""
+msgstr "सीक्वेंस और दूसरे टाइप की तुलना"
 
 #: tutorial/datastructures.rst:773
 msgid ""
@@ -1087,6 +1574,16 @@ msgid ""
 "order individual characters. Some examples of comparisons between sequences "
 "of the same type::"
 msgstr ""
+"सीक्वेंस ऑब्जेक्ट की तुलना आम तौर पर उसी सीक्वेंस टाइप के दूसरे ऑब्जेक्ट से की जा सकती है। "
+"तुलना में *लेक्सिकोग्राफ़िकल* (शब्दकोश जैसा) क्रम इस्तेमाल होता है: पहले दोनों सीक्वेंस के पहले "
+"आइटम की तुलना होती है, और अगर वे अलग हैं, तो इसी से तुलना का नतीजा तय हो जाता है; "
+"अगर वे बराबर हैं, तो अगले दो आइटम की तुलना होती है, और इसी तरह, जब तक कोई एक सीक्वेंस "
+"ख़त्म न हो जाए। अगर तुलना किए जाने वाले दो आइटम ख़ुद एक ही टाइप के सीक्वेंस हैं, तो "
+"लेक्सिकोग्राफ़िकल तुलना रिकर्सिव रूप से की जाती है। अगर दो सीक्वेंस के सभी आइटम बराबर हैं, "
+"तो सीक्वेंस बराबर माने जाते हैं। अगर एक सीक्वेंस दूसरे का शुरुआती हिस्सा है, तो छोटा सीक्वेंस "
+"छोटा (कम) माना जाता है। स्ट्रिंग के लिए लेक्सिकोग्राफ़िकल क्रम में अलग-अलग कैरेक्टरों का क्रम "
+"तय करने के लिए Unicode कोड पॉइंट नंबर इस्तेमाल होता है। एक ही टाइप के सीक्वेंस के बीच "
+"तुलना के कुछ उदाहरण::"
 
 #: tutorial/datastructures.rst:785
 msgid ""
@@ -1098,6 +1595,13 @@ msgid ""
 "(1, 2, 3)             == (1.0, 2.0, 3.0)\n"
 "(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)"
 msgstr ""
+"(1, 2, 3)              < (1, 2, 4)\n"
+"[1, 2, 3]              < [1, 2, 4]\n"
+"'ABC' < 'C' < 'Pascal' < 'Python'\n"
+"(1, 2, 3, 4)           < (1, 2, 4)\n"
+"(1, 2)                 < (1, 2, -1)\n"
+"(1, 2, 3)             == (1.0, 2.0, 3.0)\n"
+"(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)"
 
 #: tutorial/datastructures.rst:793
 msgid ""
@@ -1107,13 +1611,19 @@ msgid ""
 "equals 0.0, etc.  Otherwise, rather than providing an arbitrary ordering, "
 "the interpreter will raise a :exc:`TypeError` exception."
 msgstr ""
+"ध्यान दें कि अलग-अलग टाइप के ऑब्जेक्ट की ``<`` या ``>`` से तुलना करना तब मान्य है, जब "
+"ऑब्जेक्ट में तुलना के उपयुक्त मेथड हों। उदाहरण के लिए, अलग-अलग संख्यात्मक टाइप की तुलना उनके "
+"संख्यात्मक मान के आधार पर होती है, इसलिए 0, 0.0 के बराबर है, वग़ैरह। अन्यथा, कोई "
+"मनमाना क्रम देने के बजाय, इंटरप्रेटर :exc:`TypeError` एक्सेप्शन रेज़ करेगा।"
 
 #: tutorial/datastructures.rst:801
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/datastructures.rst:802
 msgid ""
 "Other languages may return the mutated object, which allows method chaining, "
 "such as ``d->insert(\"a\")->remove(\"b\")->sort();``."
 msgstr ""
+"दूसरी भाषाएँ बदला हुआ ऑब्जेक्ट लौटा सकती हैं, जिससे मेथड चेनिंग संभव होती है, जैसे ``d-"
+">insert(\"a\")->remove(\"b\")->sort();``।"
