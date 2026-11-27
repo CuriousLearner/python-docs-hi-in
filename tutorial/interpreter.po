@@ -3,27 +3,27 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/interpreter.rst:5
 msgid "Using the Python Interpreter"
-msgstr ""
+msgstr "पायथन इंटरप्रेटर का उपयोग"
 
 #: tutorial/interpreter.rst:11
 msgid "Invoking the Interpreter"
-msgstr ""
+msgstr "इंटरप्रेटर को चलाना"
 
 #: tutorial/interpreter.rst:13
 msgid ""
@@ -32,10 +32,13 @@ msgid ""
 "available; putting :file:`/usr/local/bin` in your Unix shell's search path "
 "makes it possible to start it by typing the command:"
 msgstr ""
+"जिन मशीनों पर पायथन इंटरप्रेटर उपलब्ध है, उन पर वह आम तौर पर |"
+"usr_local_bin_python_x_dot_y_literal| के रूप में इंस्टॉल होता है; अपने Unix शेल के सर्च "
+"पाथ में :file:`/usr/local/bin` जोड़ने के बाद, उसे शुरू करने के लिए आप यह कमांड:"
 
 #: tutorial/interpreter.rst:17
 msgid "python3.15"
-msgstr ""
+msgstr "python3.15"
 
 #: tutorial/interpreter.rst:21
 msgid ""
@@ -44,6 +47,9 @@ msgid ""
 "local Python guru or system administrator.  (E.g., :file:`/usr/local/python` "
 "is a popular alternative location.)"
 msgstr ""
+"शेल में टाइप कर सकते हैं। [#]_ चूँकि इंटरप्रेटर किस डायरेक्टरी में रहेगा, यह इंस्टॉलेशन के समय "
+"चुना जाता है, इसलिए दूसरी जगहें भी हो सकती हैं; अपने आसपास के पायथन जानकार या सिस्टम "
+"एडमिनिस्ट्रेटर से पूछें। (जैसे, :file:`/usr/local/python` एक लोकप्रिय वैकल्पिक जगह है।)"
 
 #: tutorial/interpreter.rst:26
 msgid ""
@@ -53,6 +59,10 @@ msgid ""
 "can use the :file:`py` command. See :ref:`setting-envvars` for other ways to "
 "launch Python."
 msgstr ""
+"जिन Windows मशीनों पर आपने पायथन :ref:`Microsoft Store <windows-store>` से "
+"इंस्टॉल किया है, उन पर |python_x_dot_y_literal| कमांड उपलब्ध होगा। अगर "
+"आपने :ref:`py.exe लॉन्चर <launcher>` इंस्टॉल किया है, तो आप :file:`py` कमांड "
+"इस्तेमाल कर सकते हैं। पायथन चलाने के दूसरे तरीक़ों के लिए :ref:`setting-envvars` देखें।"
 
 #: tutorial/interpreter.rst:31
 msgid ""
@@ -61,6 +71,10 @@ msgid ""
 "exit status.  If that doesn't work, you can exit the interpreter by typing "
 "the following command: ``quit()``."
 msgstr ""
+"प्राइमरी प्रॉम्प्ट पर एंड-ऑफ़-फ़ाइल कैरेक्टर (Unix पर :kbd:`Control-D`, Windows "
+"पर :kbd:`Control-Z`) टाइप करने से इंटरप्रेटर शून्य एग्ज़िट स्टेटस के साथ बंद हो जाता है। "
+"अगर यह काम न करे, तो आप यह कमांड टाइप करके इंटरप्रेटर से बाहर निकल सकते हैं: "
+"``quit()``।"
 
 #: tutorial/interpreter.rst:36
 msgid ""
@@ -74,6 +88,13 @@ msgid ""
 "available; you'll only be able to use backspace to remove characters from "
 "the current line."
 msgstr ""
+"इंटरप्रेटर की लाइन-एडिटिंग सुविधाओं में ज़्यादातर सिस्टम पर इंटरैक्टिव एडिटिंग, हिस्ट्री "
+"सब्स्टिट्यूशन और कोड कम्प्लीशन शामिल हैं। कमांड लाइन एडिटिंग सपोर्ट होती है या नहीं, यह "
+"जाँचने का शायद सबसे तेज़ तरीक़ा है पायथन प्रॉम्प्ट पर कोई शब्द टाइप करके बायाँ तीर "
+"(या :kbd:`Control-b`) दबाना। अगर कर्सर हिलता है, तो आपके पास कमांड लाइन एडिटिंग "
+"है; कुंजियों के परिचय के लिए परिशिष्ट :ref:`tut-interacting` देखें। अगर कुछ होता न दिखे, "
+"या ``^[[D`` या ``^B`` जैसा क्रम दिखे, तो कमांड लाइन एडिटिंग उपलब्ध नहीं है; आप मौजूदा "
+"लाइन से कैरेक्टर हटाने के लिए सिर्फ़ बैकस्पेस इस्तेमाल कर पाएँगे।"
 
 #: tutorial/interpreter.rst:46
 msgid ""
@@ -82,6 +103,10 @@ msgid ""
 "interactively; when called with a file name argument or with a file as "
 "standard input, it reads and executes a *script* from that file."
 msgstr ""
+"इंटरप्रेटर कुछ हद तक Unix शेल की तरह काम करता है: जब उसे tty डिवाइस से जुड़े स्टैंडर्ड इनपुट "
+"के साथ चलाया जाता है, तो वह कमांड इंटरैक्टिव रूप से पढ़ता और चलाता है; जब उसे फ़ाइल नाम "
+"आर्ग्युमेंट के साथ या स्टैंडर्ड इनपुट के रूप में किसी फ़ाइल के साथ चलाया जाता है, तो वह उस "
+"फ़ाइल से एक *स्क्रिप्ट* पढ़ता और चलाता है।"
 
 #: tutorial/interpreter.rst:51
 msgid ""
@@ -91,6 +116,10 @@ msgid ""
 "or other characters that are special to the shell, it is usually advised to "
 "quote *command* in its entirety."
 msgstr ""
+"इंटरप्रेटर शुरू करने का दूसरा तरीक़ा ``python -c command [arg] ...`` है, जो *command* "
+"में दिए स्टेटमेंट चलाता है, ठीक शेल के :option:`-c` विकल्प की तरह। चूँकि पायथन स्टेटमेंट में "
+"अक्सर स्पेस या शेल के लिए ख़ास दूसरे कैरेक्टर होते हैं, इसलिए आम तौर पर सलाह दी जाती है कि "
+"पूरे *command* को उद्धरण चिह्नों (कोट) में रखें।"
 
 #: tutorial/interpreter.rst:57
 msgid ""
@@ -98,6 +127,9 @@ msgid ""
 "``python -m module [arg] ...``, which executes the source file for *module* "
 "as if you had spelled out its full name on the command line."
 msgstr ""
+"कुछ पायथन मॉड्यूल स्क्रिप्ट के रूप में भी उपयोगी होते हैं। उन्हें ``python -m module "
+"[arg] ...`` से चलाया जा सकता है, जो *module* की सोर्स फ़ाइल को ऐसे चलाता है मानो "
+"आपने कमांड लाइन पर उसका पूरा नाम लिखा हो।"
 
 #: tutorial/interpreter.rst:61
 msgid ""
@@ -105,14 +137,16 @@ msgid ""
 "script and enter interactive mode afterwards.  This can be done by "
 "passing :option:`-i` before the script."
 msgstr ""
+"स्क्रिप्ट फ़ाइल इस्तेमाल करते समय, कभी-कभी स्क्रिप्ट चलाकर उसके बाद इंटरैक्टिव मोड में जाना "
+"उपयोगी होता है। यह स्क्रिप्ट से पहले :option:`-i` देकर किया जा सकता है।"
 
 #: tutorial/interpreter.rst:65
 msgid "All command line options are described in :ref:`using-on-general`."
-msgstr ""
+msgstr "सभी कमांड लाइन विकल्पों का विवरण :ref:`using-on-general` में है।"
 
 #: tutorial/interpreter.rst:71
 msgid "Argument Passing"
-msgstr ""
+msgstr "आर्ग्युमेंट पास करना"
 
 #: tutorial/interpreter.rst:73
 msgid ""
@@ -129,10 +163,21 @@ msgid ""
 "interpreter's option processing but left in ``sys.argv`` for  the command or "
 "module to handle."
 msgstr ""
+"जब इंटरप्रेटर को स्क्रिप्ट का नाम और उसके बाद के अतिरिक्त आर्ग्युमेंट पता होते हैं, तो उन्हें "
+"स्ट्रिंग की एक लिस्ट में बदलकर ``sys`` मॉड्यूल के ``argv`` वेरिएबल को असाइन किया जाता "
+"है। ``import sys`` चलाकर आप इस लिस्ट तक पहुँच सकते हैं। लिस्ट की लंबाई कम से कम एक "
+"होती है; जब कोई स्क्रिप्ट और कोई आर्ग्युमेंट नहीं दिया जाता, तो ``sys.argv[0]`` एक "
+"ख़ाली स्ट्रिंग होता है। जब स्क्रिप्ट का नाम ``'-'`` (यानी स्टैंडर्ड इनपुट) दिया जाता है, "
+"तो ``sys.argv[0]`` को ``'-'`` सेट किया जाता है। जब :option:`-c` *command* "
+"इस्तेमाल होता है, तो ``sys.argv[0]`` को ``'-c'`` सेट किया जाता है। जब :option:`-"
+"m` *module* इस्तेमाल होता है, तो ``sys.argv[0]`` को ढूँढे गए मॉड्यूल के पूरे नाम पर सेट "
+"किया जाता है। :option:`-c` *command* या :option:`-m` *module* के बाद मिलने वाले "
+"विकल्पों को पायथन इंटरप्रेटर की विकल्प प्रोसेसिंग इस्तेमाल नहीं करती, बल्कि उन्हें कमांड या "
+"मॉड्यूल के लिए ``sys.argv`` में छोड़ देती है।"
 
 #: tutorial/interpreter.rst:89
 msgid "Interactive Mode"
-msgstr ""
+msgstr "इंटरैक्टिव मोड"
 
 #: tutorial/interpreter.rst:91
 msgid ""
@@ -143,6 +188,11 @@ msgid ""
 "dots (``...``). The interpreter prints a welcome message stating its version "
 "number and a copyright notice before printing the first prompt:"
 msgstr ""
+"जब कमांड tty से पढ़े जाते हैं, तो कहा जाता है कि इंटरप्रेटर *इंटरैक्टिव मोड* में है। इस मोड में "
+"वह अगले कमांड के लिए *प्राइमरी प्रॉम्प्ट* दिखाता है, जो आम तौर पर तीन ग्रेटर-दैन चिह्न "
+"(``>>>``) होते हैं; कंटिन्यूएशन लाइनों के लिए वह *सेकेंडरी प्रॉम्प्ट* दिखाता है, जो डिफ़ॉल्ट "
+"रूप से तीन बिंदु (``...``) होते हैं। पहला प्रॉम्प्ट दिखाने से पहले इंटरप्रेटर एक स्वागत संदेश "
+"प्रिंट करता है, जिसमें उसका वर्ज़न नंबर और कॉपीराइट सूचना होती है:"
 
 #: tutorial/interpreter.rst:98
 msgid ""
@@ -153,12 +203,20 @@ msgid ""
 "information.\n"
 ">>>"
 msgstr ""
+"$ python3.15\n"
+"Python 3.15 (default, May 7 2025, 15:46:04)\n"
+"[GCC 10.2.0] on linux\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
 
 #: tutorial/interpreter.rst:108
 msgid ""
 "Continuation lines are needed when entering a multi-line construct. As an "
 "example, take a look at this :keyword:`if` statement::"
 msgstr ""
+"कई लाइनों वाला कोई ढाँचा लिखते समय कंटिन्यूएशन लाइनों की ज़रूरत होती है। उदाहरण के लिए, "
+"इस :keyword:`if` स्टेटमेंट को देखें::"
 
 #: tutorial/interpreter.rst:111
 msgid ""
@@ -168,18 +226,23 @@ msgid ""
 "...\n"
 "Be careful not to fall off!"
 msgstr ""
+">>> the_world_is_flat = True\n"
+">>> if the_world_is_flat:\n"
+"...     print(\"Be careful not to fall off!\")\n"
+"...\n"
+"Be careful not to fall off!"
 
 #: tutorial/interpreter.rst:118
 msgid "For more on interactive mode, see :ref:`tut-interac`."
-msgstr ""
+msgstr "इंटरैक्टिव मोड के बारे में और जानकारी के लिए :ref:`tut-interac` देखें।"
 
 #: tutorial/interpreter.rst:124
 msgid "The Interpreter and Its Environment"
-msgstr ""
+msgstr "इंटरप्रेटर और उसका वातावरण"
 
 #: tutorial/interpreter.rst:130
 msgid "Source Code Encoding"
-msgstr ""
+msgstr "सोर्स कोड एन्कोडिंग"
 
 #: tutorial/interpreter.rst:132
 msgid ""
@@ -191,30 +254,42 @@ msgid ""
 "properly, your editor must recognize that the file is UTF-8, and it must use "
 "a font that supports all the characters in the file."
 msgstr ""
+"डिफ़ॉल्ट रूप से, पायथन सोर्स फ़ाइलों को UTF-8 में एन्कोड माना जाता है। इस एन्कोडिंग में, "
+"दुनिया की ज़्यादातर भाषाओं के कैरेक्टर स्ट्रिंग लिटरल, आइडेंटिफ़ायर और कमेंट में एक साथ इस्तेमाल "
+"किए जा सकते हैं --- हालाँकि स्टैंडर्ड लाइब्रेरी आइडेंटिफ़ायर के लिए सिर्फ़ ASCII कैरेक्टर "
+"इस्तेमाल करती है, और यह एक ऐसा नियम है जिसका पालन हर पोर्टेबल कोड को करना चाहिए। "
+"इन सभी कैरेक्टरों को सही तरह दिखाने के लिए, आपके एडिटर को पहचानना होगा कि फ़ाइल "
+"UTF-8 है, और उसे ऐसा फ़ॉन्ट इस्तेमाल करना होगा जो फ़ाइल के सभी कैरेक्टरों को सपोर्ट करता "
+"हो।"
 
 #: tutorial/interpreter.rst:140
 msgid ""
 "To declare an encoding other than the default one, a special comment line "
 "should be added as the *first* line of the file.  The syntax is as follows::"
 msgstr ""
+"डिफ़ॉल्ट के अलावा कोई दूसरी एन्कोडिंग घोषित करने के लिए, फ़ाइल की *पहली* लाइन के रूप में "
+"एक ख़ास कमेंट लाइन जोड़नी चाहिए। इसका सिंटैक्स इस तरह है::"
 
 #: tutorial/interpreter.rst:143
 msgid "# -*- coding: encoding -*-"
-msgstr ""
+msgstr "# -*- coding: encoding -*-"
 
 #: tutorial/interpreter.rst:145
 msgid "where *encoding* is one of the valid :mod:`codecs` supported by Python."
 msgstr ""
+"जहाँ *encoding* पायथन द्वारा सपोर्ट किए जाने वाले मान्य :mod:`codecs` में से एक है।"
 
 #: tutorial/interpreter.rst:147
 msgid ""
 "For example, to declare that Windows-1252 encoding is to be used, the first "
 "line of your source code file should be::"
 msgstr ""
+"उदाहरण के लिए, Windows-1252 एन्कोडिंग इस्तेमाल करने की घोषणा के लिए, आपकी सोर्स कोड "
+"फ़ाइल की पहली लाइन यह होनी चाहिए::"
 
 #: tutorial/interpreter.rst:150
 msgid "# -*- coding: cp1252 -*-"
-msgstr ""
+msgstr "# -*- coding: cp1252 -*-"
 
 #: tutorial/interpreter.rst:152
 msgid ""
@@ -222,16 +297,21 @@ msgid ""
 "a :ref:`UNIX \"shebang\" line <tut-scripts>`.  In this case, the encoding "
 "declaration should be added as the second line of the file.  For example::"
 msgstr ""
+"*पहली लाइन* वाले नियम का एक अपवाद तब है जब सोर्स कोड :ref:`UNIX \"shebang\" "
+"लाइन <tut-scripts>` से शुरू होता है। इस स्थिति में, एन्कोडिंग की घोषणा फ़ाइल की दूसरी "
+"लाइन के रूप में जोड़नी चाहिए। उदाहरण के लिए::"
 
 #: tutorial/interpreter.rst:156
 msgid ""
 "#!/usr/bin/env python3\n"
 "# -*- coding: cp1252 -*-"
 msgstr ""
+"#!/usr/bin/env python3\n"
+"# -*- coding: cp1252 -*-"
 
 #: tutorial/interpreter.rst:160
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/interpreter.rst:161
 msgid ""
@@ -239,3 +319,6 @@ msgid ""
 "executable named ``python``, so that it does not conflict with a "
 "simultaneously installed Python 2.x executable."
 msgstr ""
+"Unix पर, पायथन 3.x इंटरप्रेटर डिफ़ॉल्ट रूप से ``python`` नाम के एग्ज़िक्यूटेबल के साथ "
+"इंस्टॉल नहीं होता, ताकि एक साथ इंस्टॉल किए गए पायथन 2.x एग्ज़िक्यूटेबल से उसका टकराव न "
+"हो।"
