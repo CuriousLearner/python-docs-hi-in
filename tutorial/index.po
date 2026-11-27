@@ -3,29 +3,31 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/index.rst:5
 msgid "The Python Tutorial"
-msgstr ""
+msgstr "पायथन ट्यूटोरियल"
 
 #: tutorial/index.rst:7
 msgid ""
 "This tutorial is designed for *programmers* that are new to the Python "
 "language, **not** *beginners* who are new to programming."
 msgstr ""
+"यह ट्यूटोरियल उन *प्रोग्रामरों* के लिए बनाया गया है जो पायथन भाषा में नए हैं, उन *शुरुआती "
+"लोगों* के लिए **नहीं** जो प्रोग्रामिंग में ही नए हैं।"
 
 #: tutorial/index.rst:11
 msgid ""
@@ -35,6 +37,11 @@ msgid ""
 "with its interpreted nature, make it an ideal language for scripting and "
 "rapid application development in many areas on most platforms."
 msgstr ""
+"पायथन एक आसानी से सीखी जाने वाली, शक्तिशाली प्रोग्रामिंग भाषा है। इसमें कुशल हाई-लेवल "
+"डेटा स्ट्रक्चर हैं और ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग का एक सरल लेकिन असरदार तरीक़ा है। पायथन "
+"का सुंदर सिंटैक्स और डायनामिक टाइपिंग, उसके इंटरप्रेटेड स्वभाव के साथ मिलकर, उसे ज़्यादातर "
+"प्लेटफ़ॉर्म पर कई क्षेत्रों में स्क्रिप्टिंग और तेज़ी से एप्लिकेशन बनाने के लिए एक आदर्श भाषा बनाते "
+"हैं।"
 
 #: tutorial/index.rst:17
 msgid ""
@@ -44,6 +51,10 @@ msgid ""
 "site also contains distributions of and pointers to many free third party "
 "Python modules, programs and tools, and additional documentation."
 msgstr ""
+"पायथन इंटरप्रेटर और विस्तृत स्टैंडर्ड लाइब्रेरी सभी प्रमुख प्लेटफ़ॉर्म के लिए सोर्स या बाइनरी "
+"रूप में पायथन वेबसाइट, https://www.python.org/, से मुफ़्त में उपलब्ध हैं, और इन्हें मुफ़्त में "
+"बाँटा जा सकता है। इसी साइट पर कई मुफ़्त थर्ड-पार्टी पायथन मॉड्यूल, प्रोग्राम और टूल के "
+"डिस्ट्रिब्यूशन और उनके लिंक, और अतिरिक्त डॉक्यूमेंटेशन भी हैं।"
 
 #: tutorial/index.rst:23
 msgid ""
@@ -51,6 +62,9 @@ msgid ""
 "implemented in C or C++ (or other languages callable from C). Python is also "
 "suitable as an extension language for customizable applications."
 msgstr ""
+"पायथन इंटरप्रेटर में C या C++ (या C से कॉल की जा सकने वाली दूसरी भाषाओं) में लिखे नए "
+"फ़ंक्शन और डेटा टाइप आसानी से जोड़े जा सकते हैं। पायथन कस्टमाइज़ किए जा सकने वाले एप्लिकेशन "
+"के लिए एक्सटेंशन भाषा के रूप में भी उपयुक्त है।"
 
 #: tutorial/index.rst:27
 msgid ""
@@ -60,6 +74,11 @@ msgid ""
 "Python interpreter handy for hands-on experience, but all examples are self-"
 "contained, so the tutorial can be read off-line as well."
 msgstr ""
+"यह ट्यूटोरियल पाठक को पायथन भाषा और सिस्टम की बुनियादी अवधारणाओं और सुविधाओं से "
+"अनौपचारिक रूप से परिचित कराता है। ध्यान रखें कि यह मानकर चलता है कि आपको प्रोग्रामिंग "
+"की सामान्य बुनियादी समझ है। ख़ुद आज़माकर सीखने के लिए पास में पायथन इंटरप्रेटर होना "
+"मददगार है, लेकिन सभी उदाहरण अपने-आप में पूरे हैं, इसलिए ट्यूटोरियल को ऑफ़लाइन भी पढ़ा जा "
+"सकता है।"
 
 #: tutorial/index.rst:33
 msgid ""
@@ -69,6 +88,10 @@ msgid ""
 "read :ref:`extending-index` and :ref:`c-api-index`. There are also several "
 "books covering Python in depth."
 msgstr ""
+"स्टैंडर्ड ऑब्जेक्ट और मॉड्यूल के विवरण के लिए :ref:`builtins-index` और :ref:`library-"
+"index` देखें। :ref:`reference-index` भाषा की ज़्यादा औपचारिक परिभाषा देता है। C या "
+"C++ में एक्सटेंशन लिखने के लिए :ref:`extending-index` और :ref:`c-api-index` पढ़ें। "
+"पायथन को गहराई से समझाने वाली कई किताबें भी हैं।"
 
 #: tutorial/index.rst:38
 msgid ""
@@ -79,7 +102,12 @@ msgid ""
 "write Python modules and programs, and you will be ready to learn more about "
 "the various Python library modules described in :ref:`library-index`."
 msgstr ""
+"यह ट्यूटोरियल हर एक सुविधा को, या आम तौर पर इस्तेमाल होने वाली हर सुविधा को भी, "
+"शामिल करने की कोशिश नहीं करता। इसके बजाय, यह पायथन की कई सबसे ख़ास सुविधाओं से परिचय "
+"कराता है, और आपको भाषा के मिज़ाज और शैली का अच्छा अंदाज़ा देगा। इसे पढ़ने के बाद, आप "
+"पायथन मॉड्यूल और प्रोग्राम पढ़ और लिख सकेंगे, और :ref:`library-index` में बताए गए अलग-"
+"अलग पायथन लाइब्रेरी मॉड्यूल के बारे में और सीखने के लिए तैयार होंगे।"
 
 #: tutorial/index.rst:45
 msgid "The :ref:`glossary` is also worth going through."
-msgstr ""
+msgstr ":ref:`glossary` भी पढ़ने लायक है।"
