@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/introduction.rst:5
 msgid "An Informal Introduction to Python"
-msgstr ""
+msgstr "पायथन का एक अनौपचारिक परिचय"
 
 #: tutorial/introduction.rst:7
 msgid ""
@@ -30,6 +30,12 @@ msgid ""
 "that a secondary prompt on a line by itself in an example means you must "
 "type a blank line; this is used to end a multi-line command."
 msgstr ""
+"नीचे के उदाहरणों में, इनपुट और आउटपुट प्रॉम्प्ट (:term:`>>>` और :term:`...`) के होने या "
+"न होने से पहचाने जाते हैं: उदाहरण दोहराने के लिए, प्रॉम्प्ट दिखने पर आपको प्रॉम्प्ट के बाद "
+"का सब कुछ टाइप करना होगा; जो लाइनें प्रॉम्प्ट से शुरू नहीं होतीं, वे इंटरप्रेटर का आउटपुट हैं। "
+"ध्यान दें कि उदाहरण में किसी लाइन पर अकेला सेकेंडरी प्रॉम्प्ट होने का मतलब है कि आपको एक "
+"ख़ाली लाइन टाइप करनी होगी; इसका इस्तेमाल कई लाइनों वाले कमांड को ख़त्म करने के लिए "
+"होता है।"
 
 #: tutorial/introduction.rst:16
 msgid ""
@@ -37,6 +43,9 @@ msgid ""
 "hovering over or tapping a code example), which strips prompts and omits "
 "output, to copy and paste the input lines into your interpreter."
 msgstr ""
+"आप \"Copy\" बटन इस्तेमाल कर सकते हैं (यह किसी कोड उदाहरण पर माउस ले जाने या टैप करने "
+"पर ऊपर दाएँ कोने में दिखता है), जो प्रॉम्प्ट हटाकर और आउटपुट छोड़कर इनपुट लाइनों को आपके "
+"इंटरप्रेटर में कॉपी और पेस्ट करने देता है।"
 
 #: tutorial/introduction.rst:22
 msgid ""
@@ -48,10 +57,16 @@ msgid ""
 "Since comments are to clarify code and are not interpreted by Python, they "
 "may be omitted when typing in examples."
 msgstr ""
+"इस मैनुअल के कई उदाहरणों में, इंटरैक्टिव प्रॉम्प्ट पर डाले गए उदाहरणों में भी, कमेंट हैं। पायथन "
+"में कमेंट हैश कैरेक्टर, ``#``, से शुरू होते हैं और फ़िज़िकल लाइन के अंत तक चलते हैं। कमेंट लाइन की "
+"शुरुआत में, या ख़ाली जगह या कोड के बाद आ सकता है, लेकिन स्ट्रिंग लिटरल के अंदर नहीं। स्ट्रिंग "
+"लिटरल के अंदर का हैश कैरेक्टर सिर्फ़ एक हैश कैरेक्टर है। चूँकि कमेंट कोड को स्पष्ट करने के लिए "
+"होते हैं और पायथन उन्हें इंटरप्रेट नहीं करता, इसलिए उदाहरण टाइप करते समय उन्हें छोड़ा जा "
+"सकता है।"
 
 #: tutorial/introduction.rst:30
 msgid "Some examples::"
-msgstr ""
+msgstr "कुछ उदाहरण::"
 
 #: tutorial/introduction.rst:32
 msgid ""
@@ -60,20 +75,26 @@ msgid ""
 "          # ... and now a third!\n"
 "text = \"# This is not a comment because it's inside quotes.\""
 msgstr ""
+"# this is the first comment\n"
+"spam = 1  # and this is the second comment\n"
+"          # ... and now a third!\n"
+"text = \"# This is not a comment because it's inside quotes.\""
 
 #: tutorial/introduction.rst:41
 msgid "Using Python as a Calculator"
-msgstr ""
+msgstr "पायथन को कैलकुलेटर की तरह इस्तेमाल करना"
 
 #: tutorial/introduction.rst:43
 msgid ""
 "Let's try some simple Python commands.  Start the interpreter and wait for "
 "the primary prompt, ``>>>``.  (It shouldn't take long.)"
 msgstr ""
+"आइए कुछ सरल पायथन कमांड आज़माएँ। इंटरप्रेटर शुरू करें और प्राइमरी प्रॉम्प्ट, ``>>>``, का "
+"इंतज़ार करें। (इसमें ज़्यादा समय नहीं लगना चाहिए।)"
 
 #: tutorial/introduction.rst:50
 msgid "Numbers"
-msgstr ""
+msgstr "नंबर"
 
 #: tutorial/introduction.rst:52
 msgid ""
@@ -82,6 +103,10 @@ msgid ""
 "operators ``+``, ``-``, ``*`` and ``/`` can be used to perform arithmetic; "
 "parentheses (``()``) can be used for grouping. For example::"
 msgstr ""
+"इंटरप्रेटर एक सरल कैलकुलेटर की तरह काम करता है: आप उसमें कोई एक्सप्रेशन टाइप कर सकते हैं और "
+"वह उसका मान लिख देगा। एक्सप्रेशन का सिंटैक्स सीधा है: अंकगणित के लिए ``+``, ``-``, "
+"``*`` और ``/`` ऑपरेटर इस्तेमाल किए जा सकते हैं; समूह बनाने के लिए कोष्ठक (``()``) "
+"इस्तेमाल किए जा सकते हैं। उदाहरण के लिए::"
 
 #: tutorial/introduction.rst:58
 msgid ""
@@ -94,6 +119,14 @@ msgid ""
 ">>> 8 / 5  # division always returns a floating-point number\n"
 "1.6"
 msgstr ""
+">>> 2 + 2\n"
+"4\n"
+">>> 50 - 5*6\n"
+"20\n"
+">>> (50 - 5*6) / 4\n"
+"5.0\n"
+">>> 8 / 5  # division always returns a floating-point number\n"
+"1.6"
 
 #: tutorial/introduction.rst:67
 msgid ""
@@ -102,6 +135,9 @@ msgid ""
 "type :class:`float`.  We will see more about numeric types later in the "
 "tutorial."
 msgstr ""
+"पूर्णांक नंबरों (जैसे ``2``, ``4``, ``20``) का टाइप :class:`int` है, और भिन्नात्मक "
+"हिस्से वाले नंबरों (जैसे ``5.0``, ``1.6``) का टाइप :class:`float` है। ट्यूटोरियल में आगे "
+"हम संख्यात्मक टाइप के बारे में और देखेंगे।"
 
 #: tutorial/introduction.rst:71
 msgid ""
@@ -109,6 +145,9 @@ msgid ""
 "get an integer result you can use the ``//`` operator; to calculate the "
 "remainder you can use ``%``::"
 msgstr ""
+"भाग (``/``) हमेशा float लौटाता है। :term:`फ़्लोर डिवीज़न <floor division>` करके "
+"पूर्णांक नतीजा पाने के लिए आप ``//`` ऑपरेटर इस्तेमाल कर सकते हैं; शेषफल निकालने के लिए आप "
+"``%`` इस्तेमाल कर सकते हैं::"
 
 #: tutorial/introduction.rst:75
 msgid ""
@@ -122,12 +161,21 @@ msgid ""
 ">>> 5 * 3 + 2  # floored quotient * divisor + remainder\n"
 "17"
 msgstr ""
+">>> 17 / 3  # classic division returns a float\n"
+"5.666666666666667\n"
+">>>\n"
+">>> 17 // 3  # floor division discards the fractional part\n"
+"5\n"
+">>> 17 % 3  # the % operator returns the remainder of the division\n"
+"2\n"
+">>> 5 * 3 + 2  # floored quotient * divisor + remainder\n"
+"17"
 
 #: tutorial/introduction.rst:85
 msgid ""
 "With Python, it is possible to use the ``**`` operator to calculate powers "
 "[#]_::"
-msgstr ""
+msgstr "पायथन में घात निकालने के लिए ``**`` ऑपरेटर इस्तेमाल किया जा सकता है [#]_::"
 
 #: tutorial/introduction.rst:87
 msgid ""
@@ -136,12 +184,18 @@ msgid ""
 ">>> 2 ** 7  # 2 to the power of 7\n"
 "128"
 msgstr ""
+">>> 5 ** 2  # 5 squared\n"
+"25\n"
+">>> 2 ** 7  # 2 to the power of 7\n"
+"128"
 
 #: tutorial/introduction.rst:92
 msgid ""
 "The equal sign (``=``) is used to assign a value to a variable. Afterwards, "
 "no result is displayed before the next interactive prompt::"
 msgstr ""
+"किसी वेरिएबल को मान असाइन करने के लिए बराबर का चिह्न (``=``) इस्तेमाल होता है। इसके "
+"बाद, अगले इंटरैक्टिव प्रॉम्प्ट से पहले कोई नतीजा नहीं दिखता::"
 
 #: tutorial/introduction.rst:95
 msgid ""
@@ -150,12 +204,18 @@ msgid ""
 ">>> width * height\n"
 "900"
 msgstr ""
+">>> width = 20\n"
+">>> height = 5 * 9\n"
+">>> width * height\n"
+"900"
 
 #: tutorial/introduction.rst:100
 msgid ""
 "If a variable is not \"defined\" (assigned a value), trying to use it will "
 "give you an error::"
 msgstr ""
+"अगर कोई वेरिएबल \"परिभाषित\" नहीं है (उसे कोई मान असाइन नहीं किया गया), तो उसे "
+"इस्तेमाल करने की कोशिश करने पर त्रुटि मिलेगी::"
 
 #: tutorial/introduction.rst:103
 msgid ""
@@ -164,18 +224,26 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "NameError: name 'n' is not defined"
 msgstr ""
+">>> n  # try to access an undefined variable\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"NameError: name 'n' is not defined"
 
 #: tutorial/introduction.rst:108
 msgid ""
 "There is full support for floating point; operators with mixed type operands "
 "convert the integer operand to floating point::"
 msgstr ""
+"फ़्लोटिंग पॉइंट का पूरा सपोर्ट है; अलग-अलग टाइप के ऑपरेंड वाले ऑपरेटर पूर्णांक ऑपरेंड को "
+"फ़्लोटिंग पॉइंट में बदल देते हैं::"
 
 #: tutorial/introduction.rst:111
 msgid ""
 ">>> 4 * 3.75 - 1\n"
 "14.0"
 msgstr ""
+">>> 4 * 3.75 - 1\n"
+"14.0"
 
 #: tutorial/introduction.rst:114
 msgid ""
@@ -183,6 +251,9 @@ msgid ""
 "``_``.  This means that when you are using Python as a desk calculator, it "
 "is somewhat easier to continue calculations, for example::"
 msgstr ""
+"इंटरैक्टिव मोड में, आख़िरी प्रिंट हुआ एक्सप्रेशन वेरिएबल ``_`` को असाइन होता है। इसका मतलब "
+"है कि जब आप पायथन को डेस्क कैलकुलेटर की तरह इस्तेमाल कर रहे हों, तो गणनाएँ आगे बढ़ाना कुछ "
+"आसान होता है, उदाहरण के लिए::"
 
 #: tutorial/introduction.rst:118
 msgid ""
@@ -195,6 +266,14 @@ msgid ""
 ">>> round(_, 2)\n"
 "113.06"
 msgstr ""
+">>> tax = 12.5 / 100\n"
+">>> price = 100.50\n"
+">>> price * tax\n"
+"12.5625\n"
+">>> price + _\n"
+"113.0625\n"
+">>> round(_, 2)\n"
+"113.06"
 
 #: tutorial/introduction.rst:127
 msgid ""
@@ -202,6 +281,9 @@ msgid ""
 "assign a value to it --- you would create an independent local variable with "
 "the same name masking the built-in variable with its magic behavior."
 msgstr ""
+"यूज़र को यह वेरिएबल सिर्फ़ पढ़ने के लिए मानना चाहिए। इसे स्पष्ट रूप से कोई मान असाइन न करें "
+"--- ऐसा करने पर आप उसी नाम का एक अलग लोकल वेरिएबल बना देंगे, जो अपने ख़ास व्यवहार "
+"वाले बिल्ट-इन वेरिएबल को छिपा देगा।"
 
 #: tutorial/introduction.rst:131
 msgid ""
@@ -211,10 +293,14 @@ msgid ""
 "for :ref:`complex numbers <typesnumeric>`, and uses the ``j`` or ``J`` "
 "suffix to indicate the imaginary part (e.g. ``3+5j``)."
 msgstr ""
+":class:`int` और :class:`float` के अलावा, पायथन दूसरी तरह के नंबर भी सपोर्ट करता "
+"है, जैसे :class:`~decimal.Decimal` और :class:`~fractions.Fraction`। पायथन "
+"में :ref:`सम्मिश्र संख्याओं <typesnumeric>` का बिल्ट-इन सपोर्ट भी है, और काल्पनिक हिस्सा "
+"बताने के लिए ``j`` या ``J`` प्रत्यय इस्तेमाल होता है (जैसे ``3+5j``)।"
 
 #: tutorial/introduction.rst:141
 msgid "Text"
-msgstr ""
+msgstr "टेक्स्ट"
 
 #: tutorial/introduction.rst:143
 msgid ""
@@ -224,6 +310,11 @@ msgid ""
 "\"``Yay! :)``\". They can be enclosed in single quotes (``'...'``) or double "
 "quotes (``\"...\"``) with the same result [#]_."
 msgstr ""
+"पायथन नंबरों के साथ-साथ टेक्स्ट (जो :class:`str` टाइप से दर्शाया जाता है, यानी "
+"तथाकथित \"स्ट्रिंग\") के साथ भी काम कर सकता है। इसमें कैरेक्टर \"``!``\", शब्द "
+"\"``rabbit``\", नाम \"``Paris``\", वाक्य \"``Got your back.``\", "
+"\"``Yay! :)``\" वगैरह शामिल हैं। इन्हें सिंगल कोट (``'...'``) या डबल कोट (``\"..."
+"\"``) में रखा जा सकता है, नतीजा एक ही होता है [#]_।"
 
 #: tutorial/introduction.rst:149
 msgid ""
@@ -234,12 +325,20 @@ msgid ""
 ">>> '1975'  # digits and numerals enclosed in quotes are also strings\n"
 "'1975'"
 msgstr ""
+">>> 'spam eggs'  # single quotes\n"
+"'spam eggs'\n"
+">>> \"Paris rabbit got your back :)! Yay!\"  # double quotes\n"
+"'Paris rabbit got your back :)! Yay!'\n"
+">>> '1975'  # digits and numerals enclosed in quotes are also strings\n"
+"'1975'"
 
 #: tutorial/introduction.rst:158
 msgid ""
 "To quote a quote, we need to \"escape\" it, by preceding it with ``\\``. "
 "Alternatively, we can use the other type of quotation marks::"
 msgstr ""
+"कोट के अंदर कोट लिखने के लिए, हमें उसे ``\\`` लगाकर \"एस्केप\" करना होगा। या फिर, हम "
+"दूसरी तरह के कोट इस्तेमाल कर सकते हैं::"
 
 #: tutorial/introduction.rst:161
 msgid ""
@@ -254,6 +353,16 @@ msgid ""
 ">>> '\"Isn\\'t,\" they said.'\n"
 "'\"Isn\\'t,\" they said.'"
 msgstr ""
+">>> 'doesn\\'t'  # use \\' to escape the single quote...\n"
+"\"doesn't\"\n"
+">>> \"doesn't\"  # ...or use double quotes instead\n"
+"\"doesn't\"\n"
+">>> '\"Yes,\" they said.'\n"
+"'\"Yes,\" they said.'\n"
+">>> \"\\\"Yes,\\\" they said.\"\n"
+"'\"Yes,\" they said.'\n"
+">>> '\"Isn\\'t,\" they said.'\n"
+"'\"Isn\\'t,\" they said.'"
 
 #: tutorial/introduction.rst:172
 msgid ""
@@ -262,6 +371,9 @@ msgid ""
 "omitting the enclosing quotes and by printing escaped and special "
 "characters::"
 msgstr ""
+"पायथन शेल में, स्ट्रिंग की परिभाषा और आउटपुट स्ट्रिंग अलग दिख सकती हैं। :func:`print` "
+"फ़ंक्शन बाहरी कोट हटाकर और एस्केप किए गए और ख़ास कैरेक्टर प्रिंट करके ज़्यादा पढ़ने लायक "
+"आउटपुट देता है::"
 
 #: tutorial/introduction.rst:176
 msgid ""
@@ -273,6 +385,13 @@ msgid ""
 "First line.\n"
 "Second line."
 msgstr ""
+">>> s = 'First line.\\nSecond line.'  # \\n means newline\n"
+">>> s  # without print(), special characters are included in the string\n"
+"'First line.\\nSecond line.'\n"
+">>> print(s)  # with print(), special characters are interpreted, so \\n "
+"produces new line\n"
+"First line.\n"
+"Second line."
 
 #: tutorial/introduction.rst:183
 msgid ""
@@ -280,6 +399,8 @@ msgid ""
 "characters, you can use *raw strings* by adding an ``r`` before the first "
 "quote::"
 msgstr ""
+"अगर आप नहीं चाहते कि ``\\`` से शुरू होने वाले कैरेक्टर ख़ास कैरेक्टर के रूप में समझे जाएँ, तो आप "
+"पहले कोट से पहले ``r`` लगाकर *रॉ स्ट्रिंग* इस्तेमाल कर सकते हैं::"
 
 #: tutorial/introduction.rst:187
 msgid ""
@@ -289,6 +410,11 @@ msgid ""
 ">>> print(r'C:\\this\\name')  # note the r before the quote\n"
 "C:\\this\\name"
 msgstr ""
+">>> print('C:\\this\\name')  # here \\t means tab, \\n means newline\n"
+"C:      his\n"
+"ame\n"
+">>> print(r'C:\\this\\name')  # note the r before the quote\n"
+"C:\\this\\name"
 
 #: tutorial/introduction.rst:193
 msgid ""
@@ -296,6 +422,9 @@ msgid ""
 "odd number of ``\\`` characters; see :ref:`the FAQ entry <faq-programming-"
 "raw-string-backslash>` for more information and workarounds."
 msgstr ""
+"रॉ स्ट्रिंग की एक बारीक बात है: रॉ स्ट्रिंग विषम संख्या में ``\\`` कैरेक्टरों पर ख़त्म नहीं हो "
+"सकती; ज़्यादा जानकारी और इसके उपायों के लिए :ref:`FAQ की यह एंट्री <faq-programming-"
+"raw-string-backslash>` देखें।"
 
 #: tutorial/introduction.rst:198
 msgid ""
@@ -305,6 +434,10 @@ msgid ""
 "adding a ``\\`` at the end of the line.  In the following example, the "
 "initial newline is not included::"
 msgstr ""
+"स्ट्रिंग लिटरल कई लाइनों में फैल सकते हैं। एक तरीक़ा ट्रिपल कोट इस्तेमाल करना है: "
+"``\"\"\"...\"\"\"`` या ``'''...'''``। लाइन के अंत के कैरेक्टर अपने-आप स्ट्रिंग में शामिल "
+"हो जाते हैं, लेकिन लाइन के आख़िर में ``\\`` लगाकर इसे रोका जा सकता है। नीचे के उदाहरण में, "
+"शुरुआती न्यूलाइन शामिल नहीं है::"
 
 #: tutorial/introduction.rst:204
 msgid ""
@@ -319,12 +452,24 @@ msgid ""
 "\n"
 ">>>"
 msgstr ""
+">>> print(\"\"\"\\\n"
+"... Usage: thingy [OPTIONS]\n"
+"...      -h                        Display this usage message\n"
+"...      -H hostname               Hostname to connect to\n"
+"... \"\"\")\n"
+"Usage: thingy [OPTIONS]\n"
+"     -h                        Display this usage message\n"
+"     -H hostname               Hostname to connect to\n"
+"\n"
+">>>"
 
 #: tutorial/introduction.rst:215
 msgid ""
 "Strings can be concatenated (glued together) with the ``+`` operator, and "
 "repeated with ``*``::"
 msgstr ""
+"स्ट्रिंग को ``+`` ऑपरेटर से जोड़ा (कॉनकैटिनेट किया) जा सकता है, और ``*`` से दोहराया जा "
+"सकता है::"
 
 #: tutorial/introduction.rst:218
 msgid ""
@@ -332,23 +477,30 @@ msgid ""
 ">>> 3 * 'un' + 'ium'\n"
 "'unununium'"
 msgstr ""
+">>> # 3 times 'un', followed by 'ium'\n"
+">>> 3 * 'un' + 'ium'\n"
+"'unununium'"
 
 #: tutorial/introduction.rst:222
 msgid ""
 "Two or more *string literals* (i.e. the ones enclosed between quotes) next "
 "to each other are automatically concatenated. ::"
 msgstr ""
+"पास-पास लिखे दो या ज़्यादा *स्ट्रिंग लिटरल* (यानी कोट के बीच वाले) अपने-आप जुड़ जाते "
+"हैं। ::"
 
 #: tutorial/introduction.rst:225
 msgid ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
 msgstr ""
+">>> 'Py' 'thon'\n"
+"'Python'"
 
 #: tutorial/introduction.rst:228
 msgid ""
 "This feature is particularly useful when you want to break long strings::"
-msgstr ""
+msgstr "यह सुविधा ख़ास तौर पर तब उपयोगी है जब आप लंबी स्ट्रिंग को तोड़ना चाहते हैं::"
 
 #: tutorial/introduction.rst:230
 msgid ""
@@ -357,11 +509,15 @@ msgid ""
 ">>> text\n"
 "'Put several strings within parentheses to have them joined together.'"
 msgstr ""
+">>> text = ('Put several strings within parentheses '\n"
+"...         'to have them joined together.')\n"
+">>> text\n"
+"'Put several strings within parentheses to have them joined together.'"
 
 #: tutorial/introduction.rst:235
 msgid ""
 "This only works with two literals though, not with variables or expressions::"
-msgstr ""
+msgstr "लेकिन यह सिर्फ़ दो लिटरल के साथ काम करता है, वेरिएबल या एक्सप्रेशन के साथ नहीं::"
 
 #: tutorial/introduction.rst:237
 msgid ""
@@ -377,17 +533,32 @@ msgid ""
 "               ^^^^^\n"
 "SyntaxError: invalid syntax"
 msgstr ""
+">>> prefix = 'Py'\n"
+">>> prefix 'thon'  # can't concatenate a variable and a string literal\n"
+"  File \"<stdin>\", line 1\n"
+"    prefix 'thon'\n"
+"           ^^^^^^\n"
+"SyntaxError: invalid syntax\n"
+">>> ('un' * 3) 'ium'\n"
+"  File \"<stdin>\", line 1\n"
+"    ('un' * 3) 'ium'\n"
+"               ^^^^^\n"
+"SyntaxError: invalid syntax"
 
 #: tutorial/introduction.rst:249
 msgid ""
 "If you want to concatenate variables or a variable and a literal, use ``+``::"
 msgstr ""
+"अगर आप वेरिएबलों को, या किसी वेरिएबल और लिटरल को जोड़ना चाहते हैं, तो ``+`` इस्तेमाल "
+"करें::"
 
 #: tutorial/introduction.rst:251
 msgid ""
 ">>> prefix + 'thon'\n"
 "'Python'"
 msgstr ""
+">>> prefix + 'thon'\n"
+"'Python'"
 
 #: tutorial/introduction.rst:254
 msgid ""
@@ -395,6 +566,8 @@ msgid ""
 "index 0. There is no separate character type; a character is simply a string "
 "of size one::"
 msgstr ""
+"स्ट्रिंग को *इंडेक्स* किया जा सकता है (सबस्क्रिप्ट किया जा सकता है), जिसमें पहले कैरेक्टर का "
+"इंडेक्स 0 होता है। कैरेक्टर का कोई अलग टाइप नहीं है; कैरेक्टर बस लंबाई 1 वाली स्ट्रिंग है::"
 
 #: tutorial/introduction.rst:258
 msgid ""
@@ -404,11 +577,16 @@ msgid ""
 ">>> word[5]  # character in position 5\n"
 "'n'"
 msgstr ""
+">>> word = 'Python'\n"
+">>> word[0]  # character in position 0\n"
+"'P'\n"
+">>> word[5]  # character in position 5\n"
+"'n'"
 
 #: tutorial/introduction.rst:264
 msgid ""
 "Indices may also be negative numbers, to start counting from the right::"
-msgstr ""
+msgstr "दाईं ओर से गिनती शुरू करने के लिए, इंडेक्स ऋणात्मक नंबर भी हो सकते हैं::"
 
 #: tutorial/introduction.rst:266
 msgid ""
@@ -419,10 +597,16 @@ msgid ""
 ">>> word[-6]\n"
 "'P'"
 msgstr ""
+">>> word[-1]  # last character\n"
+"'n'\n"
+">>> word[-2]  # second-last character\n"
+"'o'\n"
+">>> word[-6]\n"
+"'P'"
 
 #: tutorial/introduction.rst:273
 msgid "Note that since -0 is the same as 0, negative indices start from -1."
-msgstr ""
+msgstr "ध्यान दें कि चूँकि -0 और 0 एक ही हैं, इसलिए ऋणात्मक इंडेक्स -1 से शुरू होते हैं।"
 
 #: tutorial/introduction.rst:275
 msgid ""
@@ -430,6 +614,8 @@ msgid ""
 "used to obtain individual characters, *slicing* allows you to obtain a "
 "substring::"
 msgstr ""
+"इंडेक्सिंग के अलावा, *स्लाइसिंग* भी सपोर्ट होती है। जहाँ इंडेक्सिंग से अलग-अलग कैरेक्टर मिलते "
+"हैं, वहीं *स्लाइसिंग* से आप एक सबस्ट्रिंग पा सकते हैं::"
 
 #: tutorial/introduction.rst:278
 msgid ""
@@ -438,12 +624,18 @@ msgid ""
 ">>> word[2:5]  # characters from position 2 (included) to 5 (excluded)\n"
 "'tho'"
 msgstr ""
+">>> word[0:2]  # characters from position 0 (included) to 2 (excluded)\n"
+"'Py'\n"
+">>> word[2:5]  # characters from position 2 (included) to 5 (excluded)\n"
+"'tho'"
 
 #: tutorial/introduction.rst:283
 msgid ""
 "Slice indices have useful defaults; an omitted first index defaults to zero, "
 "an omitted second index defaults to the size of the string being sliced. ::"
 msgstr ""
+"स्लाइस इंडेक्स के उपयोगी डिफ़ॉल्ट हैं; छोड़े गए पहले इंडेक्स का डिफ़ॉल्ट शून्य है, और छोड़े गए दूसरे "
+"इंडेक्स का डिफ़ॉल्ट स्लाइस की जा रही स्ट्रिंग का साइज़ है। ::"
 
 #: tutorial/introduction.rst:286
 msgid ""
@@ -454,12 +646,20 @@ msgid ""
 ">>> word[-2:]  # characters from the second-last (included) to the end\n"
 "'on'"
 msgstr ""
+">>> word[:2]   # character from the beginning to position 2 (excluded)\n"
+"'Py'\n"
+">>> word[4:]   # characters from position 4 (included) to the end\n"
+"'on'\n"
+">>> word[-2:]  # characters from the second-last (included) to the end\n"
+"'on'"
 
 #: tutorial/introduction.rst:293
 msgid ""
 "Note how the start is always included, and the end always excluded.  This "
 "makes sure that ``s[:i] + s[i:]`` is always equal to ``s``::"
 msgstr ""
+"ध्यान दें कि शुरुआत हमेशा शामिल होती है, और अंत हमेशा बाहर रहता है। इससे पक्का होता है कि "
+"``s[:i] + s[i:]`` हमेशा ``s`` के बराबर हो::"
 
 #: tutorial/introduction.rst:296
 msgid ""
@@ -468,6 +668,10 @@ msgid ""
 ">>> word[:4] + word[4:]\n"
 "'Python'"
 msgstr ""
+">>> word[:2] + word[2:]\n"
+"'Python'\n"
+">>> word[:4] + word[4:]\n"
+"'Python'"
 
 #: tutorial/introduction.rst:301
 msgid ""
@@ -476,6 +680,9 @@ msgid ""
 "Then the right edge of the last character of a string of *n* characters has "
 "index *n*, for example::"
 msgstr ""
+"स्लाइस कैसे काम करते हैं, यह याद रखने का एक तरीक़ा है इंडेक्स को कैरेक्टरों के *बीच* की जगह "
+"की ओर इशारा करते हुए सोचना, जिसमें पहले कैरेक्टर का बायाँ किनारा 0 है। तब *n* कैरेक्टर "
+"वाली स्ट्रिंग के आख़िरी कैरेक्टर के दाएँ किनारे का इंडेक्स *n* होता है, उदाहरण के लिए::"
 
 #: tutorial/introduction.rst:306
 msgid ""
@@ -485,6 +692,11 @@ msgid ""
 " 0   1   2   3   4   5   6\n"
 "-6  -5  -4  -3  -2  -1"
 msgstr ""
+" +---+---+---+---+---+---+\n"
+" | P | y | t | h | o | n |\n"
+" +---+---+---+---+---+---+\n"
+" 0   1   2   3   4   5   6\n"
+"-6  -5  -4  -3  -2  -1"
 
 #: tutorial/introduction.rst:312
 msgid ""
@@ -493,6 +705,9 @@ msgid ""
 "from *i* to *j* consists of all characters between the edges labeled *i* and "
 "*j*, respectively."
 msgstr ""
+"नंबरों की पहली पंक्ति स्ट्रिंग में इंडेक्स 0...6 की स्थिति बताती है; दूसरी पंक्ति उनके संगत "
+"ऋणात्मक इंडेक्स बताती है। *i* से *j* तक की स्लाइस में वे सभी कैरेक्टर होते हैं जो क्रमशः *i* "
+"और *j* वाले किनारों के बीच हैं।"
 
 #: tutorial/introduction.rst:317
 msgid ""
@@ -500,10 +715,12 @@ msgid ""
 "indices, if both are within bounds.  For example, the length of "
 "``word[1:3]`` is 2."
 msgstr ""
+"ग़ैर-ऋणात्मक इंडेक्स के लिए, अगर दोनों इंडेक्स सीमा के अंदर हैं, तो स्लाइस की लंबाई इंडेक्स का "
+"अंतर होती है। उदाहरण के लिए, ``word[1:3]`` की लंबाई 2 है।"
 
 #: tutorial/introduction.rst:321
 msgid "Attempting to use an index that is too large will result in an error::"
-msgstr ""
+msgstr "बहुत बड़ा इंडेक्स इस्तेमाल करने की कोशिश करने पर त्रुटि आएगी::"
 
 #: tutorial/introduction.rst:323
 msgid ""
@@ -512,12 +729,18 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "IndexError: string index out of range"
 msgstr ""
+">>> word[42]  # the word only has 6 characters\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"IndexError: string index out of range"
 
 #: tutorial/introduction.rst:328
 msgid ""
 "However, out of range slice indexes are handled gracefully when used for "
 "slicing::"
 msgstr ""
+"लेकिन स्लाइसिंग में इस्तेमाल किए जाने पर सीमा से बाहर के स्लाइस इंडेक्स बिना त्रुटि के संभाल "
+"लिए जाते हैं::"
 
 #: tutorial/introduction.rst:331
 msgid ""
@@ -526,12 +749,18 @@ msgid ""
 ">>> word[42:]\n"
 "''"
 msgstr ""
+">>> word[4:42]\n"
+"'on'\n"
+">>> word[42:]\n"
+"''"
 
 #: tutorial/introduction.rst:336
 msgid ""
 "Python strings cannot be changed --- they are :term:`immutable`. Therefore, "
 "assigning to an indexed position in the string results in an error::"
 msgstr ""
+"पायथन स्ट्रिंग बदली नहीं जा सकतीं --- वे :term:`इम्यूटेबल <immutable>` हैं। इसलिए, "
+"स्ट्रिंग में किसी इंडेक्स वाली स्थिति को असाइन करने पर त्रुटि आती है::"
 
 #: tutorial/introduction.rst:339
 msgid ""
@@ -544,10 +773,18 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: 'str' object does not support item assignment"
 msgstr ""
+">>> word[0] = 'J'\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: 'str' object does not support item assignment\n"
+">>> word[2:] = 'py'\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: 'str' object does not support item assignment"
 
 #: tutorial/introduction.rst:348
 msgid "If you need a different string, you should create a new one::"
-msgstr ""
+msgstr "अगर आपको अलग स्ट्रिंग चाहिए, तो आपको एक नई स्ट्रिंग बनानी चाहिए::"
 
 #: tutorial/introduction.rst:350
 msgid ""
@@ -556,10 +793,14 @@ msgid ""
 ">>> word[:2] + 'py'\n"
 "'Pypy'"
 msgstr ""
+">>> 'J' + word[1:]\n"
+"'Jython'\n"
+">>> word[:2] + 'py'\n"
+"'Pypy'"
 
 #: tutorial/introduction.rst:355
 msgid "The built-in function :func:`len` returns the length of a string::"
-msgstr ""
+msgstr "बिल्ट-इन फ़ंक्शन :func:`len` किसी स्ट्रिंग की लंबाई लौटाता है::"
 
 #: tutorial/introduction.rst:357
 msgid ""
@@ -567,56 +808,61 @@ msgid ""
 ">>> len(s)\n"
 "34"
 msgstr ""
+">>> s = 'supercalifragilisticexpialidocious'\n"
+">>> len(s)\n"
+"34"
 
 #: tutorial/introduction.rst:364
 msgid ":ref:`textseq`"
-msgstr ""
+msgstr ":ref:`textseq`"
 
 #: tutorial/introduction.rst:365
 msgid ""
 "Strings are examples of *sequence types*, and support the common operations "
 "supported by such types."
-msgstr ""
+msgstr "स्ट्रिंग *सीक्वेंस टाइप* के उदाहरण हैं, और ऐसे टाइप के सामान्य ऑपरेशन सपोर्ट करती हैं।"
 
 #: tutorial/introduction.rst:368
 msgid ":ref:`string-methods`"
-msgstr ""
+msgstr ":ref:`string-methods`"
 
 #: tutorial/introduction.rst:369
 msgid ""
 "Strings support a large number of methods for basic transformations and "
 "searching."
-msgstr ""
+msgstr "स्ट्रिंग में बुनियादी बदलावों और खोजने के लिए बहुत सारे मेथड हैं।"
 
 #: tutorial/introduction.rst:372
 msgid ":ref:`f-strings`"
-msgstr ""
+msgstr ":ref:`f-strings`"
 
 #: tutorial/introduction.rst:373
 msgid "String literals that have embedded expressions."
-msgstr ""
+msgstr "ऐसे स्ट्रिंग लिटरल जिनके अंदर एक्सप्रेशन होते हैं।"
 
 #: tutorial/introduction.rst:375
 msgid ":ref:`formatstrings`"
-msgstr ""
+msgstr ":ref:`formatstrings`"
 
 #: tutorial/introduction.rst:376
 msgid "Information about string formatting with :meth:`str.format`."
-msgstr ""
+msgstr ":meth:`str.format` से स्ट्रिंग फ़ॉर्मैटिंग की जानकारी।"
 
 #: tutorial/introduction.rst:378
 msgid ":ref:`old-string-formatting`"
-msgstr ""
+msgstr ":ref:`old-string-formatting`"
 
 #: tutorial/introduction.rst:379
 msgid ""
 "The old formatting operations invoked when strings are the left operand of "
 "the ``%`` operator are described in more detail here."
 msgstr ""
+"जब स्ट्रिंग ``%`` ऑपरेटर का बायाँ ऑपरेंड होती है, तब होने वाले पुराने फ़ॉर्मैटिंग ऑपरेशनों का "
+"विवरण यहाँ ज़्यादा विस्तार से है।"
 
 #: tutorial/introduction.rst:386
 msgid "Lists"
-msgstr ""
+msgstr "लिस्ट"
 
 #: tutorial/introduction.rst:388
 msgid ""
@@ -625,6 +871,10 @@ msgid ""
 "comma-separated values (items) between square brackets.  Lists might contain "
 "items of different types, but usually the items all have the same type. ::"
 msgstr ""
+"पायथन कई *कंपाउंड* डेटा टाइप जानता है, जिनसे दूसरे मानों को एक साथ समूह में रखा जाता है। "
+"इनमें सबसे बहुउपयोगी *लिस्ट* है, जिसे स्क्वेयर ब्रैकेट के बीच कॉमा से अलग किए गए मानों "
+"(आइटम) की सूची के रूप में लिखा जा सकता है। लिस्ट में अलग-अलग टाइप के आइटम हो सकते हैं, "
+"लेकिन आम तौर पर सभी आइटम एक ही टाइप के होते हैं। ::"
 
 #: tutorial/introduction.rst:393
 msgid ""
@@ -632,12 +882,17 @@ msgid ""
 ">>> squares\n"
 "[1, 4, 9, 16, 25]"
 msgstr ""
+">>> squares = [1, 4, 9, 16, 25]\n"
+">>> squares\n"
+"[1, 4, 9, 16, 25]"
 
 #: tutorial/introduction.rst:397
 msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can be "
 "indexed and sliced::"
 msgstr ""
+"स्ट्रिंग (और दूसरे सभी बिल्ट-इन :term:`सीक्वेंस <sequence>` टाइप) की तरह, लिस्ट को भी "
+"इंडेक्स और स्लाइस किया जा सकता है::"
 
 #: tutorial/introduction.rst:400
 msgid ""
@@ -648,22 +903,32 @@ msgid ""
 ">>> squares[-3:]  # slicing returns a new list\n"
 "[9, 16, 25]"
 msgstr ""
+">>> squares[0]  # indexing returns the item\n"
+"1\n"
+">>> squares[-1]\n"
+"25\n"
+">>> squares[-3:]  # slicing returns a new list\n"
+"[9, 16, 25]"
 
 #: tutorial/introduction.rst:407
 msgid "Lists also support operations like concatenation::"
-msgstr ""
+msgstr "लिस्ट जोड़ने (कॉनकैटिनेशन) जैसे ऑपरेशन भी सपोर्ट करती हैं::"
 
 #: tutorial/introduction.rst:409
 msgid ""
 ">>> squares + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
 msgstr ""
+">>> squares + [36, 49, 64, 81, 100]\n"
+"[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
 
 #: tutorial/introduction.rst:412
 msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
 msgstr ""
+"स्ट्रिंग के उलट, जो :term:`इम्यूटेबल <immutable>` हैं, लिस्ट एक :term:`म्यूटेबल "
+"<mutable>` टाइप है, यानी उनकी सामग्री बदली जा सकती है::"
 
 #: tutorial/introduction.rst:415
 msgid ""
@@ -674,12 +939,20 @@ msgid ""
 ">>> cubes\n"
 "[1, 8, 27, 64, 125]"
 msgstr ""
+">>> cubes = [1, 8, 27, 65, 125]  # something's wrong here\n"
+">>> 4 ** 3  # the cube of 4 is 64, not 65!\n"
+"64\n"
+">>> cubes[3] = 64  # replace the wrong value\n"
+">>> cubes\n"
+"[1, 8, 27, 64, 125]"
 
 #: tutorial/introduction.rst:422
 msgid ""
 "You can also add new items at the end of the list, by using "
 "the :meth:`list.append` *method* (we will see more about methods later)::"
 msgstr ""
+"आप :meth:`list.append` *मेथड* इस्तेमाल करके लिस्ट के आख़िर में नए आइटम भी जोड़ सकते हैं "
+"(मेथड के बारे में हम आगे और देखेंगे)::"
 
 #: tutorial/introduction.rst:425
 msgid ""
@@ -688,6 +961,10 @@ msgid ""
 ">>> cubes\n"
 "[1, 8, 27, 64, 125, 216, 343]"
 msgstr ""
+">>> cubes.append(216)  # add the cube of 6\n"
+">>> cubes.append(7 ** 3)  # and the cube of 7\n"
+">>> cubes\n"
+"[1, 8, 27, 64, 125, 216, 343]"
 
 #: tutorial/introduction.rst:430
 msgid ""
@@ -696,6 +973,9 @@ msgid ""
 "to the list through one variable will be seen through all other variables "
 "that refer to it.::"
 msgstr ""
+"पायथन में सामान्य असाइनमेंट कभी डेटा कॉपी नहीं करता। जब आप किसी लिस्ट को किसी वेरिएबल "
+"को असाइन करते हैं, तो वेरिएबल *मौजूदा लिस्ट* की ओर इशारा करता है। एक वेरिएबल के ज़रिए "
+"लिस्ट में किए गए बदलाव उसकी ओर इशारा करने वाले सभी दूसरे वेरिएबलों में दिखेंगे।::"
 
 #: tutorial/introduction.rst:435
 msgid ""
@@ -707,6 +987,13 @@ msgid ""
 ">>> rgb\n"
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 msgstr ""
+">>> rgb = [\"Red\", \"Green\", \"Blue\"]\n"
+">>> rgba = rgb\n"
+">>> id(rgb) == id(rgba)  # they reference the same object\n"
+"True\n"
+">>> rgba.append(\"Alph\")\n"
+">>> rgb\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 
 #: tutorial/introduction.rst:443
 msgid ""
@@ -714,6 +1001,8 @@ msgid ""
 "This means that the following slice returns a :ref:`shallow copy "
 "<shallow_vs_deep_copy>` of the list::"
 msgstr ""
+"सभी स्लाइस ऑपरेशन माँगे गए एलिमेंट वाली एक नई लिस्ट लौटाते हैं। इसका मतलब है कि नीचे की "
+"स्लाइस लिस्ट की एक :ref:`शैलो कॉपी <shallow_vs_deep_copy>` लौटाती है::"
 
 #: tutorial/introduction.rst:447
 msgid ""
@@ -724,12 +1013,20 @@ msgid ""
 ">>> rgba\n"
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 msgstr ""
+">>> correct_rgba = rgba[:]\n"
+">>> correct_rgba[-1] = \"Alpha\"\n"
+">>> correct_rgba\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alpha\"]\n"
+">>> rgba\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 
 #: tutorial/introduction.rst:454
 msgid ""
 "Assignment to slices is also possible, and this can even change the size of "
 "the list or clear it entirely::"
 msgstr ""
+"स्लाइस को असाइन करना भी संभव है, और इससे लिस्ट का साइज़ भी बदल सकता है या वह पूरी "
+"तरह ख़ाली हो सकती है::"
 
 #: tutorial/introduction.rst:457
 msgid ""
@@ -749,10 +1046,25 @@ msgid ""
 ">>> letters\n"
 "[]"
 msgstr ""
+">>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
+">>> letters\n"
+"['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
+">>> # replace some values\n"
+">>> letters[2:5] = ['C', 'D', 'E']\n"
+">>> letters\n"
+"['a', 'b', 'C', 'D', 'E', 'f', 'g']\n"
+">>> # now remove them\n"
+">>> letters[2:5] = []\n"
+">>> letters\n"
+"['a', 'b', 'f', 'g']\n"
+">>> # clear the list by replacing all the elements with an empty list\n"
+">>> letters[:] = []\n"
+">>> letters\n"
+"[]"
 
 #: tutorial/introduction.rst:473
 msgid "The built-in function :func:`len` also applies to lists::"
-msgstr ""
+msgstr "बिल्ट-इन फ़ंक्शन :func:`len` लिस्ट पर भी लागू होता है::"
 
 #: tutorial/introduction.rst:475
 msgid ""
@@ -760,12 +1072,15 @@ msgid ""
 ">>> len(letters)\n"
 "4"
 msgstr ""
+">>> letters = ['a', 'b', 'c', 'd']\n"
+">>> len(letters)\n"
+"4"
 
 #: tutorial/introduction.rst:479
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
-msgstr ""
+msgstr "लिस्ट को नेस्ट करना (दूसरी लिस्ट वाली लिस्ट बनाना) संभव है, उदाहरण के लिए::"
 
 #: tutorial/introduction.rst:482
 msgid ""
@@ -779,10 +1094,19 @@ msgid ""
 ">>> x[0][1]\n"
 "'b'"
 msgstr ""
+">>> a = ['a', 'b', 'c']\n"
+">>> n = [1, 2, 3]\n"
+">>> x = [a, n]\n"
+">>> x\n"
+"[['a', 'b', 'c'], [1, 2, 3]]\n"
+">>> x[0]\n"
+"['a', 'b', 'c']\n"
+">>> x[0][1]\n"
+"'b'"
 
 #: tutorial/introduction.rst:495
 msgid "First Steps Towards Programming"
-msgstr ""
+msgstr "प्रोग्रामिंग की ओर पहले क़दम"
 
 #: tutorial/introduction.rst:497
 msgid ""
@@ -791,6 +1115,9 @@ msgid ""
 "`Fibonacci series <https://en.wikipedia.org/wiki/Fibonacci_sequence>`_ as "
 "follows::"
 msgstr ""
+"बेशक, हम पायथन को दो और दो जोड़ने से ज़्यादा जटिल कामों के लिए इस्तेमाल कर सकते हैं। "
+"उदाहरण के लिए, हम `फ़िबोनाची सीरीज़ <https://en.wikipedia.org/wiki/"
+"Fibonacci_sequence>`__ का शुरुआती हिस्सा इस तरह लिख सकते हैं::"
 
 #: tutorial/introduction.rst:502
 msgid ""
@@ -809,10 +1136,24 @@ msgid ""
 "5\n"
 "8"
 msgstr ""
+">>> # Fibonacci series:\n"
+">>> # the sum of two elements defines the next\n"
+">>> a, b = 0, 1\n"
+">>> while a < 10:\n"
+"...     print(a)\n"
+"...     a, b = b, a+b\n"
+"...\n"
+"0\n"
+"1\n"
+"1\n"
+"2\n"
+"3\n"
+"5\n"
+"8"
 
 #: tutorial/introduction.rst:517
 msgid "This example introduces several new features."
-msgstr ""
+msgstr "यह उदाहरण कई नई सुविधाओं से परिचय कराता है।"
 
 #: tutorial/introduction.rst:519
 msgid ""
@@ -822,6 +1163,10 @@ msgid ""
 "all evaluated first before any of the assignments take place.  The right-"
 "hand side expressions are evaluated  from the left to the right."
 msgstr ""
+"पहली लाइन में एक *मल्टीपल असाइनमेंट* है: वेरिएबल ``a`` और ``b`` एक साथ नए मान 0 और "
+"1 पाते हैं। आख़िरी लाइन में इसे फिर इस्तेमाल किया गया है, जिससे पता चलता है कि कोई भी "
+"असाइनमेंट होने से पहले दाईं ओर के सभी एक्सप्रेशन इवैल्युएट होते हैं। दाईं ओर के एक्सप्रेशन बाएँ से "
+"दाएँ इवैल्युएट होते हैं।"
 
 #: tutorial/introduction.rst:525
 msgid ""
@@ -834,6 +1179,13 @@ msgid ""
 "than), ``>`` (greater than), ``==`` (equal to), ``<=`` (less than or equal "
 "to), ``>=`` (greater than or equal to) and ``!=`` (not equal to)."
 msgstr ""
+":keyword:`while` लूप तब तक चलता है जब तक शर्त (यहाँ: ``a < 10``) सही रहती है। "
+"पायथन में, C की तरह, कोई भी शून्य से अलग पूर्णांक मान true है; शून्य false है। शर्त कोई "
+"स्ट्रिंग या लिस्ट मान भी हो सकती है, असल में कोई भी सीक्वेंस; शून्य से अलग लंबाई वाली हर "
+"चीज़ true है, ख़ाली सीक्वेंस false हैं। उदाहरण में इस्तेमाल की गई जाँच एक सरल तुलना है। "
+"स्टैंडर्ड तुलना ऑपरेटर C की तरह ही लिखे जाते हैं: ``<`` (इससे कम), ``>`` (इससे ज़्यादा), "
+"``==`` (बराबर), ``<=`` (कम या बराबर), ``>=`` (ज़्यादा या बराबर) और ``!=`` "
+"(बराबर नहीं)।"
 
 #: tutorial/introduction.rst:534
 msgid ""
@@ -846,6 +1198,13 @@ msgid ""
 "(since the parser cannot guess when you have typed the last line).  Note "
 "that each line within a basic block must be indented by the same amount."
 msgstr ""
+"लूप की *बॉडी* *इंडेंट* की गई है: इंडेंटेशन पायथन में स्टेटमेंटों को समूह में रखने का तरीक़ा है। "
+"इंटरैक्टिव प्रॉम्प्ट पर, आपको हर इंडेंट की गई लाइन के लिए टैब या स्पेस टाइप करने होंगे। "
+"व्यवहार में आप पायथन के लिए ज़्यादा जटिल इनपुट किसी टेक्स्ट एडिटर में तैयार करेंगे; सभी ठीक-"
+"ठाक टेक्स्ट एडिटर में अपने-आप इंडेंट करने की सुविधा होती है। जब कोई कंपाउंड स्टेटमेंट इंटरैक्टिव "
+"रूप से डाला जाता है, तो उसके पूरा होने का संकेत देने के लिए उसके बाद एक ख़ाली लाइन होनी "
+"चाहिए (क्योंकि पार्सर अंदाज़ा नहीं लगा सकता कि आपने आख़िरी लाइन कब टाइप की)। ध्यान दें "
+"कि किसी बुनियादी ब्लॉक की हर लाइन बराबर इंडेंट होनी चाहिए।"
 
 #: tutorial/introduction.rst:543
 msgid ""
@@ -856,6 +1215,10 @@ msgid ""
 "without quotes, and a space is inserted between items, so you can format "
 "things nicely, like this::"
 msgstr ""
+":func:`print` फ़ंक्शन उसे दिए गए आर्ग्युमेंट का मान लिखता है। यह सिर्फ़ वह एक्सप्रेशन लिखने "
+"से (जैसा हमने पहले कैलकुलेटर वाले उदाहरणों में किया) इस बात में अलग है कि यह कई आर्ग्युमेंट, "
+"फ़्लोटिंग-पॉइंट मात्राओं और स्ट्रिंग को कैसे संभालता है। स्ट्रिंग बिना कोट के प्रिंट होती हैं, और "
+"आइटमों के बीच एक स्पेस डाला जाता है, ताकि आप चीज़ों को अच्छी तरह फ़ॉर्मैट कर सकें, जैसे::"
 
 #: tutorial/introduction.rst:550
 msgid ""
@@ -863,12 +1226,17 @@ msgid ""
 ">>> print('The value of i is', i)\n"
 "The value of i is 65536"
 msgstr ""
+">>> i = 256*256\n"
+">>> print('The value of i is', i)\n"
+"The value of i is 65536"
 
 #: tutorial/introduction.rst:554
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
 msgstr ""
+"कीवर्ड आर्ग्युमेंट *end* से आउटपुट के बाद की न्यूलाइन से बचा जा सकता है, या आउटपुट को किसी "
+"दूसरी स्ट्रिंग से ख़त्म किया जा सकता है::"
 
 #: tutorial/introduction.rst:557
 msgid ""
@@ -879,10 +1247,16 @@ msgid ""
 "...\n"
 "0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
 msgstr ""
+">>> a, b = 0, 1\n"
+">>> while a < 1000:\n"
+"...     print(a, end=',')\n"
+"...     a, b = b, a+b\n"
+"...\n"
+"0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
 
 #: tutorial/introduction.rst:566
 msgid "Footnotes"
-msgstr ""
+msgstr "फ़ुटनोट"
 
 #: tutorial/introduction.rst:567
 msgid ""
@@ -890,6 +1264,9 @@ msgid ""
 "as ``-(3**2)`` and thus result in ``-9``.  To avoid this and get ``9``, you "
 "can use ``(-3)**2``."
 msgstr ""
+"चूँकि ``**`` की प्राथमिकता ``-`` से ज़्यादा है, इसलिए ``-3**2`` को ``-(3**2)`` समझा "
+"जाएगा और नतीजा ``-9`` होगा। इससे बचने और ``9`` पाने के लिए, आप ``(-3)**2`` "
+"इस्तेमाल कर सकते हैं।"
 
 #: tutorial/introduction.rst:571
 msgid ""
@@ -898,11 +1275,15 @@ msgid ""
 "only difference between the two is that within single quotes you don't need "
 "to escape ``\"`` (but you have to escape ``\\'``) and vice versa."
 msgstr ""
+"दूसरी भाषाओं के उलट, ``\\n`` जैसे ख़ास कैरेक्टरों का मतलब सिंगल (``'...'``) और डबल "
+"(``\"...\"``) दोनों तरह के कोट में एक ही होता है। दोनों में अकेला फ़र्क़ यह है कि सिंगल "
+"कोट के अंदर आपको ``\"`` को एस्केप करने की ज़रूरत नहीं होती (लेकिन ``\\'`` को एस्केप "
+"करना होता है), और डबल कोट में इसका उल्टा।"
 
 #: tutorial/introduction.rst:20
 msgid "# (hash)"
-msgstr ""
+msgstr "# (हैश)"
 
 #: tutorial/introduction.rst:20
 msgid "comment"
-msgstr ""
+msgstr "कमेंट"
