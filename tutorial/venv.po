@@ -3,27 +3,27 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 13:18+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-11-20 19:31-0800\n"
+"PO-Revision-Date: 2026-11-21 00:00-0800\n"
+"Last-Translator: Thejesh <35212698+thejesh23@users.noreply.github.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: tutorial/venv.rst:6
 msgid "Virtual Environments and Packages"
-msgstr ""
+msgstr "वर्चुअल एनवायरनमेंट और पैकेज"
 
 #: tutorial/venv.rst:9
 msgid "Introduction"
-msgstr ""
+msgstr "परिचय"
 
 #: tutorial/venv.rst:11
 msgid ""
@@ -33,6 +33,10 @@ msgid ""
 "bug has been fixed or the application may be written using an obsolete "
 "version of the library's interface."
 msgstr ""
+"पायथन एप्लिकेशन अक्सर ऐसे पैकेज और मॉड्यूल इस्तेमाल करते हैं जो स्टैंडर्ड लाइब्रेरी का हिस्सा "
+"नहीं होते। एप्लिकेशन को कभी-कभी किसी लाइब्रेरी के ख़ास वर्ज़न की ज़रूरत होती है, क्योंकि हो "
+"सकता है कि एप्लिकेशन के लिए किसी ख़ास बग का ठीक होना ज़रूरी हो, या एप्लिकेशन लाइब्रेरी "
+"के इंटरफ़ेस के किसी पुराने वर्ज़न के हिसाब से लिखा गया हो।"
 
 #: tutorial/venv.rst:17
 msgid ""
@@ -42,6 +46,10 @@ msgid ""
 "are in conflict and installing either version 1.0 or 2.0 will leave one "
 "application unable to run."
 msgstr ""
+"इसका मतलब है कि एक ही पायथन इंस्टॉलेशन से हर एप्लिकेशन की ज़रूरतें पूरी करना शायद संभव न "
+"हो। अगर एप्लिकेशन A को किसी ख़ास मॉड्यूल का वर्ज़न 1.0 चाहिए, लेकिन एप्लिकेशन B को "
+"वर्ज़न 2.0, तो ये ज़रूरतें आपस में टकराती हैं, और 1.0 या 2.0 में से कोई भी वर्ज़न इंस्टॉल करने "
+"पर कोई एक एप्लिकेशन नहीं चल पाएगा।"
 
 #: tutorial/venv.rst:23
 msgid ""
@@ -49,6 +57,9 @@ msgid ""
 "self-contained directory tree that contains a Python installation for a "
 "particular version of Python, plus a number of additional packages."
 msgstr ""
+"इस समस्या का हल एक :term:`वर्चुअल एनवायरनमेंट <virtual environment>` बनाना है: अपने-"
+"आप में पूरा एक डायरेक्टरी ट्री, जिसमें पायथन के किसी ख़ास वर्ज़न का इंस्टॉलेशन और कुछ "
+"अतिरिक्त पैकेज होते हैं।"
 
 #: tutorial/venv.rst:27
 msgid ""
@@ -59,10 +70,15 @@ msgid ""
 "application B requires a library be upgraded to version 3.0, this will not "
 "affect application A's environment."
 msgstr ""
+"फिर अलग-अलग एप्लिकेशन अलग-अलग वर्चुअल एनवायरनमेंट इस्तेमाल कर सकते हैं। ऊपर के उदाहरण में "
+"टकराती ज़रूरतों को सुलझाने के लिए, एप्लिकेशन A का अपना वर्चुअल एनवायरनमेंट हो सकता है "
+"जिसमें वर्ज़न 1.0 इंस्टॉल हो, जबकि एप्लिकेशन B के दूसरे वर्चुअल एनवायरनमेंट में वर्ज़न 2.0 हो। "
+"अगर एप्लिकेशन B को किसी लाइब्रेरी को वर्ज़न 3.0 पर अपग्रेड करना हो, तो इसका एप्लिकेशन "
+"A के एनवायरनमेंट पर कोई असर नहीं पड़ेगा।"
 
 #: tutorial/venv.rst:36
 msgid "Creating Virtual Environments"
-msgstr ""
+msgstr "वर्चुअल एनवायरनमेंट बनाना"
 
 #: tutorial/venv.rst:38
 msgid ""
@@ -72,6 +88,10 @@ msgid ""
 "instance, executing the command with ``python3.12`` will install version "
 "3.12."
 msgstr ""
+"वर्चुअल एनवायरनमेंट बनाने और मैनेज करने के लिए इस्तेमाल होने वाले मॉड्यूल का "
+"नाम :mod:`venv` है। :mod:`venv` पायथन का वही वर्ज़न इंस्टॉल करेगा जिससे कमांड चलाया "
+"गया था (जैसा :option:`--version` विकल्प बताता है)। उदाहरण के लिए, ``python3.12`` "
+"से कमांड चलाने पर वर्ज़न 3.12 इंस्टॉल होगा।"
 
 #: tutorial/venv.rst:44
 msgid ""
@@ -79,10 +99,12 @@ msgid ""
 "place it, and run the :mod:`venv` module as a script with the directory "
 "path::"
 msgstr ""
+"वर्चुअल एनवायरनमेंट बनाने के लिए, वह डायरेक्टरी तय करें जहाँ आप उसे रखना चाहते हैं, "
+"और :mod:`venv` मॉड्यूल को उस डायरेक्टरी के पाथ के साथ स्क्रिप्ट के रूप में चलाएँ::"
 
 #: tutorial/venv.rst:47
 msgid "python -m venv tutorial-env"
-msgstr ""
+msgstr "python -m venv tutorial-env"
 
 #: tutorial/venv.rst:49
 msgid ""
@@ -90,6 +112,8 @@ msgid ""
 "also create directories inside it containing a copy of the Python "
 "interpreter and various supporting files."
 msgstr ""
+"अगर ``tutorial-env`` डायरेक्टरी मौजूद नहीं है, तो यह उसे बनाएगा, और उसके अंदर ऐसी "
+"डायरेक्टरियाँ भी बनाएगा जिनमें पायथन इंटरप्रेटर की एक कॉपी और कई सहायक फ़ाइलें होंगी।"
 
 #: tutorial/venv.rst:53
 msgid ""
@@ -99,26 +123,30 @@ msgid ""
 "prevents clashing with ``.env`` environment variable definition files that "
 "some tooling supports."
 msgstr ""
+"वर्चुअल एनवायरनमेंट के लिए एक आम डायरेक्टरी ``.venv`` है। इस नाम से डायरेक्टरी आम तौर "
+"पर आपके शेल में छिपी रहती है और इसलिए रास्ते में नहीं आती, और साथ ही नाम से यह भी पता "
+"चलता है कि डायरेक्टरी किस लिए है। इससे कुछ टूल द्वारा सपोर्ट की जाने वाली ``.env`` "
+"एनवायरनमेंट वेरिएबल परिभाषा फ़ाइलों से टकराव भी नहीं होता।"
 
 #: tutorial/venv.rst:59
 msgid "Once you've created a virtual environment, you may activate it."
-msgstr ""
+msgstr "वर्चुअल एनवायरनमेंट बनाने के बाद, आप उसे एक्टिवेट कर सकते हैं।"
 
 #: tutorial/venv.rst:61
 msgid "On Windows, run::"
-msgstr ""
+msgstr "Windows पर यह चलाएँ::"
 
 #: tutorial/venv.rst:63
 msgid "tutorial-env\\Scripts\\activate"
-msgstr ""
+msgstr "tutorial-env\\Scripts\\activate"
 
 #: tutorial/venv.rst:65
 msgid "On Unix or MacOS, run::"
-msgstr ""
+msgstr "Unix या MacOS पर यह चलाएँ::"
 
 #: tutorial/venv.rst:67
 msgid "source tutorial-env/bin/activate"
-msgstr ""
+msgstr "source tutorial-env/bin/activate"
 
 #: tutorial/venv.rst:69
 msgid ""
@@ -126,6 +154,9 @@ msgid ""
 "or :program:`fish` shells, there are alternate ``activate.csh`` and "
 "``activate.fish`` scripts you should use instead.)"
 msgstr ""
+"(यह स्क्रिप्ट bash शेल के लिए लिखी गई है। अगर आप :program:`csh` या :program:`fish` "
+"शेल इस्तेमाल करते हैं, तो उनके लिए अलग ``activate.csh`` और ``activate.fish`` स्क्रिप्ट "
+"हैं, जिन्हें आपको इसके बजाय इस्तेमाल करना चाहिए।)"
 
 #: tutorial/venv.rst:74
 msgid ""
@@ -134,6 +165,9 @@ msgid ""
 "running ``python`` will get you that particular version and installation of "
 "Python. For example:"
 msgstr ""
+"वर्चुअल एनवायरनमेंट एक्टिवेट करने से आपके शेल का प्रॉम्प्ट बदल जाएगा, ताकि पता चले कि आप "
+"कौन-सा वर्चुअल एनवायरनमेंट इस्तेमाल कर रहे हैं, और एनवायरनमेंट इस तरह बदल जाएगा कि "
+"``python`` चलाने पर आपको पायथन का वही ख़ास वर्ज़न और इंस्टॉलेशन मिले। उदाहरण के लिए:"
 
 #: tutorial/venv.rst:79
 msgid ""
@@ -147,6 +181,15 @@ msgid ""
 "'~/envs/tutorial-env/lib/python3.5/site-packages']\n"
 ">>>"
 msgstr ""
+"$ source ~/envs/tutorial-env/bin/activate\n"
+"(tutorial-env) $ python\n"
+"Python 3.5.1 (default, May  6 2016, 10:59:36)\n"
+"  ...\n"
+">>> import sys\n"
+">>> sys.path\n"
+"['', '/usr/local/lib/python35.zip', ...,\n"
+"'~/envs/tutorial-env/lib/python3.5/site-packages']\n"
+">>>"
 
 #: tutorial/venv.rst:91
 msgid ""
@@ -156,22 +199,26 @@ msgid ""
 "version the virtual environment is using. The best practice is to ``unset "
 "PYTHONPATH`` in bash or the equivalent for the shell you are using."
 msgstr ""
+"ध्यान दें कि एक्टिवेट किया गया वर्चुअल एनवायरनमेंट ``PYTHONPATH`` वेरिएबल को किसी भी "
+"तरह नहीं बदलता। अगर इस पाथ में ऐसे कोड के रेफ़रेंस हैं जो वर्चुअल एनवायरनमेंट के पायथन वर्ज़न "
+"के साथ काम नहीं करता, तो अनपेक्षित नतीजे मिल सकते हैं। सबसे अच्छा तरीक़ा है bash में "
+"``unset PYTHONPATH`` चलाना, या आप जो शेल इस्तेमाल कर रहे हैं उसमें इसके बराबर का कमांड।"
 
 #: tutorial/venv.rst:96
 msgid "To deactivate a virtual environment, type::"
-msgstr ""
+msgstr "वर्चुअल एनवायरनमेंट को डीएक्टिवेट करने के लिए, टर्मिनल में::"
 
 #: tutorial/venv.rst:98
 msgid "deactivate"
-msgstr ""
+msgstr "deactivate"
 
 #: tutorial/venv.rst:100
 msgid "into the terminal."
-msgstr ""
+msgstr "टाइप करें।"
 
 #: tutorial/venv.rst:103
 msgid "Managing Packages with pip"
-msgstr ""
+msgstr "pip से पैकेज मैनेज करना"
 
 #: tutorial/venv.rst:105
 msgid ""
@@ -180,6 +227,9 @@ msgid ""
 "`Python Package Index <https://pypi.org>`_.  You can browse the Python "
 "Package Index by going to it in your web browser."
 msgstr ""
+"आप :program:`pip` नाम के प्रोग्राम से पैकेज इंस्टॉल, अपग्रेड और हटा सकते हैं। डिफ़ॉल्ट रूप से "
+"``pip`` `Python Package Index <https://pypi.org>`_ से पैकेज इंस्टॉल करता है। आप "
+"अपने वेब ब्राउज़र में Python Package Index पर जाकर उसे ब्राउज़ कर सकते हैं।"
 
 #: tutorial/venv.rst:110
 msgid ""
@@ -187,12 +237,14 @@ msgid ""
 "etc.  (Consult the :ref:`installing-index` guide for complete documentation "
 "for ``pip``.)"
 msgstr ""
+"``pip`` के कई सबकमांड हैं: \"install\", \"uninstall\", \"freeze\" वग़ैरह। (``pip`` "
+"के पूरे डॉक्यूमेंटेशन के लिए :ref:`installing-index` गाइड देखें।)"
 
 #: tutorial/venv.rst:114
 msgid ""
 "You can install the latest version of a package by specifying a package's "
 "name:"
-msgstr ""
+msgstr "आप किसी पैकेज का नाम देकर उसका सबसे नया वर्ज़न इंस्टॉल कर सकते हैं:"
 
 #: tutorial/venv.rst:116
 msgid ""
@@ -203,12 +255,20 @@ msgid ""
 "  Running setup.py install for novas\n"
 "Successfully installed novas-3.1.1.3"
 msgstr ""
+"(tutorial-env) $ python -m pip install novas\n"
+"Collecting novas\n"
+"  Downloading novas-3.1.1.3.tar.gz (136kB)\n"
+"Installing collected packages: novas\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3"
 
 #: tutorial/venv.rst:125
 msgid ""
 "You can also install a specific version of a package by giving the package "
 "name  followed by ``==`` and the version number:"
 msgstr ""
+"आप पैकेज के नाम के बाद ``==`` और वर्ज़न नंबर देकर किसी पैकेज का ख़ास वर्ज़न भी इंस्टॉल कर "
+"सकते हैं:"
 
 #: tutorial/venv.rst:128
 msgid ""
@@ -218,6 +278,11 @@ msgid ""
 "Installing collected packages: requests\n"
 "Successfully installed requests-2.6.0"
 msgstr ""
+"(tutorial-env) $ python -m pip install requests==2.6.0\n"
+"Collecting requests==2.6.0\n"
+"  Using cached requests-2.6.0-py2.py3-none-any.whl\n"
+"Installing collected packages: requests\n"
+"Successfully installed requests-2.6.0"
 
 #: tutorial/venv.rst:136
 msgid ""
@@ -226,6 +291,9 @@ msgid ""
 "number to get that version, or you can run ``python -m pip install --"
 "upgrade`` to upgrade the package to the latest version:"
 msgstr ""
+"अगर आप यह कमांड फिर से चलाते हैं, तो ``pip`` देखेगा कि माँगा गया वर्ज़न पहले से इंस्टॉल है "
+"और कुछ नहीं करेगा। आप कोई दूसरा वर्ज़न नंबर देकर वह वर्ज़न पा सकते हैं, या पैकेज को सबसे नए "
+"वर्ज़न पर अपग्रेड करने के लिए ``python -m pip install --upgrade`` चला सकते हैं:"
 
 #: tutorial/venv.rst:141
 msgid ""
@@ -237,17 +305,26 @@ msgid ""
 "      Successfully uninstalled requests-2.6.0\n"
 "Successfully installed requests-2.7.0"
 msgstr ""
+"(tutorial-env) $ python -m pip install --upgrade requests\n"
+"Collecting requests\n"
+"Installing collected packages: requests\n"
+"  Found existing installation: requests 2.6.0\n"
+"    Uninstalling requests-2.6.0:\n"
+"      Successfully uninstalled requests-2.6.0\n"
+"Successfully installed requests-2.7.0"
 
 #: tutorial/venv.rst:151
 msgid ""
 "``python -m pip uninstall`` followed by one or more package names will "
 "remove the packages from the virtual environment."
 msgstr ""
+"``python -m pip uninstall`` के बाद एक या ज़्यादा पैकेज के नाम देने पर वे पैकेज वर्चुअल "
+"एनवायरनमेंट से हट जाएँगे।"
 
 #: tutorial/venv.rst:154
 msgid ""
 "``python -m pip show`` will display information about a particular package:"
-msgstr ""
+msgstr "``python -m pip show`` किसी ख़ास पैकेज की जानकारी दिखाएगा:"
 
 #: tutorial/venv.rst:156
 msgid ""
@@ -264,12 +341,24 @@ msgid ""
 "Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\n"
 "Requires:"
 msgstr ""
+"(tutorial-env) $ python -m pip show requests\n"
+"---\n"
+"Metadata-Version: 2.0\n"
+"Name: requests\n"
+"Version: 2.7.0\n"
+"Summary: Python HTTP for Humans.\n"
+"Home-page: http://python-requests.org\n"
+"Author: Kenneth Reitz\n"
+"Author-email: me@kennethreitz.com\n"
+"License: Apache 2.0\n"
+"Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\n"
+"Requires:"
 
 #: tutorial/venv.rst:171
 msgid ""
 "``python -m pip list`` will display all of the packages installed in the "
 "virtual environment:"
-msgstr ""
+msgstr "``python -m pip list`` वर्चुअल एनवायरनमेंट में इंस्टॉल किए गए सभी पैकेज दिखाएगा:"
 
 #: tutorial/venv.rst:174
 msgid ""
@@ -280,6 +369,12 @@ msgid ""
 "requests (2.7.0)\n"
 "setuptools (16.0)"
 msgstr ""
+"(tutorial-env) $ python -m pip list\n"
+"novas (3.1.1.3)\n"
+"numpy (1.9.2)\n"
+"pip (7.0.3)\n"
+"requests (2.7.0)\n"
+"setuptools (16.0)"
 
 #: tutorial/venv.rst:183
 msgid ""
@@ -288,6 +383,9 @@ msgid ""
 "expects. A common convention is to put this list in a ``requirements.txt`` "
 "file:"
 msgstr ""
+"``python -m pip freeze`` इंस्टॉल किए गए पैकेजों की ऐसी ही सूची बनाएगा, लेकिन उसका "
+"आउटपुट उसी फ़ॉर्मैट में होता है जिसकी ``python -m pip install`` अपेक्षा करता है। एक आम "
+"तरीक़ा यह है कि इस सूची को ``requirements.txt`` फ़ाइल में रखा जाए:"
 
 #: tutorial/venv.rst:187
 msgid ""
@@ -297,6 +395,11 @@ msgid ""
 "numpy==1.9.2\n"
 "requests==2.7.0"
 msgstr ""
+"(tutorial-env) $ python -m pip freeze > requirements.txt\n"
+"(tutorial-env) $ cat requirements.txt\n"
+"novas==3.1.1.3\n"
+"numpy==1.9.2\n"
+"requests==2.7.0"
 
 #: tutorial/venv.rst:195
 msgid ""
@@ -304,6 +407,9 @@ msgid ""
 "shipped as part of an application.  Users can then install all the necessary "
 "packages with ``install -r``:"
 msgstr ""
+"फिर ``requirements.txt`` को वर्ज़न कंट्रोल में कमिट किया जा सकता है और एप्लिकेशन के "
+"हिस्से के रूप में शिप किया जा सकता है। फिर यूज़र ``install -r`` से सभी ज़रूरी पैकेज इंस्टॉल "
+"कर सकते हैं:"
 
 #: tutorial/venv.rst:199
 msgid ""
@@ -318,6 +424,16 @@ msgid ""
 "  Running setup.py install for novas\n"
 "Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0"
 msgstr ""
+"(tutorial-env) $ python -m pip install -r requirements.txt\n"
+"Collecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n"
+"  ...\n"
+"Collecting numpy==1.9.2 (from -r requirements.txt (line 2))\n"
+"  ...\n"
+"Collecting requests==2.7.0 (from -r requirements.txt (line 3))\n"
+"  ...\n"
+"Installing collected packages: novas, numpy, requests\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0"
 
 #: tutorial/venv.rst:212
 msgid ""
@@ -326,3 +442,6 @@ msgid ""
 "want to make it available on the Python Package Index, consult the `Python "
 "packaging user guide`_."
 msgstr ""
+"``pip`` में और भी कई विकल्प हैं। ``pip`` के पूरे डॉक्यूमेंटेशन के लिए :ref:`installing-"
+"index` गाइड देखें। जब आप कोई पैकेज लिख लें और उसे Python Package Index पर उपलब्ध "
+"कराना चाहें, तो `Python packaging user guide`_ देखें।"
